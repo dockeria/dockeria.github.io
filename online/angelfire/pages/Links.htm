@@ -1,0 +1,535 @@
+<HTML>
+<HEAD><TITLE>Links</TITLE>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Personal Homepage, including topics of Pictures (Palace, Qingdao-Dalian, Hainan, Tailand, the States, Wedding, Studio, etc.), Favorites (Music, surfing internet, Cookbook, Fashion, Movies, Entertainment, Seasons and Holidays), Family and Friends (my family, as a couple, friends and another me), Books (internet digest, jokes, fictions, scenes, lyrics, forums, talktime), Poems, Resume and Links."> 
+<META NAME="keywords" CONTENT="Grace, Zhou, Lin, Zhoulin, Pictures, Favorites, Family, Friends, Books, Poems, Resume, Links, Wedding, Studio, Beijing, Qingdao, Dalian, Hainan, United States, Scenes, Music, internet digest, jokes, lyrics, DHTML, JavaScript, jpg, gif">
+
+<style TYPE="text/css">
+ a:hover {color: 1E90FF;}
+ body { overflow:scroll;overflow-x:hidden }
+ .popper { position : absolute; visibility : hidden; }
+ .tb { position: absolute; left:0px; top:25px; }
+</style>
+
+
+<script language="JavaScript" src="menutopbar.js"></script>
+<script language="JavaScript" src="menulib.js"></script>
+<script language="JavaScript">    // Navigation Topbar Menu
+
+  // Define navigation bar settings.
+
+  iMenu  = 0;
+  navBarX = 0;
+
+  navBarHeaderWidth  = 100;
+  navBarMenuWidth    = 186;
+  navBarBorderWidth  =   1;
+  navBarPaddingWidth =   4;
+
+  navBarBorderColor   = "#F0FFFF";
+  navBarHeaderBgColor = "#BFFD97";
+  navBarHeaderFgColor = "#000000";
+  navBarActiveBgColor = "#8FBC8F";
+  navBarActiveFgColor = "#ffffff";
+  navBarItemBgColor   = "#87CEEB";
+  navBarItemFgColor   = "#000000";
+  navBarHighBgColor   = "#FF8C00";
+  navBarHighFgColor   = "#ffffff";
+
+  navBarHeaderFontFamily = "Verdana,Arial,Helvetica,sans-serif";
+  navBarHeaderFontStyle  = "plain";
+  navBarHeaderFontWeight = "bold";
+  navBarHeaderFontSize   = "10pt";
+  navBarItemFontFamily   = "Verdana,Arial,Helvetica,sans-serif";
+  navBarItemFontStyle    = "plain";
+  navBarItemFontWeight   = "bold";
+  navBarItemFontSize     = "8pt";
+
+  // Define navigation bar menus. Extend beyond 4 as desired
+
+  navBarMenus[iMenu++] = new Array("Home", "../index.html");
+
+  navBarMenus[iMenu++] = new Array("Pictures", "../pages/Pictures.htm",
+    "The Palace",   "../pages/palace.htm",
+    "Qingdao-Dalian",  "../pages/qingdao.htm",
+    "Hainan Island",   "../pages/hainan.htm",
+    "Tailand",     "../pages/tailand.htm",
+    "In the States",   "../pages/states.htm",
+    "My Wedding Pictures","../pages/wedding.htm",
+    "The Studio",   "../pages/studio.htm",
+    "Others",     "../pages/others.htm");
+
+  navBarMenus[iMenu++] = new Array("Family", "../pages/Family.htm",
+    "New Home",     "../pages/newhome.htm",
+    "My Family Album",   "../pages/myfamily.htm",
+    "The Friends",   "../pages/friends.htm",
+    "As A Couple",   "../pages/couples.htm",
+    "Another Me",   "../pages/another.htm");
+
+  navBarMenus[iMenu++] = new Array("Favorites", "../pages/Favorites.htm",
+    "Amei: May I Hold You",  "../files/Amei.htm",
+    "Na-Ying: Straight Forward",  "../files/NaYing.htm",
+    "Celine Dion: All the Way",  "http://www.celineonline.com",
+    "Calendar for Holidays",  "../files/calendar.htm",
+    "Happy! Happy! Birthday!",  "../files/birthday.htm",
+    "Fashion: Dress to Kill",  "../files/dresstokill.htm",
+    "How are you feeling?",  "../files/feeling.htm",
+    "Movies Bookshelf",    "../files/Movies.htm");
+
+  navBarMenus[iMenu++] = new Array("Books", "../pages/Books.htm",
+    "Chinese Seals",    "../files/seals.htm",
+    "Chinese Paintings",    "../files/painting.htm",
+    "Photography China",    "../files/china.htm",
+    "Tulips Festival",    "../files/tulips.htm",
+    "Viewpoint Mt. Rainier",  "../files/rainier.htm",
+    "Season's Prints Site",  "../../all4/",
+    "Wine Glossary",    "../books/digest/winegl.htm",
+    "Christie Collection",  "../books/fictions/christie.zip",
+    "Hitchcock's Stage",    "../books/fictions/Hitchcock.doc",
+    "English Jokes",    "../books/digest/jokesENG.pdf",
+    "More ...",    "../pages/Books.htm");
+
+  navBarMenus[iMenu++] = new Array("Poems", "../pages/Poems.htm",
+    "Link to Boathill Page",  "../../boathill/index.html",
+    "Golden Silk",    "../pics/poem_golden2a.gif");
+
+  navBarMenus[iMenu++] = new Array("Resume", "../pages/Resume.htm");
+
+</script>
+
+</HEAD>
+
+<BODY bgcolor=#FFE4E1 text="#404040" link="#0000AA" alink="#D50000" vlink="#008080" onLoad="navBarInit()">
+
+
+
+<FONT FACE="Arial, Arial Norrow, Times New Roman" SIZE=2>
+<BGSOUND SRC="../midi/meninblack.mid" VOLUME=10000 LOOP=1>
+
+<script type="text/javascript">  //Corner Logo Display
+
+ if (document.images) var staticlogo=new Image(82,286)
+ staticlogo.src="../media/higrace.gif"
+ var logolink="mailto:grace_zhou@hotmail.com?subject=Hi, Grace!"
+ var alttext="Hi, Grace!"
+ var fadeintoview=1
+ var visibleduration=60
+
+ function regenerate() {
+  window.location.reload()
+ }
+ function regenerate2() {
+  if (document.layers)
+  setTimeout("window.onresize=regenerate",400)
+ }
+
+ var fadeset=''
+
+ if (fadeintoview) fadeset="filter:alpha(opacity=0)"
+
+ if (document.all) document.write('<span id="logo" style="'+fadeset+';position:absolute;top:100;width:'+staticlogo.width+';height:'+staticlogo.height+'"></span>')
+
+ function bringintoview() {
+  if (logo.filters.alpha.opacity<=95)
+   logo.filters.alpha.opacity+=5
+  else {
+   clearInterval(viewit)
+   if (visibleduration!=0) setTimeout("logo.style.visibility='hidden'",visibleduration*1000)
+  }
+ }
+
+ function createlogo() {
+  staticimage=new Layer(100)
+  staticimage.left=-300
+  staticimage.top=120
+  staticimage.document.write('<a href="'+logolink+'"><img src="'+staticlogo.src+'" border=0 alt="'+alttext+'"></a>')
+  staticimage.document.close()
+  staticimage.visibility="show"
+  regenerate2()
+  staticitns()
+ }
+
+// if (document.layers) window.onload="createlogo;navBarInit();"
+ if (document.layers) createlogo();
+
+ if (document.all) {
+  w=document.body.clientWidth-logo.style.pixelWidth-5
+  h=document.body.clientHeight-logo.style.pixelHeight-30
+  logo.style.left=w
+  logo.style.top=h
+ }
+
+ function logoit() {
+  var w2=document.body.scrollLeft+w
+  var h2=document.body.scrollTop+h
+  logo.style.left=w2
+  logo.style.top=h2
+ }
+ function logoit2() {
+  staticimage.left=pageXOffset+window.innerWidth-staticimage.document.width-15
+  staticimage.top=pageYOffset+window.innerHeight-staticimage.document.height
+ }
+
+ function insertimage() {
+  logo.innerHTML='<a href="'+logolink+'"><img src="'+staticlogo.src+'" border=0 alt="'+alttext+'"></a>'
+  if (fadeintoview)
+   viewit=setInterval("bringintoview()",100)
+  else {
+   if (visibleduration!=0)
+   setTimeout("logo.style.visibility='hidden'",visibleduration*1000)
+  }
+ }
+
+ if (document.all) {
+  window.onscroll=logoit
+  window.onresize=new Function("window.location.reload()")
+//  window.onload=insertimage
+  insertimage();
+ }
+
+ function staticitns() {
+  setInterval("logoit2()",90)
+  if (visibleduration!=0)
+   setTimeout("staticimage.visibility='hide'",visibleduration*1000)
+ }
+</script>
+
+
+<DIV ID="topdeck" CLASS="popper">&#160;</DIV>
+<script type="text/javascript">  //Popup information box scripts
+
+ var nav = (document.layers); 
+ var iex = (document.all);
+ var skn = (nav) ? document.topdeck : topdeck.style;
+
+ if (nav) document.captureEvents(Event.MOUSEMOVE);
+ document.onmousemove = get_mouse;
+
+ function pop(cap,msg,bak) {
+
+  var content ="<TABLE WIDTH=150 BORDER=0 cellpadding=2 cellspacing=0 BGCOLOR=#000000><TR><TD><TABLE WIDTH=100% BORDER=0 cellpadding=0 cellspacing=0><TR><TD><CENTER><FONT COLOR=#FFFFFF SIZE=2 style='font-size:10pt'><B>"+cap+"</B></FONT></CENTER></TD></TR></TABLE><TABLE WIDTH=100% BORDER=0 cellpadding=2 cellspacing=0 BGCOLOR="+bak+"><TR><TD><FONT COLOR=#000000 SIZE=2 style='font-size:10pt'><CENTER>"+msg+"</CENTER></FONT></TD></TR></TABLE></TD></TR></TABLE>";
+
+  if (nav) { 
+  skn.document.write(content); 
+  skn.document.close();
+  skn.visibility = "visible";
+  }
+  else if (iex) {
+  document.all("topdeck").innerHTML = content;
+  skn.visibility = "visible";  
+  }
+ }
+
+ function get_mouse(e) {
+  var x = (nav) ? e.pageX : event.x+document.body.scrollLeft; 
+  var y = (nav) ? e.pageY : event.y+document.body.scrollTop;
+  skn.left = x + 35;
+  skn.top  = y - 20;
+ }
+
+ function kill() { skn.visibility = "hidden"; }
+
+</script>
+
+<center>
+
+<table border=0 cellpadding=0 cellspacing=1 bgcolor=#FFFFFF>
+
+ <tr>
+
+  <td width=160 align="center">
+   <table height=100% border=0 cellpadding=0 cellspacing=0>
+    <tr>
+     <td width=20  align="left" valign="top BGCOLOR=#CCCCFF"></td>
+     <td width=140 align="left" valign="top BGCOLOR=#CCCCFF">
+      <B></B><br><hr width=90%>
+      <FONT SIZE=2 style="COLOR:#666666;FONT-FAMILY:'Times New Roman';FONT-SIZE:10pt">
+      <a href="../index.html" 
+  OnMouseOver="pop('Back to Home','to view my first page picture on this site','#FFF5EE')"; OnMouseOut="kill()">Back Home</a> <br>
+      <a href="../pages/Pictures.htm" 
+  OnMouseOver="pop('Grace Photo Album','<i>A Fashion Story </i><br> Over hundred pictures updated to view!','#FFB0B0')"; OnMouseOut="kill()">Pictures</a><br>
+  &#160; &#8226; &#160; <a href="../pages/palace.htm" 
+  OnMouseOver="pop('The Palace of China','<i>Seasons in Beijing</i><br> Visiting the Summer Palace and Friendship Hotel (1997-1998)','#00A040')"; OnMouseOut="kill()">The Palace</a> <br>
+  &#160; &#8226; &#160; <a href="../pages/qingdao.htm" 
+  OnMouseOver="pop('Qingdao and Dalian','<i>Beautiful Cities <br> in East Coast China </i><br> Holiday Shangri-La','#7FFFD0')"; OnMouseOut="kill()">Qingdao-Dalian</a> <br>
+  &#160; &#8226; &#160; <a href="../pages/hainan.htm" 
+  OnMouseOver="pop('Hainan Island','<i>Ness South Skyline</i><br> Sea Sky Blue','#00FFFF')"; OnMouseOut="kill()">Hainan</a> <br>
+  &#160; &#8226; &#160; <a href="../pages/tailand.htm" 
+  OnMouseOver="pop('Tour Tailand','<i>Temple Fragrance</i><br>Color to Buddha World','#9932CC')"; OnMouseOut="kill()">Tailand</a> <br>
+  &#160; &#8226; &#160; <a href="../pages/states.htm" 
+  OnMouseOver="pop('In the United States','<i>Living West Coast</i><br>First Feeling America','#F4A460')"; OnMouseOut="kill()">In the States</a> <br>
+  &#160; &#8226; &#160; <a href="../pages/studio.htm" 
+  OnMouseOver="pop('The Studio Art','<i>A Fresh Design</i><br>Summer 1998 Beijing','#00B0F0')"; OnMouseOut="kill()">The Studio</a> <br>
+  &#160; &#8226; &#160; <a href="../pages/wedding.htm" 
+  OnMouseOver="pop('Wedding Album','<i>Love Story</i><br>Fall 1997 Beijing','#FF0000')"; OnMouseOut="kill()">My Wedding</a> <br>
+  &#160; &#8226; &#160; <a href="../pages/others.htm" 
+  OnMouseOver="pop('Other Pictures','<i>Spring Flowers<br>South the River</i><br>more stories to be continued...','#F0F000')"; OnMouseOut="kill()">Others</a> <br>
+      <a href="../pages/Favorites.htm" 
+  OnMouseOver="pop('My Favorites','Including Music, Family Cookbook, Fashion, Internet Computer, Entertainment, Seasons and Holidays','#DDA0DD')"; OnMouseOut="kill()">My Favorites</a> <br>
+  &#160; &#8226; &#160; Music, movies <br>
+  &#160; &#160; &#160; cookbook, etc... <br>
+      <a href="../pages/Family.htm" 
+  OnMouseOver="pop('Family and Friends','to view the pictures of my family, we the couple, friends, and another me','#EEE8AA')"; OnMouseOut="kill()">Family & Friends</a> <br>
+  &#160; &#8226; &#160; <a href="../pages/another.htm" 
+  OnMouseOver="pop('Another Me','Back to the childhood and girlhood','#D8BFD8')"; OnMouseOut="kill()">Another Me</a> <br>
+  &#160; &#8226; &#160; <a href="../pages/couples.htm" 
+  OnMouseOver="pop('We, The Couple','Branches join together, Lovebirds wing to wing','#FFC0CB')"; OnMouseOut="kill()">As A Couple</a> <br>
+  &#160; &#8226; &#160; <a href="../pages/friends.htm" 
+  OnMouseOver="pop('The Friends','friends everywhere, happy all the where','#FFDA89')"; OnMouseOut="kill()">The Friends</a> <br>
+  &#160; &#8226; &#160; <a href="../pages/myfamily.htm" 
+  OnMouseOver="pop('My Family','my parents, my younger brother and sister','#9ACD32')"; OnMouseOut="kill()">My Family</a> <br>
+  &#160; &#8226; &#160; <a href="../pages/newhome.htm" 
+  OnMouseOver="pop('New Home','Dream of American, northwest settled down','#8FBC8F')"; OnMouseOut="kill()">New Home!</a> <br>
+      <a href="../pages/Books.htm" 
+  OnMouseOver="pop('Books, Bookshelf','to share the reading with you on the internet...','#E6E6FA')"; OnMouseOut="kill()">Books</a> <br>
+   &#160; &#8226; &#160; Digest, fictions, <br>
+  &#160; &#160; &#160; scenes, jokes, <br>
+  &#160; &#160; &#160; lyrics, etc... <br>
+      <a href="../pages/Poems.htm" 
+  OnMouseOver="pop('Poems Dedication','the poems I love, the love my poet','#98FB98')"; OnMouseOut="kill()">Poems</a> <br>
+      <a href="../pages/Resume.htm" OnMouseOver="pop('My Resume','Looking for a job in the United States','#F5FFFA')"; OnMouseOut="kill()">Resume</a> <br>
+      Links <br><br>
+     </td>
+    </tr>
+    <tr>
+     <td width=20  align="left" valign="top BGCOLOR=#CCCCFF"></td>
+     <td width=140 align="left" valign="top BGCOLOR=#CCCCFF">
+      <FONT COLOR=#A9A9A9 FACE="Times New Roman" SIZE=2 style='font-size:10pt'>
+      <a href="mailto:jason_zhu@usa.net?subject=Comments about Links Topic">
+      <img src="../media/e.gif" border=0 alt="mail to webmaster about this topic or page..."><br>
+      Your Comments</a><br><br>
+     </td>
+    </tr>
+   </table>
+  </td>
+
+<!--  <td width=1 bgcolor=#FFFFFF></td>
+
+  <td width=240 align="center" bgcolor=#F0F0F0>
+
+  <FONT FACE="Arial, Arial Norrow, Times New Roman" COLOR=#BC8F8F SIZE=2 style="font-size:10pt">
+
+  <br>
+  <img src="../media/starBlue.gif">&#160;<img src="../media/starBlue.gif">&#160;<img src="../media/starBlue.gif">&#160;<img src="../media/starBlue.gif">&#160;<img src="../media/starBlue.gif">&#160;<img src="../media/starBlue.gif">
+  <br>
+
+  <FONT COLOR=#C71585 SIZE=2 style="font-size:10pt"><B>FRIENDSHIP LINKS</B></FONT><BR>
+  <a href="http://www.cadvision.com/keky/baby" 
+  OnMouseOver="pop('new babygirl born!','','')"; OnMouseOut="kill()">Fiona's Page</a> |
+  <a href="../../all4/index.html" 
+  OnMouseOver="pop('to visit my sister homepage','','')"; OnMouseOut="kill()">zhouyao</a><br>
+  <a href="http://home.att.net/~svinis" 
+  OnMouseOver="pop('to visit Svinis family','','')"; OnMouseOut="kill()">Mike and Donna</a> | 
+  <a href="../../boathill/index.html"
+  OnMouseOver="pop('<img src=../media/tagPoems.gif>','','')"; OnMouseOut="kill()">boathill Poems</a> <br>
+  <a href="http://www.friendsofjane.com/" 
+  OnMouseOver="pop('My most favorite star','','')"; OnMouseOut="kill()">Jane Seymour</a> |
+  <a href="http://www.qingyun.com/"
+  OnMouseOver="pop('QingYun','','')"; OnMouseOut="kill()">QingYun</a> |
+  <br>
+
+  <br>
+  <img src="../media/starPurple.gif">&#160;<img src="../media/starPurple.gif">&#160;<img src="../media/starPurple.gif">&#160;<img src="../media/starPurple.gif">&#160;<img src="../media/starPurple.gif">&#160;<img src="../media/starPurple.gif">
+  <br>
+
+
+  <FONT COLOR=#FF4500 SIZE=2 style="font-size:10pt"><B>LIVING IN THE STATES</B></FONT><BR>
+  <a href="http://investor.msn.com/">msn Investor</a> |
+  <a href="http://www.morningstar.net/">Morningstar</a><br>
+  <a href="http://www.bankrate.com/">Bankrate</a> |
+  <a href="http://www.smartmoney.com/">Smartmoney</a> |
+  <a href="http://www.fidelity.com/">Fedility</a><br>
+  <a href="http://www.homefair.com/">Homefair</a> |
+  <a href="http://verticals.yahoo.com/cities/">cities</a> |
+  <a href="http://www.monster.com/">Monster</a> |
+  <a href="http://www.jobreviews.com/">jobs</a> |
+  <a href="http://www.salary.com/">salary</a> <br>
+  <a href="http://www.apartments.com/">Apts</a> |
+  <a href="http://www.realtor.com/">Realtor</a> |
+  <a href="http://www.move.com/">Move</a> |
+  <a href="http://www.weather.com/">Weather</a> |
+  <a href="http://www.trip.com">trip</a><br>
+  <a href="http://www.mapquest.com/">MapQuest</a> | 
+  <a href="http://maps.yahoo.com/">maps</a> |
+  <a href="http://www.expedia.com/">Expedia</a> <br>
+  <a href="http://www.kbb.com/">Kelly's Blue Book</a> | 
+  <a href="http://www.edmunds.com/">Car Evaluation</a><br>
+  <a href="http://carpoint.msn.com/">carpoint</a> |
+  <a href="http://www.nctd.com/index1.html">nctd</a> |
+  <a href="http://www.womanmotorist.com/">womanmotorist</a> <br>
+  <a href="http://www.dealtime.com/">Dealtime</a> |
+  <a href="http://www.consumerreview.com/">Reviews</a> | 
+  <a href="http://www.epinions.com/">Epinions</a> | 
+  <a href="http://www.deja.com/">Deja</a><br>
+  <a href="http://www.amazon.com/">amazon</a> |
+  <a href="http://www.fatbrain.com/">fatbrain</a> |
+  <a href="http://www.shopper.com/">shopper</a><br>
+  <a href="http://www.freewell.com/">Freewell</a> |
+  <a href="http://www.uswestdex.com/">USWest</a> |
+  <a href="http://www.zip2.com/">Zip2</a> |
+  <a href="http://sidewalk.citysearch.com/">Sidewalk</a> <br>
+  <a href="http://www.fcc.gov/cib/">FCC/CIB</a> | 
+  <a href="http://www.wutc.wa.gov/">WUTC</a> |
+  <a href="http://www.bbb.org/">BBB</a> 
+  <a href="http://www.bbbonline.org/">Online</a><br>
+
+  <br>
+  <img src="../media/starYellow.gif">&#160;<img src="../media/starYellow.gif">&#160;<img src="../media/starYellow.gif">&#160;<img src="../media/starYellow.gif">&#160;<img src="../media/starYellow.gif">&#160;<img src="../media/starYellow.gif">
+  <br>
+
+  <FONT COLOR=#228B22 SIZE=2 style="font-size:10pt"><B>CHINESE READER</B></FONT><BR>
+  <a href="http://www.sina.com">Sina</a> |
+  <a href="http://www.163.com">163</a> |
+  <a href="http://www.yifan.net">Yifan</a> |
+  <a href="http://www.creaders.net">Creaders</a> |
+  <a href="http://www.sohu.com">Sohu</a> <br>
+  <a href="http://www.tonghua.com.cn/bookbar/">bookbar</a> |
+  <a href="http://my.szptt.net.cn/bookroad/">bookroad</a> |
+  <a href="http://book.ok8.net/">chinaLib</a> <br>
+  <a href="http://www.sjbl.com/">World Vision</a> |
+  <a href="http://www.globe.xinhua.org/">Globe</a> |
+  <a href="http://www.yinsha.com">YinSha</a> |
+  <a href="http://www.youzi.com/">Youzi</a> <br>
+  <a href="http://www.cctv.com/">CCTV</a> | 
+  <a href="http://www.phoenixtv.com/">PhoenixTV</a> |
+  <a href="http://www.usctv.com/">USCTV</a> |
+  <a href="http://www.kp.net.cn/">kp.net</a> <br>
+  <a href="http://www.chinamp3.net/gb/">ChinaMP3</a> |
+  <a href="http://music.online.cq.cn/">MusicOnline</a> |
+  <a href="http://www.269.net/music/">269</a> |
+  <a href="http://member.netease.com/~fengt/tlc/">TianLai</a> <br>
+  <a href="http://www.xys.org/">NewTreads</a> |
+  <a href="http://www.chinagee.com">Chinagee</a> |
+  <a href="http://www.chinese-e.com">Chinese-e</a> <br>
+  <a href="http://www.cnd.org/">CND</a> |
+  <a href="http://www.huabao.net/">huabao</a> |
+  <a href="http://www.ssreader.com/">ssreader</a> |
+  <a href="http://www.is4u.net/qa/indexgb.shtml">Is4u</a> <br>
+
+  <br>
+  <img src="../media/starBrown.gif">&#160;<img src="../media/starBrown.gif">&#160;<img src="../media/starBrown.gif">&#160;<img src="../media/starBrown.gif">&#160;<img src="../media/starBrown.gif">&#160;<img src="../media/starBrown.gif">
+  <br>
+
+
+  </td>
+
+<!--  <td width=1 bgcolor=#FFFFFF></td>
+
+  <td width=240 align="center" bgcolor=#FFFAF0><center>
+
+  <FONT FACE="Arial, Arial Norrow, Times New Roman" COLOR=#BC8F8F SIZE=2 style="font-size:10pt"><br>
+
+  <img src="../media/starOrange.gif">&#160;<img src="../media/starOrange.gif">&#160;<img src="../media/starOrange.gif">&#160;<img src="../media/starOrange.gif">&#160;<img src="../media/starOrange.gif">&#160;<img src="../media/starOrange.gif">
+  <br>
+
+  <FONT COLOR=#4B0082 SIZE=2 style="font-size:10pt"><B>SEARCH ENGINES</B></FONT><BR>
+<table border=0 cellpadding=0 cellspacing=0>
+ <tr><td width=110 align="right">
+  <font face="Arial" color=#BC8F8F size=2 style="font-size:10pt">
+  <a href="http://www.4anything.com">4anything.com</a><br>
+  <a href="http://www.ask.com">Ask</a> |
+  <a href="http://www.about.com">About</a><br>
+  <a href="http://www.altavista.com">AltaVista</a><br>
+  <a href="http://www.directhit.com">DirectHit</a><br>
+  <a href="http://www.dogpile.com">Dogpile</a><br>
+  <a href="http://www.excite.com">Excite.com</a><br>
+  <a href="http://www.go.com">Go</a> |
+  <a href="http://www.goto.com">Goto</a><br>
+  <a href="http://www.google.com">Google</a><br>
+  <a href="http://www.ignifuge.com/?id=HGA157"><img src="../media/star_ignifuge.gif" border=0 width=16 height=12>IGNIFUGE</a><img src="../media/new.gif" height=12><br>
+     </td><td width=10>&#160;
+     </td><td width=120 align="left">
+        <font face="Arial" color=#BC8F8F size=2 style="font-size:10pt">
+  <a href="http://www.lycos.com">Lycos</a> | 
+  <a href="http://hotbot.lycos.com">Hotbot</a><br>
+  <a href="http://infoseek.go.com">Infoseek</a><br>
+  <a href="http://www.looksmart.com">LookSmart</a><br>
+  <a href="http://home.snap.com">Snap.com</a><br>
+  <a href="http://www.stpt.com">Starting-Point</a><br>
+  <a href="http://www.web-search.com">WebSearch</a><br>
+  <a href="http://www.yahoo.com">Yahoo!</a><br>
+  <a href="http://www.notess.com/search">Engines Review</a><br>
+  <a href="http://search.aol.com">aol</a> |
+  <a href="http://www.msn.com">msn</a> | ...<br>
+  </td></tr></table>
+
+  <br>
+  <img src="../media/starGray.gif">&#160;<img src="../media/starGray.gif">&#160;<img src="../media/starGray.gif">&#160;<img src="../media/starGray.gif">&#160;<img src="../media/starGray.gif">&#160;<img src="../media/starGray.gif">
+  <br>
+
+
+  <FONT COLOR=#9932CC SIZE=2 style="font-size:10pt"><B>INTERNET REFERENCE</B></FONT><BR>
+<table border=0 cellpadding=0 cellspacing=0>
+ <tr><td width=110 align="right"><font face="Arial" size=2 style="font-size:10pt">
+  <a href="http://www.acronymfinder.com">Acronym Finder</a><br>
+  <a href="http://www.first-name.com">First-name</a><br>
+  <a href="http://www.dynamicdrive.com/">DynamicDrive</a><br>
+  <a href="http://www.internet4free.net/">Internet4free!</a>
+  <a href="http://aol.pcwebopedia.com/">PCWebopedia</a><br>
+  <a href="http://wdvl.internet.com/">Wdvl</a><br>
+  <a href="http://www.whatis.com">Whatis.com</a><br>
+
+     </td><td width=10>&#160;
+     </td><td width=120 align="left">
+  <font face="Arial" size=2 style="font-size:10pt">
+  <a href="http://bigbook.com">BigBook</a><br>
+  <a href="http://www2.ccim.org/~bible">Bibles Online</a><br>
+  <a href="http://www.thefreesite.com/">FreeSite</a><br>
+  <a href="http://freesoft.org/CIE/">Int'net Encyclopedia</a><br>
+  <a href="http://www.tomshardware.com/">Tom's h/w</a> |
+  <a href="http://www.pcguide.com/">pcguide</a><br>
+  <a href="http://www.tucows.com/">Tucows</a> |
+  <a href="http://www.cnet.com/">CNET</a><br>
+  <a href="http://www.zdwebopedia.com">ZDWebopedia</a><br>
+  </td></tr></table>
+
+  <br>
+  <img src="../media/starBlue.gif">&#160;<img src="../media/starBlue.gif">&#160;<img src="../media/starBlue.gif">&#160;<img src="../media/starBlue.gif">&#160;<img src="../media/starBlue.gif">&#160;<img src="../media/starBlue.gif">
+  <br>
+
+  <FONT COLOR=#DC143C SIZE=2 style="font-size:10pt"><B>ONLINE STUDY</B></FONT><BR>
+  <FONT COLOR=#FAA460 style="font-size:10pt"></FONT>
+  <a href="http://english4us.com">English4us</a> |
+  <a href="http://learn.com/">Learn</a> |
+  <a href="http://bobo.link.cs.cmu.edu/dougb">Rhyming</a><br>
+  <a href="http://www.essay.com/">Essay</a> |
+  <a href="http://www.m-w.com">Webster Online</a> |
+  <a href="http://www.tigernt.com">TigerNT</a> <br>
+  <a href="http://www.ushk.tom.com">tom.com</a> |
+  <a href="http://www.ocrat.com">ocrat.com</a> |
+  <a href="http://www.chinalanguage.com/CCDICT">Chinese Dict</a><br>
+  <a href="http://www.springertech.com/">A+</a> |
+  <a href="http://mcse.meetchinese.com/">MCSE</a> 
+  <a href="http://www.mcseguide.com/">Guide</a> &
+  <a href="http://braindumps.net/">Braindump</a> <br>
+  <a href="http://www.gre.org">GRE</a> |
+  <a href="http://www.toefl.org">TOEFL</a> |
+  <a href="http://esl.to/">ESL</a> 
+  <a href="http://www.eslplanet.com/">Planet</a> 
+  <a href="http://www.esl-lab.com/">Lab</a> <br>
+
+  <br>
+  <img src="../media/starOrange.gif">&#160;<img src="../media/starOrange.gif">&#160;<img src="../media/starOrange.gif">&#160;<img src="../media/starOrange.gif">&#160;<img src="../media/starOrange.gif">&#160;<img src="../media/starOrange.gif">
+  <br>
+
+  </td>
+<!--  <td width=100% bgcolor=#FFE4E1></td>
+
+ </tr>
+</table>
+
+<FONT COLOR=#8F8F8F FACE="Times New Roman" SIZE=2 style="font-size:10pt"><br>
+<a href="../index.html">Back Home</a> | 
+<a href="../pages/Pictures.htm">Pictures</a> | 
+<a href="../pages/Favorites.htm">Favorites</a> |
+<a href="../pages/Family.htm">Family & Friends</a> | 
+<a href="../pages/Books.htm">Books</a> |
+<a href="../pages/Poems.htm">Poems</a> |
+<a href="../pages/Resume.htm">Resume</a> | Links <br>
+
+
+</center>
+
+</BODY> 
+</HTML>

@@ -1,0 +1,326 @@
+<html>
+<head><title>My HomePage</title>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Personal Homepage, including topics of Pictures (Palace, Qingdao-Dalian, Hainan, Tailand, the States, Wedding, Studio, etc.), Favorites (Music, surfing internet, Cookbook, Fashion, Movies, Entertainment, Seasons and Holidays), Family and Friends (my family, our couples, friends and another me), Books (internet digest, jokes, fictions, scenes, lyrics, forums, talktime), Poems, Resume and Links.">
+<META NAME="keywords" CONTENT="Grace, Zhou, Lin, Zhoulin, Pictures, Favorites, Family, Friends, Books, Poems, Resume, Links, Wedding, Studio, Beijing, Qingdao, Dalian, Hainan, United States, Scenes, Music, internet digest, jokes, lyrics, DHTML, JavaScript, jpg, gif">
+
+<style>
+ .bodytext {
+  color: black;
+  font-family: 'Times New Roman', Arial Narrow, Arial, Helvetica;
+  font-size: 10pt;
+ }
+ .main { position: absolute; left:0px; top:0px; }
+ .intro {
+  position:absolute;
+  left:0;
+  top:0;
+  layer-background-color:red;
+  background-color:red;
+  border:0.1px solid red
+ }
+ #slidemenubar {
+  position:absolute;
+  left:-160px;
+  width:200px;
+  top:100px;
+  border:1.5px solid green;
+  background-color:bffd97;
+  layer-background-color:lightyellow;
+  font:bold 12px Verdana;
+  line-height:20px;
+  a { text-decoration:none; }
+ }
+ #navbar  { font:bold 12px Arial; }
+ a:hover{color:00BFFF; }
+</style>
+
+</head>
+
+<body onFocus="bg_live()" bgcolor="#FFF0F5" text="#404040" link="#0000AA" alink="#D50000" vlink="#0000AA">
+<BGSOUND SRC="./midi/becauseyoulovedme.mid" VOLUME=1000 LOOP=1>
+
+<script type="text/javascript">
+ // Live Background
+ bg_imax = 0;
+ bg_text = new Array();
+ intervals = 10000;
+
+ bg_text[bg_imax++] = new Array ("./media/bgfabric_pink.gif");
+ bg_text[bg_imax++] = new Array ("./media/bgsealstone.gif");
+ bg_text[bg_imax++] = new Array ("./media/seals_fu.gif");
+ bg_text[bg_imax++] = new Array ("./media/bgswirl.gif");
+ bg_text[bg_imax++] = new Array ("./media/bgsnows.gif");
+ bg_text[bg_imax++] = new Array ("./media/bgtext.jpg");
+
+ function bg_live() {
+  i = Math.round(Math.random()*(bg_imax-1))
+  image = bg_text[i]
+  if (document.layers) {
+   document.layers.background.src = image;
+  } else {
+   document.body.style.backgroundImage = "url("+image+")";
+  }
+  setTimeout("bg_live()", intervals);
+ }
+
+ window.onLoad=bg_live();
+
+</script>
+
+<script type="text/javascript">
+  var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+  var ie4up = (document.all) ? 1 : 0;
+ function GoView() {
+  if (ns4up) window.location.href='#main'
+  else window.location.href='#main'
+ }
+</script>
+
+<div id="i1" class="intro"></div><div id="i2" class="intro"></div>
+<div id="i3" class="intro"></div><div id="i4" class="intro"></div>
+<div id="i5" class="intro"></div><div id="i6" class="intro"></div>
+<div id="i7" class="intro"></div><div id="i8" class="intro"></div>
+
+<script type="text/javascript">
+
+ var speed=20
+ var temp=new Array()
+ var temp2=new Array()
+
+ if (document.layers) {
+  for (i=1;i<=8;i++) {
+   temp[i]=eval("document.i"+i+".clip")
+   temp2[i]=eval("document.i"+i)
+   temp[i].width=window.innerWidth
+   temp[i].height=window.innerHeight/8
+   temp2[i].top=(i-1)*temp[i].height
+  }
+} else {
+  var clipright=document.body.clientWidth,clipleft=0
+  for (i=1;i<=8;i++) {
+   temp[i]=eval("document.all.i"+i+".style")
+   temp[i].width=document.body.clientWidth
+   temp[i].height=document.body.offsetHeight/8
+   temp[i].top=(i-1)*parseInt(temp[i].height)
+  }
+ }
+
+ function openit() {
+  window.scrollTo(0,0)
+  if (document.layers) {
+   for (i=1;i<=8;i=i+2) temp[i].right-=speed
+   for (i=2;i<=8;i=i+2) temp[i].left+=speed
+   if (temp[2].left>window.innerWidth) clearInterval(stopit)
+  } else {
+   clipright-=speed
+   for (i=1;i<=8;i=i+2) temp[i].clip="rect(0 "+clipright+" auto 0)"
+   clipleft+=speed
+   for (i=2;i<=8;i=i+2) temp[i].clip="rect(0 auto auto "+clipleft+")"
+   if (clipright<=0) clearInterval(stopit)
+  }
+ }
+
+ function gogo() { stopit=setInterval("openit()",100) }
+
+ gogo()
+
+</script>
+
+<script type="text/javascript">
+  // Sliding Menu Bar
+  if (document.layers) {
+    document.write(`<layer id="slidemenubar" onMouseover="pull()" onMouseout="draw()">`);
+  } else {
+    document.write(`<div id="slidemenubar" style="left:-160;" onMouseover="pull()" onMouseout="draw()">`);
+  }
+
+  var menuitems=new Array();
+  var menulinks=new Array();
+  var HTMLstr = "";
+
+  // extend or shorten this list
+  menuitems[0] = "Home"
+  menuitems[1] = "Pictures"
+  menuitems[2] = "Favorites"
+  menuitems[3] = "Family & Friends"
+  menuitems[4] = "Bookshelf"
+  menuitems[5] = "Poems Page"
+  menuitems[6] = "Resume"
+  menuitems[7] = "Links"
+
+  // the links pertaining to the above text.
+  menulinks[0] = "./index.html"
+  menulinks[1] = "./pages/Pictures.htm"
+  menulinks[2] = "./pages/Favorites.htm"
+  menulinks[3] = "./pages/Family.htm"
+  menulinks[4] = "./pages/Books.htm"
+  menulinks[5] = "./pages/Poems.htm"
+  menulinks[6] = "./pages/Resume.htm"
+  menulinks[7] = "./pages/Links.htm"
+
+  HTMLstr = `
+    <table id='navbar' cellpadding=0 cellspacing=0 border=0>
+    <tr>
+    <td width=25 align="center" valign="top"><br><img src='./media/folder.gif'></td>
+    <td width=135 valign="top"><br><font face='Arial Narrow, Times New Roman' color=#C71585 size=2 style='font-size:10pt'>What's New?</font><br>
+    &#8226; <a href='./pages/newhome.htm' style='text-decoration:none;'>New Home</a> <br>
+    &#8226; <a href='./files/Essay.htm' style='text-decoration:none;'>Easy Essay</a> !<br>
+    &#8226; <a href='./pages/states3.htm' style='text-decoration:none;'>In the States (3)</a><br>
+    &#8226; <a href='./files/tulips.htm' style='text-decoration:none;'>Tulips Festival</a><br>
+    &#8226; <a href='./files/calendar.htm' style='text-decoration:none;'>Calendar for Holidays</a><br>
+    &#8226; <a href='./pages/Links.htm' style='text-decoration:none;'>Favorite Links</a><br>
+    </td>
+    <td width=40 rowspan=2 align="right" valign="middle bgcolor=#FFFFFF">
+    <a href='./pages/Links.htm'><img src='./media/shortcuts.gif' width=40 border=0 alt='View sitemap & links'></a>
+    </td>
+    </tr><tr>
+    <td width=30 align="center" valign="top"><img src='./media/folder.gif'></td>
+    <td width=135 valign="top"><font face='Arial Narrow, Times New Roman' color=#C71585 size=2 style='font-size:10pt'>Hot Links!</font><br>
+    &#8226; <a href='./pages/wedding.htm' style='text-decoration:none;'>Wedding Pictures</a><br>
+    &#8226; <a href='./pages/states.htm' style='text-decoration:none;'>Living in the States</a><br>
+    &#8226; <a href='../Boathill/index.html' style='text-decoration:none;'>Boathill Poems Page</a><br>
+    &#8226; <a href='./pages/friends.htm' style='text-decoration:none;'>Our Friends</a><br>
+    <br>
+  </td>
+  </tr>
+  </table>`;
+
+  /*
+  for (i=0;i<=menuitems.length-1;i++) {
+    HTMLstr += '<a href="'+menulinks[i]+'">' + menuitems[i] + '</a><br>';
+  }
+  */
+  document.writeln(HTMLstr);
+
+  function regenerate() {
+    window.location.reload()
+  }
+
+  function regenerate2() {
+    if (document.layers)
+     setTimeout("window.onresize=regenerate",400)
+  }
+
+  window.onload=regenerate2
+
+  if (document.layers) {
+    document.write('</layers>');
+    themenu=document.layers.slidemenubar
+    rightboundary=150
+    leftboundary=10
+  } else {
+    document.write('</div>')
+    themenu=document.all.slidemenubar.style
+    rightboundary=0
+    leftboundary=-150
+  }
+
+  function pull() {
+    if (window.drawit) clearInterval(drawit)
+    pullit=setInterval("pullengine()",50)
+  }
+
+  function draw() {
+    clearInterval(pullit)
+    drawit=setInterval("drawengine()",50)
+  }
+
+  function pullengine() {
+    if (!document.layers&&themenu.pixelLeft<rightboundary)
+      themenu.pixelLeft+=50
+    else if (document.layers&&themenu.left<rightboundary)
+      themenu.left+=5
+    else if (window.pullit)
+      clearInterval(pullit)
+  }
+
+  function drawengine() {
+    if (!document.layers&&themenu.pixelLeft>leftboundary)
+      themenu.pixelLeft-=5
+    else if(document.layers&&themenu.left>leftboundary)
+      themenu.left-=5
+    else if (window.drawit)
+      clearInterval(drawit)
+  }
+</script>
+
+<center>
+
+<a name="main">
+
+<table align="center" valign="top"><tr>
+ <td valign="top">
+  <img src="./media/couplet2.gif"
+    style="filter:BlendTrans(Duration=5)"
+   OnMouseOver="window.status='Fly in pairs mizzly swallows';return true"
+    width=100 height=450 alt="Fly in pairs mizzly swallows">
+ </td><td width=10> &#160; </td>
+ <td valign="top">
+  <a href="./pages/Pictures.htm"
+   OnMouseOver="window.status='Enter to visit more pictures';return true">
+  <img src="./images/graceInx.jpg" border=0 alt="WELCOME TO GRACE HOMEPAGE!"></a>
+ </td><td width=10> &#160; </td>
+ <td valign="top">
+  <img src="./media/couplet1.gif"
+    style="filter:RevealTrans(Duration=5,Transition=12)"
+   OnMouseOver="window.status='Stand alone with falling flowers';return true"
+    width=100 height=450 alt="Stand alone with falling flowers">
+ </td>
+</tr></table>
+
+
+<table><tr>
+ <td valign="middle"><img src="./media/ball_purple.gif" border=0 width=12 height=12></td>
+ <td valign="middle"><FONT CLASS="bodytext">
+  <a href="./pages/Pictures.htm"
+   OnMouseOver="window.status='Grace Photo Album';return true"
+    OnMouseOut="window.status='';return true">Pictures</a><font color=#FFFFFF>_</font>|
+ </td>
+ <td valign="middle"><img src="./media/ball_green.gif" border=0 width=20 height=20></td>
+ <td valign="middle"><FONT CLASS="bodytext">
+  <a href="./pages/Favorites.htm"
+   OnMouseOver="window.status='Music, Fashion, Computer, Seasons & Holidy, etc.';return true"
+    OnMouseOut="window.status='';return true">Favorites</a><font color=#FFFFFF>_</font>|
+ </td>
+ <td valign="middle"><img src="./media/ball_pink.gif" border=0 width=24 height=24></td>
+ <td valign="middle"><FONT CLASS="bodytext">
+  <a href="./pages/Family.htm"
+   OnMouseOver="window.status='Family and Friends Photo Album';return true"
+    OnMouseOut="window.status='';return true">
+     Family&#160;&&#160;Friends</a><font color=#FFFFFF>_</font>|
+ </td>
+ <td valign="middle"><img src="./media/ball_grey.gif" border=0 width=20 height=20></td>
+ <td valign="middle"><FONT CLASS="bodytext">
+  <a href="./pages/Books.htm"
+   OnMouseOver="window.status='Internet Bookshelf';return true"
+    OnMouseOut="window.status='';return true">Books</a><font color=#FFFFFF>_</font>|
+ </td>
+ <td valign="middle"><img src="./media/ball_jade.gif" border=0 width=12 height=12></td>
+ <td valign="middle"><FONT CLASS="bodytext">
+ <a href="./pages/Poems.htm"
+  OnMouseOver="window.status='Poems Dedication';return true"
+   OnMouseOut="window.status='';return true">Poems</a><font color=#FFFFFF>_</font>|
+ </td>
+ <td valign="middle"><img src="./media/ball_blue.gif" border=0 width=16 height=16></td>
+ <td valign="middle"><FONT CLASS="bodytext">
+  <a href="./pages/Resume.htm"
+   OnMouseOver="window.status='My Resume';return true"
+    OnMouseOut="window.status='';return true">Resume</a><font color=#FFFFFF>_</font>|
+ </td>
+ <td valign="middle"><img src="./media/ball_yellow.gif" border=0 width=16 height=16></td>
+ <td valign="middle"><FONT CLASS="bodytext">
+  <a href="./pages/Links.htm"
+   OnMouseOver="window.status='Other new topics and referred links';return true"
+    OnMouseOut="window.status='';return true">Links</a>
+ </td>
+ <td valign="middle"><img src="./media/ball_red.gif" border=0 width=12 height=12></td>
+</tr></table>
+<br>
+
+</center>
+</font>
+
+</body>
+</html>

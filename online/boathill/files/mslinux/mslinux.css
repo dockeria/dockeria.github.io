@@ -1,0 +1,209 @@
+
+.BodyText {
+	FONT-SIZE:68%;
+	font-family:Verdana
+ }
+.BodyTxtSm {
+	FONT-SIZE:68.75%;
+	font-family:Verdana
+ }
+.finePrint
+	{font-size: 62.5%}
+
+.leftNavSearch {
+	background-color: #0099FF;
+ }
+
+.Header {
+	COLOR: #0099FF;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 17px;
+	FONT-WEIGHT: bold;
+ }
+.OListItem {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 112%;
+	FONT-WEIGHT: bold;
+ }
+.ImgLink {
+	font-family:Verdana
+ }
+.HomeTitle {
+	COLOR:#009CFF;
+	FONT-SIZE:93%;
+	FONT-WEIGHT:bold;
+	LINE-HEIGHT:30px;
+	font-family:Verdana
+}
+
+.LeftNavOff {
+    BACKGROUND-COLOR:white;
+    BORDER-BOTTOM:white solid 2px;
+    BORDER-LEFT:white solid 2px;
+    BORDER-RIGHT:white solid 2px;
+    BORDER-TOP:white solid 2px;
+    COLOR:black;
+    CURSOR:hand;
+	FONT-FAMILY: verdana,arial,helvetica;
+	FONT-SIZE: 68.75%;
+    FONT-WEIGHT:bold;
+    HEIGHT:24px;
+    LETTER-SPACING:.5pt;
+    LINE-HEIGHT:106.25%;
+    PADDING-TOP:1px;
+    TEXT-DECORATION:none;
+    MARGIN:1px;
+    WIDTH:195px
+}
+.LeftNavOn {
+    BACKGROUND-COLOR:white;
+    BORDER-BOTTOM:#99ccff solid 2px;
+    BORDER-LEFT:#003399 solid 2px;
+    BORDER-RIGHT:#99ccff solid 2px;
+    BORDER-TOP:#003399 solid 2px;
+    COLOR:#666666;
+	FONT-FAMILY: verdana,arial,helvetica;
+	FONT-SIZE: 68.75%;
+    FONT-WEIGHT:bold;
+    HEIGHT:24px;
+    LETTER-SPACING:.5pt;
+    LINE-HEIGHT:106.25%;
+    PADDING-TOP:1px;
+    TEXT-DECORATION:none;
+    MARGIN:1px;
+    WIDTH:195px
+}
+.LeftNavChosen {
+    BACKGROUND-COLOR:white;
+    BORDER-BOTTOM:#99ccff solid 2px;
+    BORDER-LEFT:#003399 solid 2px;
+    BORDER-RIGHT:#99ccff solid 2px;
+    BORDER-TOP:#003399 solid 2px;
+    COLOR:#000000;
+	FONT-FAMILY: verdana,arial,helvetica;
+	FONT-SIZE: 68.75%;
+    FONT-WEIGHT:bold;
+    HEIGHT:24px;
+    LETTER-SPACING:.5pt;
+    LINE-HEIGHT:106.25%;
+    PADDING-TOP:1px;
+    TEXT-DECORATION:none;
+    MARGIN:1px;
+    WIDTH:195px
+ }
+
+
+BODY {
+	FONT-FAMILY:Verdana,Arial,Helvetica
+}
+A:hover {
+    COLOR:#00319c;
+    TEXT-DECORATION:underline
+}
+A {
+    COLOR:#00319c;
+    TEXT-DECORATION:none
+}
+A:hover.leftNavLink {
+    TEXT-DECORATION:underline
+}
+
+
+// redefined below...
+
+.leftNavLink {
+	COLOR:black
+ }
+.RightNavHead {
+	background-color:#0099FF;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 7.5pt;
+	FONT-WEIGHT:bold;
+ }
+.RightNav1Item {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 7.5pt;
+	FONT-WEIGHT:bold;
+ }
+.RightNav2Item {
+	background-color:#99CCFF;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 7.5pt;
+	FONT-WEIGHT:bold;
+ }
+.IEAKHomeHeader {
+	FONT-FAMILY: verdana;
+	FONT-SIZE: 14px;
+	FONT-WEIGHT: bold;
+	color:#FFFFFF;
+ }
+
+.leftNavLink {
+    COLOR: black
+ }
+.leftNavLinkChosen {
+    COLOR: #FF0000
+ }
+.LeftNavUp {
+    BACKGROUND-COLOR: #0099FF;
+    BORDER-BOTTOM:white solid 0px;
+    BORDER-LEFT:white solid 0px;
+    BORDER-RIGHT:white solid 0px;
+    BORDER-TOP:white solid 0px;
+    COLOR: #FF0000;
+    CURSOR: hand;
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    HEIGHT: 20px;
+    LETTER-SPACING: -0.5pt;
+    TEXT-DECORATION: none;
+    WIDTH: 194px
+ }
+.LeftNavOn {
+    BORDER-BOTTOM:white solid 0px;
+    BORDER-LEFT:white solid 0px;
+    BORDER-RIGHT:white solid 0px;
+    BORDER-TOP:white solid 0px;
+    BACKGROUND-COLOR: #0099FF;
+    COLOR: #FF0000;
+    CURSOR: default;
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    HEIGHT: 20px;
+    LETTER-SPACING: -0.5pt;
+    TEXT-DECORATION: none;
+    WIDTH: 194px
+ }
+.LeftNavOff {
+    BORDER-BOTTOM:white solid 0px;
+    BORDER-LEFT:white solid 0px;
+    BORDER-RIGHT:white solid 0px;
+    BORDER-TOP:white solid 0px;
+    BACKGROUND-COLOR: #0099FF;
+    COLOR: black;
+    CURSOR: hand;
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    HEIGHT: 20px;
+    LETTER-SPACING: -0.5pt;
+    TEXT-DECORATION: none;
+    WIDTH: 194px
+ }
+.LeftNavChosen {
+    BORDER-BOTTOM:white solid 0px;
+    BORDER-LEFT:white solid 0px;
+    BORDER-RIGHT:white solid 0px;
+    BORDER-TOP:white solid 0px;
+    BACKGROUND-COLOR: #0099FF;
+    COLOR: #FF0000;
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    HEIGHT: 20px;
+    LETTER-SPACING: -0.5pt;
+    TEXT-DECORATION: none;
+    WIDTH: 194px
+}

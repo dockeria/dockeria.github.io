@@ -1,0 +1,108 @@
+<html>
+<head><title>Lexus Gallery</title>
+
+<style>
+ body {
+  background: #FDF5E6 url('../pics/lexus_logo.gif');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: black;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+ }
+</style>
+
+<script type="text/javascript">  // Blending Image Slide Show Script- 
+
+  function reapply()
+  {
+   setTimeout("slideit()",2000)
+   return true
+  }
+  window.onerror=reapply
+
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">    // freewin
+
+ function freewin(htmlfile,width,height) {
+
+  var handout_int = 10000;
+  var height_offset = 26;
+  var width_offset = 4;
+
+  if (width==0 || height==0) {
+   poplink = window.open(htmlfile, "winlink", "fullscreen=0, scrollbars=0, toolbar=0, menubar=0, location=0, directories=0, channelmode=0, resizable=0, status=0");
+   poplink.focus();
+  }
+  else {
+   handout = window.open(htmlfile, "winhand"+width+"", "top=10, left=10, width="+width+", height="+height+", fullscreen=0, scrollbars=0, toolbar=0, menubar=0, location=0, directories=0, channelmode=0, resizable=0, status=0");
+   if (!document.all) {
+    height_offset = handout.outerHeight - handout.innerHeight;
+    width_offset = handout.outerWidth - handout.innerWidth;
+   }
+   handout.resizeTo(width+width_offset,height+height_offset);
+   handout.focus();
+  }
+ }
+
+</SCRIPT>
+
+</head>
+
+<body onLoad="self.resizeTo(680,520);
+  javascript:freewin('../files/nissan.htm',360,180);
+  javascript:freewin('../files/acura.htm',400,300);">
+
+<table width=100% height=100% cellpadding="0" cellspacing=0 BORDER=0>
+ <tr>
+  <td align="CENTER" valign="MIDDLE">
+   <div><img src="../pics/lexus_logoindex.gif"></div>
+
+<script>  // change number_of_images below 
+  var number_of_images=6
+    // change speed below (in seconds)
+  var speed=3
+  var step=1
+  var whichimage=1
+  var str="";
+
+  var image1=new Image()  ;  image1.src="../pics/lexus_es.jpg";
+  var image2=new Image()  ;  image2.src="../pics/lexus_gs.jpg";
+  var image3=new Image()  ;  image3.src="../pics/lexus_is.jpg";
+  var image4=new Image()  ;  image4.src="../pics/lexus_ls430.jpg";
+  var image5=new Image()  ;  image5.src="../pics/lexus_lx.jpg";
+  var image6=new Image()  ;  image6.src="../pics/lexus_rx.jpg";
+
+  function slideit()
+  {
+   if (!document.images) return
+   if (document.all) slide.filters.blendTrans.apply()
+   document.images.slide.src=eval("image"+step+".src")
+   if (document.all) slide.filters.blendTrans.play()
+   whichimage=step
+   if (step<number_of_images) step++
+   else step=1
+   if (document.all) setTimeout("slideit()",speed*1000+3000)
+   else setTimeout("slideit()",speed*1000)
+  }
+  
+  str+="<a href='http://www.lexus.com/'>"
+  str+="<img id='reflect' src=+image1.src+ name='slide' width=620 height=232 align="center" border=0 alt='Lexus Gallery' style='filter:blendTrans(duration=3)'>"
+  str+="</a><br>"
+
+  document.writeln(str);
+
+  slideit();
+
+</script>
+
+  </td>
+ </tr>
+</table>
+
+
+</body>
+</html>
+
+

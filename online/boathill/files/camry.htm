@@ -1,0 +1,94 @@
+<html>
+<head><title>Camry Gallery</title>
+
+<script type="text/javascript">  // Blending Image Slide Show Script- 
+
+  function reapply()
+  {
+   setTimeout("slideit()",2000)
+   return true
+  }
+  window.onerror=reapply
+
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+ function freewin(htmlfile,width,height) {
+
+  var handout_int = 10000;
+  var height_offset = 26;
+  var width_offset = 4;
+
+  if (width==0 || height==0) {
+   poplink = window.open(htmlfile, "winlink", "fullscreen=0, scrollbars=1, toolbar=1, menubar=0, location=0, directories=0, channelmode=0, resizable=1, status=1");
+   poplink.focus();
+  }
+  else {
+   handout = window.open(htmlfile, "winhand", "top=10, left=10, width="+width+", height="+height+", fullscreen=0, scrollbars=0, toolbar=0, menubar=0, location=0, directories=0, channelmode=0, resizable=0, status=0");
+   if (!document.all) {
+    height_offset = handout.outerHeight - handout.innerHeight;
+    width_offset = handout.outerWidth - handout.innerWidth;
+   }
+   handout.resizeTo(width+width_offset,height+height_offset);
+   handout.focus();
+  }
+ }
+
+</SCRIPT>
+
+</head>
+
+<body onLoad="self.resizeTo(680,520); javascript:freewin('../files/toyota.htm',360,180)">
+
+<table width=100% height=100% cellpadding="0" cellspacing=0 BORDER=0>
+ <tr>
+  <td align="CENTER" valign="MIDDLE">
+
+<script>  // change number_of_images below 
+  var number_of_images=6
+    // change speed below (in seconds)
+  var speed=3
+  var step=1
+  var whichimage=1
+  var str="";
+
+  var image1=new Image()  ;  image1.src="../pics/toyota_camry_ex1.jpg";
+  var image2=new Image()  ;  image2.src="../pics/toyota_camry_ex2.jpg";
+  var image3=new Image()  ;  image3.src="../pics/toyota_camry_ex3.jpg";
+  var image4=new Image()  ;  image4.src="../pics/toyota_camry_ex4.jpg";
+  var image5=new Image()  ;  image5.src="../pics/toyota_camry_green.jpg";
+  var image6=new Image()  ;  image6.src="../pics/toyota_camry_interior.jpg";
+
+  function slideit()
+  {
+   if (!document.images) return
+   if (document.all) slide.filters.blendTrans.apply()
+   document.images.slide.src=eval("image"+step+".src")
+   if (document.all) slide.filters.blendTrans.play()
+   whichimage=step
+   if (step<number_of_images) step++
+   else step=1
+   if (document.all) setTimeout("slideit()",speed*1000+3000)
+   else setTimeout("slideit()",speed*1000)
+  }
+  
+  str+="<a href='http://www.crown-motors.com/'>"
+  str+="<img id='reflect' src=+image1.src+ name='slide' width=425 height=300 align="center" border=0 alt='Camry Gallery' style='filter:blendTrans(duration=3)'>"
+  str+="</a><br>"
+
+  document.writeln(str);
+
+  slideit();
+
+</script>
+
+  </td>
+ </tr>
+</table>
+
+
+</body>
+</html>
+
+

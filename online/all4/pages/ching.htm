@@ -1,0 +1,175 @@
+<html>
+<head><title>Childhood Ching</title>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="subject" CONTENT="Childhood Ching">
+<META NAME="description" CONTENT="8 Pictures of Childhood Ching"> 
+<META NAME="keywords" CONTENT="Ching, Qing, Zhu, pictures, childhood, javascript, dhtml, html, jpg">
+
+<script type="text/javascript">
+
+ var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+ var ie4up = (document.all) ? 1 : 0;
+
+ function GoView() {
+  if (ns4up) window.location.href='#View'
+ }
+
+ var g_fPlayMode = 0;
+ var g_iimg = 0;
+ var g_imax = 0;
+ var g_ImageTable = new Array();
+ var g_dwTimeOutSec=2
+
+ g_ImageTable[g_imax++] = new Array ("../family/zhuqing1a.jpg","I Am A Soldier");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuqing2a.jpg","Ice-Lolly");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuqing3a.jpg","The Museum");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuqing4a.jpg","The Light Square");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuqing5a.jpg","I Am Here");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuqing6a.jpg","I Got Teeth");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuqing7a.jpg","To Feed the Chicks");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuqing8a.jpg","I Am Reading ...");
+
+ function ChangeImage(fFwd) {
+  if (fFwd) { if (++g_iimg==g_imax) g_iimg=0; }
+  else { if (g_iimg==0) g_iimg=g_imax; g_iimg--; }
+  Update();
+ }
+ function Update() {
+  document.all._pic_Slide.src = g_ImageTable[g_iimg][0];
+  document.all._pic_FileName.innerHTML = g_ImageTable[g_iimg][1];
+//  document.all._pic_Img_X.innerHTML = g_iimg + 1;
+//  document.all._pic_Img_N.innerHTML = g_imax;
+ }
+ function Play() {
+  g_fPlayMode = !g_fPlayMode;
+  if (g_fPlayMode) { btnPrev.disabled = btnNext.disabled = btnView.disabled = true; Next(); }
+  else { btnPrev.disabled = btnNext.disabled = btnView.disabled = false; }
+ }
+ function OnImgLoad() { if (g_fPlayMode) window.setTimeout("Tick()", g_dwTimeOutSec*1000); }
+ function Tick() { if (g_fPlayMode) Next(); }
+ function Prev() { ChangeImage(false); }
+ function Next() { ChangeImage(true); }
+ function main() { Update(); }
+
+ window.onload=Play
+
+</script>
+
+</head>
+
+<body bgcolor=#000000 text=#DCDCDC link=#A0CE00 vlink=#B8860B alink=#6495ED scroll="yes" onLoad="GoView()">
+
+<font face="Arial" color=#CCCCCC size=2>
+
+<a name="main"><center>
+
+ <input type="button" name="btnPrev" value="&lt;&lt; Back Page" onclick="Prev();">
+ <input type="button" name="btnPlay" value="Turn Over | Stop" onclick="Play();" 
+  OnMouseOver="window.status='Turn Over the Album';return true" 
+  OnMouseOut="window.status='';return true">
+ <input type="button" name="btnView" value="Thumbnail" 
+  onClick="window.location.href='#View'" 
+  OnMouseOver="window.status='View Thumbnail';return true" 
+  OnMouseOut="window.status='';return true">
+ <input type="button" name="btnNext" value="Next Page &gt;&gt;" onclick="Next();">
+ <br><br>
+
+<script type="text/javascript" event="onload" for="window">
+ main();
+</script> 
+
+<img name="_pic_Slide" onload="OnImgLoad()">
+<font face="Arial" color=#EEEEEE size=1><BR><B>
+<SPAN id="_pic_FileName"></b></SPAN>
+</font><br>
+
+<br>
+
+Back |
+<a href="../index.html">Home</a> |
+Photo Album |
+<a href="../../Angelfire/pages/Books.htm">Books</a> |
+Music |
+<a href="../../Boathill/index.html">Poems</a> |
+<a href="../pages/ResumeZQ.htm"></a>Resume |
+Links
+
+<p>
+
+<table height=100% border=0 cellpadding=0 cellspacing=0>
+ <tr><td height=10240 align="center" valign="top">
+
+
+</td></tr></table>
+
+<a name="View">
+<table height=100% border=0 cellpadding=0 cellspacing=0>
+ <tr>
+  <td height=90% align="center" valign="top"><font size=1>
+   <img src="../media/section.gif"><br><br>
+   <img src="../family/zhuqing1a.jpg" border=0 usemap="#zhuqing1" width=100 height=100>
+   <img src="../family/zhuqing2a.jpg" border=0 usemap="#zhuqing2" width=100 height=100>
+   <img src="../family/zhuqing3a.jpg" border=0 usemap="#zhuqing3" width=100 height=100>
+   <img src="../family/zhuqing4a.jpg" border=0 usemap="#zhuqing4" width=100 height=100><br>
+   <img src="../family/zhuqing5a.jpg" border=0 usemap="#zhuqing5" width=100 height=100>
+   <img src="../family/zhuqing6a.jpg" border=0 usemap="#zhuqing6" width=100 height=100>
+   <img src="../family/zhuqing7a.jpg" border=0 usemap="#zhuqing7" width=100 height=100>
+   <img src="../family/zhuqing8a.jpg" border=0 usemap="#zhuqing8" width=100 height=100><br>
+   <br><img src="../media/section.gif"><br><br>
+  </td>
+ </tr>
+
+ <tr><td height=20% align="center"><font face="Arial" size=2>
+   <br><br><br>
+
+<a href=#main>Main</a> |
+<a href="../index.html">Home</a> | 
+Photo Album |
+<a href="../../Angelfire/pages/Books.htm">Books</a> |
+Music |
+<a href="../../Boathill/index.html">Poems</a> |
+<a href="../pages/Resume.htm"></a>Resume |
+Links
+
+   <br><br><br></font>
+ </td></tr>
+
+ <tr>
+  <td height=10% align="center">
+   <FORM>
+    <INPUT TYPE="button" VALUE="Back" onClick="history.go(-2)">
+   </FORM>
+  </td>
+ </tr>
+</table>
+
+</center>
+
+<MAP NAME="zhuqing1">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuqing1a.jpg" ALT="I Am A Soldier">
+</MAP>
+<MAP NAME="zhuqing2">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuqing2a.jpg" ALT="Ice-Lolly">
+</MAP>
+<MAP NAME="zhuqing3">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuqing3a.jpg" ALT="The Museum">
+</MAP>
+<MAP NAME="zhuqing4">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuqing4a.jpg" ALT="The Light Square">
+</MAP>
+<MAP NAME="zhuqing5">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuqing5a.jpg" ALT="I Am Here">
+</MAP>
+<MAP NAME="zhuqing6">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuqing6a.jpg" ALT="I Got Teeth">
+</MAP>
+<MAP NAME="zhuqing7">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuqing7a.jpg" ALT="To Feed the Chicks">
+</MAP>
+<MAP NAME="zhuqing8">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuqing8a.jpg" ALT="I Am Reading">
+</MAP>
+
+</body>
+</html>

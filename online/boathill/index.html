@@ -1,0 +1,107 @@
+<html>
+<head><title>Splash to Boathill HomePage</title>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Personal Homepage, Poems topic"> 
+<META NAME="keywords" CONTENT="Zhu, Yuxin, Jason, Zhu Yuxin, Boathill, poems, DHTML, JavaScript, jpg, gif">
+
+</head>
+
+<BODY bgcolor="#000000" text="#C0C0C0" link="#B0C4DE" alink="#CD5C5C" vlink="#008080">
+
+<div id="splashcontainer" style="position:absolute;width:600"></div>
+<layer id="splashcontainerns" width=600></layer>
+
+<script type="text/javascript">  // Dynamic Splash Screen
+
+     //configure delay in miliseconds between each message (default: 2 seconds)
+ var intervals=5000
+     //configure destination URL
+ var targetdestination="./main.html"
+
+     //configure messages to be displayed
+ var splashmessage=new Array()
+ var openingtags='<font face="Arial" size="3">'
+ splashmessage[0]="<img src=./images/dao101.gif><br>The way could be the way, but not a normal way;"
+ splashmessage[1]="<img src=./images/dao102.gif><br>the name could be the name, but not a normal name"
+ splashmessage[2]="<img src=./images/dao103.gif><br>Nothing, name the beginning of the world;"
+ splashmessage[3]="<img src=./images/dao104.gif><br>Having, name the origin of the earth"
+ splashmessage[4]="<img src=./images/dao105.gif><br>So all of nothing, to see its infinite;"
+ splashmessage[5]="<img src=./images/dao106.gif><br>all of having, to see its limit"
+ splashmessage[6]="<img src=./images/dao107.gif><br>Both of them,  came from the same <br>and name of the difference, and both called mystery"
+ splashmessage[7]="<img src=./images/dao108.gif><br>Mystery of mysteries, of all marvelous the way"
+ var closingtags='</font>'
+
+ var msgmaxWidth=500;
+ var msgmaxHeight=96;
+ var adbarHeight=120;
+
+ //Do not edit below this line
+
+ var i=0
+
+ function displaysplash_ie() {
+  if (i<splashmessage.length) {
+   sc_ie.style.visibility="hidden"
+   sc_ie.innerHTML='<b><center>'+openingtags+splashmessage[i]+closingtags+'</center></b>'
+
+   sc_ie.style.left=document.body.scrollLeft+document.body.clientWidth/2 - ((sc_ie.offetWidth<msgmaxWidth)?msgmaxWidth:sc_ie.offsetWidth)/2
+   sc_ie.style.top=document.body.scrollTop+document.body.clientHeight/2-((sc_ie.offsetHeight<msgmaxHeight)?msgmaxHeight:sc_ie.offsetHeight)/2+adbarHeight/2
+
+   sc_ie.style.visibility="visible"
+   i++
+  }
+  else {
+   setTimeout("displaysplash_ie()",10000)
+   window.location=targetdestination
+   return
+  }
+  setTimeout("displaysplash_ie()",intervals)
+ }
+
+ function displaysplash_ns() {
+  if (i<splashmessage.length) {
+   sc_ns.visibility="hide"
+   sc_ns.document.write('<b>'+openingtags+splashmessage[i]+closingtags+'</b>')
+   sc_ns.document.close()
+
+   sc_ns.left=pageXOffset+window.innerWidth/2-((sc_ns.document.width<msgmaxWidth)?msgmaxWidth:sc_ns.document.width)/2
+   sc_ns.top=pageYOffset+window.innerHeight/2-((sc_ns.document.height<msgmaxHeight)?msgmaxHeight:sc_ns.document.height)/2+adbarHeight/2
+
+   sc_ns.visibility="show"
+   i++
+  }
+  else {
+   setTimeout("displaysplash_ns()",10000)
+   window.location=targetdestination
+   return
+  }
+  setTimeout("displaysplash_ns()",intervals)
+ }
+
+
+ function positionsplashcontainer() {
+  if (document.all) {
+   sc_ie=document.all.splashcontainer
+   sc_ie.style.left=document.body.scrollLeft+document.body.clientWidth/2 - ((sc_ie.offetWidth<msgmaxWidth)?msgmaxWidth:sc_ie.offsetWidth)/2
+   sc_ie.style.top=document.body.scrollTop+document.body.clientHeight/2 - ((sc_ie.offsetHeight<msgmaxHeight)?msgmaxHeight:sc_ie.offsetHeight)/2 + adbarHeight/2
+   displaysplash_ie()
+  }
+  else if (document.layers) {
+   sc_ns=document.splashcontainerns
+   sc_ns.left=pageXOffset+window.innerWidth/2-((sc_ns.document.width<msgmaxWidth)?msgmaxWidth:sc_ns.document.width)/2
+   sc_ns.top=pageYOffset+window.innerHeight/2-((sc_ns.document.height<msgmaxHeight)?msgmaxHeight:sc_ns.document.height)/2+adbarHeight/2
+   sc_ns.visibility="show"
+   displaysplash_ns()
+  }
+  else
+   window.location=targetdestination
+ }
+
+  window.onload=positionsplashcontainer
+
+</script>
+
+
+</body>
+</html>

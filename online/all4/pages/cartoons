@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+<TITLE>Cartoons</TITLE>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Grace Homepage">
+<META NAME="keywords" CONTENT="pictures, favorites, family, friends, books, poems, resume, links">
+
+<style>		<!-- Glowing Text Style	-->
+<!--
+#glowtext{
+filter:glow(color=FFFF00, strength=3);
+width:100%;
+}
+-->
+ a:hover{color:FF4500; }
+</style>
+
+<style>		<!-- Style for Drag and Drop 
+<!--
+ .drag{position:relative;cursor:hand}
+-->
+</style>
+
+
+<script language="JavaScript1.2">	// Drag and Drop Script- 
+
+ var dragapproved=false
+ var z,x,y
+
+ function move() {
+  if (event.button==1&&dragapproved) {
+   z.style.pixelLeft=temp1+event.clientX-x
+   z.style.pixelTop=temp2+event.clientY-y
+   return false
+  }
+ }
+
+ function drags() {
+  if (!document.all)
+   return
+  if (event.srcElement.className=="drag") {
+   dragapproved=true
+   z=event.srcElement
+   temp1=z.style.pixelLeft
+   temp2=z.style.pixelTop
+   x=event.clientX
+   y=event.clientY
+   document.onmousemove=move
+  }
+ }
+
+ document.onmousedown=drags
+ document.onmouseup=new Function("dragapproved=false")
+
+//-->
+</script>
+
+<script language="JavaScript1.2">	// Glowing Text Script- 
+
+ function glowit(which) {
+  if (document.all.glowtext[which].filters[0].strength==3)
+   document.all.glowtext[which].filters[0].strength=2
+  else
+   document.all.glowtext[which].filters[0].strength=3
+ }
+
+ function glowit2(which) {
+  if (document.all.glowtext.filters[0].strength==3)
+   document.all.glowtext.filters[0].strength=2
+  else
+  document.all.glowtext.filters[0].strength=3
+ }
+
+ function startglowing() {
+  if (document.all.glowtext&&glowtext.length) {
+   for (i=0;i<glowtext.length;i++)
+    eval('setInterval("glowit('+i+')",150)')
+  }
+  else if (glowtext)
+   setInterval("glowit2(0)",150)
+ }
+
+  if (document.all) window.onload=startglowing
+
+</script>
+
+</HEAD>
+
+
+<body bgcolor=#E6E6FA background="../media/bg_snowsky.gif" text=#000099 topmargin=5 bottommargin=5 leftmargin=0>
+
+<bgsound src="../midi/cocacola.mid" volumn="-7000" loop=0>
+<EMBED SRC="" HIDDEN="True"> 
+
+<center>
+
+<table><tr><td width=100% align=center>
+<img src="../pics/bb001.gif" class="drag" height=199 border=0 alt="Oops! I Did It Again ...">
+<img src="../pics/bb002.gif" class="drag" height=199 border=0 alt="Oops! I Did It Again ...">
+<img src="../pics/bb003.gif" class="drag" height=199 border=0 alt="Oops! I Did It Again ...">
+<br>
+<img src="../pics/bb004.gif" class="drag" height=199 border=0 alt="Oops! I Did It Again ...">
+<img src="../pics/bb005.gif" class="drag" height=199 border=0 alt="Oops! I Did It Again ...">
+<img src="../pics/bb006.gif" class="drag" height=199 border=0 alt="Oops! I Did It Again ...">
+<br>
+<img src="../pics/bb007.gif" class="drag" height=199 border=0 alt="Oops! I Did It Again ...">
+<img src="../pics/bb008.gif" class="drag" height=199 border=0 alt="Oops! I Did It Again ...">
+<img src="../pics/bb009.gif" class="drag" height=199 border=0 alt="Oops! I Did It Again ...">
+</td></tr></table>
+
+<table><tr><td width=100% align=center>
+<img src="../pics/bedtime.gif"    class="drag" height=320 border=0 alt="Bedtime Stories">	   &#160;&#160;
+<img src="../pics/love_music.gif" class="drag" height=320 border=0 alt="Love Music"> <br>
+</td></tr></table>
+
+<table><tr><td width=100% align=center>
+<img src="../pics/imagine.jpg" class="drag" height=352 border=0 alt="Dream On Road To Work">
+<img src="../pics/howlong.jpg" class="drag" height=353 border=0 alt="How long 'til it starts feeling good?"><p>
+</td></tr></table>
+
+<font face="Arial" color=#FF00FF><b>
+<span id="glowtext" class="drag">
+All objects on this page are dragable, including this text line...
+</span></b></font><p>
+
+<table><tr><td width=100% align=center>
+<img src="../pics/showgirl.gif" class="drag" height=364 border=0 alt="Showgirl">
+<img src="../pics/surprise.gif" class="drag" height=364 border=0 alt="What A Surprise!">
+</td></tr></table>
+
+<table><tr><td width=100% align=center>
+<img src="../pics/circus.gif" 	    class="drag" width=200 border=0 alt="Home Circus">
+<img src="../pics/pizzadeliver.gif" class="drag" width=200 border=0 alt="Pizza Delivery">
+<img src="../pics/painting.gif"     class="drag" width=200 border=0 alt="Painting">
+</td></tr></table>
+
+<table><tr><td width=100% align=center>
+<img src="../pics/rob.gif" 	class="drag" height=219 border=0 alt="Snowman's violence">
+<img src="../pics/murder.gif" 	class="drag" height=219 border=0 alt="Honey, hand me the hairdryer">
+</td></tr></table>
+
+<table><tr><td width=100% align=center>
+<img src="../pics/trafficzzz.gif" class="drag" height=152 border=0 alt="It's traffic, it is Zzzzzzzzzzz ...">
+<img src="../pics/monkey.gif"	  class="drag" height=152 border=0 alt="I Love You">
+<img src="../pics/rocky.gif"	  class="drag" height=152 border=0 alt="Rocky!">
+</td></tr></table>
+
+<p>
+
+</center>
+</body>
+</html>

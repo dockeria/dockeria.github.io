@@ -1,0 +1,487 @@
+<html>
+<head><title>Calendar</title>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Personal Homepage, including topics of Pictures (Palace, Qingdao-Dalian, Hainan, Tailand, the States, Wedding, Studio, etc.), Favorites (Music, surfing internet, Cookbook, Fashion, Movies, Entertainment, Seasons and Holidays), Family and Friends (my family, our couples, friends and another me), Books (internet digest, jokes, fictions, scenes, lyrics, forums, talktime), Poems, Resume and Links."> 
+<META NAME="keywords" CONTENT="Grace, Zhou, Lin, Zhoulin, Pictures, Favorites, Family, Friends, Books, Poems, Resume, Links, Wedding, Studio, Beijing, Qingdao, Dalian, Hainan, United States, Scenes, Music, internet digest, jokes, lyrics, DHTML, JavaScript, jpg, gif, music, holiday, ">
+
+<style type="text/css">
+ body { background:seashell url("../media/cheers.gif") repeat-y fixed left; }
+.textanimlink,a {
+ text-decoration : none;
+ }
+ P.main {font-family : Arial;
+   font-size : 15pt;
+   font-weight : bold;
+  }
+</style>
+
+<script language="JavaScript">  // Dynamic Calender
+
+ if (document.all)    {ns=0;ie=1;fShow="visible";fHide="hidden";}
+ if (document.layers) {ns=1;ie=0;fShow="show";   fHide="hide";}
+
+ var MonthNames = new Array("January", "Febrary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+ var YearNames = new Array("Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Sheep", "Monkey", "Rooster", "Dog", "Boar");
+ var nCurrentYear = 0;
+ var nCurrentMonth = 0;
+
+ var nWidth  = 35;
+ var nHeight = 25;
+
+ var leftX;
+ var rightX
+ var topY;
+ var bottomY;
+
+ function Calendar() {  // form the calender area
+
+  var HTMLstr = "";
+
+  HTMLstr += "<center>\n";
+  HTMLstr += "<table bgcolor=#FFFFFF cellspacing=0 cellpadding=0 border=0>\n";
+  HTMLstr += "<tr>\n";
+  HTMLstr += "<td width=180 height=135 valign="top"><a href='../files/holidays.htm#xmas'><img src='../media/xmas.gif' width=180 border=0 alt='Christmas Day, 12/25'></a></td>\n";
+  HTMLstr += "<td bgcolor=#FFC0CB><center><a href='../files/TimeZone.htm'><font face='Arial' size=1>TIME <img src='../media/world.gif' align="middle" border=0> ZONE</a></td>\n";
+  HTMLstr += "<td width=180 valign="top"><a href='../files/holidays.htm#newyear'><img src='../media/newyear.jpg' width=180 border=0 alt='Chinese New Year'></a></td>\n";
+  HTMLstr += "</tr><tr>\n";
+  HTMLstr += "<td bgcolor=#F5F5DC valign="top"><a href='../files/holidays.htm#thanksgiving'>"
+  HTMLstr += "<img src='../media/bbqturkey.gif' width=180 border=0 alt='Thanks for giving the chance to grill you!'><p></a>\n";
+  HTMLstr += "<a href='../files/holidays.htm#xmas'><img src='../media/santaskate.gif' width=180 border=0 alt='I am hanging around...'></a><br></td>\n";
+  HTMLstr += "<td>\n";
+
+  HTMLstr += "<table background='../media/grid35x25.gif' width=245 cellspacing=0 cellpadding=0 border=0>\n";
+  HTMLstr += "<tr><td bgcolor='darkblue'>\n";
+  HTMLstr += "\n";
+
+  HTMLstr += "<table background='' width=100% height=50 cols=4 cellspacing=0 cellpadding=0 border=0>\n";
+  HTMLstr += "<tr>\n";
+
+  if (ie) HTMLstr += "<td width=20 align="center" valign="middle">";
+  if (ns) HTMLstr += "<td width=5 align="center" valign="middle">";
+  HTMLstr += "<a href=\"javascript:prevMonth();\"><img src=\"../media/scrollup.gif\" border=0 alt=\"Previous Month\"></a>\n";
+//  HTMLstr += "<a href=\"javascript:nextMonth();\" style='text-decoration: none;'><font face=\"Courier\" size=1 color=#FFFFFF>(+)</a>\n";
+  HTMLstr += "<br>";
+  HTMLstr += "<a href=\"javascript:nextMonth();\"><img src=\"../media/scrolldown.gif\" border=0 alt=\"Next Month\"></a>\n";
+//  HTMLstr += "<a href=\"javascript:prevMonth();\" style='text-decoration: none;'><font face=\"Courier\" size=1 color=#FFFFFF>(-)</a>";
+  HTMLstr += "</td>\n";
+
+  HTMLstr += "<td align="left" valign="middle">";
+  if (ie) HTMLstr += "<div id='mainMonth' style='position=relative;'>";
+  if (ns) HTMLstr += "<ilayer id='mainMonth'><layer id='idMonth' top='0' left='0'>\n";
+  HTMLstr += "<font color='#99ffff'><b>January</b></font>\n";
+  if (ns) HTMLstr += "</layer></ilayer>\n";
+  if (ie) HTMLstr += "</div>\n";
+  HTMLstr += "</td>\n";
+
+  HTMLstr += "<td width=50 align="right" valign="middle">\n";
+  if (ns) HTMLstr += "<ilayer id='mainYear'><layer id='idYear' top='0' left='0'>\n";
+  if (ie) HTMLstr += "<div id='mainYear' style='position: relative'>\n";
+  HTMLstr += "<font color='#99ffff'><b>2000</b></font>\n";
+  if (ie) HTMLstr += "<div>\n";
+  if (ns) HTMLstr += "</layer></ilayer>\n";
+  HTMLstr += "</td>\n";
+
+  if (ns) HTMLstr += "<td width=5 align="center" valign="middle">";
+  if (ie) HTMLstr += "<td width=20 align="center" valign="middle">";
+  HTMLstr += "<a href=\"javascript:prevYear();\"><img src=\"../media/scrollup.gif\" border=0 alt=\"Previous Year\"></a>\n";
+//  HTMLstr += "<a href=\"javascript:nextYear();\" style='text-decoration: none;'><font face=\"Courier\" size=1 color=#FFFFFF>(+)</font></a>";
+  HTMLstr += "<br>";
+  HTMLstr += "<a href=\"javascript:nextYear();\"><img src=\"../media/scrolldown.gif\" border=0 alt=\"Next Year\"></a>\n";
+//  HTMLstr += "<a href=\"javascript:prevYear();\" style='text-decoration: none;'><font face=\"Courier\" size=1 color=#FFFFFF>(-)</font></a>";
+  HTMLstr += "</td>\n";
+
+  HTMLstr += "</tr>\n";
+  HTMLstr += "</table>\n";
+
+  HTMLstr += "\n";
+  HTMLstr += "</td></tr>\n";
+  HTMLstr += "\n";
+  HTMLstr += "<tr height=175><td valign="\""top\">\n";
+  HTMLstr += "\n";
+  HTMLstr += "<table background='' cols=7 cellspacing=0 cellpadding=0 border=0>\n";
+  HTMLstr += "<tr>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008000 size=2><b>SU</b></font></td>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008B8B size=2><b>MO</b></font></td>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008B8B size=2><b>TU</b></font></td>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008B8B size=2><b>WE</b></font></td>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008B8B size=2><b>TH</b></font></td>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008B8B size=2><b>FR</b></font></td>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008000 size=2><b>SA</b></font></td>\n";
+  HTMLstr += "</tr>\n";
+  HTMLstr += "<tr>\n";
+  HTMLstr += "<td colspan=7><font face='Arial'>\n";
+  if (ie) HTMLstr += "<div style='position: relative;'>";
+  if (ns) HTMLstr += "<ilayer id='idMenuContainer' height='120px' width='250px'>\n";
+
+  for (var date=1; date <= 31; date++) {
+   if (ns) {
+  HTMLstr += "  <layer id=\"idDate"+date+"\" val="+date+" visibility=\"hide\">\n";
+  HTMLstr += "    <layer><b>"+date+"</b></layer>\n";
+  HTMLstr += "  </layer>\n";
+   }
+   if (ie) {
+  HTMLstr += "  <div id=\"idDate"+date+"\" val="+date+" style=\"position: absolute; visibility: hidden\">\n";
+  HTMLstr += "    <b>"+date+"</b>\n";
+  HTMLstr += "  </div>\n";
+   }
+  }
+
+  if (ie) HTMLstr += "</div>";
+  if (ns) HTMLstr += "</ilayer>\n";
+  HTMLstr += "</td></tr>\n";
+  HTMLstr += "</table>\n";
+  HTMLstr += "\n";
+  HTMLstr += "</td></tr>\n";
+  HTMLstr += "</table>\n";
+
+  HTMLstr += "</td>\n";
+  HTMLstr += "<td bgcolor=#9EFFCC align="center" valign="bottom bgcolor=#9EFFCC">\n";
+  HTMLstr += "<a href='../files/holidays.htm#yearname'><img src='../media/yearsigns.gif' border=0 alt='Name Chinese Year'></a><p>\n";
+  HTMLstr += "<a href='../files/holidays.htm#midautumn'><img src='../media/mooncake.gif' width=180 border=0 alt='Enjoy to eat us during this holidy!'></a></td>\n";
+  HTMLstr += "</tr>\n";
+  HTMLstr += "<tr>\n";
+  HTMLstr += "<td width=180 valign="top"><a href='../files/holidays.htm#valentine'><img src='../media/valentine.jpg' width=180 border=0 alt='Valentine&#39;s Day, 2/14'></a></td>\n";
+  HTMLstr += "<td bgcolor=#E6E6FA><center><font face='Arial'><font size=1><b><a href=# onClick='history.go(-1)'>Click to <img src='../media/go.gif' align="middle" border=0> Back...</a></font><br>";
+  HTMLstr += "&#160; <a href='../pages/Favorites.htm'><u>Back</u></a> | <a href='../index.html'><u>Home</u></a> | <a href='../pages/Links.htm'><u>Links</u></a></td>\n";
+  HTMLstr += "<td width=180 valign="top"><a href='../files/holidays.htm#midautumn'><img src='../media/moonboat.jpg' width=180 border=0 alt='Chinese Mid-Autumn'></a></td>\n";
+  HTMLstr += "</tr>\n";
+  HTMLstr += "</table>\n";
+  HTMLstr += "<br><br><br><br><br><br>\n";
+
+// document.writeln("<div id='tooltip' style='position:absolute;visibility:hidden'></div>\n");
+
+  document.writeln(HTMLstr);
+  buildMonthMenu();
+ }
+
+ function setYearMonth(nYear, nMonth) {
+
+  nCurrentYear = nYear;
+  nCurrentMonth = nMonth;
+  var today  = new Date();
+
+  if (ie) {
+   document.all["mainYear"].innerHTML  = "<a href=\"../files/holidays.htm#yearname\" style=\"text-decoration:none\" onMouseOver=\"showYearName(this,event,nCurrentYear)\"><font face=\"Arial\" color=#99ffff size=5><b>"+nCurrentYear+"</b></font></a>";
+   document.all["mainMonth"].innerHTML = "<a href=\"javascript:showMonthMenu()\" style=\"text-decoration:none\"><font face=\"Arial\" color=#99ffff size=5><b>"+MonthNames[nCurrentMonth-1]+"</b></font></a>\n";
+
+   var date   = new Date(nCurrentYear, nCurrentMonth-1, 1);
+   var nWeek  = 1;
+   var nDate;
+
+   while (date.getMonth() == nCurrentMonth-1) {
+  nDate = date.getDate();
+  nLastDate = nDate;
+
+  var posDay = date.getDay();
+  var posLeft = posDay*(nWidth)+8;
+  var posTop  = (nWeek-1)*nHeight;
+
+  if (nDate < 10) document.all["idDate"+nDate].style.left = posLeft+5;
+  else document.all["idDate"+nDate].style.left = posLeft;
+  document.all["idDate"+nDate].style.top  = posTop;
+  if (today.getDate() == nDate) {
+    document.all["idDate"+nDate].style.color  = "blue";
+  }
+  else if (date.getDay() == 0 || date.getDay() == 6)
+    document.all["idDate"+nDate].style.color  = "red";
+  else
+    document.all["idDate"+nDate].style.color  = "black";
+  document.all["idDate"+nDate].style.visibility = "visible";
+  date = new Date(nCurrentYear, date.getMonth(), date.getDate()+1);
+  if (posDay == 6) nWeek++;
+   }
+   for (++nDate; nDate <= 31; nDate++)
+  document.all["idDate"+nDate].style.visibility = "hidden";
+  }
+  if (ns) {
+   // Verify parameters
+   if (nMonth < 1 || nMonth > 12) {alert("Function: setYearMonth()\nERROR: Incorrect month "+nMomth);}
+
+   document.mainYear.document.idYear.document.open();
+   document.mainYear.document.idYear.document.write("<a href=\"#\" style=\"text-decoration:none\" onMouseOver=\"showYearName(this,event,nCurrentYear)\" onMouseOut=\"hideYearName()\"><font face=\"Arial\" color=#99ffff size=4><b>"+nCurrentYear+"</b></font></a>");
+   document.mainYear.document.idYear.document.close();
+
+   document.mainMonth.document.idMonth.document.open();
+   document.mainMonth.document.idMonth.document.write("<a href=\"javascript:showMonthMenu()\" style=\"text-decoration:none\"><font face=\"Arial\" color=#99ffff size=4><b>"+MonthNames[nCurrentMonth-1]+"</b></font></a>");
+   document.mainMonth.document.idMonth.document.close();
+
+   var date   = new Date(nYear, nMonth-1, 1);
+   var nWeek  = 1;
+   var nDate;
+
+   while (date.getMonth() == nMonth-1) {
+  nDate = date.getDate();
+  nLastDate = nDate;
+
+  var posDay = date.getDay();
+  var posLeft = posDay*(nWidth)+5;
+  var posTop  = (nWeek-1)*nHeight;
+
+  if (nDate < 10) document.layers["idMenuContainer"].document.layers["idDate"+nDate].left = posLeft+5;
+  else document.layers["idMenuContainer"].document.layers["idDate"+nDate].left = posLeft;
+  document.layers["idMenuContainer"].document.layers["idDate"+nDate].top  = posTop;
+  if (date.getDay() == 0 || date.getDay() == 6)
+    document.layers["idMenuContainer"].document.layers["idDate"+nDate].color  = "red";
+  else
+    document.layers["idMenuContainer"].document.layers["idDate"+nDate].color  = "black";
+  document.layers["idMenuContainer"].document.layers["idDate"+nDate].visibility = "visible";
+  date = new Date(nCurrentYear, date.getMonth(), date.getDate()+1);
+  if (posDay == 6) nWeek++;
+   }
+   for (++nDate; nDate <= 31; nDate++)
+  document.layers["idMenuContainer"].document.layers["idDate"+nDate].visibility = "hidden";
+  }
+ }
+
+ function nextMonth() {  // go the next month
+  nCurrentMonth++;
+  if (nCurrentMonth > 12) {
+  nCurrentMonth -= 12;
+  nextYear();
+  }
+  setYearMonth(nCurrentYear, nCurrentMonth);
+ }
+
+ function prevMonth() {  // go the previous month
+  nCurrentMonth--;
+  if (nCurrentMonth < 1) {
+  nCurrentMonth += 12;
+  prevYear();
+  }
+  setYearMonth(nCurrentYear, nCurrentMonth);
+ }
+
+ function prevYear() {  // go the previous year
+  nCurrentYear--;
+  setYearMonth(nCurrentYear, nCurrentMonth);
+ }
+
+ function nextYear() {  // go the next year
+  nCurrentYear++;
+  setYearMonth(nCurrentYear, nCurrentMonth);
+ }
+
+ function setCurrentMonth() {
+  date = new Date();
+  currentyear=date.getYear()
+  if (currentyear < 1000) currentyear += 1900
+  setYearMonth(currentyear, date.getMonth()+1);
+ }
+
+ function setMonth(nMonth) {
+  setYearMonth(nCurrentYear, nMonth);
+ }
+
+////////////////////////////////////////////////////
+
+ function showYearName(current,e,nYear) {  // show tip for the Name of the Chinese Year
+
+  if (nYear < 0) { 
+   while (nYear < -12) nYear = nYear + 12;
+   if (nYear < -9) nYear = nYear + 21;
+   else nYear = nYear + 9;
+  }
+  else if (nYear < 4) nYear = nYear + 8;
+  else { 
+   nYear = nYear - 4;
+   while (nYear > 11) nYear = nYear - 12;
+  }
+
+  text = "Chinese Year of " + YearNames[nYear]
+
+  if (document.all) {
+   thetitle=text.split('<br>')
+   if (thetitle.length>1) {
+    thetitles=''
+    for (i=0;i<thetitle.length;i++) thetitles+=thetitle[i]
+    current.title=thetitles
+   }
+   else
+    current.title=text
+  }
+  else if (document.layers) {
+   document.tooltip.document.write('<layer bgColor="white" style="border:1px solid black;font-size:12px;">'+text+'</layer>')
+   document.tooltip.document.close()
+   document.tooltip.left=e.pageX+5
+   document.tooltip.top=e.pageY-5
+   document.tooltip.visibility="show"
+  }
+ }
+
+ function hideYearName() {
+  if (document.layers) document.tooltip.visibility="hidden"
+ }
+
+ function updateIt(e) {
+ //  var x = e.pageX;
+ //  var y = e.pageY;
+
+ //  if (x > rightX || x < leftX) hideMonthMenu();
+ //  else if (y > bottomY || y < topY) hideMonthMenu();
+ }
+
+ function hideMonthMenu() {
+  document.layers["idMonthMenu"].visibility="hide";
+ }
+
+ function showMonthMenu() {
+  if (!ns) return;
+  topY    = document.layers["mainMonth"].pageY-50;
+  bottomY = document.layers["mainMonth"].pageY + document.layers["idMonthMenu"].clip.height+50;
+  leftX   = document.layers["mainMonth"].pageX-50;
+  rightX  = document.layers["mainMonth"].pageX + document.layers["idMonthMenu"].clip.width+50;
+
+  document.layers["idMonthMenu"].top = document.layers["mainMonth"].pageY+document.layers["mainMonth"].clip.height;
+  document.layers["idMonthMenu"].left = document.layers["mainMonth"].pageX;
+  document.layers["idMonthMenu"].visibility="show";
+ }
+
+ function buildMonthMenu() {
+  if (!ns) return;
+  var HTML = "";
+  HTML += "<layer id=\"idMonthMenu\" visibility=\"hide\" width=\"120\" bgcolor=\"darkblue\">\n";
+  HTML += "<table border=\"1\" cellspacing=\"0\" cellpading=\"0\">\n";
+  for (var month=0; month<12;) {
+  HTML += "<tr>\n";
+  for (var i = 0; i < 3; i++) {
+    var nMonth = month+1;
+    HTML += "<td><a href=\"javascript:hideMonthMenu();setMonth("+nMonth+");\"><font color=\"white\" size=-1><b>"+MonthNames[month]+"</b></font></a></td>\n";
+    month++;
+  }
+  HTML += "</tr>\n";
+  }
+  HTML += "</table>";
+  HTML += "</layer>";
+  document.writeln(HTML);
+ }
+
+ var cal = new Calendar();
+
+</script>
+
+</head>
+
+<body onload="setCurrentMonth()">
+
+<bgsound src="../midi/holiday.mid" volumn="-7000" loop=1>
+
+
+<script language="JavaScript"><!-- standard scroll clock by kurt.grigg@virgin.net
+
+fCol='cc3366';  // face color.
+sCol='33cc66';  // seconds color.
+mCol='483D8B';  // minutes color.
+hCol='A52A2A';  // hours color.
+H='....'; H=H.split('');
+M='.....'; M=M.split('');
+S='......'; S=S.split('');
+Ypos=0;  Xpos=0;  Ybase=8; Xbase=8; dots=12;
+ns=(document.layers)?1:0;
+if (ns) {
+ dgts='1 2 3 4 5 6 7 8 9 10 11 12';
+ dgts=dgts.split(' ')
+ for (i=0; i < dots; i++) {
+ document.write('<layer name=nsDigits'+i+' top=0 left=0 height=30 width=30><center>');
+ document.write('<font face=Arial,Verdana size=1 color='+fCol+'>'+dgts[i]+'</font></center></layer>');
+ }
+ for (i=0; i < M.length; i++) {
+  document.write('<layer name=ny'+i+' top=0 left=0 bgcolor='+mCol+' clip="0,0,2,2"></layer>');
+ }
+ for (i=0; i < H.length; i++) {
+  document.write('<layer name=nz'+i+' top=0 left=0 bgcolor='+hCol+' clip="0,0,2,2"></layer>');
+ }
+ for (i=0; i < S.length; i++) {
+  document.write('<layer name=nx'+i+' top=0 left=0 bgcolor='+sCol+' clip="0,0,2,2"></layer>');
+ }
+}
+else {
+ document.write('<div style="position:absolute;top:0px;left:0px">');
+ document.write('<div style="position:relative">');
+ for (i=1; i < dots+1; i++) {
+  document.write('<div id="ieDigits" style="position:absolute;top:0px;left:0px;width:30px;height:30px;');
+  document.write('font-family:Arial,Verdana;font-size:10px;color:'+fCol+';text-align:center;padding-top:10px">'+i+'</div>');
+ }
+ document.write('</div></div>')
+ document.write('<div style="position:absolute;top:0px;left:0px">');
+ document.write('<div style="position:relative">');
+ for (i=0; i < M.length; i++) {
+  document.write('<div id=y style="position:absolute;width:2px;height:2px;font-size:2px;background:'+mCol+'"></div>');
+ }
+ document.write('</div></div>')
+ document.write('</div></div>')
+ document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+ for (i=0; i < H.length; i++){
+  document.write('<div id=z style="position:absolute;width:2px;height:2px;font-size:2px;background:'+hCol+'"></div>');
+ }
+ document.write('</div></div>')
+ document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+ for (i=0; i < S.length; i++){
+  document.write('<div id=x style="position:absolute;width:2px;height:2px;font-size:2px;background:'+sCol+'"></div>');
+ }
+ document.write('</div></div>')
+}
+
+function clock() {
+  time = new Date ();
+  secs = time.getSeconds();
+  sec = -1.57 + Math.PI * secs/30;
+  mins = time.getMinutes();
+  min = -1.57 + Math.PI * mins/30;
+  hr = time.getHours();
+  hrs = -1.57 + Math.PI * hr/6 + Math.PI*parseInt(time.getMinutes())/360;
+  if (ns) {
+    Ypos=window.pageYOffset+window.innerHeight-60;
+    Xpos=window.pageXOffset+window.innerWidth-80;
+  }
+  else {
+    Ypos=document.body.scrollTop+window.document.body.clientHeight-60;
+  Xpos=document.body.scrollLeft+window.document.body.clientWidth-60;
+  }
+  if (ns) {
+    for (i=0; i < dots; ++i) {
+    document.layers["nsDigits"+i].top=Ypos-5+40*Math.sin(-0.49+dots+i/1.9);
+    document.layers["nsDigits"+i].left=Xpos-15+40*Math.cos(-0.49+dots+i/1.9);
+    }
+    for (i=0; i < S.length; i++) {
+    document.layers["nx"+i].top=Ypos+i*Ybase*Math.sin(sec);
+    document.layers["nx"+i].left=Xpos+i*Xbase*Math.cos(sec);
+    }
+    for (i=0; i < M.length; i++) {
+    document.layers["ny"+i].top=Ypos+i*Ybase*Math.sin(min);
+    document.layers["ny"+i].left=Xpos+i*Xbase*Math.cos(min);
+    }
+    for (i=0; i < H.length; i++) {
+    document.layers["nz"+i].top=Ypos+i*Ybase*Math.sin(hrs);
+    document.layers["nz"+i].left=Xpos+i*Xbase*Math.cos(hrs);
+    }
+  }
+  else {
+    for (i=0; i < dots; ++i){
+    ieDigits[i].style.pixelTop=Ypos-15+40*Math.sin(-0.49+dots+i/1.9);
+    ieDigits[i].style.pixelLeft=Xpos-14+40*Math.cos(-0.49+dots+i/1.9);
+    }
+    for (i=0; i < S.length; i++){
+    x[i].style.pixelTop =Ypos+i*Ybase*Math.sin(sec);
+    x[i].style.pixelLeft=Xpos+i*Xbase*Math.cos(sec);
+    }
+    for (i=0; i < M.length; i++){
+    y[i].style.pixelTop =Ypos+i*Ybase*Math.sin(min);
+    y[i].style.pixelLeft=Xpos+i*Xbase*Math.cos(min);
+    }
+    for (i=0; i < H.length; i++){
+    z[i].style.pixelTop =Ypos+i*Ybase*Math.sin(hrs);
+    z[i].style.pixelLeft=Xpos+i*Xbase*Math.cos(hrs);
+    }
+  }
+  setTimeout('clock()',50);
+}
+
+if (document.layers || document.all) clock();
+
+//--></script>
+
+
+
+</body>
+</html>

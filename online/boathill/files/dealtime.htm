@@ -1,0 +1,194 @@
+<html>
+<head><title>Dealtime Highlight</title>
+
+<style type="text/css">
+
+ a:link {color:#00BFFF;} 
+ a:active {color:#FF1493;} 
+ a:visited {color:#8FBC8F;}
+ a:hover {color:#90EE90; font-weight: bold; text-decoration:none; }
+
+ body {
+  background: #FFFFFF url('../media/bgseals.gif');
+  background-attachment: scroll;
+  background-repeat: repeat;
+  color: #8F8F8F;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-indent: 10px;
+  tab-interval: 36pt;
+  font-family: Arial, Times New Roman;
+  font-size: 10pt;
+ }
+
+.headline {
+  color: #FF8C00;
+  margin: 2 10 5 5;
+  font-weight: bold;
+  font-size: 10pt;
+  font-family: Arial Narrow, Arial, 'Times New Roman', Helvetica;
+  text-indent : 0px;
+ }
+
+</style>
+
+
+<script LANGUAGE="JavaScript">
+
+ function freewin(htmlfile,width,height) {
+
+  var handout_int = 10000;
+  var height_offset = 26;
+  var width_offset = 4;
+
+  if (width==0 || height==0) {
+   poplink = window.open(htmlfile, "winlink", "fullscreen=0, scrollbars=1, toolbar=1, menubar=0, location=0, directories=0, channelmode=0, resizable=1, status=1");
+   poplink.focus();
+  }
+  else {
+   handout = window.open(htmlfile, "winhand", "top=10, left=10, width="+width+", height="+height+", fullscreen=0, scrollbars=0, toolbar=0, menubar=0, location=0, directories=0, channelmode=0, resizable=0, status=0");
+   if (!document.all) {
+    height_offset = handout.outerHeight - handout.innerHeight;
+    width_offset = handout.outerWidth - handout.innerWidth;
+   }
+   handout.resizeTo(width+width_offset,height+height_offset);
+   handout.focus();
+  }
+ }
+
+</script>
+
+<script type="text/javascript">  // Highlight Table Cells Script- 
+
+ function changeto(highlightcolor)
+ {
+  source=event.srcElement
+  if (source.tagName=="TR"||source.tagName=="TABLE") return
+  while(source.tagName!="TD") source=source.parentElement
+  if (source.style.backgroundColor!=highlightcolor&&source.id!="ignore")
+   source.style.backgroundColor=highlightcolor
+ }
+
+ function changeback(originalcolor)
+ {
+  if (event.fromElement.contains(event.toElement)||source.contains(event.toElement)||source.id=="ignore")
+   return
+  if (event.toElement!=source) source.style.backgroundColor=originalcolor
+ }
+
+</script>
+
+<script type="text/javascript">  // Blending Image Slide Show Script- 
+
+  function reapply()
+  {
+   setTimeout("slideit()",2000)
+   return true
+  }
+  window.onerror=reapply
+
+</script>
+
+</head>
+
+<body onLoad="self.resizeTo(680,520)">
+
+<table width=640 height=100% cellpadding="0" cellspacing=0 BORDER=0>
+ <tr>
+  <td BGCOLOR=#EEEEEE align="CENTER" valign="TOP WIDTH=120">
+   <table width=120 height=100% cellpadding="0" cellspacing=0 BORDER=0 align="CENTER" valign="TOP
+  onMouseover=""changeto('#CCFF99')" onMouseout="changeback('#EEEEEE')">
+    <tr><td align="left"><div><img
+   src="../pics/vw_logo.gif" border=0 width=56 align="right"></div><a
+   href="../pics/vw_beetle.jpg"><img
+   src="../pics/vw_passat.gif" border=0 width=96 height=80 align="left
+  " alt="VW Passat | New Beetle"></a></td>
+    </tr>
+    <tr><td align="center" valign="middle">
+  <a href="../files/pontiac.htm"><img
+   src="../pics/pontiac_sunfire.gif" border=0 width=120
+   alt="Pontiac | Oldsmobile"></a></td>
+    </tr>
+    <tr><td align="center">
+  <a href="../files/bmw.htm"><img 
+   src="../pics/bmw_logo.gif" border=0 width=90
+   alt="BMW"></a></td>
+    </tr>
+    <tr><td align="center">
+  <a href="../files/lexus.htm"><img
+   src="../pics/lexus_ls430.gif" border=0 width=120
+   alt="Lexus LS 430"></a>
+    </td></tr>
+    <tr><td align="center" valign="top">
+  <a href="javascript:freewin('../files/benz.htm',366,241)"><img 
+   src="../pics/benz_logo.gif" border=0 width=80
+   alt="Mercedes-Benz"></a></td>
+    </tr>
+   </table>
+  </td>
+  <td background="" align="CENTER" valign="TOP WIDTH=520">
+  <p class="headline">
+  Today's Movie: 
+  <a href="../files/dr.htm">Dr. Stranglove - Or How I Learned To Stop Worrying And Love The Bomb</a>
+  </p>
+  <a href="../files/sharphi8.htm"><img src="../pics/sharphi8.jpg" align="middle" border=0 alt="SHARP VL-H890U Hi-8 Camcorder"></a>
+  <a href="http://www.jvc.com/subprod.jsp?modelId=MODL020640"><img src="../pics/jvcavd201.jpg" align="middle" border=0 alt="JVC D-Series AV32D501"></a>
+  <br>
+
+<script>  // change number_of_images below 
+  var number_of_images=4
+    // change speed below (in seconds)
+  var speed=3
+  var step=1
+  var whichimage=1
+  var str="";
+
+  var image1=new Image()  ;  image1.src="../pics/jvc3800u.jpg"
+  var image2=new Image()  ;  image2.src="../pics/jvc3800uav.jpg"
+  var image3=new Image()  ;  image3.src="../pics/jvc3800ubv.jpg"
+  var image4=new Image()  ;  image4.src="../pics/jvc3800urc.jpg"
+
+  function slideit()
+  {
+   if (!document.images) return
+   if (document.all) slide.filters.blendTrans.apply()
+   document.images.slide.src=eval("image"+step+".src")
+   if (document.all) slide.filters.blendTrans.play()
+   whichimage=step
+   if (step<number_of_images) step++
+   else step=1
+   if (document.all) setTimeout("slideit()",speed*1000+3000)
+   else setTimeout("slideit()",speed*1000)
+  }
+  
+  str+="<a href='http://www.jvc.com/subprod.jsp?modelId=MODL022170'>"
+  str+="<img id='reflect' src=+image1.src+ name='slide' align="center" border=0 alt='JVC SuperVHS HR-S3800U' style='filter:blendTrans(duration=3)'>"
+  str+="</a><br>"
+
+  document.writeln(str);
+
+  slideit();
+
+</script>
+
+<br><font style="font-size:10pt">
+  <a href="../files/camry.htm">Auto</a> |
+  <a href="">Books</a> |
+  <a href="../files/sharphi8.htm">Camera</a> | 
+  <a href="">DVD/VHS</a> |
+  <a href="../files/sofa_levitz.htm">Furniture</a> |
+  <a href="">Cell phone</a> |
+  <a href="../pics/compaq_dpensff.gif">Computer</a> |
+  <a href="">TV</a> |
+  <a href="">VCR</a>
+    
+
+  </td>
+ </tr>
+</table>
+
+
+</body>
+</html>
+
+

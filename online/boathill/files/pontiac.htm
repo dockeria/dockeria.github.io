@@ -1,0 +1,147 @@
+<html>
+<head><title>Pontiac | Oldsmobile Gallery</title>
+
+<style>
+ body {
+  background: #DCDCDC url('');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: black;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+ }
+</style>
+
+<script type="text/javascript">  // Blending Image Slide Show Script- 
+
+  function reapply()
+  {
+   setTimeout("slideit()",2000)
+   return true
+  }
+  window.onerror=reapply
+
+</script>
+
+</head>
+
+<body onLoad="self.resizeTo(680,520)">
+
+<div>
+ <table width=100% height=100% border=0>
+  <tr>
+   <td align="left"   valign="top"    width=25% height=22%>
+  <img src="../pics/pontiac_sunfire_gt.gif" border=0 width=150 alt="Sunfire GT">
+   </td>
+   <td align="center" valign="middle" colspan=2>
+  <img src="../pics/pontiac_logo.gif" border=0 width=196 alt="Pontiac"><br>
+  <img src="../pics/olds_logo.gif" border=0 width=234 alt="Oldsmobile"><br><br><br>
+   </td>
+   <td align="right"  valign="top"    width=25% height=22%>
+  <img src="../pics/pontiac_bonneville_se.gif" border=0 width=150 alt="Bonneville SE">
+   </td>
+  </tr><tr>
+   <td align="left"   valign="middle" width=25% height=25%>
+  <img src="../pics/pontiac_grandprix_se.gif" border=0 width=150 alt="Grand Prix SE">
+    </td>
+   <td align="center" valign="middle" rowspan=2 colspan=2>
+  <img src="../pics/pontiac_tm.gif" border=0>
+   </td>
+   <td align="right"  valign="middle" width=25% height=25%>
+  <img src="../pics/pontiac_grandam_gt.gif" border=0 width=150 alt="Grand Am GT">
+   </td>
+  </tr><tr>
+   <td align="left"   valign="middle" width=25% height=25%>
+  <img src="../pics/pontiac_grandprix_gt.gif" border=0 width=120 alt="Grand Prix SE">
+   </td>
+   <td align="right"  valign="middle" width=25% height=25%>
+  <img src="../pics/pontiac_sunfire_se.gif" border=0 width=150 alt="Sunfire SE">
+   </td>
+  </tr><tr>
+   <td align="left"   valign="bottom">
+  <img src="../pics/pontiac_bonneville.gif" border=0 width=150 alt="Bonneville">
+   </td>
+   <td align="center" valign="bottom" width=25% height=28%>
+  <img src="../pics/pontiac_montana.gif" border=0 width=150 alt="Montana">
+   </td>
+   <td align="center" valign="bottom" width=25% height=28%>
+  <img src="../pics/pontiac_montana_el.gif" border=0 width=150 alt="Montana Extended Length">
+   </td>
+   <td align="right"  valign="bottom" width=25% height=28%>
+  <img src="../pics/pontiac_firebird.gif" border=0 width=150 alt="Firebird">
+   </td>
+  </tr>
+ </table>
+</div>
+
+<div style="align:center;position:absolute;left:0;top:0;width:100%;height=100%">
+<table width=100% height=100% cellpadding="0" cellspacing=0 BORDER=0>
+ <tr>
+  <td align="CENTER" Valign="MIDDLE">
+
+<script>  // change number_of_images below 
+  var number_of_images=25
+    // change speed below (in seconds)
+  var speed=3
+  var step=1
+  var whichimage=1
+  var str="";
+
+  var image1 =new Image()  ;  image1.src ="../pics/pontiac_firebird1.jpg";
+  var image2 =new Image()  ;  image2.src ="../pics/pontiac_firebird2.jpg";
+  var image3 =new Image()  ;  image3.src ="../pics/pontiac_firebird3.jpg";
+  var image4 =new Image()  ;  image4.src ="../pics/pontiac_grandam.jpg";
+  var image5 =new Image()  ;  image5.src ="../pics/pontiac_grandprix1.jpg";
+  var image6 =new Image()  ;  image6.src ="../pics/pontiac_grandprix2.jpg";
+  var image7 =new Image()  ;  image7.src ="../pics/pontiac_grandprix3.jpg";
+  var image8 =new Image()  ;  image8.src ="../pics/pontiac_grandprix4.jpg";
+  var image9 =new Image()  ;  image9.src ="../pics/pontiac_grandprix5.jpg";
+  var image10=new Image()  ;  image10.src="../pics/pontiac_grandprix6.jpg";
+  var image11=new Image()  ;  image11.src="../pics/pontiac_sunfire1.jpg";
+  var image12=new Image()  ;  image12.src="../pics/pontiac_sunfire2.jpg";
+  var image13=new Image()  ;  image13.src="../pics/olds_alero_c1.jpg";
+  var image14=new Image()  ;  image14.src="../pics/olds_alero_c2.jpg";
+  var image15=new Image()  ;  image15.src="../pics/olds_alero_c3.jpg";
+  var image16=new Image()  ;  image16.src="../pics/olds_alero_c4.jpg";
+  var image17=new Image()  ;  image17.src="../pics/olds_alero_s1.jpg";
+  var image18=new Image()  ;  image18.src="../pics/olds_alero_s2.jpg";
+  var image19=new Image()  ;  image19.src="../pics/olds_alero_s3.jpg";
+  var image20=new Image()  ;  image20.src="../pics/olds_intrigue.jpg";
+  var image21=new Image()  ;  image21.src="../pics/olds_aurora1.jpg";
+  var image22=new Image()  ;  image22.src="../pics/olds_aurora2.jpg";
+  var image23=new Image()  ;  image23.src="../pics/olds_aurora3.jpg";
+  var image24=new Image()  ;  image24.src="../pics/olds_aurora4.jpg";
+  var image25=new Image()  ;  image25.src="../pics/olds_aurora5.jpg";
+
+  function slideit()
+  {
+   if (!document.images) return
+   if (document.all) slide.filters.blendTrans.apply()
+   document.images.slide.src=eval("image"+step+".src")
+   if (document.all) slide.filters.blendTrans.play()
+   whichimage=step
+   if (step<number_of_images) step++
+   else step=1
+   if (document.all) setTimeout("slideit()",speed*1000+3000)
+   else setTimeout("slideit()",speed*1000)
+  }
+  
+  str+="<a href='http://www.pontiac.com/'>"
+  str+="<img id='reflect' src=+image1.src+ name='slide' width=388 height=246 align="center" border=0 alt='Pontiac | Oldsmobile Gallery' style='filter:blendTrans(duration=3)'>"
+  str+="</a><br><br>"
+
+  document.writeln(str);
+
+  slideit();
+
+</script>
+
+  </td>
+ </tr>
+</table>
+</div>
+
+</body>
+</html>
+
+

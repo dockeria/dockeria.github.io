@@ -1,0 +1,376 @@
+<html>
+<head><title>Dynamic Calendar</title>
+
+
+<script language="JavaScript">  // Dynamic Calender
+
+ if (document.all)    {ns=0;ie=1;fShow="visible";fHide="hidden";}
+ if (document.layers) {ns=1;ie=0;fShow="show";   fHide="hide";}
+
+ var MonthNames = new Array("January", "Febrary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+ var YearNames = new Array("Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Sheep", "Monkey", "Rooster", "Dog", "Pig");
+ var nCurrentYear = 0;
+ var nCurrentMonth = 0;
+
+ var nWidth  = 35;
+ var nHeight = 25;
+
+ var leftX;
+ var rightX
+ var topY;
+ var bottomY;
+
+ function Calendar() {  // form the calender area
+
+  var HTMLstr = "";
+
+  HTMLstr += "<table width=100% height=100% cellpadding=16><tr><td align="center" valign="top">";
+  HTMLstr += "<table background='../lib/grid35x25.gif' width=245 cellspacing=0 cellpadding=0 border=1>\n";
+  HTMLstr += "<tr><td bgcolor='darkblue'>\n";
+  HTMLstr += "\n";
+
+  HTMLstr += "<table background='' width=100% height=50 cols=4 cellspacing=0 cellpadding=0 border=0>\n";
+  HTMLstr += "<tr>\n";
+
+  if (ie) HTMLstr += "<td width=20 align="center" valign="middle">";
+  if (ns) HTMLstr += "<td width=5 align="center" valign="middle">";
+//  HTMLstr += "<a href=\"javascript:prevMonth();\"><img src=\"../lib/scrollup.gif\" border=0 alt=\"Previous Month\"></a>\n";
+  HTMLstr += "<a href=\"javascript:nextMonth();\" style='text-decoration: none;'><font face=\"Courier\" size=1 color=#FFFFFF>(+)</a>\n";
+  HTMLstr += "<br>";
+//  HTMLstr += "<a href=\"javascript:nextMonth();\"><img src=\"../lib/scrolldown.gif\" border=0 alt=\"Previous Month\"></a>\n";
+  HTMLstr += "<a href=\"javascript:prevMonth();\" style='text-decoration: none;'><font face=\"Courier\" size=1 color=#FFFFFF>(-)</a>";
+  HTMLstr += "</td>\n";
+
+  HTMLstr += "<td align="left" valign="middle">";
+  if (ie) HTMLstr += "<div id='mainMonth' style='position=relative;'>";
+  if (ns) HTMLstr += "<ilayer id='mainMonth'><layer id='idMonth' top='0' left='0'>\n";
+  HTMLstr += "<font color='#99ffff'><b>January</b></font>\n";
+  if (ns) HTMLstr += "</layer></ilayer>\n";
+  if (ie) HTMLstr += "</div>\n";
+  HTMLstr += "</td>\n";
+
+  HTMLstr += "<td width=50 align="right" valign="middle">\n";
+  if (ns) HTMLstr += "<ilayer id='mainYear'><layer id='idYear' top='0' left='0'>\n";
+  if (ie) HTMLstr += "<div id='mainYear' style='position: relative'>\n";
+  HTMLstr += "<font color='#99ffff'><b>2000</b></font>\n";
+  if (ie) HTMLstr += "<div>\n";
+  if (ns) HTMLstr += "</layer></ilayer>\n";
+  HTMLstr += "</td>\n";
+
+  if (ns) HTMLstr += "<td width=5 align="center" valign="middle">";
+  if (ie) HTMLstr += "<td width=20 align="center" valign="middle">";
+//  HTMLstr += "<a href=\"javascript:prevYear();\"><img src=\"../lib/scrollup.gif\" border=0 alt=\"Previous Year\"></a>\n";
+  HTMLstr += "<a href=\"javascript:nextYear();\" style='text-decoration: none;'><font face=\"Courier\" size=1 color=#FFFFFF>(+)</font></a>";
+  HTMLstr += "<br>";
+//  HTMLstr += "<a href=\"javascript:nextYear();\"><img src=\"../lib/scrolldown.gif\" border=0 alt=\"Next Year\"></a>\n";
+  HTMLstr += "<a href=\"javascript:prevYear();\" style='text-decoration: none;'><font face=\"Courier\" size=1 color=#FFFFFF>(-)</font></a>";
+  HTMLstr += "</td>\n";
+
+  HTMLstr += "</tr>\n";
+  HTMLstr += "</table>\n";
+
+  HTMLstr += "\n";
+  HTMLstr += "</td></tr>\n";
+  HTMLstr += "\n";
+  HTMLstr += "<tr height=175><td bgcolor=#EEE8AA valign="\""top\">\n";
+  HTMLstr += "\n";
+  HTMLstr += "<table background='' cols=7 cellspacing=0 cellpadding=0 border=0>\n";
+  HTMLstr += "<tr>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008000 size=2><b>SU</b></font></td>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008B8B size=2><b>MO</b></font></td>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008B8B size=2><b>TU</b></font></td>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008B8B size=2><b>WE</b></font></td>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008B8B size=2><b>TH</b></font></td>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008B8B size=2><b>FR</b></font></td>\n";
+  HTMLstr += "<td width=35 height=25 align="center"><font face='Arial' color=#008000 size=2><b>SA</b></font></td>\n";
+  HTMLstr += "</tr>\n";
+  HTMLstr += "<tr>\n";
+  HTMLstr += "<td colspan=7><font face='Arial'>\n";
+  if (ie) HTMLstr += "<div style='position: relative;'>";
+  if (ns) HTMLstr += "<ilayer id='idMenuContainer' height='120px' width='250px'>\n";
+
+  for (var date=1; date <= 31; date++) {
+   if (ns) {
+  HTMLstr += "  <layer id=\"idDate"+date+"\" val="+date+" visibility=\"hide\">\n";
+  HTMLstr += "    <layer><b>"+date+"</b></layer>\n";
+  HTMLstr += "  </layer>\n";
+   }
+   if (ie) {
+  HTMLstr += "  <div id=\"idDate"+date+"\" val="+date+" style=\"position: absolute; visibility: hidden\">\n";
+  HTMLstr += "    <b>"+date+"</b>\n";
+  HTMLstr += "  </div>\n";
+   }
+  }
+
+  if (ie) HTMLstr += "</div>";
+  if (ns) HTMLstr += "</ilayer>\n";
+  HTMLstr += "</td></tr>\n";
+  HTMLstr += "</table>\n";
+  HTMLstr += "\n";
+  HTMLstr += "</td></tr>\n";
+  HTMLstr += "</table>\n";
+  HTMLstr += "</td></tr></table>\n";
+
+
+ document.writeln("<div id='tooltip' style='position:absolute;visibility:hidden'></div>\n");
+
+
+  document.writeln(HTMLstr);
+  buildMonthMenu();
+ }
+
+ function setYearMonth(nYear, nMonth) {
+
+  nCurrentYear = nYear;
+  nCurrentMonth = nMonth;
+  var today  = new Date();
+
+  if (ie) {
+   document.all["mainYear"].innerHTML  = "<a href=\"dynacalendar\" style=\"text-decoration:none\" onMouseOver=\"showYearName(this,event,nCurrentYear)\"><font face=\"Arial\" color=#99ffff size=5><b>"+nCurrentYear+"</b></font></a>";
+   document.all["mainMonth"].innerHTML = "<a href=\"javascript:showMonthMenu()\" style=\"text-decoration:none\"><font face=\"Arial\" color=#99ffff size=5><b>"+MonthNames[nCurrentMonth-1]+"</b></font></a>\n";
+
+   var date   = new Date(nCurrentYear, nCurrentMonth-1, 1);
+   var nWeek  = 1;
+   var nDate;
+
+   while (date.getMonth() == nCurrentMonth-1) {
+  nDate = date.getDate();
+  nLastDate = nDate;
+
+  var posDay = date.getDay();
+  var posLeft = posDay*(nWidth)+8;
+  var posTop  = (nWeek-1)*nHeight;
+
+  if (nDate < 10) document.all["idDate"+nDate].style.left = posLeft+5;
+  else document.all["idDate"+nDate].style.left = posLeft;
+  document.all["idDate"+nDate].style.top  = posTop;
+  if (today.getDate() == nDate)
+    document.all["idDate"+nDate].style.color  = "blue";
+  else if (date.getDay() == 0 || date.getDay() == 6)
+    document.all["idDate"+nDate].style.color  = "red";
+  else
+    document.all["idDate"+nDate].style.color  = "black";
+  document.all["idDate"+nDate].style.visibility = "visible";
+  date = new Date(nCurrentYear, date.getMonth(), date.getDate()+1);
+  if (posDay == 6) nWeek++;
+   }
+   for (++nDate; nDate <= 31; nDate++)
+  document.all["idDate"+nDate].style.visibility = "hidden";
+  }
+  if (ns) {
+   // Verify parameters
+   if (nMonth < 1 || nMonth > 12) {alert("Function: setYearMonth()\nERROR: Incorrect month "+nMomth);}
+
+   document.mainYear.document.idYear.document.open();
+   document.mainYear.document.idYear.document.write("<a href=\"#\" style=\"text-decoration:none\" onMouseOver=\"showYearName(this,event,nCurrentYear)\" onMouseOut=\"hideYearName()\"><font face=\"Arial\" color=#99ffff size=4><b>"+nCurrentYear+"</b></font></a>");
+   document.mainYear.document.idYear.document.close();
+
+   document.mainMonth.document.idMonth.document.open();
+   document.mainMonth.document.idMonth.document.write("<a href=\"javascript:showMonthMenu()\" style=\"text-decoration:none\"><font face=\"Arial\" color=#99ffff size=4><b>"+MonthNames[nCurrentMonth-1]+"</b></font></a>");
+   document.mainMonth.document.idMonth.document.close();
+
+   var date   = new Date(nYear, nMonth-1, 1);
+   var nWeek  = 1;
+   var nDate;
+
+   while (date.getMonth() == nMonth-1) {
+  nDate = date.getDate();
+  nLastDate = nDate;
+
+  var posDay = date.getDay();
+  var posLeft = posDay*(nWidth)+5;
+  var posTop  = (nWeek-1)*nHeight;
+
+  if (nDate < 10) document.layers["idMenuContainer"].document.layers["idDate"+nDate].left = posLeft+5;
+  else document.layers["idMenuContainer"].document.layers["idDate"+nDate].left = posLeft;
+  document.layers["idMenuContainer"].document.layers["idDate"+nDate].top  = posTop;
+  if (date.getDay() == 0 || date.getDay() == 6)
+    document.layers["idMenuContainer"].document.layers["idDate"+nDate].color  = "red";
+  else
+    document.layers["idMenuContainer"].document.layers["idDate"+nDate].color  = "black";
+  document.layers["idMenuContainer"].document.layers["idDate"+nDate].visibility = "visible";
+  date = new Date(nCurrentYear, date.getMonth(), date.getDate()+1);
+  if (posDay == 6) nWeek++;
+   }
+   for (++nDate; nDate <= 31; nDate++)
+  document.layers["idMenuContainer"].document.layers["idDate"+nDate].visibility = "hidden";
+  }
+ }
+
+ function nextMonth() {  // go the next month
+  nCurrentMonth++;
+  if (nCurrentMonth > 12) {
+  nCurrentMonth -= 12;
+  nextYear();
+  }
+  setYearMonth(nCurrentYear, nCurrentMonth);
+ }
+
+ function prevMonth() {  // go the previous month
+  nCurrentMonth--;
+  if (nCurrentMonth < 1) {
+  nCurrentMonth += 12;
+  prevYear();
+  }
+  setYearMonth(nCurrentYear, nCurrentMonth);
+ }
+
+ function prevYear() {  // go the previous year
+  nCurrentYear--;
+  setYearMonth(nCurrentYear, nCurrentMonth);
+ }
+
+ function nextYear() {  // go the next year
+  nCurrentYear++;
+  setYearMonth(nCurrentYear, nCurrentMonth);
+ }
+
+ function setCurrentMonth() {
+  date = new Date();
+  currentyear=date.getYear()
+  if (currentyear < 1000) currentyear += 1900
+  setYearMonth(currentyear, date.getMonth()+1);
+ }
+
+ function setMonth(nMonth) {
+  setYearMonth(nCurrentYear, nMonth);
+ }
+
+////////////////////////////////////////////////////
+
+ function showYearName(current,e,nYear) {  // show tip for the Name of the Chinese Year
+
+  if (nYear < 0) { 
+   while (nYear < -12) nYear = nYear + 12;
+   if (nYear < -9) nYear = nYear + 21;
+   else nYear = nYear + 9;
+  }
+  else if (nYear < 4) nYear = nYear + 8;
+  else { 
+   nYear = nYear - 4;
+   while (nYear > 11) nYear = nYear - 12;
+  }
+
+  text = "Chinese Year of " + YearNames[nYear]
+
+  if (document.all) {
+   thetitle=text.split('<br>')
+   if (thetitle.length>1) {
+    thetitles=''
+    for (i=0;i<thetitle.length;i++) thetitles+=thetitle[i]
+    current.title=thetitles
+   }
+   else
+    current.title=text
+  }
+  else if (document.layers) {
+   document.tooltip.document.write('<layer bgColor="white" style="border:1px solid black;font-size:12px;">'+text+'</layer>')
+   document.tooltip.document.close()
+   document.tooltip.left=e.pageX+5
+   document.tooltip.top=e.pageY-5
+   document.tooltip.visibility="show"
+  }
+ }
+
+ function hideYearName() {
+  if (document.layers) document.tooltip.visibility="hidden"
+ }
+
+ function updateIt(e) {
+ //  var x = e.pageX;
+ //  var y = e.pageY;
+
+ //  if (x > rightX || x < leftX) hideMonthMenu();
+ //  else if (y > bottomY || y < topY) hideMonthMenu();
+ }
+
+ function hideMonthMenu() {
+  document.layers["idMonthMenu"].visibility="hide";
+ }
+
+ function showMonthMenu() {
+  if (!ns) return;
+  topY    = document.layers["mainMonth"].pageY-50;
+  bottomY = document.layers["mainMonth"].pageY + document.layers["idMonthMenu"].clip.height+50;
+  leftX   = document.layers["mainMonth"].pageX-50;
+  rightX  = document.layers["mainMonth"].pageX + document.layers["idMonthMenu"].clip.width+50;
+
+  document.layers["idMonthMenu"].top = document.layers["mainMonth"].pageY+document.layers["mainMonth"].clip.height;
+  document.layers["idMonthMenu"].left = document.layers["mainMonth"].pageX;
+  document.layers["idMonthMenu"].visibility="show";
+ }
+
+ function buildMonthMenu() {
+  if (!ns) return;
+  var HTML = "";
+  HTML += "<layer id=\"idMonthMenu\" visibility=\"hide\" width=\"120\" bgcolor=\"darkblue\">\n";
+  HTML += "<table border=\"1\" cellspacing=\"0\" cellpading=\"0\">\n";
+  for (var month=0; month<12;) {
+  HTML += "<tr>\n";
+  for (var i = 0; i < 3; i++) {
+    var nMonth = month+1;
+    HTML += "<td><a href=\"javascript:hideMonthMenu();setMonth("+nMonth+");\"><font color=\"white\" size=-1><b>"+MonthNames[month]+"</b></font></a></td>\n";
+    month++;
+  }
+  HTML += "</tr>\n";
+  }
+  HTML += "</table>";
+  HTML += "</layer>";
+  document.writeln(HTML);
+ }
+
+ var cal = new Calendar();
+
+</script>
+
+</head>
+
+<body bgcolor=#FFB6C1 onLoad="setCurrentMonth()">
+
+
+<span id="liveclock" style="position:absolute;left:5;top:2;"></span>
+
+
+<script language="JavaScript">    // Upper Left Corner Live Clock Script- 
+
+ function clocktime() {
+
+  if (!document.layers&&!document.all) return
+
+  var Digital=new Date()
+  var hours=Digital.getHours()
+  var minutes=Digital.getMinutes()
+  var seconds=Digital.getSeconds()
+  var dn="AM" 
+
+  if (hours>12) {
+   dn="PM"
+   hours=hours-12
+  }
+  if (hours==0)
+   hours=12
+   if (minutes<=9)
+    minutes="0"+minutes
+   if (seconds<=9)
+    seconds="0"+seconds
+
+  //change font size here to your desire
+  myclock="<font size='1' face='Arial' >Current Time:<b> "+hours+":"+minutes+":"+seconds+" "+dn+"</b></font>"
+
+  if (document.layers) {
+   document.layers.liveclock.document.write(myclock)
+   document.layers.liveclock.document.close()
+  } 
+  else if (document.all)
+   liveclock.innerHTML=myclock
+
+  setTimeout("clocktime()",1000)
+ }
+
+ clocktime()
+
+</script>
+
+
+</body>
+</html>

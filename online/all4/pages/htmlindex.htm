@@ -1,0 +1,2321 @@
+<html>
+<head>
+<title>HTML Command Reference</title>
+<style><!--
+ a:link {color: "blue"}
+ a:active {color: "abbb20"}
+ a:visited {color: "339900"}
+ a:hover {color: "red"}
+//--></style>
+<link rel="stylesheet" href="../style.css" type="text/css">
+<script type="text/jscript" language=jscript>
+<!--
+   function mOvr(src,id) {
+      if (!src.contains(event.fromElement)) {
+         var cellID = id + 'Cell';
+         document.all.toolbar.rows(0).cells(cellID).bgColor = '#FFFF00';
+      }
+   }
+
+   function mOut(src,id) {
+      if (!src.contains(event.toElement)) {
+         var cellID = id + 'Cell';
+         document.all.toolbar.rows(0).cells(cellID).bgColor = '';
+      }
+   }
+-->
+</script>
+</head>
+<body marginheight="0" marginwidth="0" leftmargin="0" topmargin="0">
+<center>
+<font face="impact" size="5" color="0068b0">
+
+  Designer HTML Reference
+
+</font><P>
+
+<font face="Arial" size=3>
+<a href="#a">A</a> |
+<a href="#b">B</a> |
+<a href="#caption">C</a> |
+<a href="#dd">D</a> |
+<a href="#em">E</a> |
+<a href="#fieldset">F</a> |
+<a href="#h1">H</a> |
+<a href="#i">I</a> |
+<a href="#kbd">K</a> |
+<a href="#label">L</a> |
+<a href="#map">M</a> |
+<a href="#noframes">N</a> |
+<a href="#object">O</a> |
+<a href="#p">P</a> |
+<a href="#q">Q</a> |
+<a href="#s">S</a> |
+<a href="#table">T</a> |
+<a href="#u">U</a> |
+<a href="#var">V</a>
+</font>
+
+<p>
+
+
+<table border=0 cellpadding=3 cellspacing=1 width=465 bgcolor="#000000">
+<tr>
+<td bgcolor="#0058B0" width=155 colspan=4><font face="Arial" size=2 color="#ffffff"><b>HTML&nbsp;Command&nbsp;Reference</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#99ccff"><font face="Arial" size=1 color="#000000">Tag</font></td>
+<td bgcolor="#99ccff"><font face="Arial" size=1 color="#000000">Attribute</font></td>
+<td bgcolor="#99ccff"><font face="Arial" size=1 color="#000000">End Tag</font></td>
+<td bgcolor="#99ccff"><font face="Arial" size=1 color="#000000">Description</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Anchor tag.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a-accesskey"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>accesskey</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Accessibility key character.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a-charset"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>charset</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Character encoding of linked resource.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a-coords"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>coords</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Coordinates for use with an image map.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a-href"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>href</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Links to different documents or sites.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a-hreflang"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>hreflang</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines language of linked URL.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a-name"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>name</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>A reference to the location in the page.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a-rel"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>rel</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Forward link type.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a-rev"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>rev</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Reverse link type.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a-shape"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>shape</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Shape for use with an image map.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a-tabindex"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>tabindex</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies order object will be selected with tab.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a-target"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>target</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies frame or window to open link in.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="a-type"></a>a</font></td>
+<td bgcolor="#f6f6f6"><font size=2>type</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies MIME type of linked URL.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="abbr"></a>abbr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies abbreviated text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="acronym"></a>acronym</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies an acronym in text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="address"></a>address</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Applies to information about the author.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="applet"></a>applet</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Call a Java applet and defines it's properties.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="applet-height"></a>applet</font></td>
+<td bgcolor="#f6f6f6"><font size=2>height</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Height in pixels or percent of a Java Applet.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="applet-width"></a>applet</font></td>
+<td bgcolor="#f6f6f6"><font size=2>width</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Width in pixels or percent of a Java Applet.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="applet-align"></a>applet</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Horizontal aligning of a Java Applet.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="applet-alt"></a>applet</font></td>
+<td bgcolor="#f6f6f6"><font size=2>alt</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Alternative text for a Java Applet.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="applet-archive"></a>applet</font></td>
+<td bgcolor="#f6f6f6"><font size=2>archive</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>URL containing resources to pre-load.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="applet-hspace"></a>applet</font></td>
+<td bgcolor="#f6f6f6"><font size=2>hspace</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines number of pixels are on left and right of the applet.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="applet-name"></a>applet</font></td>
+<td bgcolor="#f6f6f6"><font size=2>name</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Named applets can interact with each other.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="applet-vspace"></a>applet</font></td>
+<td bgcolor="#f6f6f6"><font size=2>vspace</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines number of pixels are on top and bottom of the applet.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="area"></a>area</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies a certain area and it's properties.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="area-alt"></a>area</font></td>
+<td bgcolor="#f6f6f6"><font size=2>alt</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines the alternate text for a particular area of an image map.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="area-accesskey">area</a></font></td>
+<td bgcolor="#f6f6f6"><font size=2>accesskey</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Accessibility key character.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="area-coords"></a>area</font></td>
+<td bgcolor="#f6f6f6"><font size=2>coords</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines coordinates the area applies to.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="area-href"></a>area</font></td>
+<td bgcolor="#f6f6f6"><font size=2>href</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines URL coordinates will do to in image map.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="area-nohref"></a>area</font></td>
+<td bgcolor="#f6f6f6"><font size=2>nohref</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Coordinates go nowhere.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="area-onblur"></a>area</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onblur</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="area-onfocus"></a>area</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onfocus</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="area-tabindex"></a>area</font></td>
+<td bgcolor="#f6f6f6"><font size=2>tabindex</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Order in which object will be tabbed to.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="area-target"></a>area</font></td>
+<td bgcolor="#f6f6f6"><font size=2>target</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies frame or window the URL will be opened in.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="b"></a>b</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Makes text bold.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="base"></a>base</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines some basic body properties.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="base-href"></a>base</font></td>
+<td bgcolor="#f6f6f6"><font size=2>href</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies root URL of web site.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="base-target"></a>base</font></td>
+<td bgcolor="#f6f6f6"><font size=2>target</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies default frame or window for URLs.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="basefont"></a>basefont</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Applies properties to the entire documents fonts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="basefont-size"></a>basefont</font></td>
+<td bgcolor="#f6f6f6"><font size=2>size</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies default font size on the page.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="basefont-color"></a>basefont</font></td>
+<td bgcolor="#f6f6f6"><font size=2>color</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies default font color on the page.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="basefont-face"></a>basefont</font></td>
+<td bgcolor="#f6f6f6"><font size=2>face</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies default font face on the page.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="basefont-id"></a>basefont</font></td>
+<td bgcolor="#f6f6f6"><font size=2>id</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies default id for the entire page text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="bdo-lang"></a>bdo</font></td>
+<td bgcolor="#f6f6f6"><font size=2>lang</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies language code or document.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="bdo-dir"></a>bdo</font></td>
+<td bgcolor="#f6f6f6"><font size=2>dir</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies direction of text, ltr or rtl (right to left or left to right)</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="big"></a>big</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Makes specified text bigger.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="blockquote"></a>blockquote</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Marks text as a blockquote and indents it.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="body"></a>body</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines many properties for the body of the document.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="body-alink"></a>body</font></td>
+<td bgcolor="#f6f6f6"><font size=2>alink</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Background color of active links in <a href="colorhexchart.html" class="reftable">hex code</a>.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="body-background"></a>body</font></td>
+<td bgcolor="#f6f6f6"><font size=2>background</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies background image to be tiled.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="body-bgcolor"></a>body</font></td>
+<td bgcolor="#f6f6f6"><font size=2>bgcolor</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Background color of page in <a href="colorhexchart.html" class="reftable">hex code</a>.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="body-link"></a>body</font></td>
+<td bgcolor="#f6f6f6"><font size=2>link</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies the link color in <a href="colorhexchart.html" class="reftable">hex code</a>.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="body-onload"></a>body</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onload</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies script to be loaded after page is loaded.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="body-onunload"></a>body</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onunload</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies script to be loaded after page is unloaded.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="body-text"></a>body</font></td>
+<td bgcolor="#f6f6f6"><font size=2>text</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies the text color in <a href="colorhexchart.html" class="reftable">hex code</a>.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="body-vlink"></a>body</font></td>
+<td bgcolor="#f6f6f6"><font size=2>vlink</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies the visited link color in <a href="colorhexchart.html" class="reftable">hex code</a>.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="br"></a>br</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines a carriage return in the page.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="br-clear"></a>br</font></td>
+<td bgcolor="#f6f6f6"><font size=2>clear</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Breaks text around images in the direction specified.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="button"></a>button</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines properties for a form button.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="button-accesskey"></a>button</font></td>
+<td bgcolor="#f6f6f6"><font size=2>accesskey</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Character.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="button-disabled"></a>button</font></td>
+<td bgcolor="#f6f6f6"><font size=2>disabled</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Disable the button.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="button-name"></a>button</font></td>
+<td bgcolor="#f6f6f6"><font size=2>name</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>The button name.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="button-onblur"></a>button</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onblur</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Onblur for use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="button-onfocus"></a>button</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onfocus</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Onfocus for use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="button-tabindex"></a>button</font></td>
+<td bgcolor="#f6f6f6"><font size=2>tabindex</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Order in which button will be tabbed to.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="button-type"></a>button</font></td>
+<td bgcolor="#f6f6f6"><font size=2>type</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies type of button.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="button-value"></a>button</font></td>
+<td bgcolor="#f6f6f6"><font size=2>value</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies the form value of the button.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="caption"></a>caption</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines text as a caption.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="caption-align"></a>caption</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines how to align the caption.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="center"></a>center</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Centers everything inside of the tag.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="cite"></a>cite</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines text as a citation.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="code"></a>code</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines text as code fragment.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="col"></a>col</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines properties for a table column.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="col-align"></a>col</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Aligns a table column horizontally.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="col-char"></a>col</font></td>
+<td bgcolor="#f6f6f6"><font size=2>char</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines character type for a table column.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="col-charoff"></a>col</font></td>
+<td bgcolor="#f6f6f6"><font size=2>charoff</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Length of characters.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="col-span"></a>col</font></td>
+<td bgcolor="#f6f6f6"><font size=2>span</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>How many columns to span across.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="col-valign"></a>col</font></td>
+<td bgcolor="#f6f6f6"><font size=2>valign</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Vertically aligns the columns contents.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="col-width"></a>col</font></td>
+<td bgcolor="#f6f6f6"><font size=2>width</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines the width of the column.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="colgroup"></a>colgroup</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines properties for a table column.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="colgroup-align"></a>colgroup</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Aligns a table group column horizontally.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="colgroup-char"></a>colgroup</font></td>
+<td bgcolor="#f6f6f6"><font size=2>char</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines character type for a table column group.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="colgroup-charoff"></a>colgroup</font></td>
+<td bgcolor="#f6f6f6"><font size=2>charoff</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Length of characters.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="colgroup-span"></a>colgroup</font></td>
+<td bgcolor="#f6f6f6"><font size=2>span</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>How many columns to span across.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="colgroup-valign"></a>colgroup</font></td>
+<td bgcolor="#f6f6f6"><font size=2>valign</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Vertically aligns the column groups contents.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="colgroup-width"></a>colgroup</font></td>
+<td bgcolor="#f6f6f6"><font size=2>width</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines the width of the column group.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="dd"></a>dd</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Definition description.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="del"></a>del</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Deletes text (strikethrough).</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="del-cite"></a>del</font></td>
+<td bgcolor="#f6f6f6"><font size=2>cite</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Cites an URL.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="del-datetime"></a>del</font></td>
+<td bgcolor="#f6f6f6"><font size=2>datetime</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines a date and time the text was deleted.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="dfn"></a>dfn</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Instance definition. Italicizes text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="div"></a>div</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic language/style container.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="div-align"></a>div</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies alignment of the div tag.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="dl"></a>dl</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Definition list.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="dt"></a>dt</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Definition term.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="em"></a>em</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Puts emphasis on text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="fieldset"></a>fieldset</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Form control group.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="font"></a>font</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines properties for text within the tag.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="font-color"></a>font</font></td>
+<td bgcolor="#f6f6f6"><font size=2>color</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines color for specified text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="font-face"></a>font</font></td>
+<td bgcolor="#f6f6f6"><font size=2>face</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines font for specified text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="font-size"></a>font</font></td>
+<td bgcolor="#f6f6f6"><font size=2>size</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines size for specified text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="form"></a>form</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Form tag goes around entire form.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="form-action"></a>form</font></td>
+<td bgcolor="#f6f6f6"><font size=2>action</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>URL to script to process form.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="form-accept-charset"></a>form</font></td>
+<td bgcolor="#f6f6f6"><font size=2>accept-charset</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines forms character set.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="form-enctype"></a>form</font></td>
+<td bgcolor="#f6f6f6"><font size=2>enctype</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines forms content type.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="form-method"></a>form</font></td>
+<td bgcolor="#f6f6f6"><font size=2>method</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines method used for form, get or post.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="form-onreset"></a>form</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onreset</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines script action when resetting a form.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="form-onsubmit"></a>form</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onsubmit</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines script action when submitting a form.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="form-target"></a>form</font></td>
+<td bgcolor="#f6f6f6"><font size=2>target</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies frame or window to open frame results in.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frame"></a>frame</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines properties for a frame.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frame-frameborder"></a>frame</font></td>
+<td bgcolor="#f6f6f6"><font size=2>frameborder</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Turns frame border on or off with 1 or 0.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frame-longdesc"></a>frame</font></td>
+<td bgcolor="#f6f6f6"><font size=2>longdesc</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>URL to a long description.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frame-marginheight"></a>frame</font></td>
+<td bgcolor="#f6f6f6"><font size=2>marginheight</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines the margin height.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frame-marginwidth"></a>frame</font></td>
+<td bgcolor="#f6f6f6"><font size=2>marginwidth</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines the margin width.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frame-noresize"></a>frame</font></td>
+<td bgcolor="#f6f6f6"><font size=2>noresize</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Does not let user resize the frame.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frame-scrolling"></a>frame</font></td>
+<td bgcolor="#f6f6f6"><font size=2>scrolling</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies if the page will scroll.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frame-src"></a>frame</font></td>
+<td bgcolor="#f6f6f6"><font size=2>src</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>The source .html page of the frame.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frameset"></a>frameset</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Tag that frames go inside of.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frameset-cols"></a>frameset</font></td>
+<td bgcolor="#f6f6f6"><font size=2>cols</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies pixel width for each frame.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frameset-onload"></a>frameset</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onload</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Loads a script when the frameset loads.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frameset-onunload"></a>frameset</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onunload</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Loads a script when you exit the frameset.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="frameset-rows"></a>frameset</font></td>
+<td bgcolor="#f6f6f6"><font size=2>rows</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies pixel height for each frame.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="h1"></a>h1</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>H1 header tag, the largest header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="h1-align"></a>h1</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines alignment of the header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="h2"></a>h2</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>H2 header tag, the second largest header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="h2-align"></a>h2</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines alignment of the header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="h3"></a>h3</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>H3 header tag, the third largest header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="h3-align"></a>h3</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines alignment of the header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="h4"></a>h4</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>H4 header tag, the fourth largest header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="h4-align"></a>h4</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines alignment of the header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="h5"></a>h5</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>H5 header tag, the fifth largest header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="h5-align"></a>h5</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines alignment of the header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="h6"></a>h6</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>H6 header tag, the smallest header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="h6-align"></a>h6</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines alignment of the header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="head"></a>head</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Contains title, meta info, stylesheets, etc.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="head-profile"></a>head</font></td>
+<td bgcolor="#f6f6f6"><font size=2>profile</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>URL to dictionary of meta info.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="hr"></a>hr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Horizontal Rule.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="hr-align"></a>hr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines the alignment of the horizontal rule.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="hr-noshade"></a>hr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>noshade</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Makes a solid line instead of a 3d line.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="hr-size"></a>hr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>size</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies height of horizontal rule.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="hr-width"></a>hr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>width</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies width of horizontal rule.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="html"></a>html</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Goes around entire html document.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="html-version"></a>html</font></td>
+<td bgcolor="#f6f6f6"><font size=2>version</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Version info like language goes here.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="i"></a>i</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Puts text in italics.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="iframe"></a>iframe</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>In-line frame, or a frame inside of your document.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="iframe-align"></a>iframe</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies alignment of your iframe.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="iframe-frameborder"></a>iframe</font></td>
+<td bgcolor="#f6f6f6"><font size=2>frameborder</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies the width in pixels of the iframe border.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="iframe-height"></a>iframe</font></td>
+<td bgcolor="#f6f6f6"><font size=2>height</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies the height of an iframe.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="iframe-longdesc"></a>iframe</font></td>
+<td bgcolor="#f6f6f6"><font size=2>longdesc</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>URL to long description.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="iframe-marginheight"></a>iframe</font></td>
+<td bgcolor="#f6f6f6"><font size=2>marginheight</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Height of the margin for the inside document of an iframe.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="iframe-marginwidth"></a>iframe</font></td>
+<td bgcolor="#f6f6f6"><font size=2>marginwidth</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Width of the margin for the inside document of an iframe.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="iframe-name"></a>iframe</font></td>
+<td bgcolor="#f6f6f6"><font size=2>name</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Name for referencing the iframe.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="iframe-scrolling"></a>iframe</font></td>
+<td bgcolor="#f6f6f6"><font size=2>scrolling</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines scrolling of document, yes, no, or auto.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="iframe-src"></a>iframe</font></td>
+<td bgcolor="#f6f6f6"><font size=2>src</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>The URL for the source of an iframe.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="iframe-width"></a>iframe</font></td>
+<td bgcolor="#f6f6f6"><font size=2>width</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines the width of an iframe.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="img"></a>img</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies an image.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="img-alt"></a>img</font></td>
+<td bgcolor="#f6f6f6"><font size=2>alt</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Alternative text for an image.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="img-src"></a>img</font></td>
+<td bgcolor="#f6f6f6"><font size=2>src</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines source URL for an image.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="img-align"></a>img</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines alignment of the image.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="img-border"></a>img</font></td>
+<td bgcolor="#f6f6f6"><font size=2>border</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines image border in pixels.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="img-height"></a>img</font></td>
+<td bgcolor="#f6f6f6"><font size=2>height</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines the height of an image.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="img-hspace"></a>img</font></td>
+<td bgcolor="#f6f6f6"><font size=2>hspace</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Space in pixels on each side of the image.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="img-ismap"></a>img</font></td>
+<td bgcolor="#f6f6f6"><font size=2>ismap</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Marks image as a server side image map.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="img-longdesc"></a>img</font></td>
+<td bgcolor="#f6f6f6"><font size=2>longdesc</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>URL for long description.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="img-usemap"></a>img</font></td>
+<td bgcolor="#f6f6f6"><font size=2>usemap</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Marks image as a client side image map.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="img-vspace"></a>img</font></td>
+<td bgcolor="#f6f6f6"><font size=2>vspace</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Space in pixels on the top and bottom of the image.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="img-width"></a>img</font></td>
+<td bgcolor="#f6f6f6"><font size=2>width</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies the width of the image.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies an input for a form.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-accept"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>accept</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>List of mime-types to accept for upload.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-accesskey"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>accesskey</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Accessibility key character.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-align"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies the alignment of the input.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-alt"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>alt</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Short description of the input.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-checked"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>checked</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For radio buttons and check buttons.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-disabled"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>disabled</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Makes the input unavailable.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-maxlength"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>maxlength</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Maximum characters for text fields.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-name"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>name</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Submits as part of the form.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-onblur"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onblur</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-onchange"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onchange</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-onfocus"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onfocus</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-onselect"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onselect</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-readonly"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>readonly</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Makes it impossible for the user to change the form.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-size"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>size</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines the size of an input box.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-src"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>src</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines the source URL if an image is used.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-tabindex"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>tabindex</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines order form will be tabbed to in.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-type"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>type</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>The type of form to use, radio, checkbox, submit, etc.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-usemap"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>usemap</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Uses an image map.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="input-value"></a>input</font></td>
+<td bgcolor="#f6f6f6"><font size=2>value</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines the default value for the input.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="ins"></a>ins</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Inserts text (underline).</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="ins-cite"></a>ins</font></td>
+<td bgcolor="#f6f6f6"><font size=2>cite</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Cites an URL.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="ins-datetime"></a>ins</font></td>
+<td bgcolor="#f6f6f6"><font size=2>datetime</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines a date and time the text was inserted.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="isindex"></a>isindex</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>One line text field.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="isindex"></a>isindex</font></td>
+<td bgcolor="#f6f6f6"><font size=2>txt</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Define the isindex as text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="kbd"></a>kbd</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Indicated text to be entered by the user.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="label"></a>label</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Form field label text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="label-accesskey"></a>label</font></td>
+<td bgcolor="#f6f6f6"><font size=2>accesskey</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Accesskey for form field label text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="label-for"></a>label</font></td>
+<td bgcolor="#f6f6f6"><font size=2>for</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Used with form field label text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="label-onblur"></a>label</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onblur</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Used with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="label-onfocus"></a>label</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onfocus</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Used with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="legend"></a>legend</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Refers to fieldsets.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="legend-accesskey"></a>legend</font></td>
+<td bgcolor="#f6f6f6"><font size=2>accesskey</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Accesskey for the legend.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="legend-align"></a>legend</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies alignment for the legend.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="li"></a>li</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>List item.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="li-type"></a>li</font></td>
+<td bgcolor="#f6f6f6"><font size=2>type</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Type of li style.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="li-value"></a>li</font></td>
+<td bgcolor="#f6f6f6"><font size=2>value</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Number for li.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="link"></a>link</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>A media-independent link.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="link-charset"></a>link</font></td>
+<td bgcolor="#f6f6f6"><font size=2>charset</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Character set for the link.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="link-href"></a>link</font></td>
+<td bgcolor="#f6f6f6"><font size=2>href</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>URL for linked media.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="link-hreflang"></a>link</font></td>
+<td bgcolor="#f6f6f6"><font size=2>hreflang</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Language set for the link.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="link-media"></a>link</font></td>
+<td bgcolor="#f6f6f6"><font size=2>media</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Media description for the link.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="link-rel"></a>link</font></td>
+<td bgcolor="#f6f6f6"><font size=2>rel</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Link type.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="link-rev"></a>link</font></td>
+<td bgcolor="#f6f6f6"><font size=2>rev</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Link type.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="link-target"></a>link</font></td>
+<td bgcolor="#f6f6f6"><font size=2>target</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Frame or window to open link in.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="link-type"></a>link</font></td>
+<td bgcolor="#f6f6f6"><font size=2>type</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Content type for the link.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="map"></a>map</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Tag for client-side image maps.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="map-name"></a>map</font></td>
+<td bgcolor="#f6f6f6"><font size=2>name</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Name of map for client-side image maps.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="menu"></a>menu</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>A simple menu list.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="menu-compact"></a>menu</font></td>
+<td bgcolor="#f6f6f6"><font size=2>compact</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Makes menu compact.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="meta"></a>meta</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Contains information about the page.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="meta-content"></a>meta</font></td>
+<td bgcolor="#f6f6f6"><font size=2>content</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>What meta tag contains.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="meta-http-equiv"></a>meta</font></td>
+<td bgcolor="#f6f6f6"><font size=2>http-equiv</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>URL.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="meta-lang"></a>meta</font></td>
+<td bgcolor="#f6f6f6"><font size=2>lang</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Language.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="meta-name"></a>meta</font></td>
+<td bgcolor="#f6f6f6"><font size=2>name</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Name.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="meta-scheme"></a>meta</font></td>
+<td bgcolor="#f6f6f6"><font size=2>scheme</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Scheme of document.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="noframes"></a>noframes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Content for browsers with no frames support.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="noscript"></a>noscript</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Comment out information for scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-align"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's alignment.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-archive"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>archive</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's archive URL.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-border"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>border</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's border.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-classid"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>classid</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's classid URL.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-codebase"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>codebase</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's codebase.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-codetype"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>codetype</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's type of content.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-data"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>data</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's data URL.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-declare"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>declare</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Declared generic embedded object.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-height"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>height</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's height in pixels.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-hspace"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>hspace</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's horizontal spacing.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-name"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>name</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's name.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-standby"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>standby</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's standby text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-tabindex"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>tabindex</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's order when tabbing.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-type"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>type</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's content type.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-usemap"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>usemap</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Image map with a generic embedded object.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-vspace"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>vspace</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's vertical spacing.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="object-width"></a>object</font></td>
+<td bgcolor="#f6f6f6"><font size=2>width</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Generic embedded object's width in pixels.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="ol"></a>ol</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Ordered list.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="ol-compact"></a>ol</font></td>
+<td bgcolor="#f6f6f6"><font size=2>compact</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Compact ordered list.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="ol-start"></a>ol</font></td>
+<td bgcolor="#f6f6f6"><font size=2>start</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Number to start counting on.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="ol-type"></a>ol</font></td>
+<td bgcolor="#f6f6f6"><font size=2>type</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Type of ordered list.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="optgroup"></a>optgroup</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Option group. Like a &lt;select&gt; tag.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="optgroup-label"></a>optgroup</font></td>
+<td bgcolor="#f6f6f6"><font size=2>label</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Label for an option group.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="optgroup-disabled"></a>optgroup</font></td>
+<td bgcolor="#f6f6f6"><font size=2>disabled</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Disable an option group.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="option"></a>option</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Selectable choice in a &lt;select&gt; tag.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="option-disabled"></a>option</font></td>
+<td bgcolor="#f6f6f6"><font size=2>disabled</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Disable the option.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="option-label"></a>option</font></td>
+<td bgcolor="#f6f6f6"><font size=2>label</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Label for the option.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="option-selected"></a>option</font></td>
+<td bgcolor="#f6f6f6"><font size=2>selected</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines choice brought up when page is loaded.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="option-value"></a>option</font></td>
+<td bgcolor="#f6f6f6"><font size=2>value</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines the value of the option for use with forms.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="p"></a>p</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines a paragraph.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="p-align"></a>p</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines a paragraph's alignment.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="param"></a>param</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Passes parameters to the applet.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="param-name"></a>param</font></td>
+<td bgcolor="#f6f6f6"><font size=2>name</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Passes name of parameter to the applet.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="param-id"></a>param</font></td>
+<td bgcolor="#f6f6f6"><font size=2>id</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Passes id of parameter to the applet.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="param-type"></a>param</font></td>
+<td bgcolor="#f6f6f6"><font size=2>type</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Passes content type of parameter to the applet.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="param-value"></a>param</font></td>
+<td bgcolor="#f6f6f6"><font size=2>value</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Passes value of parameter to the applet.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="param-valuetype"></a>param</font></td>
+<td bgcolor="#f6f6f6"><font size=2>valuetype</font></td>
+<td bgcolor="#f6f6f6"><font size=2>no</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Passes value type of parameter to the applet.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="pre"></a>pre</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines preformatted text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="pre-width"></a>pre</font></td>
+<td bgcolor="#f6f6f6"><font size=2>width</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines preformatted text width.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="q"></a>q</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Short quotation.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="q-cite"></a>q</font></td>
+<td bgcolor="#f6f6f6"><font size=2>cite</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Cite an URL.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="s"></a>s</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Strike-through text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="samp"></a>samp</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Sample code, scripts, and more.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="script"></a>script</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines a script.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="script-type"></a>script</font></td>
+<td bgcolor="#f6f6f6"><font size=2>type</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines type of script.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="script-charset"></a>script</font></td>
+<td bgcolor="#f6f6f6"><font size=2>charset</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines character set of script.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="script-defer"></a>script</font></td>
+<td bgcolor="#f6f6f6"><font size=2>defer</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defers a script.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="script-language"></a>script</font></td>
+<td bgcolor="#f6f6f6"><font size=2>language</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies language of a script.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="script-src"></a>script</font></td>
+<td bgcolor="#f6f6f6"><font size=2>src</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies source of a script.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="script-title"></a>script</font></td>
+<td bgcolor="#f6f6f6"><font size=2>title</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies title of a script.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="select"></a>select</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines an option selector.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="select-disabled"></a>select</font></td>
+<td bgcolor="#f6f6f6"><font size=2>disabled</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Disables an option selector.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="select-multiple"></a>select</font></td>
+<td bgcolor="#f6f6f6"><font size=2>multiple</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines an option selector as multiple.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="select-name"></a>select</font></td>
+<td bgcolor="#f6f6f6"><font size=2>name</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines an option selector's name.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="select-onblur"></a>select</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onblur</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="select-onchange"></a>select</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onchange</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="select-onfocus"></a>select</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onfocus</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="select-size"></a>select</font></td>
+<td bgcolor="#f6f6f6"><font size=2>size</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="select-tabindex"></a>select</font></td>
+<td bgcolor="#f6f6f6"><font size=2>tabindex</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies order in which to be tabbed to.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="small"></a>small</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Small text style.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="span"></a>span</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Spans a style, language, or other container over an area.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="strike"></a>strike</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Strikethrough text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="strong"></a>strong</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Emphasizes text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="style"></a>style</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Style information.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="style-type"></a>style</font></td>
+<td bgcolor="#f6f6f6"><font size=2>type</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Style type.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="style-media"></a>style</font></td>
+<td bgcolor="#f6f6f6"><font size=2>media</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Style media description.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="style-title"></a>style</font></td>
+<td bgcolor="#f6f6f6"><font size=2>title</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Style title.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="sub"></a>sub</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Subscript.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="sup"></a>sup</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Superscript.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="table"></a>table</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines a table.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="table-align"></a>table</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines horizontal alignment of a table.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="table-bgcolor"></a>table</font></td>
+<td bgcolor="#f6f6f6"><font size=2>bgcolor</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines background color of a table.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="table-border"></a>table</font></td>
+<td bgcolor="#f6f6f6"><font size=2>border</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines border width of a table.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="table-cellpadding"></a>table</font></td>
+<td bgcolor="#f6f6f6"><font size=2>cellpadding</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines space around contents of a table.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="table-cellspacing"></a>table</font></td>
+<td bgcolor="#f6f6f6"><font size=2>cellspacing</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines spacing around cells of a table.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="table-frame"></a>table</font></td>
+<td bgcolor="#f6f6f6"><font size=2>frame</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines border placement around table.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="table-summary"></a>table</font></td>
+<td bgcolor="#f6f6f6"><font size=2>summary</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Summary text of table.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="table-width"></a>table</font></td>
+<td bgcolor="#f6f6f6"><font size=2>width</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines table width.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tbody"></a>tbody</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table body tag.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tbody-align"></a>tbody</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies alignment of table body contents.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tbody-char"></a>tbody</font></td>
+<td bgcolor="#f6f6f6"><font size=2>char</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Character set for table body.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tbody-charoff"></a>tbody</font></td>
+<td bgcolor="#f6f6f6"><font size=2>charoff</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Charoff length.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tbody-valign"></a>tbody</font></td>
+<td bgcolor="#f6f6f6"><font size=2>valign</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Vertical alignment of table body.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table data cell.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-abbr"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>abbr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Abbreviated text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-align"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Horizontal alignment of contents.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-axis"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>axis</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table data axis.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-bgcolor"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>bgcolor</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Background color in <a href="colorhexchart.html" class="reftable">hex code</a>.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-char"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>char</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Character.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-charoff"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>charoff</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Charoff.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-colspan"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>colspan</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Number of columns to span across.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-headers"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>headers</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table data headers.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-height"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>height</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table data height.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-nowrap"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>nowrap</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table data non-wrapping text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-rowspan"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>rowspan</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Number of rows to span across.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-scope"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>scope</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table data scope.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-valign"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>valign</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Vertical alignment of contents.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="td-width"></a>td</font></td>
+<td bgcolor="#f6f6f6"><font size=2>width</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table data width.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="textarea"></a>textarea</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Area filled with text for use with forms.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="textarea-cols"></a>textarea</font></td>
+<td bgcolor="#f6f6f6"><font size=2>cols</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Number of columns in a textarea.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="textarea-accesskey"></a>textarea</font></td>
+<td bgcolor="#f6f6f6"><font size=2>accesskey</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Accesskey character.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="textarea-disables"></a>textarea</font></td>
+<td bgcolor="#f6f6f6"><font size=2>disables</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Disables a textarea.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="textarea-onblur"></a>textarea</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onblur</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="textarea-onchange"></a>textarea</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onchange</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="textarea-onfocus"></a>textarea</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onfocus</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="textarea-onselect"></a>textarea</font></td>
+<td bgcolor="#f6f6f6"><font size=2>onselect</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>For use with scripts.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="textarea-readonly"></a>textarea</font></td>
+<td bgcolor="#f6f6f6"><font size=2>readonly</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Makes text area unchangeable.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="textarea-rows"></a>textarea</font></td>
+<td bgcolor="#f6f6f6"><font size=2>rows</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Number of rows in a textarea.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="textarea-tabindex"></a>textarea</font></td>
+<td bgcolor="#f6f6f6"><font size=2>tabindex</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Specifies order in which to be tabbed to.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tfoot"></a>tfoot</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines a table footer.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tfoot-align"></a>tfoot</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Horizontal alignment of table footer.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tfoot-char"></a>tfoot</font></td>
+<td bgcolor="#f6f6f6"><font size=2>char</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Character.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tfoot-charoff"></a>tfoot</font></td>
+<td bgcolor="#f6f6f6"><font size=2>charoff</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Length.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tfoot-valign"></a>tfoot</font></td>
+<td bgcolor="#f6f6f6"><font size=2>valign</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Vertical alignment of table footer.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table header cell.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-abbr"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>abbr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Abbreviated text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-align"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Horizontal alignment of contents.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-axis"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>axis</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table header axis.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-bgcolor"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>bgcolor</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Background color in <a href="colorhexchart.html" class="reftable">hex code</a>.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-char"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>char</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Character.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-charoff"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>charoff</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Charoff.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-colspan"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>colspan</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Number of columns to span across.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-headers"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>headers</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table header headers.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-height"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>height</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table header height.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-nowrap"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>nowrap</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table header non-wrapping text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-rowspan"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>rowspan</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Number of rows to span across.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-scope"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>scope</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table header scope.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-valign"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>valign</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Vertical alignment of contents.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="th-width"></a>th</font></td>
+<td bgcolor="#f6f6f6"><font size=2>width</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Table header width.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="thead"></a>thead</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines a table header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="thead-align"></a>thead</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Horizontal alignment of table header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="thead-char"></a>thead</font></td>
+<td bgcolor="#f6f6f6"><font size=2>char</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Character.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="thead-charoff"></a>thead</font></td>
+<td bgcolor="#f6f6f6"><font size=2>charoff</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Length.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="thead-valign"></a>thead</font></td>
+<td bgcolor="#f6f6f6"><font size=2>valign</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Vertical alignment of table header.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="title"></a>title</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Title of HTML document.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tr"></a>tr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Defines a table row.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tr-align"></a>tr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>align</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Horizontal alignment of a table.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tr-bgcolor"></a>tr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>bgcolor</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Background color in <a href="colorchart.html" class="reftable">hex code</a>.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tr-char"></a>tr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>char</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Character.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tr-charoff"></a>tr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>charoff</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Charoff length.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tr-valign"></a>tr</font></td>
+<td bgcolor="#f6f6f6"><font size=2>valign</font></td>
+<td bgcolor="#f6f6f6"><font size=2>optional</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Vertical alignment of table row.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="tt"></a>tt</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Teletype or monospaced font.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="u"></a>u</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Underlined text.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="ul"></a>ul</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Unordered list.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="ul-compact"></a>ul</font></td>
+<td bgcolor="#f6f6f6"><font size=2>compact</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Unordered list compacted.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="ul-type"></a>ul</font></td>
+<td bgcolor="#f6f6f6"><font size=2>type</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Type of unordered list style.</font></td>
+</tr>
+<tr>
+<td bgcolor="#f6f6f6"><font size=2><a name="var"></a>var</font></td>
+<td bgcolor="#f6f6f6"><font size=2>&nbsp;</font></td>
+<td bgcolor="#f6f6f6"><font size=2>yes</font></td>
+<td bgcolor="#f6f6f6"><font size=2>Variable or programming argument.</font></td>
+</tr>
+</table>
+
+</center>
+<P>
+</BODY>
+</html>

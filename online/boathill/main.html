@@ -1,0 +1,67 @@
+<html>
+<head><title>Boathill HomePage</title>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Personal Homepage, Poems topic"> 
+<META NAME="keywords" CONTENT="Zhu, Yuxin, Jason, Zhu Yuxin, Boathill, poems, DHTML, JavaScript, jpg, gif">
+
+<script type="text/javascript">
+ function high(which2)
+ {
+  theobject=which2
+  highlighting=setInterval("highlightit(theobject)",50)
+ }
+ function low(which2)
+ {
+ clearInterval(highlighting)
+ which2.filters.alpha.opacity=80
+ }
+ function highlightit(cur2)
+ {
+ if (cur2.filters.alpha.opacity<100)
+  cur2.filters.alpha.opacity+=5
+ else if (window.highlighting)
+  clearInterval(highlighting)
+ }
+</script>
+
+</head>
+
+
+<BODY background="" bgcolor="#000000" text="#C0C0C0" link="#B0C4DE" alink="#CD5C5C" vlink="#008080" onFocus="GoView()">
+
+<script type="text/javascript">
+  var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+  var ie4up = (document.all) ? 1 : 0;
+ function GoView() {
+  if (ns4up) window.location.href='#main'
+<!--  else window.location.href='#main'
+ }
+</script>
+
+
+
+<CENTER>
+
+<FONT FACE="Times New Roman, Arial" SIZE=2>
+
+<a name="main"><center>
+<img src="./images/dao.gif" width=352 height=357 border=0 style="filter:alpha(opacity=60)" onMouseover="high(this)" onMouseout="low(this)" usemap="#dao">
+
+<P>
+<a href="./pages/verse.htm"
+ ONMOUSEOVER="window.status='Poems Page of Master'; return true">Boathill</a> | 
+<a href="./pages/chingmin.htm">Ching-Ming Anthology</a> | 
+<a href="./pages/honglou.htm">Poems of Honglou</a> | 
+Tang | Song | Chinese Philosophia | Links
+<P>
+
+</center>
+</font>
+
+<MAP NAME="dao">
+<AREA SHAPE="RECT" COORDS="0,0,352,352" HREF="./images/dao.gif" ALT="The Way of The Way">
+</MAP>
+
+</body>
+</html>

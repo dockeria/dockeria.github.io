@@ -1,0 +1,133 @@
+<html>
+<head><title>Season's Prints</title>
+<base href="http://last.bizland.com/pages">
+
+<script type="text/javascript">
+
+  var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+  var ie4up = (document.all) ? 1 : 0;
+
+ function GoView() {
+  if (ns4up) window.location.href='#View'
+  //  else window.location.href='#main'
+ }
+  var g_fPlayMode = 0;
+  var g_iimg = 0;
+  var g_imax = 0;
+  var g_ImageTable = new Array();
+  var g_dwTimeOutSec=2
+
+  for (idx=0; idx <= 9; idx++) {
+   g_ImageTable[g_imax++] = new Array ("../books/scenes/scene00"+idx+"a.jpg","");
+  }
+  for (idx=10; idx <= 99; idx++) {
+   g_ImageTable[g_imax++] = new Array ("../books/scenes/scene0"+idx+"a.jpg","");
+  }
+  for (idx=100; idx <= 212; idx++) {
+   g_ImageTable[g_imax++] = new Array ("../books/scenes/scene"+idx+"a.jpg","");
+  }
+
+ function ChangeImage(fFwd) {
+  if (fFwd) { if (++g_iimg==g_imax) g_iimg=0; }
+  else { if (g_iimg==0) g_iimg=g_imax; g_iimg--; }
+  Update();
+ }
+
+ function Update() {
+  document.all._Ath_Slide.src = g_ImageTable[g_iimg][0];
+ }
+ function Play() {
+  g_fPlayMode = !g_fPlayMode;
+  if (g_fPlayMode) { btnPrev.disabled = btnNext.disabled = true; Next(); }
+  else { btnPrev.disabled = btnNext.disabled = false; }
+ }
+ function OnImgLoad() { if (g_fPlayMode) window.setTimeout("Tick()", g_dwTimeOutSec*1000); }
+ function Tick() { if (g_fPlayMode) Next(); }
+ function Prev() { ChangeImage(false); }
+ function Next() { ChangeImage(true); }
+ function main() { Update(); }
+
+ window.onload=Play
+
+</script>
+
+</head>
+
+<body bgcolor=#FFFFF0 text=#CCCCCC link=#CC9999 vlink=#CD853F alink=#FF0000 scroll="yes" onload="GoView()">
+
+<script type="text/javascript">
+</script>
+
+<font face="Arial" color=#CCCCCC size=2><center>
+
+<a name="main"><center>
+
+<table height=100% border=0 cellpadding=0 cellspacing=0>
+ <tr><td height=1280 align="center" valign="top">
+
+<input type="button" name="btnPrev" value="&lt;&lt; Previous"
+  onclick="Prev();window.location.href='#main'"
+  OnMouseOver="window.status='Go Previous';return true"
+  OnMouseOut="window.status='';return true">
+<input type="button" name="btnPlay" value="Turn Over | Stop"
+  onclick="Play();window.location.href='#main'"
+  OnMouseOver="window.status='Turn Over or Stop Browsing the Pictures';return true"
+  OnMouseOut="window.status='';return true">
+<input type="button" name="btnView" value="Picture List"
+  onClick="window.location.href='#View'"
+  OnMouseOver="window.status='View Page List';return true"
+  OnMouseOut="window.status='';return true">
+<input type="button" name="btnNext" value="Next &gt;&gt;"
+  onclick="Next();window.location.href='#main'"
+  OnMouseOver="window.status='Go Next';return true"
+  OnMouseOut="window.status='';return true">
+<br><br>
+
+ <img name="_Ath_Slide" onload="OnImgLoad()" width=640 height=512><br>
+
+ <script type="text/javascript" event="onload" for="window">
+  main();
+ </script>
+
+ </td></tr>
+</table>
+
+<a name="View"><center><hr width=50%><font size=4>
+<a href="http://daily.worldprints.com" style='text-decoration:none;'>Season's Prints</a>
+</font><hr width=50%>
+
+<table width=480 height=100% border=0 cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=480 height=80% align="center" valign="top">
+  <font color=#555555 face="Arial" size=2>
+
+<script>
+  for (idx=1; idx <= 9; idx++) {
+   document.write("<a href=\"../books/scenes/scene00"+idx+"a.jpg\"><img src=\"../media/bullet_blue.gif\" border=0>Scene 00"+idx+"</a>\n");
+  }
+  for (idx=10; idx <= 99; idx++) {
+   document.write("<a href=\"../books/scenes/scene0"+idx+"a.jpg\"><img src=\"../media/bullet_blue.gif\" border=0>Scene 0"+idx+"</a>\n");
+  }
+  for (idx=100; idx <= 212; idx++) {
+    document.write("<a href=\"../books/scenes/scene"+idx+"a.jpg\"><img src=\"../media/bullet_blue.gif\" border=0>Scene "+idx+"</a>\n");
+  }
+</script>
+
+  <br>
+
+  </td>
+ </tr>
+ <tr>
+  <td width=100% height=20% align="center" valign="middle">
+   <FORM><br>
+    <INPUT TYPE="button" VALUE="Back" onClick="history.go(-1)">
+   </FORM>
+  </td>
+ </tr>
+</table>
+
+</center>
+
+</font>
+</body>
+</html>

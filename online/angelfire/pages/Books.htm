@@ -1,0 +1,324 @@
+<HTML>
+<HEAD><TITLE>Books</TITLE>
+
+<meta http-equiv="Page-Enter" content="RevealTrans(Duration=3,Transition=10)">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Personal Homepage, including topics of Pictures (Palace, Qingdao-Dalian, Hainan, Tailand, the States, Wedding, Studio, etc.), Favorites (Music, surfing internet, Cookbook, Fashion, Movies, Entertainment, Seasons and Holidays), Family and Friends (my family, the couple of us, friends and another me), Books (internet digest, jokes, fictions, scenes, lyrics, forums, talktime), Poems, Resume and Links."> 
+<META NAME="keywords" CONTENT="Grace, Zhou, Lin, Zhoulin, Pictures, Favorites, Family, Friends, Books, Poems, Resume, Links, Wedding, Studio, Beijing, Qingdao, Dalian, Hainan, United States, Scenes, Music, internet digest, jokes, lyrics, DHTML, JavaScript, jpg, gif">
+
+<style type="text/css">
+
+.bodystyle {
+  color: black;
+  font-family: 'Times New Roman', Arial Narrow, Arial, Helvetica;
+  font-size: 10pt;
+ }
+
+.spanstyle {
+  position:absolute;
+  visibility:visible;
+  top:-50px;
+  font-size:10pt;
+  font-family:Verdana;
+  font-weight:bold;
+  color:red;
+ }
+</style>
+
+<script>  // cursor trailer text
+
+  var x,y;
+  var step=12;
+  var flag=0;
+
+  // Your snappy message. Important: the space at the end of the sentence!!!
+
+  var message="HAVE YOU READ BOOKS TODAY ? ";
+
+  message=message.split("");
+
+  var xpos=new Array();
+  for (i=0;i<=message.length-1;i++) {
+   xpos[i]=-50
+  }
+
+  var ypos=new Array();
+  for (i=0;i<=message.length-1;i++) {
+   ypos[i]=-50
+  }
+
+  function handlerMM(e) {
+   x = ((document.layers) ? e.pageX : document.body.scrollLeft+event.clientX)  
+   y = ((document.layers) ? e.pageY : document.body.scrollTop+event.clientY) - 15
+   flag=1
+  }
+
+  function makesnake() {
+   if (flag==1 && document.all) {
+    for (i=message.length-1; i>=1; i--) {
+       xpos[i]=xpos[i-1]+step
+    ypos[i]=ypos[i-1]
+    }
+    xpos[0]=x+step
+    ypos[0]=y
+    for (i=0; i<message.length-1; i++) {
+        var thisspan = eval("span"+(i)+".style")
+        thisspan.posLeft=xpos[i]
+    thisspan.posTop=ypos[i]
+        }
+   }
+   else if (flag==1 && document.layers) {
+    for (i=message.length-1; i>=1; i--) {
+       xpos[i]=xpos[i-1]+step
+    ypos[i]=ypos[i-1]
+        }
+    xpos[0]=x+step
+    ypos[0]=y
+    for (i=0; i<message.length-1; i++) {
+        var thisspan = eval("document.span"+i)
+        thisspan.left=xpos[i]
+    thisspan.top=ypos[i]
+        }
+   }
+   var timer=setTimeout("makesnake()",30)
+  }
+
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF BACKGROUND="../media/bgbooks.gif" bgproperties=fixed
+ onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll">
+
+<BGSOUND SRC="../midi/xfilestheme.mid" LOOP=INFINITE>
+<FONT FACE="Times New Roman, Arial Narrow, Arial" SIZE=1>
+
+<script>  // Beginning of Cursor Trailer Text
+
+  for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+    document.write(message[i])
+    document.write("</span>")
+  }
+
+  if (document.layers) {
+    document.captureEvents(Event.MOUSEMOVE);
+  }
+  document.onmousemove = handlerMM;
+
+</script>
+
+
+<center><img src="../media/books.gif" alt="Books"><br>
+
+<table border=0 cellpadding=0 cellspacing=0>
+
+ <tr>
+
+  <td valign="top">
+
+   <table border=0 cellpadding=0 cellspacing=0>
+    <tr>
+     <td colspan=5 width=520 height=25 bgcolor=#8FBC8F>
+     <FONT SIZE=4 style='font-size:14pt'><B> &#160; CHINESE READERS</B></FONT>
+     </td>
+    </tr><tr><td colspan=5 width=100% height=4></td></tr>
+
+    <tr>
+     <td valign="top width=170 bgcolor=#D8BFD8">
+      <table>
+       <tr><td width=15 align="center" valign="top"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2> Internet Digest
+        <a href="../books/digest/Kan.doc"><1></a>
+        <a href="../books/digest/Kan2.doc"><2></a>
+        <a href="../books/digest/Kan3.doc"><3></a>
+        <a href="../books/digest/Kan4.doc"><4></a>
+        <a href="../books/digest/Kan5.doc"><5*></a></td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../books/digest/universal.doc">Universal Topics</a></td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../books/digest/imm.doc">Immigration <1></a>
+        <a href="../books/digest/imm2.doc"><2*></a></td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../books/digest/economics.doc">Economics Forum</a></td>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../books/digest/rep.doc">Reports <1></a>
+        <a href="../books/digest/rep2.doc"><2></a>
+        <a href="../books/digest/rep3.doc"><3*></a></td>
+       </tr>
+       </tr>
+       <tr><td width=15 align="center"> </td><td><br></td>
+       </tr>
+      </table>
+     </td>
+     <td><width=1>&#160;</td>
+
+     <td valign="top width=170 bgcolor=#F5DEB3">
+      <table>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../books/fictions/christie.zip">Christie's Corner</a></td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../books/fictions/Hitchcock.doc">Hitchcock Stage 100</a></td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../books/digest/fiction.doc">Internet Fictions <1></a>
+        <a href="../books/digest/fiction2.doc"><2*></a></td>
+       </tr>
+       </tr>
+      </table>
+     </td>
+
+     <td><width=1>&#160;</td>
+     <td valign="top idth=170 bgcolor=#FFC0CB">
+      <table>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../books/digest/jokes.doc">Jokes</a></td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../books/digest/Lyrics.doc">Lyrics of Songs</a></td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+    
+    <tr><td colspan=5 width=100% height=5></td></tr>
+
+    <tr>
+     <td colspan=5 width=520 height=25 bgcolor=#C0C0C0>
+     <FONT SIZE=4 style='font-size:14pt'><B> &#160; ENGLISH READERS</B>
+     </td>
+    </tr>
+    <tr><td colspan=5 width=100% height=4></td></tr>
+
+    <tr>
+     <td valign="top width=170 bgcolor=#B0E0E6">
+      <table>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../books/digest/Talktime.pdf">Talktime <1></a>
+        <a href="../books/digest/Talk2000.pdf"><2*></a><img src="../media/new.gif" border=0 height=17 align="top">
+  </td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../books/digest/winegl.htm">The Wine Glossary</a></td>
+       </tr>
+       <tr><td><br><br><br><br></td><td></tr>
+      </table>
+     </td>
+
+     <td><width=1>&#160;</td>
+
+     <td valign="top width=170 bgcolor=#90EE90">
+      <table>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../files/tulips.htm">Tulips Festival</a></td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../files/rainier.htm">Mt. Rainier Scene</a></td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../files/painting.htm">Chinese Paintings</a></td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+  <a href="../files/seals.htm">Chinese Seals</a><img src="../media/new.gif" border=0 height=17 align="top"></td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../files/china.htm">North and South China</a></td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../files/scenes.htm">Calender Scenes</a></td>
+       </tr>
+      </table>
+     </td>
+
+     <td><width=1>&#160;</td>
+
+     <td valign="top width=170 bgcolor=#FFDA89">
+      <table>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../books/digest/jokesENG.pdf">English Jokes</a></td>
+       </tr>
+       <tr><td width=15 align="center"><font style="font-size:10pt"> &#8226; </td><td>
+  <FONT CLASS="bodystyle" SIZE=2>
+        <a href="../files/Essay.htm">Easy Essay</a> ! <img src="../media/new.gif" border=0 height=17 align="top"></td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+
+   </table>
+
+  </td>
+
+  <td width=2 height=100%>&#160;</td>
+  <td width=1 height=100% bgcolor="#000000"><hr></td>
+  <td width=2 height=100%>&#160;</td>
+
+  <td width=120 align="center">
+   <table height=100% border=0 cellpadding=0 cellspacing=0>
+    <tr>
+     <td width=20  align="left" valign="top BGCOLOR=#CCCCFF"></td>
+     <td width=120 align="left" valign="top BGCOLOR=#CCCCFF">
+      <B></B><br><hr width=90%>
+      <FONT CLASS="bodystyle"><FONT COLOR=#8F8F8F>
+      <a href="../index.html">Back Home</a> <br>
+      <a href="../pages/Pictures.htm">Pictures</a> <br>
+      <a href="../pages/Favorites.htm">My Favorites</a> <br>
+      <a href="../pages/Family.htm">Family & Friends</a> <br>
+      Books <br>
+      <a href="../pages/Poems.htm">Poems</a> <br>
+      <a href="../pages/Resume.htm">Resume</a> <br>
+      <a href="../pages/Links.htm">Links</a> <br>
+      <br><br><br><br><br><br>
+     </td>
+    </tr>
+    <tr>
+     <td width=20  align="left" valign="top BGCOLOR=#CCCCFF"></td>
+     <td width=120 align="left" valign="top BGCOLOR=#CCCCFF">
+      <FONT CLASS="bodystyle" SIZE=2>
+      <a href="mailto:jason_zhu@usa.net?subject=Comments about Books Topic">
+      <img src="../media/e.gif" border=0 alt="mail to webmaster about this topic or page..."><br>
+      Your Comments</a><p><br><br>
+     </td>
+    </tr>
+   </table>
+  </td>
+
+ </tr>
+</table>
+
+<FONT CLASS="bodystyle"><FONT COLOR=#A9A9A9><p>
+<a href="../index.html">Back Home</a> | 
+<a href="../pages/Pictures.htm">Pictures</a> |
+<a href="../pages/Favorites.htm">Favorites</a> |
+<a href="../pages/Family.htm">Family & Friends</a> | Books |
+<a href="../pages/Poems.htm">Poems</a> |
+<a href="../pages/Resume.htm">Resume</a> |
+<a href="../pages/Links.htm">Links</a> <br>
+
+</center>
+
+</BODY>
+</HTML>

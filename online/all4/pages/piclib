@@ -1,0 +1,206 @@
+<HTML>
+<HEAD><TITLE>Pictures Library</TITLE>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Personal Homepage, including topics of Pictures (Palace, Qingdao-Dalian, Hainan, Tailand, the States, Wedding, Studio, etc.), Favorites (Music, surfing internet, Cookbook, Fashion, Movies, Entertainment, Seasons and Holidays), Family and Friends (my family, our couples, friends and another me), Books (internet digest, jokes, fictions, scenes, lyrics, forums, talktime), Poems, Resume and Links."> 
+<META NAME="keywords" CONTENT="Grace, Zhou, Lin, Zhoulin, Pictures, Favorites, Family, Friends, Books, Poems, Resume, Links, Wedding, Studio, Beijing, Qingdao, Dalian, Hainan, United States, Scenes, Music, internet digest, jokes, lyrics, DHTML, JavaScript, jpg, gif">
+
+<style>
+<!--
+ a { text-decoration:none; }
+
+ #leftright, #topdown{
+  position:absolute;
+  left:0;
+  top:0;
+  width:1px;
+  height:1px;
+  layer-background-color:black;
+  background-color:#880000;
+  z-index:100;
+  font-size:1px;
+ }
+-->
+</style>
+
+<script>
+ function fullwin(htmlfile) {
+  window.open(htmlfile,"","fullscreen,scrollbars")
+ }
+</script>
+
+</HEAD>
+
+<BODY background="../media/bgstars.gif" bgcolor=#DCC6AC topmargin=0 leftmargin=0 onBlur="self.close()">
+
+<div id="leftright" style="width:expression(document.body.clientWidth-2)"></div>
+<div id="topdown" style="height:expression(document.body.clientHeight-2)"></div>
+
+<script language="JavaScript1.2">	// Document crosshair Script 
+
+ if (document.all&&!window.print) {
+  leftright.style.width=document.body.clientWidth-2
+  topdown.style.height=document.body.clientHeight-2
+ }
+ else if (document.layers) {
+  document.leftright.clip.width=window.innerWidth
+  document.leftright.clip.height=1
+  document.topdown.clip.width=1
+  document.topdown.clip.height=window.innerHeight
+ }
+
+ function followmouse1() {	// move cross engine for IE 4+
+  leftright.style.pixelTop=document.body.scrollTop+event.clientY+1
+  topdown.style.pixelTop=document.body.scrollTop
+  if (event.clientX<document.body.clientWidth-2)
+   topdown.style.pixelLeft=document.body.scrollLeft+event.clientX+1
+  else
+   topdown.style.pixelLeft=document.body.clientWidth-2
+ }
+
+ function followmouse2(e) {	// move cross engine for NS 4+
+  document.leftright.top=e.y+1
+  document.topdown.top=pageYOffset
+  document.topdown.left=e.x+1
+ }
+
+ if (document.all)
+  document.onmousemove=followmouse1
+ else if (document.layers) {
+  window.captureEvents(Event.MOUSEMOVE)
+  window.onmousemove=followmouse2
+ }
+
+ function regenerate() {
+  window.location.reload()
+ }
+ function regenerate2() {
+  setTimeout("window.onresize=regenerate",400)
+ }
+ if ((document.all&&!window.print)||document.layers)	// if the user is using IE 4 or NS 4, both NOT IE 5+
+  window.onload=regenerate2
+
+</script>
+
+
+<FONT FACE="Arial, Arial Norrow, Times New Roman" SIZE=2>
+
+<center>
+
+
+<table cellpadding=6 cellspacing=6 border=0>
+ <tr>
+  <td align=center valign=middle>
+
+  <img src="../media/flyingoose.gif" align=middle>
+  <img src="../pics/x-file.jpg" align=middle>	 &#160; &#160; &#160; 
+  <img src="../media/models.gif" align=middle height=160>	&#160; &#160; &#160; &#160; 
+<p>
+
+  <img src="../media/bgleaf.gif" height=260 align=middle> 
+  <img src="../media/feather_light.gif" align=bottom> 
+  <img src="../media/plateleaves.gif" align=middle>
+  <img src="../media/plumbago.gif" align=middle>
+<p>
+
+ </td></tr>
+</table>
+
+
+<table width=1022 border=0 bordercolor=#ffffff>
+
+ <tr>
+  <td colspan=2 width=620 height=22 align=left valign=top background="../media/bardot.gif"> &#160;
+  </td>
+ </tr><tr>
+  <td colspan=2 width=620 height=6 align=left valign=top background="../media/line_rgblack.gif">
+  </td>
+ </tr>
+ <tr><td width=760 align=center valign=top>
+
+<table width=760 cellpadding=0 cellspacing=0 border=0>
+<tr>
+ <td width=100 align=center>
+   <img src="../media/globe_sea.gif" height=60>
+ </td>
+ <td width=92 align=center>
+   <img src="../media/pinwheel.gif" height=80>
+ </td>
+ <td width=128 height=116 background="../media/ringofarrows.gif" align=center valign=middle>
+  <img src="../media/planet_white.gif" width=100 height=90>
+ </td>
+ <td width=100 height=112 align=right valign=middle>
+  <a href="javascript:fullwin('../pages/shutdown')" 
+   OnMouseOut="javascript:fullwin('../pages/shutdown')" 
+   OnMouseOver="window.status='Magic Cube, Magic Show!';return true">
+   <img src="../media/cube.gif" width=100 height=90 border=0 alt="Magic Click"></a>
+ </td>
+ <td width=128 height=116 background="../media/ringofarrows.gif" align=center valign=middle>
+  <img src="../media/planet_purple.gif" width=100 height=90>
+ </td>
+ <td width=92 align=center>
+   <img src="../media/taiji_red.gif" height=90>
+ </td>
+ <td width=80 align=center valign=center>
+   <img src="../media/globe_sun.gif" height=80><br><br>
+ </td>
+</tr>
+<tr>
+ <td colspan=7 width=760 align=center>
+  <a href="javascript:fullwin('../pages/shutdown')" 
+   OnMouseOver="window.status='Magic Cube, Magic Show!';return true"> &#160; &#160;
+   <img src="../media/globe_light.gif" height=64 border=0 align=middle>
+   <img src="../media/sickle.gif" height=72 border=0 align=middle>
+   <img src="../media/swirl.gif" width=82 height=62 border=0 align=middle> &#160; &#160;
+   <img src="../media/globe_blue.gif" height=80 border=0 align=middle>
+   <img src="../media/atsign.gif" width=100 height=62 border=0 align=middle>
+   <img src="../media/recycle.gif" height=72 border=0 align=middle> &#160; &#160;
+   <img src="../media/globe_green.gif" height=64 border=0 align=middle>
+  </a>
+ </td>
+</tr>
+<tr>
+ <td colspan=7 width=760 height=100 align=center> &#160; &#160; &#160;
+   <img src="../media/fire_prairie.gif" height=68 width=100 align=middle> &#160; &#160;
+   <img src="../media/heartdollar.gif" height=68 align=middle> &#160; &#160;
+   <img src="../media/taiji_green.gif" height=64 align=middle> &#160; &#160;
+   <img src="../media/ns_dragon.gif" height=68 align=middle> &#160; &#160;
+   <img src="../media/fire_sea.gif" height=68 width=100 align=middle>
+ </td>
+</tr>
+</table>
+
+&#160; &#160; &#160; 
+
+<img src="../media/spinstar_blue.gif" border=0 align=middle>
+<img src="../media/spin3d.gif" border=0 align=middle> &#160; &#160;
+<img src="../media/spinfan.gif" border=0 align=middle> &#160; &#160;
+<img src="../media/demoball.gif" border=0 align=middle>
+<img src="../media/spindollar.gif" border=0 align=middle>
+<img src="../media/compass.gif" border=0 align=middle>  &#160; &#160;
+<img src="../media/spinstar_gray.gif" border=0 align=middle>
+
+<p>
+
+<img src="../media/fireworks.gif" border=0 align=top>
+<img src="../media/nojunkemail.gif" border=0 align=top>
+<br>
+<img src="../media/whatflow1.gif" border=0 align=middle>
+<img src="../media/whatflow2.gif" border=0 align=middle>
+<img src="../media/helmets.gif" border=0 align=middle>
+<img src="../media/whatflow3.gif" border=0 align=middle>
+<img src="../media/whatflow4.gif" border=0 align=middle>
+<br>
+<img src="../media/counter.gif" border=0 align=middle>
+
+  </td>
+ </tr>
+</table>
+
+
+<p><br>
+
+
+</center>
+</BODY> 
+</HTML>

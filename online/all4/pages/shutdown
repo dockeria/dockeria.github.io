@@ -1,0 +1,60 @@
+<html>
+<head><title>It's now safe to turn off your computer</title>
+
+<meta http-equiv="Content-Type" content="Windows Shutdown"; charset=gb_2312-80">
+<meta name="GENERATOR" content="HTML">
+
+
+<script>		// Fullwindows open
+ function fullwin(htmlfile) {
+  window.open(htmlfile,"","fullscreen,scrollbars")
+ }
+</script>
+
+
+</head>
+
+<body scroll=no bgcolor="#000000" text="#FF8000" topmargin="0" leftmargin="0" onBlur="self.close()">
+
+
+<script language=JavaScript>	// Disable right mouse click Script
+<!--
+	var message="Function Disabled";
+
+	function click(e) {
+		if (document.all) {
+			if (event.button == 2) {
+			//	alert(message);
+			//	return false;
+			}
+		}
+		if (document.layers) {
+			if (e.which == 3) {
+			//	alert(message);
+				return false;
+			}
+		}
+	}
+
+	if (document.layers) {
+		document.captureEvents(Event.MOUSEDOWN);
+	}
+	document.onmousedown=click;
+// --> 
+</script>
+
+<a href="javascript:history.go(1)"
+ style="cursor:wait"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+ <tr>
+  <td align=center valign=center>
+   <font face="Tahoma, Arial" size=7>It's now safe to turn off <br>
+   your computer.</font>
+<!--
+   <font size="7"><strong>您现在可以安全关闭计算机了</strong></font>
+-->
+  </td>
+ </tr>
+</table></a>
+
+</body>
+</html>

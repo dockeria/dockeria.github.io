@@ -1,0 +1,206 @@
+<html>
+<head><title>Slide-In Menu Bar</title>
+
+<style>
+ /* Style of Menu slide-in */
+ .main { position: absolute; left:0px; top:0px; }
+ .intro {
+  position:absolute;
+  left:0;
+  top:0;
+  layer-background-color:red;
+  background-color:red;
+  border:0.1px solid red
+ }
+ #slidemenubar, #slidemenubar2 {
+  position:absolute;
+  left:-160px;
+  width:200px;
+  top:20px;
+  border:1.5px solid green;
+  background-color:bffd97;
+  layer-background-color:lightyellow;
+  font:bold 12px Verdana;
+  line-height:20px;
+ }
+ #navbar  { font:bold 12px Arial; }
+
+ a { text-decoration:none; } 
+
+ a:hover{color:FF7F50; }
+</style>
+
+
+<SCRIPT LANGUAGE="JavaScript">    // Freewindows open
+ function freewin(htmlfile) {
+  window.open(htmlfile, "freewin", "top=100, left=100, width=100, height=100, fullscreen=0, scrollbars=0, toolbar=0, menubar=0, location=0, directories=0, channelmode=0, resizable=0, status=0");
+ }
+</SCRIPT>
+
+<script>    // Fullwindows open
+ function fullwin(htmlfile) {
+  window.open(htmlfile,"fullwin","fullscreen,scrollbars")
+ }
+</script>
+
+<script type="text/javascript">  // function menulist
+ function menulist() { 
+  // extend or shorten this list
+  menuitems[0]  ="America Online"
+  menuitems[1]  ="Cisco"
+  menuitems[2]  ="Compaq"
+  menuitems[3]  ="Hewlett-Packard"
+  menuitems[4]  ="IBM"
+  menuitems[5]  ="Intel"
+  menuitems[6]  ="Microsoft"
+  menuitems[7]  ="Yahoo"
+
+  // the links pertaining to the above text.
+  menulinks[0]  ="http://www.aol.com/"
+  menulinks[1]  ="http://www.cisco.com/"
+  menulinks[2]  ="http://www.compaq.com/"
+  menulinks[3]  ="http://www.hp.com"
+  menulinks[4]  ="http://www.ibm.com"
+  menulinks[5]  ="http://www.intel.com"
+  menulinks[6]  ="http://www.microsoft.com"
+  menulinks[7]  ="http://www.yahoo.com"
+
+  for (i=0;i<=menuitems.length-1;i++) document.write('<a href='+menulinks[i]+'>'+menuitems[i]+'</a><br>')
+ }
+</script>
+
+</head>
+
+<body bgcolor=#888888 background="../media/bgraindrops_dark.gif">
+
+
+<script type="text/javascript">  // Sliding Menu Bar 
+ if (document.all)
+  document.write('<div id="slidemenubar2" style="left:-160" onMouseover="pull()" onMouseout="draw()">')
+</script>
+
+<layer id="slidemenubar" onMouseover="pull()" onMouseout="draw()">
+
+ <script type="text/javascript">  // Sliding Menu Bar Script
+  var menuitems=new Array()
+  var menulinks=new Array()
+  var HTMLstr = "";
+
+  HTMLstr += "<table id='navbar' cellpadding=3 cellspacing=3 border=0>\n";
+  HTMLstr += "<tr>\n";
+  HTMLstr += "<td valign="top"><img src='../media/folder.gif'></td>\n";
+  HTMLstr += "<td valign="top">Hot Links<br>\n";
+  HTMLstr += "&#8226; <a href='http://cover.bizland.com/'>Fashion Covers</a><br>\n";
+  HTMLstr += "&#8226; <a href='http://evergood.bizland.com/'>Evergood Music</a><br>\n";
+  HTMLstr += "&#8226; <a href='http://from.bizland.com/'>Supermodel Pictures</a><br>\n";
+  HTMLstr += "&#8226; <a href='http://last.bizland.com/'>Worldprints</a><br>\n";
+  HTMLstr += "</td>";
+  HTMLstr += "<td width=5 rowspan=2 align="right" valign="middle">";
+  HTMLstr += "<a href='http://www.bizland.com'> B <BR> I <BR> Z <BR> L <BR> A <BR> N <BR> D </a>";
+  HTMLstr += "</td>";
+  HTMLstr += "</tr><tr>";
+  HTMLstr += "<td width=15 valign="top"><img src='../media/folder.gif'></td>\n";
+  HTMLstr += "<td width=200 valign="top">What's New<br>\n";
+  HTMLstr += "&#8226; <a href='http://zhoulin.bizland.com/'>Grace Homepage</a> !<br>\n";
+  HTMLstr += "&#8226; <a href='http://zhouyao.bizland.com/'>Visit Olivia</a><br>\n";
+  HTMLstr += "&#8226; <a href='http://zhouwei.bizland.com/'>ZhouWei</a><br>\n";
+  HTMLstr += "&#8226; <a href='http://zhuyuxin.bizland.com/'>Jason Zhu</a><br>\n";
+  HTMLstr += "&#8226; <a href='http://all4.bizland.com'>All4You</a><br>\n";
+  HTMLstr += "";
+  HTMLstr += "";
+  HTMLstr += "";
+  HTMLstr += "";
+  HTMLstr += "</td>";
+  HTMLstr += "</tr>";
+  HTMLstr += "</table>\n";
+
+  document.writeln(HTMLstr);
+
+ </script>
+</layer>
+
+<script type="text/javascript">  // Sliding Menu Bar Script
+ function regenerate() {
+  window.location.reload()
+ }
+
+ function regenerate2() {
+  if (document.layers)
+   setTimeout("window.onresize=regenerate",400)
+ }
+
+ window.onload=regenerate2
+
+ if (document.all) {
+  document.write('</div>')
+  themenu=document.all.slidemenubar2.style
+  rightboundary=0
+  leftboundary=-150
+ }
+ else {
+  themenu=document.layers.slidemenubar
+  rightboundary=150
+  leftboundary=10
+ }
+
+ function pull() {
+  if (window.drawit)
+  clearInterval(drawit)
+  pullit=setInterval("pullengine()",50)
+ }
+
+ function draw() {
+  clearInterval(pullit)
+  drawit=setInterval("drawengine()",50)
+ }
+
+ function pullengine() {
+  if (document.all&&themenu.pixelLeft<rightboundary)
+   themenu.pixelLeft+=50
+  else if(document.layers&&themenu.left<rightboundary)
+   themenu.left+=5
+  else if (window.pullit)
+   clearInterval(pullit)
+ }
+
+ function drawengine() {
+  if (document.all&&themenu.pixelLeft>leftboundary)
+   themenu.pixelLeft-=5
+  else if(document.layers&&themenu.left>leftboundary)
+   themenu.left-=5
+  else if (window.drawit)
+   clearInterval(drawit)
+ }
+</script>
+
+
+
+<center>
+<table width=100% height=100%>
+ <tr><td width=100><img src="../media/box.gif" width=34></td>
+  <td align="center" valign="bottom">
+
+   <font face="Arial"><b><u><center>
+   <a href="javascript:freewin('../pages/winAniOpen')" 
+    OnMouseOver="window.status='Open The Door!';return true">
+    Open the Door !
+   </a>
+<p>
+   <a href="javascript:fullwin('../pages/shutdown')" 
+    OnClick="javascript:fullwin('../pages/shutdown')" 
+    OnMouseOver="window.status='Close the Window!';return true">
+    Close Windows
+   </a>
+
+<p><br>
+
+<object type="text/x-scriptlet" width=160 height=120 data="menudrop.htm"></object>
+
+  </td>
+ </tr>
+</table>
+</center>
+
+
+</body>
+</html>

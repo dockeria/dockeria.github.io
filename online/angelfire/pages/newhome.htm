@@ -1,0 +1,255 @@
+<HTML>
+<HEAD><TITLE>New Home - Klahanie</TITLE>
+
+<meta http-equiv="Page-Enter" content="BlendTrans(Duration=2)">
+
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="House Hunting in Klahanie">
+<META NAME="keywords" CONTENT="Real Estate, Klahanie, Madison Place, single house">
+
+<STYLE TYPE="TEXT/CSS">
+
+ a:link {color:#90EE90;} 
+ a:active {color:#FF1493;} 
+ a:visited {color:#FF7F50;}
+ a:hover {color:99FFFF; }
+
+ body {
+  background: #8FBC8F url('../media/bgrosewall.gif');
+  background-attachment: fixed;
+  background-repeat: repeat-y;
+  color: #000000;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-indent: 10px;
+  tab-interval: 36pt;
+  font-size: 12pt;
+ }
+
+ td {
+  color:#5F9EA0;
+  font-size: 11pt;
+  font-family: 'Times New Roman', Arial Narrow, Arial;
+  border-top: 1pt;
+  border-bottom: 1pt;
+  border-left: none;
+  border-right: none;
+ }
+
+.tdItem {
+  color: #00007D;
+  font-family: Arial, 'Times New Roman', Arial Narrow;
+  font-size: 9pt;
+  line-height: 13pt;
+  padding: 0 5 0 5;
+  margin: 0 0 0 0;
+ }
+
+.Title {
+  color: #FA8072;
+  font-size: 28pt;
+  font-family: 'Bookman Old Style', Tahoma, Arial, 'Times New Roman';
+  font-weight: bold;
+  line-height: 120%;
+  text-indent : 0px;
+  padding: 0 0 10 0;
+ }
+
+.Heading {
+  font-size: 13.5pt;
+  font-family: Arial, 'Times New Roman', Arial Narrow;
+  line-height: 150%;
+  padding: 0 5 0 0;
+ }
+
+.Item {
+  font-family: Arial, 'Times New Roman', Arial Narrow;
+  font-size: 9pt;
+  line-height: 13pt;
+  padding: 0 0 0 5;
+  margin: 0 0 0 0;
+ }
+
+#glowtext {
+  filter: glow(color=FFFF00, strength=3);
+  width: 100%;
+}
+
+</STYLE>
+
+<script type="text/javascript">  // Pulsating Text Script  (KilerCris@Mail.com)
+
+ // range of glowing
+ var from = 6;
+ var to = 12;
+
+ //  speed of pulsing
+ var delay = 60;
+
+ //  color of glow, name or RGB value (example:'#00FF00')
+ var glowColor = "lime";
+
+ //  NO MORE EDITING!!!
+ var i = to;
+ var j = 0;
+
+ function textPulseUp() {
+  if (!document.all) return
+  if (i < to) {
+   theText.style.filter = "Glow(Color=" + glowColor + ", Strength=" + i + ")";
+   i++;
+   theTimeout = setTimeout('textPulseUp()',delay);
+   return 0;
+  }
+  if (i = to) {
+   theTimeout = setTimeout('textPulseDown()',delay);
+   return 0;
+  }
+ }
+ function textPulseDown() {
+  if (!document.all) return
+  if (i > from) {
+   theText.style.filter = "Glow(Color=" + glowColor + ", Strength=" + i + ")";
+   i--;
+   theTimeout = setTimeout('textPulseDown()',delay);
+   return 0;
+  }
+  if (i = from) {
+   theTimeout = setTimeout('textPulseUp()',delay);
+   return 0;
+  }
+ }
+</SCRIPT>
+
+<script type="text/javascript">  // Pop-up Window Script
+
+ var top_default = 0;
+ var left_default = 0;
+ var width_default = 560;
+ var height_default = 400;
+
+ function openwin(htmlfile,width,height) {
+
+  if (width==0 || height==0) {
+   poplink = window.open(htmlfile, "winlink", "top="+top_default+", left="+left_default+", width="+width_default+", height="+height_default+", fullscreen=0, scrollbars=1, toolbar=1, menubar=0, location=0, directories=0, channelmode=0, resizable=1, status=1");
+   poplink.focus();
+  }
+  else {
+   popview = window.open(htmlfile, "winview", "top="+top_default+", left="+left_default+", width="+width+", height="+height+", fullscreen=0, scrollbars=0, toolbar=0, menubar=0, location=0, directories=0, channelmode=0, resizable=0, status=0");
+   popview.focus();
+  }
+ }
+
+</SCRIPT>
+
+<SCRIPT>
+
+ function status_scroll(seed) {    // status bar scrolling captions
+  var m1 = "We Moved! - " 
+  var m2 = "Friends, welcome to our new home!"
+  var msg = m1 + m2; 
+  var out = " ";
+  var c = 1;
+
+  if (seed > 100) {
+   seed--;
+   var cmd = "scroll(" + seed + ")";
+   timerTwo = window.setTimeout(cmd,100);
+  }
+  else if (seed <= 100 && seed > 0) {
+   for (c=0 ; c < seed ; c++) {
+    out+=" ";
+   }
+   out+=msg;
+   seed--;
+   var cmd = "scroll(" + seed + ")";
+   window.status = out;
+   timerTwo = window.setTimeout(cmd,100);
+  }
+  else if (seed <= 0) {
+   if (-seed < msg.length) {
+    out += msg.substring(-seed,msg.length);
+    seed--;
+    var cmd = "scroll(" + seed + ")";
+    window.status = out;
+    timerTwo = window.setTimeout(cmd,100);
+   }
+   else {
+    window.status = " ";
+    timerTwo = window.setTimeout("scroll(100)",7);
+   }
+  }
+ }
+
+ timerONE=window.setTimeout('scroll(100)',50);
+
+</script>
+
+<script>
+
+ function noRightClick(evnt) {
+  if (navigator.appName.toUpperCase().match(/NETSCAPE/) != null) {
+   if (evnt.which == 3) {
+    return false;
+   }
+  }
+  else file://Microsoft Internet Explorer
+  if (event.button==2)
+   alert("Welcome to our new home in Madison Place, Klahanie ...");
+ }
+
+ document.onmousedown = noRightClick;
+
+</script>
+
+</HEAD>
+
+
+<BODY>
+
+<TABLE WIDTH=620 HEIGHT=100% align="LEFT" cellpadding=0 cellspacing=0 BORDER=0>
+<TR><TD BACKGROUND="" WIDTH=100><P></TD>
+<TD WIDTH=520 HEIGHT=100% align="CENTER" valign="TOP">
+
+<BR>
+<img src="../media/album_head.gif" width=480 height=50>
+<BR>
+
+<a href="javascript:openwin('http://maps.expedia.com/QMResults.asp?A=150&C=47.569703,-122.005842&O=0.000000,0.000000&S=True&OA=16&P=47.569703,-122.005842,1,Issaquah%2C+WA+98029&Title=Moved+to+new+home+in%2C+Madison+Place%2C+Klahanie&Pr=1&L=USA0409&MapSize=Large', 
+ 0,0)"><img src="../media/house2a.gif" border=0 alt="NEW HOME ON EXPEDIA"></a>
+<BR>
+
+ <span id="theText" style="width:100%">
+ <span id="glowtext">
+<p class="Title">
+  WE MOVED!
+</p>
+ </span>
+ </span>
+
+<SCRIPT>
+ if (document.all) { textPulseDown(); }
+</SCRIPT>
+
+<BR>
+<a href="../files/housewarm.htm">House Warming!</a> |
+<a href="../files/housepics.htm">Pictures</a> |
+Floor Plan |
+<a href="javascript:openwin('../pics/map_Klahanie.gif',520,540)">Map</a> | 
+<a href="javascript:openwin('http://www.klahanie.com',0,0)">Klahanie</a> |
+<a href="javascript:openwin('../files/houseoffer.htm',632,400)">House offers</a>
+<BR>
+
+<BR>
+<img src="../media/album_foot.gif" width=480 height=50>
+<BR>
+
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+</BODY>
+</HTML>

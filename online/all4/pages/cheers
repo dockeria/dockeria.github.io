@@ -1,0 +1,145 @@
+<html>
+<head><title>Cheer, Your Birthday!</title>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Personal Homepage, including topics of Pictures (Palace, Qingdao-Dalian, Hainan, Tailand, the States, Wedding, Studio, etc.), Favorites (Music, surfing internet, Cookbook, Fashion, Movies, Entertainment, Seasons and Holidays), Family and Friends (my family, our couples, friends and another me), Books (internet digest, jokes, fictions, scenes, lyrics, forums, talktime), Poems, Resume and Links."> 
+<META NAME="keywords" CONTENT="Grace, Zhou, Lin, Zhoulin, Pictures, Favorites, Family, Friends, Books, Poems, Resume, Links, Wedding, Studio, Beijing, Qingdao, Dalian, Hainan, United States, Scenes, Music, internet digest, jokes, lyrics, DHTML, JavaScript, jpg, gif, music, holiday, ">
+
+<body background="../media/confetti2.gif" onBlur="self.close()" topmargin=0>
+<bgsound src="../midi/spiceupyourlife.mid" loop=-1>
+
+<center>
+
+<div id=ghost1 style="position: absolute; right: 690; top: 240; visibility: hidden;">
+ <img border=0 onclick="document.location.href=''" src="" name="ghost1img">
+</div>
+<div id=ghost2 style="position: absolute; right: 640; top: 325; visibility: hidden;">
+ <img border=0 onclick="document.location.href=''" src="" name="ghost2img">
+</div>
+<div id=ghost3 style="position: absolute; right: 760; top: 350; visibility: hidden;">
+ <img border=0 onclick="document.location.href=''" src="" name="ghost3img">
+</div>
+
+<script language=JavaScript>	// Ghost Halloween
+<!--
+		var Hovering;
+		var isIE = navigator.appName.indexOf("Netscape") == -1;
+	if (isIE) {
+		var Tall = document.body.clientHeight/4;
+		var Wide = document.body.clientWidth/3;
+		var step = .3;
+		var Next = 0;
+		var Xpos = 220;
+		var Ypos = 300;
+		var HomX = 75;
+		var HomY = 100;
+	}
+	function hoverGhosts(X,Y)
+	{
+		xx = HomX + ((X -HomX) /1.05);
+		yy = HomY + ((Y -HomY) /1.05);
+		Xpos = parseInt(xx);
+		Ypos = parseInt(yy);
+		if ((55 < xx < 45) && (160 < yy < 140))
+			Hovering = setTimeout('hoverGhosts(' + xx + ',' + yy + ');',90);
+	}
+		var flying = true;
+	function ghostsFly()
+	{
+		if (!flying) return;
+		for (var xx = 1 ; xx < 4 ; xx++ )
+		{
+			var ghst = 'ghost' + xx;
+			document.all[ghst].style.top = Ypos + Math.cos((20*Math.sin(Next/(30+xx)))+xx*70)*Tall*(Math.sin(10+Next/10)+0.2)*Math.cos((Next + xx*55)/10);
+			document.all[ghst].style.left =Xpos + Math.sin((20*Math.sin(Next/30))+xx*70)*Wide*(Math.sin(10+Next/(10+xx))+0.2)*Math.cos((Next + xx*55)/10);
+		}
+		Next += step;
+		setTimeout("ghostsFly()", 100) ;
+	}
+		var whichGhost = 0;
+	function stopGhosts()
+	{
+		whichGhost++;
+		document.onmousemove = null;
+		var ghst = 'ghost' + whichGhost;
+		document.all[ghst].style.visibility = 'hidden';
+		if (whichGhost == 3) flying = false;
+	}
+	if (isIE)
+	{
+		ghostsFly();
+		document.all.ghost1img.src='../media/ghost_bat.gif';
+		document.all.ghost2img.src='../media/ghost_black.gif';
+		document.all.ghost3img.src='../media/ghost_red.gif';
+		document.all.ghost1.style.visibility="visible";
+		document.all.ghost2.style.visibility="visible";
+		document.all.ghost3.style.visibility="visible";
+		setTimeout(stopGhosts,21000);
+		setTimeout(stopGhosts,23000);
+		setTimeout(stopGhosts,25000);
+	}
+//-->
+</script>
+
+<table border=0 width=640 height=480 cellspacing=0 cellpadding=0>
+ <tr>
+  <td background="../media/banjo.gif">
+   <table border=0 cellspacing=0 cellpadding=0>
+    <tr>
+     <td width=200 height=200 align=left valign=top>
+	 <img src="../media/cool-hot.gif" width=200>
+     </td>
+     <td width=240 align=center>
+	<font face="Arial, Times New Roman" color=#ADFF2F size=3><B>
+	All <font color=#87CEFA>Cartoon Mascots <font color=#FF69B4>Here <font color=#FFD700>Saying<br>
+	<img src="../media/happybirthday.gif" width=240 height=160><br>
+     </td>
+     <td width=200 rowspan=4 align=right valign=top>
+	<img src="../media/mickeysled.gif" width=200 height=100><br>
+	<img src="../media/birthcake.gif" width=200 height=200>
+     </td>
+    </tr><tr>
+     <td width=440 height=20 colspan=2 align=left valign=bottom>
+	<img src="../media/ant.gif" width=440>
+     </td>
+    </tr><tr>
+     <td width=440 height=40 colspan=2 align=left valign=bottom>
+	<font face="Arial, Times New Roman" color=#9ACD32 size=3><B>
+	&#160; &#160; My Dear Brother, &#160; <img src="../media/kitty.gif" width=260 height=40 align=middle>
+     </td>
+    </tr><tr>
+     <td width=440 colspan=2 align=center>
+	<font face="Arial, Times New Roman" color=#F04500 size=3><B>
+	Cheers <font color=#9932CC>To You and <font color=#FF8C00>Have A <font color=#FF1493>Wonderful <font color=#0000FF>Birthday! 
+     </td>
+    </tr><tr>
+     <td width=200 align=left valign=bottom>
+	<img src="../media/enjoybath.gif" width=200 height=180>
+     </td>
+     <td width=240 align=left valign=bottom background="">
+	<img src="../media/steps.gif" width=240 height=200>
+     </td>
+     <td width=200 align=left valign=bottom background="../media/helicopter.gif">
+	<img src="../media/hobbes.gif" width=80 height=100 align=middle>
+	<img src="../media/jumplamb.gif" width=100 height=100 align=middle><br>
+	<img src="../media/runrabit.gif" width=80 height=100 align=bottom><img
+	 src="../media/jerry.gif" width=120 height=100 align=bottom></td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+ <tr><td>
+	<img src="../media/hotdogman.gif" border=0 align=middle>
+	<img src="../media/garfield.gif" border=0 align=center width=75>
+	<img src="../media/manshoveling.gif" border=0 align=middle>
+	<img src="../media/dolphins.gif" border=0 align=middle>
+	<img src="../media/guitar.gif" border=0 align=middle>
+	<img src="../media/runner.gif" border=0 align=middle>
+	<img src="../media/elephant.gif" border=0 align=middle>
+ </td></tr>
+</table>
+
+
+</center>
+</body>
+</html>

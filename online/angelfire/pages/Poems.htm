@@ -1,0 +1,201 @@
+<HTML>
+<HEAD><TITLE>The Poems Dedication</TITLE>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Grace Homepage">
+<META NAME="keywords" CONTENT="Grace, Zhou, Lin, Zhoulin, pictures, favorites, family, friends, books, poems, resume, links">
+
+<style>
+.bgimages img {cursor:hand}
+</style>
+
+<script type="text/javascript">  // Live Background
+
+ bg_imax = 0;
+ bg_text = new Array()
+
+ bg_text[bg_imax++] = new Array ("../media/diaoke4.gif");
+ bg_text[bg_imax++] = new Array ("../media/diaoke6.gif");
+ bg_text[bg_imax++] = new Array ("../media/bgpaper_wall.jpg");
+ bg_text[bg_imax++] = new Array ("../media/bgpaper_xuan.gif");
+ bg_text[bg_imax++] = new Array ("../media/bgshufa_may.gif");
+ bg_text[bg_imax++] = new Array ("../media/bgshufa_paint.gif");
+
+ function bg_live() {
+  i = Math.round(Math.random()*(bg_imax-1))
+  image = bg_text[i]
+  if (!document.all) document.layers.background.src = image;
+  else document.body.style.backgroundImage = "url("+image+")"
+ }
+
+ window.onload=bg_live
+
+</script>
+
+
+<script type="text/javascript">
+/*
+Gradual-Highlight Image Script � Dynamic Drive (www.dynamicdrive.com)
+*/
+function high(which2)
+{
+ theobject=which2
+ highlighting=setInterval("highlightit(theobject)",50)
+}
+function low(which2)
+{
+ clearInterval(highlighting)
+ which2.filters.alpha.opacity=20
+}
+function highlightit(cur2)
+{
+ if (cur2.filters.alpha.opacity<100) cur2.filters.alpha.opacity+=5
+ else if (window.highlighting) clearInterval(highlighting)
+}
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR=#fffff SCROLL="yes" background="../media/diaoke4.gif" onFocus="bg_live()">
+
+<BGSOUND SRC="../midi/toalice.mid" LOOP=1>
+
+<FONT FACE="Times New Roman, Arial Narrow, Arial" SIZE=2>
+
+<script> bg_live() </script>
+
+<script>
+
+if (document.images) var staticlogo=new Image(48,208)
+staticlogo.src="../media/boathill.gif"
+var logolink="../../boathill/index.html"
+var alttext="Read more poems by the master of Boathill"
+var fadeintoview=1
+var visibleduration=100
+
+function regenerate() {
+ window.location.reload()
+}
+function regenerate2() {
+ if (document.layers)
+ setTimeout("window.onresize=regenerate",400)
+}
+
+var fadeset=''
+
+if (fadeintoview) fadeset="filter:alpha(opacity=0)"
+
+if (document.all) document.write('<span id="logo" style="'+fadeset+';position:absolute;top:100;width:'+staticlogo.width+';height:'+staticlogo.height+'"></span>')
+
+function bringintoview() {
+ if (logo.filters.alpha.opacity<=95)
+  logo.filters.alpha.opacity+=5
+ else {
+  clearInterval(viewit)
+  if (visibleduration!=0) setTimeout("logo.style.visibility='hidden'",visibleduration*1000)
+ }
+}
+
+function createlogo() {
+ staticimage=new Layer(100)
+ staticimage.left=-300
+ staticimage.top=120
+ staticimage.document.write('<a href="'+logolink+'"><img src="'+staticlogo.src+'" border=0 alt="'+alttext+'" style=filter:alpha(opacity=85) onMouseover=low(this) onMouseout=high(this)></a>')
+ staticimage.document.close()
+ staticimage.visibility="show"
+ regenerate2()
+ staticitns()
+}
+
+if (document.layers) window.onload=createlogo;
+
+if (document.all) {
+ w=document.body.clientWidth-logo.style.pixelWidth-20
+ h=document.body.clientHeight-logo.style.pixelHeight-40
+ logo.style.left=w
+ logo.style.top=h
+}
+
+function logoit() {
+ var w2=document.body.scrollLeft+w
+ var h2=document.body.scrollTop+h
+ logo.style.left=w2
+ logo.style.top=h2
+}
+function logoit2() {
+ staticimage.left=pageXOffset+window.innerWidth-staticimage.document.width-15
+ staticimage.top=pageYOffset+window.innerHeight-staticimage.document.height
+}
+
+function insertimage() {
+ logo.innerHTML='<a href="'+logolink+'"><img src="'+staticlogo.src+'" border=0 alt="'+alttext+'" style=filter:alpha(opacity=85) onMouseover=low(this) onMouseout=high(this)></a>'
+ if (fadeintoview)
+  viewit=setInterval("bringintoview()",100)
+ else {
+  if (visibleduration!=0)
+  setTimeout("logo.style.visibility='hidden'",visibleduration*1000)
+ }
+}
+
+if (document.all) {
+ window.onscroll=logoit
+ window.onresize=new Function("window.location.reload()")
+ window.onload=insertimage
+}
+
+function staticitns() {
+ setInterval("logoit2()",90)
+ if (visibleduration!=0)
+  setTimeout("staticimage.visibility='hide'",visibleduration*1000)
+}
+
+</script>
+
+
+<center>
+
+<table border=0 cellpadding=0 cellspacing=0>
+ <tr>
+  <td align="center" valign="top">
+   <table border=0 cellpadding=0 cellspacing=0 cols=5>
+    <tr>
+     <td align="center" valign="top"><br>
+      <img src="../pics/poem_golden1a.gif" border=0 style="filter:alpha(opacity=40)" onMouseover="high(this)" onMouseout="low(this)" usemap="#golden" height=200>&nbsp;
+      <img src="../pics/poem_water1a.gif" border=0 style="filter:alpha(opacity=40)" onMouseover="high(this)" onMouseout="low(this)" usemap="#water" height=200>&nbsp;<br>
+      <img src="../pics/poem_river1a.gif" border=0 style="filter:alpha(opacity=40)" onMouseover="high(this)" onMouseout="low(this)" usemap="#river" height=200>&nbsp;
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+ <tr><td align="center" valign="bottom">
+    <FONT COLOR=#8F8F8F FACE="Times New Roman" SIZE=2><br>
+    <a href="../index.html">Back Home</a> | 
+    <a href="../pages/Pictures.htm">Pictures</a> |
+    <a href="../pages/Favorites.htm">Favorites</a> | 
+    <a href="../pages/Family.htm">Family & Friends</a> | 
+    <a href="../pages/Books.htm">Books </a> | Poems |
+    <a href="../pages/Resume.htm">Resume</a> |
+    <a href="../pages/Links.htm">Links</a> <br><br></FONT>
+    </td></tr>
+ </tr>
+</table>
+
+<MAP NAME="golden">
+<AREA SHAPE="RECT" COORDS="0,0,280,200" HREF="../pics/poem_golden2a.gif" alt="Godlen Silk">
+</MAP>
+
+<MAP NAME="river">
+<AREA SHAPE="RECT" COORDS="0,0,307,200" HREF="../pics/poem_river2a.gif" alt="River in All Red">
+</MAP>
+
+<MAP NAME="water">
+<AREA SHAPE="RECT" COORDS="0,0,287,200" HREF="../pics/poem_water2a.gif" alt="Water Melody Song">
+</MAP>
+
+
+</center>
+
+
+</BODY> 
+</HTML>

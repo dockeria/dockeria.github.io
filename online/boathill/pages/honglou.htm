@@ -1,0 +1,139 @@
+<html>
+<head><title>Honglou Poems</title>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="subject" CONTENT="Honglou Poems">
+<META NAME="description" CONTENT="A poetry anthology from the classical book 'A Dream of Red Mansions', Cao-Xueqin, Qing Dynasty, 1790"> 
+<META NAME="keywords" CONTENT="poems, Cao, Xueqin, Qing Dynasty, A Dream of Red Mansions, DHTML, JavaScript, jpg, gif">
+
+<script type="text/javascript">
+
+ var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+ var ie4up = (document.all) ? 1 : 0;
+
+ function GoView() {
+  if (ns4up) window.location.href='#View'
+//  else window.location.href='#main'
+ }
+
+ var g_fPlayMode = 0;
+ var g_iimg = 0;
+ var g_imax = 0;
+ var g_ImageTable = new Array();
+ var g_dwTimeOutSec=2
+
+ g_ImageTable[g_imax++] = new Array ("../poems/vp200a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../poems/vp201a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../poems/vp201b.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../poems/vp202a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../poems/vp202b.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../poems/vp203a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../poems/vp203b.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../poems/vp204a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../poems/vp204b.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../poems/vp205a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../poems/vp205b.jpg","");
+
+ function ChangeImage(fFwd) {
+  if (fFwd) { if (++g_iimg==g_imax) g_iimg=0; }
+  else { if (g_iimg==0) g_iimg=g_imax; g_iimg--; }
+  Update();
+ }
+
+ function Update() {
+  document.all._Ath_Slide.src = g_ImageTable[g_iimg][0];
+//  document.all._Ath_FileName.innerHTML = g_ImageTable[g_iimg][1];
+//  document.all._Ath_Img_X.innerHTML = g_iimg + 1;
+//  document.all._Ath_Img_N.innerHTML = g_imax;
+ }
+ function Play() {
+  g_fPlayMode = !g_fPlayMode;
+  if (g_fPlayMode) { btnPrev.disabled = btnNext.disabled = true; Next(); }
+  else { btnPrev.disabled = btnNext.disabled = false; }
+ }
+ function OnImgLoad() { if (g_fPlayMode) window.setTimeout("Tick()", g_dwTimeOutSec*1000); }
+ function Tick() { if (g_fPlayMode) Next(); }
+ function Prev() { ChangeImage(false); }
+ function Next() { ChangeImage(true); }
+ function main() { Update(); }
+
+ window.onload=Play
+
+</script>
+
+</head>
+
+<body bgcolor=#000000 text=#CCCCCC link=#CC9999 vlink=#CD853F alink=#FF0000 scroll="yes" onLoad="GoView()">
+
+
+<font face="Arial" color=#CCCCCC size=2>
+
+<a name="main"><center>
+
+<table height=100% border=0 cellpadding=0 cellspacing=0>
+ <tr><td height=10240 align="center" valign="top">
+
+ <input type="button" name="btnNext" value="Next Page &lt;&lt;" onclick="Next();">
+ <input type="button" name="btnPlay" value="Turn Over" onclick="Play();" 
+  OnMouseOver="window.status='Turn Over the Book';return true" 
+  OnMouseOut="window.status='';return true">
+ <input type="button" name="btnView" value="Pagelist" 
+  onClick="window.location.href='#View'" 
+  OnMouseOver="window.status='View Page List';return true" 
+  OnMouseOut="window.status='';return true">
+ <input type="button" name="btnPrev" value="&gt;&gt; Back Page" onclick="Prev();">
+ <br><br>
+
+ <img name="_Ath_Slide" onload="OnImgLoad()"><br>
+
+ <script type="text/javascript" event="onload" for="window">
+  main();
+ </script> 
+
+ </td></tr>
+</table>
+
+<a name="View">
+<table height=100% border=0 cellpadding=0 cellspacing=0>
+ <tr>
+  <td height=90% align="center" valign="top"><font face="Arial" size=2>
+   <br><img src="../media/section.gif"><br><br>
+   <a href="../poems/vp200a.jpg">The Cover</a> &#160; <p> Poem Five: 
+   <a href="../poems/vp201a.jpg">Page 1</a> &#160; 
+   <a href="../poems/vp201b.jpg">Page 2</a> &#160; 
+   <a href="../poems/vp202a.jpg">Page 3</a> &#160; 
+   <a href="../poems/vp202b.jpg">Page 4</a> &#160; <p> Leushe - The Eight Line "Sonnet":
+   <a href="../poems/vp203a.jpg">Page 5</a> &#160; 
+   <a href="../poems/vp203b.jpg">Page 6</a> &#160; 
+   <a href="../poems/vp204a.jpg">Page 7</a> &#160; 
+   <a href="../poems/vp204b.jpg">Page 8</a> &#160;
+   <a href="../poems/vp205a.jpg">Page 9</a> &#160; <p> Tzi - The Classical Chinese Lyric:
+   <a href="../poems/vp205b.jpg">Page 10</a> &#160; <p>
+
+   <br><br><img src="../media/section.gif"><br><br>
+
+   Back | Home |
+   <a href="../pages/verse.htm">Boathill</a> | 
+   <a href="../pages/chingmin.htm">Ching-Ming Anthology</a> |
+   Dream of Red Mansions |
+   Tang |
+   Song |
+   Links
+
+   <br><br><br>
+
+  </td>
+ </tr>
+ <tr>
+  <td height=10% align="center">
+   <FORM>
+    <INPUT TYPE="button" VALUE="Back" onClick="history.go(-2)">
+   </FORM>
+  </td>
+ </tr>
+</table>
+
+</center>
+
+</body>
+</html>

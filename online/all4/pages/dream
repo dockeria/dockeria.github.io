@@ -1,0 +1,164 @@
+<HTML>
+<HEAD><TITLE>Dream, Dream, Dream - Night Mystery</TITLE>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Personal Homepage, including topics of Pictures (Palace, Qingdao-Dalian, Hainan, Tailand, the States, Wedding, Studio, etc.), Favorites (Music, surfing internet, Cookbook, Fashion, Movies, Entertainment, Seasons and Holidays), Family and Friends (my family, our couples, friends and another me), Books (internet digest, jokes, fictions, scenes, lyrics, forums, talktime), Poems, Resume and Links."> 
+<META NAME="keywords" CONTENT="Grace, Zhou, Lin, Zhoulin, Pictures, Favorites, Family, Friends, Books, Poems, Resume, Links, Wedding, Studio, Beijing, Qingdao, Dalian, Hainan, United States, Scenes, Music, internet digest, jokes, lyrics, DHTML, JavaScript, jpg, gif">
+
+<style>
+<!--
+ a { text-decoration:none; }
+
+ #leftright, #topdown{
+  position:absolute;
+  left:0;
+  top:0;
+  width:1px;
+  height:1px;
+  layer-background-color:black;
+  background-color:#880000;
+  z-index:100;
+  font-size:1px;
+ }
+-->
+</style>
+
+<script>
+ function fullwin(htmlfile) {
+  window.open(htmlfile,"","fullscreen,scrollbars")
+ }
+</script>
+
+</HEAD>
+
+<BODY background="../media/bgstars.gif" bgcolor=#DCC6AC topmargin=0 leftmargin=0 onBlur="self.close()">
+
+<div id="leftright" style="width:expression(document.body.clientWidth-2)"></div>
+<div id="topdown" style="height:expression(document.body.clientHeight-2)"></div>
+
+<script language="JavaScript1.2">	// Document crosshair Script 
+
+ if (document.all&&!window.print) {
+  leftright.style.width=document.body.clientWidth-2
+  topdown.style.height=document.body.clientHeight-2
+ }
+ else if (document.layers) {
+  document.leftright.clip.width=window.innerWidth
+  document.leftright.clip.height=1
+  document.topdown.clip.width=1
+  document.topdown.clip.height=window.innerHeight
+ }
+
+ function followmouse1() {	// move cross engine for IE 4+
+  leftright.style.pixelTop=document.body.scrollTop+event.clientY+1
+  topdown.style.pixelTop=document.body.scrollTop
+  if (event.clientX<document.body.clientWidth-2)
+   topdown.style.pixelLeft=document.body.scrollLeft+event.clientX+1
+  else
+   topdown.style.pixelLeft=document.body.clientWidth-2
+ }
+
+ function followmouse2(e) {	// move cross engine for NS 4+
+  document.leftright.top=e.y+1
+  document.topdown.top=pageYOffset
+  document.topdown.left=e.x+1
+ }
+
+ if (document.all)
+  document.onmousemove=followmouse1
+ else if (document.layers) {
+  window.captureEvents(Event.MOUSEMOVE)
+  window.onmousemove=followmouse2
+ }
+
+ function regenerate() {
+  window.location.reload()
+ }
+ function regenerate2() {
+  setTimeout("window.onresize=regenerate",400)
+ }
+ if ((document.all&&!window.print)||document.layers)	// if the user is using IE 4 or NS 4, both NOT IE 5+
+  window.onload=regenerate2
+
+</script>
+
+
+<FONT FACE="Arial, Arial Norrow, Times New Roman" SIZE=2>
+
+<center>
+
+
+<table background="../media/birdfly.gif" width=1280 height=100 cellpadding=0 cellspacing=0 border=0>
+ <tr><td></td></tr>
+</table>
+
+
+<table width=1022 border=0 bordercolor=#ffffff>
+
+ <tr><td width=760 align=center valign=top>
+
+<table cols=3 width=660 cellpadding=0 cellspacing=0 border=0>
+ <th><td width=120></td><td width=100></td><td width=320></td><td width=120></td></th>
+ <tr>
+  <td width=120 align=left><img src="../media/star_white.gif"></td>
+  <td width=100 align=center valign=middle><img src="../media/star_red.gif"></td>
+  <td width=320 align=right><img src="../media/line_bluestar.gif" width=300></td>
+  <td width=120 align=right><img src="../media/star_purple.gif"></td>
+ </tr>
+ <tr>
+  <td rowspan=2 background="../media/bgstars_flash.gif" width=120 heigh=260 align=center valign=bottom>
+   <img src="../media/fire_camp.gif"><br>
+   <img src="../media/flashlight_left.gif"><br>
+  </td>
+  <td colspan=2 rowspan=2 background="../media/map_states.gif" width=420 height=260 align=left valign=top>
+   <img src="../media/map_states_name.gif" width=420 height=260>
+  </td>
+  <td rowspan=2 width=120 height=260 align=center valign=bottom>
+   <img src="../media/star_white.gif"><br><br>
+   <img src="../media/globe_land.gif"><br>
+   <img src="../media/candlite.gif" border=0 width=40><br>
+   <img src="../media/flashlight_right.gif"><br>
+  </td>
+ </tr>
+ <tr><td width=120 height=150></td></tr>
+ <tr>
+  <td width=120 height=160 background="../media/blitz.gif">
+   <img src="../media/castlight.gif" width=120 height=160>
+  </td>
+  <td colspan=2 width=420 height=160 background="../media/bgstars_flash.gif" align=center>
+   <img src="../media/globe_lightblue.gif" height=30 align=top>
+   <img src="../media/line_pacman.gif" width=360><br>
+   <img src="../media/meter.gif">
+   <img src="../media/wheel_colors.gif">
+   <img src="../media/bridge.gif">
+   <img src="../media/wheel.gif">
+   <br><br>
+   <img src="../media/line_feet.gif" width=400>
+  </td>
+  <td width=120 height=160 background="" align=center valign=middle>
+   <img src="../media/xweb.gif" width=120>
+  </td>
+ </tr>
+</table>
+<br>
+<table background="../media/line_rainbow.gif" width=760 height=1 cellpadding=0 cellspacing=0 border=0>
+ <tr><td></td></tr>
+</table>
+
+
+ </td></tr>
+</table>
+
+<table><tr><td align=center>
+
+  <img src="../media/welcome.gif" border=0 align=center height=25>
+  <img src="../media/enter.gif" border=0 align=center>
+  <img src="../media/home.gif" border=0 align=center>
+
+ </td></tr>
+</table>
+
+</center>
+
+</BODY> 
+</HTML>

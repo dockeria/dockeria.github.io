@@ -1,0 +1,83 @@
+<html>
+<head><title>Come to the blessing - Animated Window Open</title>
+</head>
+
+<script>	// Animated Window Opener Script
+
+ var mylocation=""
+ var winheight=100
+ var winsize=100
+ var x=5
+ var y=5
+
+ function AniOpen() {
+  window.resizeTo(1,1)
+  window.moveTo(-5,-25)
+  AniSize()
+ }
+
+ function AniSize() {
+  if (winheight>=screen.width+20) x=0
+  if (winheight>=screen.height+25) y=0
+  window.resizeBy(x,y)
+  winheight+=5
+  winsize+=5
+  if (x==0 && y==0) {
+   winheight=100
+   winsize=100
+   x=5
+   y=5
+   return
+  }
+  setTimeout("AniSize()",50)
+ }
+
+ function go() {
+  win2=window.open("","","scrollbars")
+  if (!document.layers&&!document.all) {
+   win2.location=mylocation
+   return
+  }
+  win2.resizeTo(100,100)
+  win2.moveTo(0,0)
+  go2()
+ }
+
+ function go2() {
+  if (winheight>=screen.availHeight-3) x=0
+  win2.resizeBy(5,x)
+  winheight+=5
+  winsize+=5
+  if (winsize>=screen.width-5) {
+//   win2.location=mylocation
+   winheight=100
+   winsize=100
+   x=5
+   return
+  }
+  setTimeout("go2()",50)
+ }
+
+ window.onload=AniOpen
+
+</script>
+
+<body background="../media/door_fu.gif" onload="AniOpen()" onBlur="self.close()" leftmargin=0 rightmargin=0 topmargin=0 bottommargin=0>
+
+<a name=start>
+<center>
+<table width=100% height=100%>
+ <tr>
+  <td align=center valign=middle>
+   <img src="../media/taiji.gif" border=0 usemap="#taiji" alt="Click to Close">
+  </td>
+ </tr>
+</table>
+</center>
+
+<MAP NAME="taiji">
+<AREA SHAPE="CIRCLE" COORDS="125,125,114" HREF="#start" ALT="Click To Close">
+</MAP>
+
+</body>
+</html>

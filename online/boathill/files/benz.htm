@@ -1,0 +1,86 @@
+<html>
+<head><title>Mercedes-Benz Gallery</title>
+
+<style>
+ body {
+  background: #FFFFFF url('../pics/benz_logo.gif');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: black;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+ }
+</style>
+
+<script type="text/javascript">  // Blending Image Slide Show Script- 
+
+  function reapply()
+  {
+   setTimeout("slideit()",2000)
+   return true
+  }
+  window.onerror=reapply
+
+</script>
+
+</head>
+
+<body onLoad="self.resizeTo(370,267)" onBlur="self.close()">
+
+<table width=100% height=100% cellpadding="0" cellspacing=0 BORDER=0>
+ <tr>
+  <td align="CENTER" valign="MIDDLE">
+
+<script>  // change number_of_images below 
+  var number_of_images=14
+    // change speed below (in seconds)
+  var speed=3
+  var step=1
+  var whichimage=1
+  var str="";
+
+  var image1 =new Image()  ;  image1.src ="../pics/benz_c1.jpg";
+  var image2 =new Image()  ;  image2.src ="../pics/benz_c2.jpg";
+  var image3 =new Image()  ;  image3.src ="../pics/benz_c3.jpg";
+  var image4 =new Image()  ;  image4.src ="../pics/benz_c4.jpg";
+  var image5 =new Image()  ;  image5.src ="../pics/benz_c5.jpg";
+  var image6 =new Image()  ;  image6.src ="../pics/benz_c6.jpg";
+  var image7 =new Image()  ;  image7.src ="../pics/benz_clk.jpg";
+  var image8 =new Image()  ;  image8.src ="../pics/benz_e.jpg";
+  var image9 =new Image()  ;  image9.src ="../pics/benz_e_class.jpg";
+  var image10=new Image()  ;  image10.src="../pics/benz_e200.jpg";
+  var image11=new Image()  ;  image11.src="../pics/benz_s.jpg";
+  var image12=new Image()  ;  image12.src="../pics/benz_slk.jpg";
+  var image13=new Image()  ;  image13.src="../pics/benz_slk3.jpg";
+  var image14=new Image()  ;  image14.src="../pics/benz_vito.jpg";
+
+  function slideit()
+  {
+   if (!document.images) return
+   if (document.all) slide.filters.blendTrans.apply()
+   document.images.slide.src=eval("image"+step+".src")
+   if (document.all) slide.filters.blendTrans.play()
+   whichimage=step
+   if (step<number_of_images) step++
+   else step=1
+   if (document.all) setTimeout("slideit()",speed*1000+3000)
+   else setTimeout("slideit()",speed*1000)
+  }
+  
+  str+="<a href='http://www.mercedes-benz.com/'>"
+  str+="<img id='reflect' src=+image1.src+ name='slide' width=360 height=240 align="center" border=0 alt='Mercedes-Benz Gallery' style='filter:blendTrans(duration=3)'>"
+  str+="</a><br>"
+
+  document.writeln(str);
+
+  slideit();
+
+</script>
+
+  </td>
+ </tr>
+</table>
+
+
+</body>
+</html>

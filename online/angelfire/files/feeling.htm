@@ -1,0 +1,389 @@
+<HTML>
+<HEAD>
+<TITLE>How Are You Feeling Today?</TITLE>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Grace Homepage">
+<META NAME="keywords" CONTENT="pictures, favorites, family, friends, books, poems, resume, links">
+
+<style>
+ /* Glowing Text Style */
+ #glowtext{
+  filter:glow(color=FFFF00, strength=3);
+  width:100%;
+ }
+ /* Style for Drag and Drop */
+ .drag{position:relative;cursor:hand}
+</style>
+
+
+<script type="text/javascript">  // Drag and Drop Script- 
+
+ var dragapproved=false
+ var z,x,y
+
+ function move() {
+  if (event.button==1&&dragapproved) {
+   z.style.pixelLeft=temp1+event.clientX-x
+   z.style.pixelTop=temp2+event.clientY-y
+   return false
+  }
+ }
+
+ function drags() {
+  if (!document.all)
+   return
+  if (event.srcElement.className=="drag") {
+   dragapproved=true
+   z=event.srcElement
+   temp1=z.style.pixelLeft
+   temp2=z.style.pixelTop
+   x=event.clientX
+   y=event.clientY
+   document.onmousemove=move
+  }
+ }
+
+ document.onmousedown=drags
+ document.onmouseup=new Function("dragapproved=false")
+
+//-->
+</script>
+
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">  // Drop Text Script - 
+<!--
+
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function droptext()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script>
+
+<script type="text/javascript">  // Glowing Text Script- 
+
+ function glowit(which) {
+  if (document.all.glowtext[which].filters[0].strength==3)
+   document.all.glowtext[which].filters[0].strength=2
+  else
+   document.all.glowtext[which].filters[0].strength=3
+ }
+
+ function glowit2(which) {
+  if (document.all.glowtext.filters[0].strength==3)
+   document.all.glowtext.filters[0].strength=2
+  else
+  document.all.glowtext.filters[0].strength=3
+ }
+
+ function startglowing() {
+  if (document.all.glowtext&&glowtext.length) {
+   for (i=0;i<glowtext.length;i++)
+    eval('setInterval("glowit('+i+')",150)')
+  }
+  else if (glowtext)
+   setInterval("glowit2(0)",150)
+ }
+
+  if (document.all) window.onload=startglowing
+
+</script>
+
+</HEAD>
+
+
+<body bgcolor=#E6E6FA background="../data/bgfeeling.gif" text=#000099 topmargin=8 bottommargin=60 leftmargin=0>
+
+<bgsound src="../midi/miami.mid" volumn="-7000" loop=1>
+<EMBED SRC="" HIDDEN="True"> 
+
+<center><br><br>
+
+<font face="Arial" color=#32CD32><b>
+<span id="glowtext" class="drag">
+drag the picture away and see your background ...
+</span></b></font><p>
+
+<br><br>
+
+<img src="../data/earlysex.jpg" class="drag" height=260 border=0 alt="I love Playboy!">
+<img src="../data/xmas99sea.gif" class="drag" height=260 border=0 alt="Happy X'mas from Seattle"><p>
+
+<img src="../data/nine_people.jpg" class="drag" height=401 border=0 alt="Figure out where are the 9 people?">
+<img src="../data/bombman.jpg" class="drag" height=400 border=0 alt="Call In The Bomb Squad"><p>
+
+<font face="Arial" color=#FF00FF><b>
+<span id="glowtext" class="drag">
+All objects on this page are dragable, including this text line...
+</span></b></font><p>
+
+<img src="../data/emergency.jpg" class="drag" height=200 border=0 alt="Could happen!">
+<img src="../data/soldier.jpg" class="drag" height=200 border=0 alt="Attention! Stand - at ease ..."><p>
+
+<img src="../data/panda_bamboo.jpg" class="drag" height=280 border=0 alt="Panda and Bamboo">
+<img src="../data/panda_party.jpg" class="drag" height=280 border=0 alt="We have a party..."><p>
+
+<p>
+
+<span id="glowtext">
+    <FONT COLOR=#8F8F8F FACE="Times New Roman" SIZE=2><p>
+    <a href="../index.html">Back Home</a> | 
+    <a href="../pages/Pictures.htm">Pictures</a> |
+    <a href="../pages/Favorites.htm">Favorites</a> | 
+    <a href="../pages/Family.htm">Family & Friends</a> | 
+    <a href="../pages/Books.htm">Books</a>|
+    <a href="../pages/Poems.htm">Poems</a> |
+    <a href="../pages/Resume.htm">Resume</a> |
+    <a href="../pages/Links.htm">Links</a> <br><br><br></FONT>
+</span>
+
+</center>
+</body>
+</html>

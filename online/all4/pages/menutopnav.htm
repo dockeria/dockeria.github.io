@@ -1,0 +1,220 @@
+<html>
+<head><title>Menu Top Navigational Bar </title>
+
+<style>
+/* Glowing Text Style */
+ #glowtext {
+  filter:glow(color=FFFF00, strength=3);
+  width:100%;
+ }
+ a:hover { color:FF4500; }
+</style>
+
+<script type="text/javascript">  // Glowing Text Script-
+
+ function glowit(which) {
+  if (document.all.glowtext[which].filters[0].strength==3)
+   document.all.glowtext[which].filters[0].strength=2
+  else
+   document.all.glowtext[which].filters[0].strength=3
+ }
+
+ function glowit2(which) {
+  if (document.all.glowtext.filters[0].strength==3)
+   document.all.glowtext.filters[0].strength=2
+  else
+  document.all.glowtext.filters[0].strength=3
+ }
+
+ function startglowing() {
+  if (document.all.glowtext&&glowtext.length) {
+   for (i=0;i<glowtext.length;i++)
+    eval('setInterval("glowit('+i+')",150)')
+  }
+  else if (glowtext)
+   setInterval("glowit2(0)",150)
+ }
+
+</script>
+
+
+<script language="JavaScript" src="menutopbar.js"></script>
+<script language="JavaScript" src="menulib.js"></script>
+<script language="JavaScript">
+
+  // Define navigation bar settings.
+
+  iMenu  = 0;
+  navBarX = 0;
+
+  navBarHeaderWidth  = 120;
+  navBarMenuWidth    = 180;
+  navBarBorderWidth  =   1;
+  navBarPaddingWidth =   2;
+
+  navBarBorderColor   = "#F0FFFF";
+  navBarHeaderBgColor = "#BFFD97";
+  navBarHeaderFgColor = "#000000";
+  navBarActiveBgColor = "#8FBC8F";
+  navBarActiveFgColor = "#ffffff";
+  navBarItemBgColor   = "#87CEEB";
+  navBarItemFgColor   = "#000000";
+  navBarHighBgColor   = "#FF8C00";
+  navBarHighFgColor   = "#ffffff";
+
+  navBarHeaderFontFamily = "Verdana,Arial,Helvetica,sans-serif";
+  navBarHeaderFontStyle  = "plain";
+  navBarHeaderFontWeight = "bold";
+  navBarHeaderFontSize   = "10pt";
+  navBarItemFontFamily   = "Verdana,Arial,Helvetica,sans-serif";
+  navBarItemFontStyle    = "plain";
+  navBarItemFontWeight   = "bold";
+  navBarItemFontSize     = "8pt";
+
+  // Define navigation bar menus. Extend beyond 4 as desired
+
+  navBarMenus[iMenu++] = new Array("Dynamic Home", "http://www.dynamicdrive.com/");
+
+  navBarMenus[iMenu++] = new Array("Surf Internet", "http://www.internet4free.net",
+    "Acronym Finder",   "http://www.acronymfinder.com/",
+    "Bigbook",     "http://www.bigbook.com/",
+    "First-name",    "http://www.first-name.com/",
+    "Tucows Software",  "http://www.tucows.com/",
+    "Int'net Encyclopedia", "http://freesoft.org/CIE",
+    "ZDWebopedia",  "http://www.zdwebopedia.com/",
+    "Whatis",    "http://www.whatis.com");
+
+  navBarMenus[iMenu++] = new Array("Chinese Sites", "http://www.sohu.com/",
+    "Sinanet",  "http://www.sina.com/",
+    "Netease",  "http://www.163.com/",
+    "CCTV",  "http://www.cctv.com/",
+    "PhoenixTV",  "http://www.phoenixtv.com/",
+    "Creader",  "http://www.creader.net",
+    "Yifan",  "http://www.yifan.net/");
+
+  navBarMenus[iMenu++] = new Array("Search Engines", "http://www.notess.com/search/",
+    "4anything",   "http://www.4anything.com/",
+    "About",   "http://www.about.com/",
+    "AltaVista",   "http://www.altavista.com/",
+    "Dogpile",   "http://www.dogpile.com/",
+    "Excite",   "http://www.excite.com/",
+    "Google",   "http://www.google.com/",
+    "Goto",   "http://www.goto.com/",
+    "Hotbot",   "http://www.hotbot.com/",
+    "Infoseek",   "http://www.infoseek.com/",
+    "Snap",   "http://www.snap.com/",
+    "Startpoint",  "http://www.stpt.com/",
+    "Yahoo",   "http://www.yahoo.com/");
+
+
+</script>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+ function freewin(htmlfile,width,height) {
+
+  var handout_int = 10000;
+  var height_offset = 26;
+  var width_offset = 4;
+
+  if (width==0 || height==0) {
+   poplink = window.open(htmlfile, "winlink", "fullscreen=0, scrollbars=1, toolbar=1, menubar=0, location=0, directories=0, channelmode=0, resizable=1, status=1");
+   poplink.focus();
+  }
+  else {
+   handout = window.open(htmlfile, "winhand", "top=10, left=10, width="+width+", height="+height+", fullscreen=0, scrollbars=0, toolbar=0, menubar=0, location=0, directories=0, channelmode=0, resizable=0, status=0");
+   if (!document.all) {
+    height_offset = handout.outerHeight - handout.innerHeight;
+    width_offset = handout.outerWidth - handout.innerWidth;
+   }
+   handout.resizeTo(width+width_offset,height+height_offset);
+   handout.focus();
+  }
+ }
+
+</SCRIPT>
+
+</head>
+
+<body bgcolor=#CCCCFF background="../media/campus.jpg" link=#9400D3 alink=#FF69B4 vlink=#00CED1 onload="navBarInit(); startglowing()">
+<center>
+
+<table width=100% height=100% cellpadding=0 cellspacing=0 border=0><tr>
+<td align="center" valign="center">
+<font face="Arial Narrow, Vernada, Arial, Times New Roman" size=3><b><p>
+<img src="../media/leaf.gif"><br>
+
+<a href="javascript:freewin('../pages/htmlindex.htm',0,0)"
+ OnMouseOver="window.status='HTML Reference';return true">
+ HTML Reference
+</a><br>
+
+<a href="javascript:freewin('../pages/colors.htm',0,0)"
+ OnMouseOver="window.status='216 Web Colors';return true">
+ Web Colors
+</a><br>
+
+<font face="Arial Narrow, Arial" size=3 color=#FF69B4><br>
+ <span id="glowtext">
+  Dynamic Examples <img src="../media/more.gif" align="center" border=0>
+ </span>
+</font>
+
+<a href="javascript:freewin('../pages/nightscape.htm#nightscape',450,300)"
+ OnMouseOver="window.status='Nightscape';return true">
+ Nightscape
+</a> |
+
+<a href="javascript:freewin('../pages/nightscape.htm#nightsydney',450,500)"
+ OnMouseOver="window.status='Nightscape';return true">
+ Sydney
+</a><br>
+
+<a href="javascript:freewin('../pages/cartoons',0,0)"
+ OnMouseOver="window.status='Cartoons';return true">
+ Cartoons
+</a> |
+
+<a href="javascript:freewin('../pages/cheers',656,632)"
+ OnMouseOver="window.status='Cheers! Happy Birthday!';return true">
+ Cheers
+</a> |
+
+<a href="javascript:freewin('../pages/valentine',0,0)"
+ OnMouseOver="window.status='Valentines Day';return true">
+ Valentines' Day
+</a><br>
+
+<a href="javascript:freewin('../pages/godness',0,0)"
+ OnMouseOver="window.status='Godness';return true">
+ Godness
+</a> |
+
+<a href="javascript:freewin('../pages/dream',0,0)"
+ OnMouseOver="window.status='Night Mystery';return true">
+  Mystery
+</a><br>
+
+<a href="javascript:freewin('../pages/piclib',0,0)"
+ OnMouseOver="window.status='Picture Library';return true">
+ Picture Library
+</a> |
+
+<a href="javascript:freewin('../pages/piclib2',640,250)"
+ OnMouseOver="window.status='PicLib II';return true">
+ PicLib II
+</a><br>
+
+</b>
+
+<br><script language="JavaScript" src="textbar"></script>
+<span id="glowtext">demo gradient text bar</span>
+
+</td></tr></table>
+
+</font>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,1381 @@
+<html>
+<head><title>PaletteMaster &copy;2001, Lin Zhou</title>
+
+<META NAME="description" CONTENT="HTML Color Chart"> 
+<META NAME="copyright" CONTENT="�2001, Lin Zhou. All rights reserved.">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-us">
+
+<style><!--
+ a:link {color: "blue"; }
+ a:active {color: "#ABBB20"; }
+ a:visited {color: "#339900"; }
+ a:hover {color: "red"; }
+.chartLO { color: "#808080"; padding: 5; font: normal 10pt/10pt Arial; }
+.chartHI { color: "#FFFFFF"; padding: 5; font: normal 10pt/10pt Arial; }
+//--></style>
+
+<link rel="stylesheet" href="./css/colors.css" type="text/css">
+
+<script language="javascript"><!--
+  //the vars used for color code conversion when the radio buttons are changed
+  var RED = "", GREEN = "", BLUE = "";
+
+  function displayColor(red, green, blue)
+  {
+    RED = red; GREEN = green; BLUE = blue;
+    doWork(red, green, blue);
+  }
+
+  function convertCode()
+  {
+    if(RED != "")  // if RED is not defined, then GREEN and BLUE either...
+    doWork(RED, GREEN, BLUE);
+  }
+
+  function doWork(red, green, blue)
+  {
+    //if the first radio button is checked (hex)
+    if(document.radioForm.elements[0].checked)
+    {
+      text = "#" + red + green + blue;
+    }
+    else  //else, the second is checked (dec)
+    {
+      red = parseInt(red, 16);  //hex to dec convertion
+      green = parseInt(green, 16);
+      blue = parseInt(blue, 16);
+
+      text = "R: " + red + " G: " + green + " B: " + blue;
+    }
+    document.f1.t1.value = document.f2.t1.value = document.f3.t1.value = text;
+  }
+//--></script>
+
+<script type="text/jscript" language=jscript>
+<!--
+  function mOvr(src,id) {
+    if (!src.contains(event.fromElement))
+    {
+      var cellID = id + 'Cell';
+      document.all.toolbar.rows(0).cells(cellID).bgColor = '#FFFF00';
+    }
+  }
+
+  function mOut(src,id) {
+    if (!src.contains(event.toElement))
+    {
+      var cellID = id + 'Cell';
+      document.all.toolbar.rows(0).cells(cellID).bgColor = '';
+    }
+  }
+//--></script>
+
+</head>
+
+<body marginheight="0" marginwidth="0" leftmargin="0" topmargin="0" bottommargin="20">
+
+<font FACE="Times New Roman", size=2><center>
+
+<table width=660 cellpadding=0 cellspacing=0 border=0>
+ <tr><td colspan="2" style="padding:0 5;" nowrap>
+  <table border="0">
+   <tr>
+    <th width="100" nowrap><font face="Arial" color="rosybrown"><i>
+<font color="blue">P</font><font color="green">a</font><font color="red">l</font><font color="rosybrown">e</a><font color="black">tt</font><font color="orange">e</font><font color="hotpink">M</font><font color="crimson">a</font><font color="deepskyblue">s</font><font color="slategray">t</font><font color="violet">e</font><font color="teal">r</font></i><sup>&reg;</sup></font></th>
+    <th width="100"> &nbsp; </th>
+    <th width="100"> &nbsp; </th>
+    <th width="100"> &nbsp; </th>
+    <th width="100" align="right" valign="bottom" nowrap>
+      <font face="Arial" size="1" color="lightgrey">
+      &copy; 2001, Lin Zhou.</font>
+    </th>
+    <th width="100" align="right" valign="bottom" nowrap>
+      <font face="Arial" size="1" color="lightgrey">
+      All rights reserved.</font>
+    </th>
+   </tr><tr>
+    <td class="chartHI" bgcolor="tomato"  >  tomato   </td>
+    <td class="chartHI" bgcolor="orangered"  >  orangered   </td>
+    <td class="chartHI" bgcolor="red"    >  red  </td>
+    <td class="chartHI" bgcolor="crimson"  >  crimson  </td>
+    <td class="chartHI" bgcolor="darkred"  >  darkred  </td>
+    <td class="chartHI" bgcolor="maroon"  >  maroon  </td>
+   </tr><tr>
+    <td class="chartHI" bgcolor="lightcoral"  >  lightcoral  </td>
+    <td class="chartHI" bgcolor="coral"   >  coral   </td>
+    <td class="chartHI" bgcolor="darkcoral"  >  darkcoral  </td>
+    <td class="chartHI" bgcolor="firebrick"  >  firebrick  </td>
+    <td class="chartHI" bgcolor="brown"   >  brown   </td>
+    <td class="chartHI" bgcolor="indigo"  >  indigo  </td>
+   </tr><tr>
+    <td class="chartHI" bgcolor="lightsalmon"  >  lightsalmon  </td>
+    <td class="chartHI" bgcolor="salmon"  >  salmon  </td>
+    <td class="chartHI" bgcolor="darksalmon"  >  darksalmon  </td>
+    <td class="chartHI" bgcolor="indianred"  >  indianred  </td>
+    <td class="chartHI" bgcolor="palevioletred">  palevioletred  </td>
+    <td class="chartHI" bgcolor="mediumvioletred">  mediumvioletred  </td>
+   </tr><tr>
+    <td class="chartLO" bgcolor="lavenderblush">  lavenderblush  </td>
+    <td class="chartLO" bgcolor="mistyrose"  >  mistyrose  </td>
+    <td class="chartHI" bgcolor="lightpink"  >  lightpink  </td>
+    <td class="chartHI" bgcolor="pink"    >  pink    </td>
+    <td class="chartHI" bgcolor="hotpink"  >  hotpink  </td>
+    <td class="chartHI" bgcolor="deeppink"  >  deeppink  </td>
+   </tr><tr>
+    <td class="chartHI" bgcolor="thistle"  >  thistle  </td>
+    <td class="chartHI" bgcolor="plum"    >  plum    </td>
+    <td class="chartHI" bgcolor="magenta"  >  fuchsia/magenta  </td>
+    <td class="chartHI" bgcolor="darkmagenta"  >  darkmagenta  </td>
+    <td class="chartHI" bgcolor="purple"  >  purple  </td>
+    <td class="chartHI" bgcolor="mediumpurple">  mediumpurple</td>
+   </tr><tr>
+    <td class="chartHI" bgcolor="violet"  >  violet  </td>
+    <td class="chartHI" bgcolor="orchid"  >  orchid  </td>
+    <td class="chartHI" bgcolor="mediumorchid">  mediumorchid</td>
+    <td class="chartHI" bgcolor="darkorchid"  >  darkorchid  </td>
+    <td class="chartHI" bgcolor="darkviolet"  >  darkviolet  </td>
+    <td class="chartHI" bgcolor="blueviolet"  >  blueviolet  </td>
+   </tr><tr>
+    <td class="chartHI" bgcolor="lightblue"  >  lightblue  </td>
+    <td class="chartHI" bgcolor="royalblue"  >  royalblue  </td>
+    <td class="chartHI" bgcolor="blue"    >  blue    </td>
+    <td class="chartHI" bgcolor="mediumblue"  >  mediumblue  </td>
+    <td class="chartHI" bgcolor="darkblue"  >  darkblue  </td>
+    <td class="chartHI" bgcolor="midnightblue">  midnightblue</td>
+   </tr><tr>
+    <td class="chartHI" bgcolor="powderblue"  >  powderblue  </td>
+    <td class="chartHI" bgcolor="dodgerblue"  >  dodgerblue  </td>
+    <td class="chartHI" bgcolor="cornflowerblue" >  cornflowerblue  </td>
+    <td class="chartHI" bgcolor="slateblue"  >  slateblue  </td>
+    <td class="chartHI" bgcolor="mediumslateblue">  mediumslateblue  </td>
+    <td class="chartHI" bgcolor="darkslateblue">  darkslateblue  </td>
+   </tr><tr>
+    <td class="chartHI" bgcolor="lightskyblue">  lightskyblue  </td>
+    <td class="chartHI" bgcolor="skyblue"  >  skyblue  </td>
+    <td class="chartHI" bgcolor="deepskyblue"  >  deepskyblue  </td>
+    <td class="chartHI" bgcolor="lightsteelblue">  lightsteelblue  </td>
+    <td class="chartHI" bgcolor="steelblue"  >  steelblue  </td>
+    <td class="chartHI" bgcolor="cadetblue"  >  cadetblue  </td>
+   </tr><tr>
+    <td class="chartHI" bgcolor="paleturquoise">  paleturquoise  </td>
+    <td class="chartHI" bgcolor="turquoise"  >  turquoise  </td>
+    <td class="chartHI" bgcolor="mediumturquoise">  mediumturquoise  </td>
+    <td class="chartHI" bgcolor="darkturquoise">  darkturquoise  </td>
+    <td class="chartHI" bgcolor="darkcyan"  >  darkcyan  </td>
+    <td class="chartHI" bgcolor="teal"    >  teal  </td>
+   </tr><tr>
+    <td class="chartHI" bgcolor="aquamarine"  >  aquamarine  </td>
+    <td class="chartHI" bgcolor="mediumaquamarine">  mediumaquamarine  </td>
+    <td class="chartHI" bgcolor="lightseagreen">  lightseagreen  </td>
+    <td class="chartHI" bgcolor="mediumseagreen">  mediumseagreen  </td>
+    <td class="chartHI" bgcolor="seagreen"  >  seagreen  </td>
+    <td class="chartHI" bgcolor="darkseagreen">  darkseagreen  </td>
+   </tr><tr>
+    <td class="chartHI" bgcolor="greenyellow"  >  greenyellow  </td>
+    <td class="chartHI" bgcolor="chartreuse"  >  chartreuse  </td>
+    <td class="chartHI" bgcolor="lawngreen"  >  lawngreen  </td>
+    <td class="chartHI" bgcolor="lime"    >  lime    </td>
+    <td class="chartHI" bgcolor="limegreen"  >  limegreen  </td>
+    <td class="chartHI" bgcolor="forestgreen"  >  forestgreen  </td>
+   </tr><tr>
+    <td class="chartHI" bgcolor="palegreen"  >  palegreen  </td>
+    <td class="chartHI" bgcolor="springgreen"  >  springgreen  </td>
+    <td class="chartHI" bgcolor="mediumspringgreen">mediumspringgreen  </td>
+    <td class="chartHI" bgcolor="lightgreen"  >  lightgreen  </td>
+    <td class="chartHI" bgcolor="green"   >  green   </td>
+    <td class="chartHI" bgcolor="darkgreen"  >  darkgreen  </td>
+   </tr><tr>
+    <td class="chartHI" bgcolor="khaki"   >  khaki   </td>
+    <td class="chartHI" bgcolor="darkkhaki"   >  darkkhaki   </td>
+    <td class="chartHI" bgcolor="yellowgreen"  >  yellowgreen  </td>
+    <td class="chartHI" bgcolor="olivedrab"  >  olivedrab  </td>
+    <td class="chartHI" bgcolor="olive"   >  olive   </td>
+    <td class="chartHI" bgcolor="darkolivegreen">  darkolivegreen  </td>
+   </tr><tr>
+    <td class="chartLO" bgcolor="white"   >  white   </td>
+    <td class="chartLO" bgcolor="lavender"  >  lavender  </td>
+    <td class="chartHI" bgcolor="lightslategray">  lightslategray  </td>
+    <td class="chartHI" bgcolor="slategray"  >  slategray  </td>
+    <td class="chartHI" bgcolor="darkslategray">  darkslategray  </td>
+    <td class="chartHI" bgcolor="black"   >  black   </td>
+   </tr><tr>
+    <td class="chartLO" bgcolor="gainsboro"  >  gainsboro  </td>
+    <td class="chartHI" bgcolor="lightgrey"  >  lightgrey  </td>
+    <td class="chartHI" bgcolor="silver"  >  silver  </td>
+    <td class="chartHI" bgcolor="darkgray"  >  darkgray  </td>
+    <td class="chartHI" bgcolor="gray"    >  gray    </td>
+    <td class="chartHI" bgcolor="dimgray"  >  dimgray  </td>
+   </tr><tr>
+    <td class="chartLO" bgcolor="navajowhite"  >  navajowhite  </td>
+    <td class="chartLO" bgcolor="wheat"   >  wheat   </td>
+    <td class="chartHI" bgcolor="tan"    >  tan    </td>
+    <td class="chartHI" bgcolor="rosybrown"  >  rosybrown  </td>
+    <td class="chartHI" bgcolor="sienna"  >  sienna  </td>
+    <td class="chartHI" bgcolor="saddlebrown"  >  saddlebrown  </td>
+   </tr><tr>
+    <td class="chartLO" bgcolor="yellow"  >  yellow  </td>
+    <td class="chartLO" bgcolor="gold"     >  gold    </td>
+    <td class="chartHI" bgcolor="orange"   >  orange  </td>
+    <td class="chartHI" bgcolor="darkorange"   >  darkorange  </td>
+    <td class="chartHI" bgcolor="sandybrown"  >  sandybrown  </td>
+    <td class="chartHI" bgcolor="chocolate"  >  chocolate  </td>
+   </tr><tr>
+    <td class="chartLO" bgcolor="lightgoldenrodyellow">lightgoldenrodyellow</td>
+    <td class="chartLO" bgcolor="lemonchiffon">  lemonchiffon  </td>
+    <td class="chartHI" bgcolor="palegoldenrod">  palegoldenrod  </td>
+    <td class="chartHI" bgcolor="goldenrod"   >  goldenrod  </td>
+    <td class="chartHI" bgcolor="darkgoldenrod">  darkgoldenrod  </td>
+    <td class="chartHI" bgcolor="peru"    >  peru    </td>
+   </tr><tr>
+    <td class="chartLO" bgcolor="beige"   >  beige   </td>
+    <td class="chartLO" bgcolor="lightyellow"  >  lightyellow  </td>
+    <td class="chartLO" bgcolor="papayawhip"  >  papayawhip  </td>
+    <td class="chartLO" bgcolor="blanchedalmond">  blanchedalmond  </td>
+    <td class="chartLO" bgcolor="moccasin"  >  moccasin  </td>
+    <td class="chartLO" bgcolor="burlywood"  >  burlywood  </td>
+   </tr><tr>
+    <td class="chartLO" bgcolor="seashell"  >  seashell  </td>
+    <td class="chartLO" bgcolor="oldlace"  >  oldlace  </td>
+    <td class="chartLO" bgcolor="linen"   >  linen   </td>
+    <td class="chartLO" bgcolor="antiquewhite">  antiquewhite  </td>
+    <td class="chartLO" bgcolor="bisque"   >  bisque  </td>
+    <td class="chartLO" bgcolor="peachpuff"  >  peachpuff  </td>
+   </tr><tr>
+    <td class="chartLO" bgcolor="mintcream"  >  mintcream  </td>
+    <td class="chartLO" bgcolor="azure"   >  azure  </td>
+    <td class="chartLO" bgcolor="honeydew"  >  honeydew  </td>
+    <td class="chartLO" bgcolor="aliceblue"  >  aliceblue  </td>
+    <td class="chartLO" bgcolor="lightcyan"  >  lightcyan  </td>
+    <td class="chartLO" bgcolor="cyan"    >  aqua/cyan  </td>
+   </tr><tr>
+    <td class="chartLO" bgcolor="snow"    >  snow    </td>
+    <td class="chartLO" bgcolor="ivory"   >  ivory   </td>
+    <td class="chartLO" bgcolor="floralwhite"  >  floralwhite  </td>
+    <td class="chartLO" bgcolor="ghostwhite"  >  ghostwhite  </td>
+    <td class="chartLO" bgcolor="whitesmoke"  >  whitesmoke  </td>
+    <td class="chartLO" bgcolor="cornsilk"   >  cornsilk   </td>
+    <td class="chartLO" bgcolor=""  >    </td>
+   </tr>
+  </table>
+  <font face="Arial" color="lightgrey" size="1">
+    &copy; 2001, Lin Zhou. All rights reserved.
+  </font><br />
+ </td></tr>
+
+
+ <tr>
+  <td width=380 valign="top">
+  <center><font face="impact" size="5" color="0068b0">
+  Color Names  
+  </font></center><P>
+  When you're defining colors for elements on your webpages, you can use the hex triplets, the three hexadecimal values for red, green and blue everyone is so familiar with, or you can use any of a number of predefined words for certain colors.  Here then is a table with the colornames and their equivalent hex triplet value. 
+<P>
+
+<center>
+
+<TABLE WIDTH=380 BORDER=1 BORDERCOLOR=BLACK>
+<TR>
+
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>ALICEBLUE<BR>#A0CE00</TD>
+<TD WIDTH=35 BGCOLOR=#A0CE00><IMG SRC="../images/box.gif" width="15" height="15" ALT="ALICEBLUE &#10#A0CE00" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>ANTIQUEWHITE<BR>#FAEBD7</TD>
+<TD WIDTH=35 BGCOLOR=#FAEBD7><IMG SRC="../images/box.gif" width="15" height="15" ALT="ANTIQUEWHITE &#10#FAEBD7" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>AQUA<BR>#00FFFF</TD>
+<TD WIDTH=35 BGCOLOR=#00FFFF><IMG SRC="../images/box.gif" width="15" height="15" ALT="AQUA &#10#00FFFF" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>AQUAMARINE<BR>#7FFFD4</TD>
+<TD WIDTH=35 BGCOLOR=#7FFFD4><IMG SRC="../images/box.gif" width="15" height="15" ALT="AQUAMARINE &#10#7FFFD4" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>AZURE<BR>#F0FFFF</TD>
+<TD WIDTH=35 BGCOLOR=#F0FFFF><IMG SRC="../images/box.gif" width="15" height="15" ALT="AZURE &#10#F0FFFF" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>BEIGE<BR>#F5F5DC</TD>
+<TD WIDTH=35 BGCOLOR=#F5F5DC><IMG SRC="../images/box.gif" width="15" height="15" ALT="BEIGE &#10#F5F5DC" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>BISQUE<BR>#FFE4C4</TD>
+<TD WIDTH=35 BGCOLOR=#FFE4C4><IMG SRC="../images/box.gif" width="15" height="15" ALT="BISQUE &#10#FFE4C4" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>BLACK<BR>#000000</TD>
+<TD WIDTH=35 BGCOLOR=#000000><IMG SRC="../images/box.gif" width="15" height="15" ALT="BLACK &#10#000000" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>BLANCHEDALMOND<BR>#FFEBCD</TD>
+<TD WIDTH=35 BGCOLOR=#FFEBCD><IMG SRC="../images/box.gif" width="15" height="15" ALT="BLANCHEDALMOND &#10#FFEBCD" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>BLUE<BR>#0000FF</TD>
+<TD WIDTH=35 BGCOLOR=#0000FF><IMG SRC="../images/box.gif" width="15" height="15" ALT="BLUE &#10#0000FF" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>BLUEVIOLET<BR>#8A2BE2</TD>
+<TD WIDTH=35 BGCOLOR=#8A2BE2><IMG SRC="../images/box.gif" width="15" height="15" ALT="BLUEVIOLET &#10#8A2BE2" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>BROWN<BR>#A52A2A</TD>
+<TD WIDTH=35 BGCOLOR=#A52A2A><IMG SRC="../images/box.gif" width="15" height="15" ALT="BROWN &#10#A52A2A" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>BURLYWOOD<BR>#DEB887</TD>
+<TD WIDTH=35 BGCOLOR=#DEB887><IMG SRC="../images/box.gif" width="15" height="15" ALT="BURLYWOOD &#10#DEB887" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>CADETBLUE<BR>#5F9EA0</TD>
+<TD WIDTH=35 BGCOLOR=#5F9EA0><IMG SRC="../images/box.gif" width="15" height="15" ALT="CADETBLUE &#10#5F9EA0" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>CHARTREUSE<BR>#7FFF00</TD>
+<TD WIDTH=35 BGCOLOR=#7FFF00><IMG SRC="../images/box.gif" width="15" height="15" ALT="CHARTREUSE &#10#7FFF00" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>CHOCOLATE<BR>#D2691E</TD>
+<TD WIDTH=35 BGCOLOR=#D2691E><IMG SRC="../images/box.gif" width="15" height="15" ALT="CHOCOLATE &#10#D2691E" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>CORAL<BR>#FF7F50</TD>
+<TD WIDTH=35 BGCOLOR=#FF7F50><IMG SRC="../images/box.gif" width="15" height="15" ALT="CORAL &#10#FF7F50" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>CORNFLOWERBLUE<BR>#6495ED</TD>
+<TD WIDTH=35 BGCOLOR=#6495ED><IMG SRC="../images/box.gif" width="15" height="15" ALT="CORNFLOWERBLUE &#10#6495ED" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>CORNSILK<BR>#FFF8DC</TD>
+<TD WIDTH=35 BGCOLOR=#FFF8DC><IMG SRC="../images/box.gif" width="15" height="15" ALT="CORNSILK &#10#FFF8DC" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>CRIMSON<BR>#DC143C</TD>
+<TD WIDTH=35 BGCOLOR=#DC143C><IMG SRC="../images/box.gif" width="15" height="15" ALT="CRIMSON &#10#DC143C" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>CYAN<BR>#00FFFF</TD>
+<TD WIDTH=35 BGCOLOR=#00FFFF><IMG SRC="../images/box.gif" width="15" height="15" ALT="CYAN &#10#00FFFF" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKBLUE<BR>#00008B</TD>
+<TD WIDTH=35 BGCOLOR=#00008B><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKBLUE &#10#00008B" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKCYAN<BR>#008B8B</TD>
+<TD WIDTH=35 BGCOLOR=#008B8B><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKCYAN &#10#008B8B" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKGOLDENROD<BR>#B8860B</TD>
+<TD WIDTH=35 BGCOLOR=#B8860B><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKGOLDENROD &#10#B8860B" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKGRAY<BR>#A9A9A9</TD>
+<TD WIDTH=35 BGCOLOR=#A9A9A9><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKGRAY &#10#A9A9A9" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKGREEN<BR>#006400</TD>
+<TD WIDTH=35 BGCOLOR=#006400><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKGREEN &#10#006400" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKKHAKI<BR>#BDB76B</TD>
+<TD WIDTH=35 BGCOLOR=#BDB76B><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKKHAKI &#10#BDB76B" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKMAGENTA<BR>#8B008B</TD>
+<TD WIDTH=35 BGCOLOR=#8B008B><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKMAGENTA &#10#8B008B" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKOLIVEGREEN<BR>#556B2F</TD>
+<TD WIDTH=35 BGCOLOR=#556B2F><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKOLIVEGREEN &#10#556B2F" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKORANGE<BR>#FF8C00</TD>
+<TD WIDTH=35 BGCOLOR=#FF8C00><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKORANGE &#10#FF8C00" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKORCHID<BR>#9932CC</TD>
+<TD WIDTH=35 BGCOLOR=#9932CC><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKORCHID &#10#9932CC" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKRED<BR>#8B0000</TD>
+<TD WIDTH=35 BGCOLOR=#8B0000><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKRED &#10#8B0000" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKSALMON<BR>#E9967A</TD>
+<TD WIDTH=35 BGCOLOR=#E9967A><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKSALMON &#10#E9967A" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKSEAGREEN<BR>#8FBC8F</TD>
+<TD WIDTH=35 BGCOLOR=#8FBC8F><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKSEAGREEN &#10#8FBC8F" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKSLATEBLUE<BR>#483D8B</TD>
+<TD WIDTH=35 BGCOLOR=#483D8B><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKSLATEBLUE &#10#483D8B" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKSLATEGRAY<BR>#2F4F4F</TD>
+<TD WIDTH=35 BGCOLOR=#2F4F4F><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKSLATEGRAY &#10#2F4F4F" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKTURQUOISE<BR>#00CED1</TD>
+<TD WIDTH=35 BGCOLOR=#00CED1><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKTURQUOISE &#10#00C3D1" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DARKVIOLET<BR>#9400D3</TD>
+<TD WIDTH=35 BGCOLOR=#9400D3><IMG SRC="../images/box.gif" width="15" height="15" ALT="DARKVIOLET &#10#9400D3" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DEEPPINK<BR>#FF1493</TD>
+<TD WIDTH=35 BGCOLOR=#FF1493><IMG SRC="../images/box.gif" width="15" height="15" ALT="DEEPPINK &#10#FF1493" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DEEPSKYBLUE<BR>#00BFFF</TD>
+<TD WIDTH=35 BGCOLOR=#00BFFF><IMG SRC="../images/box.gif" width="15" height="15" ALT="DEEPSKYBLUE &#10#00BFFF" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DIMGRAY<BR>#696969</TD>
+<TD WIDTH=35 BGCOLOR=#696969><IMG SRC="../images/box.gif" width="15" height="15" ALT="DIMGRAY &#10#696969" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>DODGERBLUE<BR>#1E90FF</TD>
+<TD WIDTH=35 BGCOLOR=#1E90FF><IMG SRC="../images/box.gif" width="15" height="15" ALT="DODGERBLUE &#10#1E90FF" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>FIREBRICK<BR>#B22222</TD>
+<TD WIDTH=35 BGCOLOR=#B22222><IMG SRC="../images/box.gif" width="15" height="15" ALT="FIREBRICK &#10#B22222" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>FLORALWHITE<BR>#FFFAF0</TD>
+<TD WIDTH=35 BGCOLOR=#FFFAF0><IMG SRC="../images/box.gif" width="15" height="15" ALT="FLORALWHITE &#10#FFFAF0" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>FORESTGREEN<BR>#228B22</TD>
+<TD WIDTH=35 BGCOLOR=#228B22><IMG SRC="../images/box.gif" width="15" height="15" ALT="FORESTGREEN &#10#228B22" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>FUCHSIA<BR>#FF00FF</TD>
+<TD WIDTH=35 BGCOLOR=#FF00FF><IMG SRC="../images/box.gif" width="15" height="15" ALT="FUCHSIA &#10#FF00FF" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>GAINSBORO<BR>#DCDCDC</TD>
+<TD WIDTH=35 BGCOLOR=#DCDCDC><IMG SRC="../images/box.gif" width="15" height="15" ALT="GAINSBORO &#10#DCDCDC" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>GHOSTWHITE<BR>#F8F8FF</TD>
+<TD WIDTH=35 BGCOLOR=#F8F8FF><IMG SRC="../images/box.gif" width="15" height="15" ALT="GHOSTWHITE &#10#F8F8FF" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>GOLD<BR>#FFD700</TD>
+<TD WIDTH=35 BGCOLOR=#FFD700><IMG SRC="../images/box.gif" width="15" height="15" ALT="GOLD &#10#FFD700" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>GOLDENROD<BR>#DAA520</TD>
+<TD WIDTH=35 BGCOLOR=#DAA520><IMG SRC="../images/box.gif" width="15" height="15" ALT="GOLDENROD &#10#DAA520" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>GRAY<BR>#808080</TD>
+<TD WIDTH=35 BGCOLOR=#808080><IMG SRC="../images/box.gif" width="15" height="15" ALT="GRAY &#10#808080" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>GREEN<BR>#008000</TD>
+<TD WIDTH=35 BGCOLOR=#008000><IMG SRC="../images/box.gif" width="15" height="15" ALT="GREEN &#10#008000" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>GREENYELLOW<BR>#ADFF2F</TD>
+<TD WIDTH=35 BGCOLOR=#ADFF2F><IMG SRC="../images/box.gif" width="15" height="15" ALT="GREENYELLOW &#10#ADFF2F" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>HONEYDEW<BR>#F0FFF0</TD>
+<TD WIDTH=35 BGCOLOR=#F0FFF0><IMG SRC="../images/box.gif" width="15" height="15" ALT="HONEYDEW &#10#F0FFFF" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>HOTPINK<BR>#FF69B4</TD>
+<TD WIDTH=35 BGCOLOR=#FF69B4><IMG SRC="../images/box.gif" width="15" height="15" ALT="HOTPINK &#10#FF69B4" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>INDIANRED<BR>#CD5C5C</TD>
+<TD WIDTH=35 BGCOLOR=#CD5C5C><IMG SRC="../images/box.gif" width="15" height="15" ALT="INDIANRED &#10#FF69B6" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>INDIGO<BR>#4B0082</TD>
+<TD WIDTH=35 BGCOLOR=#4B0082><IMG SRC="../images/box.gif" width="15" height="15" ALT="INDIGO &#10#4B0082" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>IVORY<BR>#FFFFF0</TD>
+<TD WIDTH=35 BGCOLOR=#FFFFF0><IMG SRC="../images/box.gif" width="15" height="15" AL"IVORY &#10#FFFFFO" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>KHAKI<BR>#FOE68C</TD>
+<TD WIDTH=35 BGCOLOR=#FOE68C><IMG SRC="../images/box.gif" width="15" height="15" ALT="KHAKI &#10#FOE68C" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LAVENDER<BR>#E6E6FA</TD>
+<TD WIDTH=35 BGCOLOR=#E6E6FA><IMG SRC="../images/box.gif" width="15" height="15" ALT="LAVENDER &#10#E6E6FA" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LAVENDERBLUSH<BR>#FFF0F5</TD>
+<TD WIDTH=35 BGCOLOR=#FFF0F5><IMG SRC="../images/box.gif" width="15" height="15" ALT="LAVENDERBLUSH &#10#FFF0F5" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LEMONCHIFFON<BR>#FFFACD</TD>
+<TD WIDTH=35 BGCOLOR=#FFFACD><IMG SRC="../images/box.gif" width="15" height="15" ALT="LEMONCHIFFON &#10#FFFACD" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTBLUE<BR>#ADD8E6</TD>
+<TD WIDTH=35 BGCOLOR=#ADD8E6><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTBLUE &#10#ADD8E6" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTCORAL<BR>#F08080</TD>
+<TD WIDTH=35 BGCOLOR=#F08080><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTCORAL &#10#F08080" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTCYAN<BR>#E0FFFF</TD>
+<TD WIDTH=35 BGCOLOR=#E0FFFF><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTCYAN &#E0FFFF" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTGOLDENRODYELLOW<BR>#FAFAD2</TD>
+<TD WIDTH=35 BGCOLOR=#FAFAD2><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTGOLDENRODYELLOW 
+
+&#10#FAFAD2" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTGREEN<BR>#90EE90</TD>
+<TD WIDTH=35 BGCOLOR=#90EE90><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTGREEN &#10#90EE90" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTGREY<BR>#D3D3D3</TD>
+<TD WIDTH=35 BGCOLOR=#D3D3D3><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTGREY &#10#D3D3D3" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTPINK<BR>#FFB6C1</TD>
+<TD WIDTH=35 BGCOLOR=#FFB6C1><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTPINK &#10#FFB6C1" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTSALMON<BR>#FFA07A</TD>
+<TD WIDTH=35 BGCOLOR=#FFA07A><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTSALMON &#10#FFA07A" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTSEAGREEN<BR>#20B2AA</TD>
+<TD WIDTH=35 BGCOLOR=#20B2AA><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTSEAGREEN &#10#20B2AA" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTSKYBLUE<BR>#87CEFA</TD>
+<TD WIDTH=35 BGCOLOR=#87CEFA><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTSKYBLUE &#10#87CEFA"
+BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTSLATEGRAY<BR>#778899</TD>
+<TD WIDTH=35 BGCOLOR=#778899><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTSLATEGRAY &#10#778899" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTSTEELBLUE<BR>#B0C4DE</TD>
+<TD WIDTH=35 BGCOLOR=#B0C4DE><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTSTEELBLUE &#10#B0C4DE" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIGHTYELLOW<BR>#FFFFE0</TD>
+<TD WIDTH=35 BGCOLOR=#FFFFE0><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIGHTYELLOW &#10#FFFFE0" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIME<BR>#00FF00</TD>
+<TD WIDTH=35 BGCOLOR=#00FF00><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIME &#10#00FF00" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LIMEGREEN<BR>#32CD32</TD>
+<TD WIDTH=35 BGCOLOR=#32CD32><IMG SRC="../images/box.gif" width="15" height="15" ALT="LIMEGREEN &#10#32CD32" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>LINEN<BR>#FAF0E6</TD>
+<TD WIDTH=35 BGCOLOR=#FAF0E6><IMG SRC="../images/box.gif" width="15" height="15" ALT="LINEN &#10#FAF0E6" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MAGENTA<BR>#FF00FF</TD>
+<TD WIDTH=35 BGCOLOR=#FF00FF><IMG SRC="../images/box.gif" width="15" height="15" ALT="MAGENTA &#10#FF00FF" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MAROON<BR>#800000</TD>
+<TD WIDTH=35 BGCOLOR=#800000><IMG SRC="../images/box.gif" width="15" height="15" ALT="MAROON &#10#800000" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MEDIUMAQUAMARINE<BR>#66CDAA</TD>
+<TD WIDTH=35 BGCOLOR=#66CDAA><IMG SRC="../images/box.gif" width="15" height="15" ALT="MEDIUMAQUAMARINE &#10#66CDAA" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MEDIUMBLUE<BR>#0000CD</TD>
+<TD WIDTH=35 BGCOLOR=#0000CD><IMG SRC="../images/box.gif" width="15" height="15" ALT="MEDIUMBLUE &#10#0000CD" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MEDIUMORCHID<BR>#BA55D3</TD>
+<TD WIDTH=35 BGCOLOR=#BA55D3><IMG SRC="../images/box.gif" width="15" height="15" ALT="MEDIUMORCHID &#10#BA55D3" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MEDIUMPURPLE<BR>#9370D8</TD>
+<TD WIDTH=35 BGCOLOR=#9370D8><IMG SRC="../images/box.gif" width="15" height="15" ALT="MEDIUMPURPLE &#10#9370D8" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MEDIUMSEAGREEN<BR>#3CB371</TD>
+<TD WIDTH=35 BGCOLOR=#3CB371><IMG SRC="../images/box.gif" width="15" height="15" ALT="MEDIUMSEAGREEN &#10#3CB371" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MEDIUMSLATEBLUE<BR>#7B68EE</TD>
+<TD WIDTH=35 BGCOLOR=#7B68EE><IMG SRC="../images/box.gif" width="15" height="15" ALT="MEDIUMSLATEBLUE &#10#7B68EE" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MEDIUMSPRINGGREEN<BR>#00FA9A</TD>
+<TD WIDTH=35 BGCOLOR=#00FA9A><IMG SRC="../images/box.gif" width="15" height="15" ALT="MEDIUMSPRINGGREEN &#10#00FA9A" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MEDIUMTURQUOISE<BR>#48D1CC</TD>
+<TD WIDTH=35 BGCOLOR=#48D1CC><IMG SRC="../images/box.gif" width="15" height="15" ALT="MEDIUMTURQUOISE &#10#48D1CC" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MEDIUMVIOLETRED<BR>#C71585</TD>
+<TD WIDTH=35 BGCOLOR=#C71585><IMG SRC="../images/box.gif" width="15" height="15" ALT="MEDIUMVIOLETRED &#10#C71585" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MIDNIGHTBLUE<BR>#191970</TD>
+<TD WIDTH=35 BGCOLOR=#191970><IMG SRC="../images/box.gif" width="15" height="15" ALT="MIDNIGHTBLUE &#10#191970" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MINTCREAM<BR>#F5FFFA</TD>
+<TD WIDTH=35 BGCOLOR=#F5FFFA><IMG SRC="../images/box.gif" width="15" height="15" ALT="MINTCREAM &#10#F5FFFA" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>MISTYROSE<BR>#FFE4E1</TD>
+<TD WIDTH=35 BGCOLOR=#FFE4E1><IMG SRC="../images/box.gif" width="15" height="15" ALT="MISTYROSE &#10#FFE4E1" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>NAVAJOWHITE<BR>#FFDEAD</TD>
+<TD WIDTH=35 BGCOLOR=#FFDEAD><IMG SRC="../images/box.gif" width="15" height="15" ALT="NAVAJOWHITE &#10#FFDEAD" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>NAVY<BR>#000080</TD>
+<TD WIDTH=35 BGCOLOR=#000080><IMG SRC="../images/box.gif" width="15" height="15" ALT="NAVY &#10#000080" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>OLDLACE<BR>#FDF5E6</TD>
+<TD WIDTH=35 BGCOLOR=#FDF5E6><IMG SRC="../images/box.gif" width="15" height="15" ALT="OLDLACE &#10#FDF5E6" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>OLIVE<BR>#808000</TD>
+<TD WIDTH=35 BGCOLOR=#808000><IMG SRC="../images/box.gif" width="15" height="15" ALT="OLIVE &#10#808000" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>OLIVEDRAB<BR>#6B8E23</TD>
+<TD WIDTH=35 BGCOLOR=#6B8E23><IMG SRC="../images/box.gif" width="15" height="15" ALT="OLIVEDRAB &#10#6B8E23" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>ORANGE<BR>#FFA500</TD>
+<TD WIDTH=35 BGCOLOR=#FFA500><IMG SRC="../images/box.gif" width="15" height="15" ALT="ORANGE &#10#FFA500" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>ORANGERED<BR>#FF4500</TD>
+<TD WIDTH=35 BGCOLOR=#FF4500><IMG SRC="../images/box.gif" width="15" height="15" ALT="ORANGERED &#10#FF4500" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>ORCHID<BR>#DA70D6</TD>
+<TD WIDTH=35 BGCOLOR=#DA70D6><IMG SRC="../images/box.gif" width="15" height="15" ALT="ORCHID &#10#DA70D6" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>PALEGOLDENROD<BR>#EEE8AA</TD>
+<TD WIDTH=35 BGCOLOR=#EEE8AA><IMG SRC="../images/box.gif" width="15" height="15" ALT="PALEGOLDENROD &#10#EEE8AA" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>PALEGREEN<BR>#98FB98</TD>
+<TD WIDTH=35 BGCOLOR=#98FB98><IMG SRC="../images/box.gif" width="15" height="15" ALT="PALEGREEN &#10#98FB98" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>PALETURQUOISE<BR>#AFEEEE</TD>
+<TD WIDTH=35 BGCOLOR=#AFEEEE><IMG SRC="../images/box.gif" width="15" height="15" ALT="PALETURQUOISE &#10#AFEEEE" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>PALEVIOLETRED<BR>#DB7093</TD>
+<TD WIDTH=35 BGCOLOR=#DB7093><IMG SRC="../images/box.gif" width="15" height="15" ALT="PALEVIOLETRED &#10#DB7093" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>PAPAYAWHIP<BR>#FFEFD5</TD>
+<TD WIDTH=35 BGCOLOR=#FFEFD5><IMG SRC="../images/box.gif" width="15" height="15" ALT="PAPAYAWHIP &#10#FFEFD5" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>PEACHPUFF<BR>#FFDA89</TD>
+<TD WIDTH=35 BGCOLOR=#FFDA89><IMG SRC="../images/box.gif" width="15" height="15" ALT="PEACHPUFF &#10#FFDA89" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>PERU<BR>#CD853F</TD>
+<TD WIDTH=35 BGCOLOR=#CD853F><IMG SRC="../images/box.gif" width="15" height="15" ALT="PERU &#10#CD853F" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>PINK<BR>#FFC0CB</TD>
+<TD WIDTH=35 BGCOLOR=#FFCOCB><IMG SRC="../images/box.gif" width="15" height="15" ALT="PINK &#10#FFCOCB" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>PLUM<BR>#DDA0DD</TD>
+<TD WIDTH=35 BGCOLOR=#DDA0DD><IMG SRC="../images/box.gif" width="15" height="15" ALT="PLUM &#10#DDA0DD" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>POWDERBLUE<BR>#B0E0E6</TD>
+<TD WIDTH=35 BGCOLOR=#B0E0E6><IMG SRC="../images/box.gif" width="15" height="15" ALT="POWDERBLUE &#10#B0E0E6" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>PURPLE<BR>#800080</TD>
+<TD WIDTH=35 BGCOLOR=#800080><IMG SRC="../images/box.gif" width="15" height="15" ALT="PURPLE &#10#800080" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>RED<BR>#FF0000</TD>
+<TD WIDTH=35 BGCOLOR=#FF0000><IMG SRC="../images/box.gif" width="15" height="15" ALT="RED &#10#FF0000" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>ROSYBROWN<BR>#BC8F8F</TD>
+<TD WIDTH=35 BGCOLOR=#BC8F8F><IMG SRC="../images/box.gif" width="15" height="15" ALT="ROSYBROWN &#10#BC8F8F" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>ROYALBLUE<BR>#4169E1</TD>
+<TD WIDTH=35 BGCOLOR=#4169E1><IMG SRC="../images/box.gif" width="15" height="15" ALT="ROYALBLUE &#10#4169E1" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>SADDLEBROWN<BR>8B4513</TD>
+<TD WIDTH=35 BGCOLOR=#8B4513><IMG SRC="../images/box.gif" width="15" height="15" ALT="SADDLEBROWN &#10#8B4513" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>SALMON<BR>#FA8072</TD>
+<TD WIDTH=35 BGCOLOR=#FA8072><IMG SRC="../images/box.gif" width="15" height="15" ALT="SALMON &#10#FA8072" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>SANDYBROWN<BR>#F4A460</TD>
+<TD WIDTH=35 BGCOLOR=#F4A460><IMG SRC="../images/box.gif" width="15" height="15" ALT="SANDYBROWN &#10#F4A460" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>SEAGREEN<BR>#2E8B57</TD>
+<TD WIDTH=35 BGCOLOR=#2E8B57><IMG SRC="../images/box.gif" width="15" height="15" ALT="SEAGREEN &#10#2E8B57" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>SEASHELL<BR>#FFF5EE</TD>
+<TD WIDTH=35 BGCOLOR=#FFF5EE><IMG SRC="../images/box.gif" width="15" height="15" ALT="SEASHELL &#10#FFF5EE" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>SIENNA<BR>#A0522D</TD>
+<TD WIDTH=35 BGCOLOR=#A0522D><IMG SRC="../images/box.gif" width="15" height="15" ALT="SIENNA &#10#A0522D" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>SILVER<BR>#C0C0C0</TD>
+<TD WIDTH=35 BGCOLOR=#C0C0C0><IMG SRC="../images/box.gif" width="15" height="15" ALT="SILVER &#10#C0C0C0" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>SKYBLUE<BR>#87CEEB</TD>
+<TD WIDTH=35 BGCOLOR=#87CEEB><IMG SRC="../images/box.gif" width="15" height="15" ALT="SKYBLUE &#10#87CEEB" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>SLATEBLUE<BR>#6A5ACD</TD>
+<TD WIDTH=35 BGCOLOR=#6A5ACD><IMG SRC="../images/box.gif" width="15" height="15" ALT="SLATEBLUE &#10#6A5ACD" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>SLATEGRAY<BR>#708090</TD>
+<TD WIDTH=35 BGCOLOR=#708090><IMG SRC="../images/box.gif" width="15" height="15" ALT="SLATEGRAY &#10#708090" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>SNOW<BR>#FFFAFA</TD>
+<TD WIDTH=35 BGCOLOR=#FFFAFA><IMG SRC="../images/box.gif" width="15" height="15" ALT="SNOW &#10#FFFAFA" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>SPRINGGREEN<BR>#00FF7F</TD>
+<TD WIDTH=35 BGCOLOR=#00FF7F><IMG SRC="../images/box.gif" width="15" height="15" ALT="SPRINGGREEN &#10#00FF7F" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>STEELBLUE<BR>#4682B4</TD>
+<TD WIDTH=35 BGCOLOR=#4682B4><IMG SRC="../images/box.gif" width="15" height="15" ALT="STEELBLUE &#10#4682B4" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>TAN<BR>#D2B48C</TD>
+<TD WIDTH=35 BGCOLOR=#D2B48C><IMG SRC="../images/box.gif" width="15" height="15" ALT="TAN &#10#D2B48C" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>TEAL<BR>#008080</TD>
+<TD WIDTH=35 BGCOLOR=#008080><IMG SRC="../images/box.gif" width="15" height="15" ALT="TEAL &#10#008080" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>THISTLE<BR>#D8BFD8</TD>
+<TD WIDTH=35 BGCOLOR=#D8BFD8><IMG SRC="../images/box.gif" width="15" height="15" ALT="THISTLE &#10#D8BFD8" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>TOMATO<BR>#FF6347</TD>
+<TD WIDTH=35 BGCOLOR=#FF6347><IMG SRC="../images/box.gif" width="15" height="15" ALT="TOMATO &#10#FF6347" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>TURQUOISE<BR>#40E0D0</TD>
+<TD WIDTH=35 BGCOLOR=#40E0D0><IMG SRC="../images/box.gif" width="15" height="15" ALT="TURQUOISE &#10#40E0D0" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>VIOLET<BR>#EE82EE</TD>
+<TD WIDTH=35 BGCOLOR=#EE82EE><IMG SRC="../images/box.gif" width="15" height="15" ALT="VIOLET &#10#EE82EE" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>WHEAT<BR>#F5DEB3</TD>
+<TD WIDTH=35 BGCOLOR=#F5DEB3><IMG SRC="../images/box.gif" width="15" height="15" ALT="WHEAT &#10#F5DEB3" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>WHITE<BR>#FFFFFF</TD>
+<TD WIDTH=35 BGCOLOR=#FFFFFF><IMG SRC="../images/box.gif" width="15" height="15" ALT="WHITE &#10#FFFFFF" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>WHITESMOKE<BR>#F5F5F5</TD>
+<TD WIDTH=35 BGCOLOR=#F5F5F5><IMG SRC="../images/box.gif" width="15" height="15" ALT="WHITESMOKE &#10#F5F5F5" BORDER=0></TD>
+</TR>
+<TR>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>YELLOW<BR>#FFFF00</TD>
+<TD WIDTH=35 BGCOLOR=#FFFF00><IMG SRC="../images/box.gif" width="15" height="15" ALT="YELLOW &#10#FFFF00" BORDER=0></TD>
+<TD WIDTH=160 BGCOLOR=#FFFFFF><font size=2>YELLOWGREEN<BR>#9ACD32</TD>
+<TD WIDTH=35 BGCOLOR=#9ACD32><IMG SRC="../images/box.gif" width="15" height="15" ALT="YELLOWGREEN &#10#9ACD32" BORDER=0></TD>
+</TR>
+
+</TABLE>
+</center>
+
+ </td>
+
+ <td width=280 valign="top">
+
+  <center><font face="impact" size="5" color="#0068b0">
+
+  Color Chart
+
+  </font><P>
+
+  <font face="Times New Roman", size=3>
+   This is a chart of the 216 colors that will show on any color setting with any graphical browser. Using these colors will assure you that your viewers will see that same colors that you want them to.<p>
+   This chart can display either the hexadecimal number or the decimal number for the color.  Make sure you have the radio button corresponding to the number system you want is checked and the click on the color you would like.  The value will appear in the three text fields below.  When hexadecimal is selected, then the number that is given is ready for you to just copy and paste into your HTML code.  If you change the radio buttons, then the value found in the text fields will be converted to the new selection.
+
+  <center>
+  <form name="radioForm">
+  <input type=radio name="radioSet" value="hex" checked onClick="convertCode()">hexadecimal
+  <input type=radio name="radioSet" value="dec" onClick="convertCode()">decimal
+  </form>
+  </font></center>
+
+<table cellpadding=0 cellspacing=0>
+<tr><td>
+
+<table border=0 bordercolor=black cellpadding=0 cellspacing=2>
+<tr>
+<td width="21" bgcolor="#000000"><a href="javascript:displayColor('00','00','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 00 00" border=0></a></td>
+<td width="21" bgcolor="#000033"><a href="javascript:displayColor('00','00','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 00 33" border=0></a></td>
+<td width="21" bgcolor="#000066"><a href="javascript:displayColor('00','00','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 00 66" border=0></a></td>
+<td width="21" bgcolor="#000099"><a href="javascript:displayColor('00','00','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 00 99" border=0></a></td>
+<td width="21" bgcolor="#0000CC"><a href="javascript:displayColor('00','00','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 00 CC" border=0></a></td>
+<td width="21" bgcolor="#0000FF"><a href="javascript:displayColor('00','00','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 00 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#003300"><a href="javascript:displayColor('00','33','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 33 00" border=0></a></td>
+<td width="21" bgcolor="#003333"><a href="javascript:displayColor('00','33','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 33 33" border=0></a></td>
+<td width="21" bgcolor="#003366"><a href="javascript:displayColor('00','33','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 33 66" border=0></a></td>
+<td width="21" bgcolor="#003399"><a href="javascript:displayColor('00','33','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 33 99" border=0></a></td>
+<td width="21" bgcolor="#0033CC"><a href="javascript:displayColor('00','33','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 33 CC" border=0></a></td>
+<td width="21" bgcolor="#0033FF"><a href="javascript:displayColor('00','33','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 33 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#006600"><a href="javascript:displayColor('00','66','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 66 00" border=0></a></td>
+<td width="21" bgcolor="#006633"><a href="javascript:displayColor('00','66','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 66 33" border=0></a></td>
+<td width="21" bgcolor="#006666"><a href="javascript:displayColor('00','66','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 66 66" border=0></a></td>
+<td width="21" bgcolor="#006699"><a href="javascript:displayColor('00','66','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 66 99" border=0></a></td>
+<td width="21" bgcolor="#0066CC"><a href="javascript:displayColor('00','66','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 66 CC" border=0></a></td>
+<td width="21" bgcolor="#0066FF"><a href="javascript:displayColor('00','66','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 66 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#009900"><a href="javascript:displayColor('00','99','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 99 00" border=0></a></td>
+<td width="21" bgcolor="#009933"><a href="javascript:displayColor('00','99','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 99 33" border=0></a></td>
+<td width="21" bgcolor="#009966"><a href="javascript:displayColor('00','99','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 99 66" border=0></a></td>
+<td width="21" bgcolor="#009999"><a href="javascript:displayColor('00','99','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 99 99" border=0></a></td>
+<td width="21" bgcolor="#0099CC"><a href="javascript:displayColor('00','99','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 99 CC" border=0></a></td>
+<td width="21" bgcolor="#0099FF"><a href="javascript:displayColor('00','99','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 99 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#00CC00"><a href="javascript:displayColor('00','CC','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 CC 00" border=0></a></td>
+<td width="21" bgcolor="#00CC33"><a href="javascript:displayColor('00','CC','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 CC 33" border=0></a></td>
+<td width="21" bgcolor="#00CC66"><a href="javascript:displayColor('00','CC','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 CC 66" border=0></a></td>
+<td width="21" bgcolor="#00CC99"><a href="javascript:displayColor('00','CC','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 CC 99" border=0></a></td>
+<td width="21" bgcolor="#00CCCC"><a href="javascript:displayColor('00','CC','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 CC CC" border=0></a></td>
+<td width="21" bgcolor="#00CCFF"><a href="javascript:displayColor('00','CC','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 CC FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#00FF00"><a href="javascript:displayColor('00','FF','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 FF 00" border=0></a></td>
+<td width="21" bgcolor="#00FF33"><a href="javascript:displayColor('00','FF','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 FF 33" border=0></a></td>
+<td width="21" bgcolor="#00FF66"><a href="javascript:displayColor('00','FF','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 FF 66" border=0></a></td>
+<td width="21" bgcolor="#00FF99"><a href="javascript:displayColor('00','FF','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 FF 99" border=0></a></td>
+<td width="21" bgcolor="#00FFCC"><a href="javascript:displayColor('00','FF','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 FF CC" border=0></a></td>
+<td width="21" bgcolor="#00FFFF"><a href="javascript:displayColor('00','FF','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 FF FF" border=0></a></td></tr>
+</table>
+</td>
+
+<td>
+<table border=0 bordercolor=black cellpadding=0 cellspacing=2>
+<tr>
+<td width="21" bgcolor="#330000"><a href="javascript:displayColor('33','00','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 00 00" border=0></a></td>
+<td width="21" bgcolor="#330033"><a href="javascript:displayColor('33','00','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 00 33" border=0></a></td>
+<td width="21" bgcolor="#330066"><a href="javascript:displayColor('33','00','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 00 66" border=0></a></td>
+<td width="21" bgcolor="#330099"><a href="javascript:displayColor('33','00','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 00 99" border=0></a></td>
+<td width="21" bgcolor="#3300CC"><a href="javascript:displayColor('33','00','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 00 CC" border=0></a></td>
+<td width="21" bgcolor="#3300FF"><a href="javascript:displayColor('33','00','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 00 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#333300"><a href="javascript:displayColor('33','33','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 33 00" border=0></a></td>
+<td width="21" bgcolor="#333333"><a href="javascript:displayColor('33','33','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 33 33" border=0></a></td>
+<td width="21" bgcolor="#333366"><a href="javascript:displayColor('33','33','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 33 66" border=0></a></td>
+<td width="21" bgcolor="#333399"><a href="javascript:displayColor('33','33','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 33 99" border=0></a></td>
+<td width="21" bgcolor="#3333CC"><a href="javascript:displayColor('33','33','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 33 CC" border=0></a></td>
+<td width="21" bgcolor="#3333FF"><a href="javascript:displayColor('33','33','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 33 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#336600"><a href="javascript:displayColor('33','66','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 66 00" border=0></a></td>
+<td width="21" bgcolor="#336633"><a href="javascript:displayColor('33','66','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 66 33" border=0></a></td>
+<td width="21" bgcolor="#336666"><a href="javascript:displayColor('33','66','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 66 66" border=0></a></td>
+<td width="21" bgcolor="#336699"><a href="javascript:displayColor('33','66','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 66 99" border=0></a></td>
+<td width="21" bgcolor="#3366CC"><a href="javascript:displayColor('33','66','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 66 CC" border=0></a></td>
+<td width="21" bgcolor="#3366FF"><a href="javascript:displayColor('33','66','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 66 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#339900"><a href="javascript:displayColor('33','99','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 99 00" border=0></a></td>
+<td width="21" bgcolor="#339933"><a href="javascript:displayColor('33','99','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 99 33" border=0></a></td>
+<td width="21" bgcolor="#339966"><a href="javascript:displayColor('33','99','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 99 66" border=0></a></td>
+<td width="21" bgcolor="#339999"><a href="javascript:displayColor('33','99','99')"><IMG SRC="../images/box.gif" width="21" height="21" idth="1" height="1" width="21" height="21" alt="HEX: 33 99 99" border=0></a></td>
+<td width="21" bgcolor="#3399CC"><a href="javascript:displayColor('33','99','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 99 CC" border=0></a></td>
+<td width="21" bgcolor="#3399FF"><a href="javascript:displayColor('33','99','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 99 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#33CC00"><a href="javascript:displayColor('33','CC','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 CC 00" border=0></a></td>
+<td width="21" bgcolor="#33CC33"><a href="javascript:displayColor('33','CC','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 CC 33" border=0></a></td>
+<td width="21" bgcolor="#33CC66"><a href="javascript:displayColor('33','CC','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 CC 66" border=0></a></td>
+<td width="21" bgcolor="#33CC99"><a href="javascript:displayColor('33','CC','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 CC 99" border=0></a></td>
+<td width="21" bgcolor="#33CCCC"><a href="javascript:displayColor('33','CC','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 CC CC" border=0></a></td>
+<td width="21" bgcolor="#33CCFF"><a href="javascript:displayColor('33','CC','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 CC FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#33FF00"><a href="javascript:displayColor('33','FF','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 FF 00" border=0></a></td>
+<td width="21" bgcolor="#33FF33"><a href="javascript:displayColor('33','FF','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 FF 33" border=0></a></td>
+<td width="21" bgcolor="#33FF66"><a href="javascript:displayColor('33','FF','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 FF 66" border=0></a></td>
+<td width="21" bgcolor="#33FF99"><a href="javascript:displayColor('33','FF','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 FF 99" border=0></a></td>
+<td width="21" bgcolor="#33FFCC"><a href="javascript:displayColor('33','FF','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 FF CC" border=0></a></td>
+<td width="21" bgcolor="#33FFFF"><a href="javascript:displayColor('33','FF','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 FF FF" border=0></a></td></tr>
+</table>
+</td>
+</tr>
+
+<tr>
+ <td colspan=2 align="center">
+  <form name=f1><tt><input type=text name=t1 size=20></tt></form>
+ </td>
+</tr>
+
+<tr><td>
+
+<table border=0 bordercolor=black cellpadding=0 cellspacing=2>
+<tr>
+<td width="21" bgcolor="#660000"><a href="javascript:displayColor('66','00','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 00 00" border=0></a></td>
+<td width="21" bgcolor="#660033"><a href="javascript:displayColor('66','00','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 00 33" border=0></a></td>
+<td width="21" bgcolor="#660066"><a href="javascript:displayColor('66','00','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 00 66" border=0></a></td>
+<td width="21" bgcolor="#660099"><a href="javascript:displayColor('66','00','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 00 99" border=0></a></td>
+<td width="21" bgcolor="#6600CC"><a href="javascript:displayColor('66','00','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 00 CC" border=0></a></td>
+<td width="21" bgcolor="#6600FF"><a href="javascript:displayColor('66','00','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 00 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#663300"><a href="javascript:displayColor('66','33','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 33 00" border=0></a></td>
+<td width="21" bgcolor="#663333"><a href="javascript:displayColor('66','33','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 33 33" border=0></a></td>
+<td width="21" bgcolor="#663366"><a href="javascript:displayColor('66','33','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 33 66" border=0></a></td>
+<td width="21" bgcolor="#663399"><a href="javascript:displayColor('66','33','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 33 99" border=0></a></td>
+<td width="21" bgcolor="#6633CC"><a href="javascript:displayColor('66','33','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 33 CC" border=0></a></td>
+<td width="21" bgcolor="#6633FF"><a href="javascript:displayColor('66','33','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 33 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#666600"><a href="javascript:displayColor('66','66','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 66 00" border=0></a></td>
+<td width="21" bgcolor="#666633"><a href="javascript:displayColor('66','66','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 66 33" border=0></a></td>
+<td width="21" bgcolor="#666666"><a href="javascript:displayColor('66','66','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 66 66" border=0></a></td>
+<td width="21" bgcolor="#666699"><a href="javascript:displayColor('66','66','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 66 99" border=0></a></td>
+<td width="21" bgcolor="#6666CC"><a href="javascript:displayColor('66','66','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 66 CC" border=0></a></td>
+<td width="21" bgcolor="#6666FF"><a href="javascript:displayColor('66','66','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 66 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#669900"><a href="javascript:displayColor('66','99','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 99 00" border=0></a></td>
+<td width="21" bgcolor="#669933"><a href="javascript:displayColor('66','99','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 99 33" border=0></a></td>
+<td width="21" bgcolor="#669966"><a href="javascript:displayColor('66','99','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 99 66" border=0></a></td>
+<td width="21" bgcolor="#669999"><a href="javascript:displayColor('66','99','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 99 99" border=0></a></td>
+<td width="21" bgcolor="#6699CC"><a href="javascript:displayColor('66','99','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 99 CC" border=0></a></td>
+<td width="21" bgcolor="#6699FF"><a href="javascript:displayColor('66','99','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 99 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#66CC00"><a href="javascript:displayColor('66','CC','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 CC 00" border=0></a></td>
+<td width="21" bgcolor="#66CC33"><a href="javascript:displayColor('66','CC','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 CC 33" border=0></a></td>
+<td width="21" bgcolor="#66CC66"><a href="javascript:displayColor('66','CC','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 CC 66" border=0></a></td>
+<td width="21" bgcolor="#66CC99"><a href="javascript:displayColor('66','CC','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 CC 99" border=0></a></td>
+<td width="21" bgcolor="#66CCCC"><a href="javascript:displayColor('66','CC','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 CC CC" border=0></a></td>
+<td width="21" bgcolor="#66CCFF"><a href="javascript:displayColor('66','CC','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 CC FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#66FF00"><a href="javascript:displayColor('66','FF','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 FF 00" border=0></a></td>
+<td width="21" bgcolor="#66FF33"><a href="javascript:displayColor('66','FF','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 FF 33" border=0></a></td>
+<td width="21" bgcolor="#66FF66"><a href="javascript:displayColor('66','FF','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 FF 66" border=0></a></td>
+<td width="21" bgcolor="#66FF99"><a href="javascript:displayColor('66','FF','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 FF 99" border=0></a></td>
+<td width="21" bgcolor="#66FFCC"><a href="javascript:displayColor('66','FF','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 FF CC" border=0></a></td>
+<td width="21" bgcolor="#66FFFF"><a href="javascript:displayColor('66','FF','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 FF FF" border=0></a></td></tr>
+</table>
+</td>
+
+<td>
+<table border=0 bordercolor=black cellpadding=0 cellspacing=2>
+<tr>
+<td width="21" bgcolor="#990000"><a href="javascript:displayColor('99','00','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 00 00" border=0></a></td>
+<td width="21" bgcolor="#990033"><a href="javascript:displayColor('99','00','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 00 33" border=0></a></td>
+<td width="21" bgcolor="#990066"><a href="javascript:displayColor('99','00','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 00 66" border=0></a></td>
+<td width="21" bgcolor="#990099"><a href="javascript:displayColor('99','00','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 00 99" border=0></a></td>
+<td width="21" bgcolor="#9900CC"><a href="javascript:displayColor('99','00','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 00 CC" border=0></a></td>
+<td width="21" bgcolor="#9900FF"><a href="javascript:displayColor('99','00','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 00 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#993300"><a href="javascript:displayColor('99','33','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 33 00" border=0></a></td>
+<td width="21" bgcolor="#993333"><a href="javascript:displayColor('99','33','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 33 33" border=0></a></td>
+<td width="21" bgcolor="#993366"><a href="javascript:displayColor('99','33','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 33 66" border=0></a></td>
+<td width="21" bgcolor="#993399"><a href="javascript:displayColor('99','33','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 33 99" border=0></a></td>
+<td width="21" bgcolor="#9933CC"><a href="javascript:displayColor('99','33','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 33 CC" border=0></a></td>
+<td width="21" bgcolor="#9933FF"><a href="javascript:displayColor('99','33','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 33 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#996600"><a href="javascript:displayColor('99','66','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 66 00" border=0></a></td>
+<td width="21" bgcolor="#996633"><a href="javascript:displayColor('99','66','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 66 33" border=0></a></td>
+<td width="21" bgcolor="#996666"><a href="javascript:displayColor('99','66','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 66 66" border=0></a></td>
+<td width="21" bgcolor="#996699"><a href="javascript:displayColor('99','66','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 66 99" border=0></a></td>
+<td width="21" bgcolor="#9966CC"><a href="javascript:displayColor('99','66','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 66 CC" border=0></a></td>
+<td width="21" bgcolor="#9966FF"><a href="javascript:displayColor('99','66','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 66 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#999900"><a href="javascript:displayColor('99','99','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 99 00" border=0></a></td>
+<td width="21" bgcolor="#999933"><a href="javascript:displayColor('99','99','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 99 33" border=0></a></td>
+<td width="21" bgcolor="#999966"><a href="javascript:displayColor('99','99','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 99 66" border=0></a></td>
+<td width="21" bgcolor="#999999"><a href="javascript:displayColor('99','99','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 99 99" border=0></a></td>
+<td width="21" bgcolor="#9999CC"><a href="javascript:displayColor('99','99','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 99 CC" border=0></a></td>
+<td width="21" bgcolor="#9999FF"><a href="javascript:displayColor('99','99','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 99 FF" border=0></a></td>
+<tr>
+<td width="21" bgcolor="#99CC00"><a href="javascript:displayColor('99','CC','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 CC 00" border=0></a></td>
+<td width="21" bgcolor="#99CC33"><a href="javascript:displayColor('99','CC','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 CC 33" border=0></a></td>
+<td width="21" bgcolor="#99CC66"><a href="javascript:displayColor('99','CC','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 CC 66" border=0></a></td>
+<td width="21" bgcolor="#99CC99"><a href="javascript:displayColor('99','CC','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 CC 99" border=0></a></td>
+<td width="21" bgcolor="#99CCCC"><a href="javascript:displayColor('99','CC','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 CC CC" border=0></a></td>
+<td width="21" bgcolor="#99CCFF"><a href="javascript:displayColor('99','CC','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 CC FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#99FF00"><a href="javascript:displayColor('99','FF','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 FF 00" border=0></a></td>
+<td width="21" bgcolor="#99FF33"><a href="javascript:displayColor('99','FF','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 FF 33" border=0></a></td>
+<td width="21" bgcolor="#99FF66"><a href="javascript:displayColor('99','FF','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 FF 66" border=0></a></td>
+<td width="21" bgcolor="#99FF99"><a href="javascript:displayColor('99','FF','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 FF 99" border=0></a></td>
+<td width="21" bgcolor="#99FFCC"><a href="javascript:displayColor('99','FF','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 FF CC" border=0></a></td>
+<td width="21" bgcolor="#99FFFF"><a href="javascript:displayColor('99','FF','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 FF FF" border=0></a></td></tr>
+</table>
+</td>
+</tr>
+
+<tr>
+ <td colspan=2 align="center">
+  <form name=f2><tt><input type=text name=t1 size=20></tt></form>
+ </td>
+</tr>
+
+<tr><td>
+
+<table border=0 bordercolor=black cellpadding=0 cellspacing=2>
+<tr>
+<td width="21" bgcolor="#CC0000"><a href="javascript:displayColor('CC','00','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 00 00" border=0></a></td>
+<td width="21" bgcolor="#CC0033"><a href="javascript:displayColor('CC','00','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 00 33" border=0></a></td>
+<td width="21" bgcolor="#CC0066"><a href="javascript:displayColor('CC','00','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 00 66" border=0></a></td>
+<td width="21" bgcolor="#CC0099"><a href="javascript:displayColor('CC','00','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 00 99" border=0></a></td>
+<td width="21" bgcolor="#CC00CC"><a href="javascript:displayColor('CC','00','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 00 CC" border=0></a></td>
+<td width="21" bgcolor="#CC00FF"><a href="javascript:displayColor('CC','00','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 00 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#CC3300"><a href="javascript:displayColor('CC','33','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 33 00" border=0></a></td>
+<td width="21" bgcolor="#CC3333"><a href="javascript:displayColor('CC','33','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 33 33" border=0></a></td>
+<td width="21" bgcolor="#CC3366"><a href="javascript:displayColor('CC','33','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 33 66" border=0></a></td>
+<td width="21" bgcolor="#CC3399"><a href="javascript:displayColor('CC','33','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 33 99" border=0></a></td>
+<td width="21" bgcolor="#CC33CC"><a href="javascript:displayColor('CC','33','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 33 CC" border=0></a></td>
+<td width="21" bgcolor="#CC33FF"><a href="javascript:displayColor('CC','33','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 33 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#CC6600"><a href="javascript:displayColor('CC','66','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 66 00" border=0></a></td>
+<td width="21" bgcolor="#CC6633"><a href="javascript:displayColor('CC','66','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 66 33" border=0></a></td>
+<td width="21" bgcolor="#CC6666"><a href="javascript:displayColor('CC','66','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 66 66" border=0></a></td>
+<td width="21" bgcolor="#CC6699"><a href="javascript:displayColor('CC','66','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 66 99" border=0></a></td>
+<td width="21" bgcolor="#CC66CC"><a href="javascript:displayColor('CC','66','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 66 CC" border=0></a></td>
+<td width="21" bgcolor="#CC66FF"><a href="javascript:displayColor('CC','66','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 66 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#CC9900"><a href="javascript:displayColor('CC','99','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 99 00" border=0></a></td>
+<td width="21" bgcolor="#CC9933"><a href="javascript:displayColor('CC','99','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 99 33" border=0></a></td>
+<td width="21" bgcolor="#CC9966"><a href="javascript:displayColor('CC','99','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 99 66" border=0></a></td>
+<td width="21" bgcolor="#CC9999"><a href="javascript:displayColor('CC','99','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 99 99" border=0></a></td>
+<td width="21" bgcolor="#CC99CC"><a href="javascript:displayColor('CC','99','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 99 CC" border=0></a></td>
+<td width="21" bgcolor="#CC99FF"><a href="javascript:displayColor('CC','99','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC 99 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#CCCC00"><a href="javascript:displayColor('CC','CC','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC CC 00" border=0></a></td>
+<td width="21" bgcolor="#CCCC33"><a href="javascript:displayColor('CC','CC','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC CC 33" border=0></a></td>
+<td width="21" bgcolor="#CCCC66"><a href="javascript:displayColor('CC','CC','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC CC 66" border=0></a></td>
+<td width="21" bgcolor="#CCCC99"><a href="javascript:displayColor('CC','CC','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC CC 99" border=0></a></td>
+<td width="21" bgcolor="#CCCCCC"><a href="javascript:displayColor('CC','CC','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC CC CC" border=0></a></td>
+<td width="21" bgcolor="#CCCCFF"><a href="javascript:displayColor('CC','CC','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC CC FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#CCFF00"><a href="javascript:displayColor('CC','FF','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC FF 00" border=0></a></td>
+<td width="21" bgcolor="#CCFF33"><a href="javascript:displayColor('CC','FF','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC FF 33" border=0></a></td>
+<td width="21" bgcolor="#CCFF66"><a href="javascript:displayColor('CC','FF','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC FF 66" border=0></a></td>
+<td width="21" bgcolor="#CCFF99"><a href="javascript:displayColor('CC','FF','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC FF 99" border=0></a></td>
+<td width="21" bgcolor="#CCFFCC"><a href="javascript:displayColor('CC','FF','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC FF CC" border=0></a></td>
+<td width="21" bgcolor="#CCFFFF"><a href="javascript:displayColor('CC','FF','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC FF FF" border=0></a></td></tr>
+</table>
+</td>
+
+<td>
+<table border=0 bordercolor=black cellpadding=0 cellspacing=2>
+<tr>
+<td width="21" bgcolor="#FF0000"><a href="javascript:displayColor('FF','00','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 00 00" border=0></a></td>
+<td width="21" bgcolor="#FF0033"><a href="javascript:displayColor('FF','00','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 00 33" border=0></a></td>
+<td width="21" bgcolor="#FF0066"><a href="javascript:displayColor('FF','00','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 00 66" border=0></a></td>
+<td width="21" bgcolor="#FF0099"><a href="javascript:displayColor('FF','00','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 00 99" border=0></a></td>
+<td width="21" bgcolor="#FF00CC"><a href="javascript:displayColor('FF','00','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 00 CC" border=0></a></td>
+<td width="21" bgcolor="#FF00FF"><a href="javascript:displayColor('FF','00','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 00 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#FF3300"><a href="javascript:displayColor('FF','33','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 33 00" border=0></a></td>
+<td width="21" bgcolor="#FF3333"><a href="javascript:displayColor('FF','33','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 33 33" border=0></a></td>
+<td width="21" bgcolor="#FF3366"><a href="javascript:displayColor('FF','33','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 33 66" border=0></a></td>
+<td width="21" bgcolor="#FF3399"><a href="javascript:displayColor('FF','33','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 33 99" border=0></a></td>
+<td width="21" bgcolor="#FF33CC"><a href="javascript:displayColor('FF','33','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 33 CC" border=0></a></td>
+<td width="21" bgcolor="#FF33FF"><a href="javascript:displayColor('FF','33','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 33 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#FF6600"><a href="javascript:displayColor('FF','66','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 66 00" border=0></a></td>
+<td width="21" bgcolor="#FF6633"><a href="javascript:displayColor('FF','66','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 66 33" border=0></a></td>
+<td width="21" bgcolor="#FF6666"><a href="javascript:displayColor('FF','66','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 66 66" border=0></a></td>
+<td width="21" bgcolor="#FF6699"><a href="javascript:displayColor('FF','66','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 66 99" border=0></a></td>
+<td width="21" bgcolor="#FF66CC"><a href="javascript:displayColor('FF','66','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 66 CC" border=0></a></td>
+<td width="21" bgcolor="#FF66FF"><a href="javascript:displayColor('FF','66','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 66 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#FF9900"><a href="javascript:displayColor('FF','99','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 99 00" border=0></a></td>
+<td width="21" bgcolor="#FF9933"><a href="javascript:displayColor('FF','99','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 99 33" border=0></a></td>
+<td width="21" bgcolor="#FF9966"><a href="javascript:displayColor('FF','99','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 99 66" border=0></a></td>
+<td width="21" bgcolor="#FF9999"><a href="javascript:displayColor('FF','99','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 99 99" border=0></a></td>
+<td width="21" bgcolor="#FF99CC"><a href="javascript:displayColor('FF','99','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 99 CC" border=0></a></td>
+<td width="21" bgcolor="#FF99FF"><a href="javascript:displayColor('FF','99','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF 99 FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#FFCC00"><a href="javascript:displayColor('FF','CC','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF CC 00" border=0></a></td>
+<td width="21" bgcolor="#FFCC33"><a href="javascript:displayColor('FF','CC','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF CC 33" border=0></a></td>
+<td width="21" bgcolor="#FFCC66"><a href="javascript:displayColor('FF','CC','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF CC 66" border=0></a></td>
+<td width="21" bgcolor="#FFCC99"><a href="javascript:displayColor('FF','CC','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF CC 99" border=0></a></td>
+<td width="21" bgcolor="#FFCCCC"><a href="javascript:displayColor('FF','CC','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF CC CC" border=0></a></td>
+<td width="21" bgcolor="#FFCCFF"><a href="javascript:displayColor('FF','CC','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF CC FF" border=0></a></td></tr>
+<tr>
+<td width="21" bgcolor="#FFFF00"><a href="javascript:displayColor('FF','FF','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF FF 00" border=0></a></td>
+<td width="21" bgcolor="#FFFF33"><a href="javascript:displayColor('FF','FF','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF FF 33" border=0></a></td>
+<td width="21" bgcolor="#FFFF66"><a href="javascript:displayColor('FF','FF','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF FF 66" border=0></a></td>
+<td width="21" bgcolor="#FFFF99"><a href="javascript:displayColor('FF','FF','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF FF 99" border=0></a></td>
+<td width="21" bgcolor="#FFFFCC"><a href="javascript:displayColor('FF','FF','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF FF CC" border=0></a></td>
+<td width="21" bgcolor="#FFFFFF"><a href="javascript:displayColor('FF','FF','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF FF FF" border=0></a></td></tr>
+</table>
+</td>
+</tr>
+
+<tr>
+ <td colspan=2 align="center">
+  <form name=f3><tt><input type=text name=t1 size=20></tt></form>
+ </td>
+</tr>
+
+<tr><td colspan=2 align="center">
+  <table border=0 bordercolor=black cellpadding=0 cellspacing=2>
+  <tr>
+        <td width="21" bgcolor="#000000"><a href="javascript:displayColor('00','00','00')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 00 00 00" border=0></a></td>
+        <td width="21" bgcolor="#333333"><a href="javascript:displayColor('33','33','33')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 33 33 33" border=0></a></td>
+        <td width="21" bgcolor="#666666"><a href="javascript:displayColor('66','66','66')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 66 66 66" border=0></a></td>
+        <td width="21" bgcolor="#999999"><a href="javascript:displayColor('99','99','99')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: 99 99 99" border=0></a></td>
+        <td width="21" bgcolor="#CCCCCC"><a href="javascript:displayColor('CC','CC','CC')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: CC CC CC" border=0></a></td>
+        <td width="21" bgcolor="#FFFFFF"><a href="javascript:displayColor('FF','FF','FF')"><IMG SRC="../images/box.gif" width="21" height="21" alt="HEX: FF FF FF" border=0></a></td>
+  </tr>
+  </table>
+</td></tr>
+</table>
+
+
+  <center><font face="impact" size="5" color="#0068b0"><br><p><hr width=280><p>
+
+  216 Web-Safe Colors
+
+  </font>
+
+<TABLE WIDTH=280 BORDER="0" ALIGN="CENTER" VALIGN="MIDDLE" cellpadding="0" cellspacing="6">
+<TR>
+<TH WIDTH=66 HEIGHT=16></TH>
+<TH WIDTH=66></TH>
+<TH WIDTH=66></TH>
+<TH WIDTH=66></TH>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#990033">990033</TD>
+<TD HEIGHT=22 BGCOLOR="#FF3366">FF3366</TD>
+<TD HEIGHT=22 BGCOLOR="#CC0033">CC0033</TD>
+<TD HEIGHT=22 BGCOLOR="#FF0033">FF0033</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#FF9999">FF9999</TD>
+<TD HEIGHT=22 BGCOLOR="#CC3366">CC3366</TD>
+<TD HEIGHT=22 BGCOLOR="#FFCCFF">FFCCFF</TD>
+<TD HEIGHT=22 BGCOLOR="#CC6699">CC6699</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#993366">993366</TD>
+<TD HEIGHT=22 BGCOLOR="#660033"><FONT COLOR="#FFFFFF">660033</FONT></TD>
+<TD HEIGHT=22 BGCOLOR="#CC3399">CC3399</TD>
+<TD HEIGHT=22 BGCOLOR="#FF99CC">FF99CC</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#FF66CC">FF66CC</TD>
+<TD HEIGHT=22 BGCOLOR="#FF99FF">FF99FF</TD>
+<TD HEIGHT=22 BGCOLOR="#FF6699">FF6699</TD>
+<TD HEIGHT=22 BGCOLOR="#CC0066">CC0066</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#FF0066">FF0066</TD>
+<TD HEIGHT=22 BGCOLOR="#FF3399">FF3399</TD>
+<TD HEIGHT=22 BGCOLOR="#FF0099">FF0099</TD>
+<TD HEIGHT=22 BGCOLOR="#FF33CC">FF33CC</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#FF00CC">FF00CC</TD>
+<TD HEIGHT=22 BGCOLOR="#FF66FF">FF66FF</TD>
+<TD HEIGHT=22 BGCOLOR="#FF33FF">FF33FF</TD>
+<TD HEIGHT=22 BGCOLOR="#FF00FF">FF00FF</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#CC0099">CC0099</TD>
+<TD HEIGHT=22 BGCOLOR="#990066">990066</TD>
+<TD HEIGHT=22 BGCOLOR="#CC66CC">CC66CC</TD>
+<TD HEIGHT=22 BGCOLOR="#CC33CC">CC33CC</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#CC99FF">CC99FF</TD>
+<TD HEIGHT=22 BGCOLOR="#CC66FF">CC66FF</TD>
+<TD HEIGHT=22 BGCOLOR="#CC33FF">CC33FF</TD>
+<TD HEIGHT=22 BGCOLOR="#993399">993399</TD></TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#CC00CC">CC00CC</TD>
+<TD HEIGHT=22 BGCOLOR="#CC00FF">CC00FF</TD>
+<TD HEIGHT=22 BGCOLOR="#9900CC">9900CC</TD>
+<TD HEIGHT=22 BGCOLOR="#990099">990099</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#CC99CC">CC99CC</TD>
+<TD HEIGHT=22 BGCOLOR="#996699">996699</TD>
+<TD HEIGHT=22 BGCOLOR="#663366">663366</TD>
+<TD HEIGHT=22 BGCOLOR="#660099">660099</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#9933CC">9933CC</TD>
+<TD HEIGHT=22 BGCOLOR="#660066">660066</TD>
+<TD HEIGHT=22 BGCOLOR="#9900FF">9900FF</TD>
+<TD HEIGHT=22 BGCOLOR="#9933FF">9933FF</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#9966CC">9966CC</TD>
+<TD HEIGHT=22 BGCOLOR="#330033"><FONT COLOR="#FFFFFF">330033</FONT></TD>
+<TD HEIGHT=22 BGCOLOR="#663399">663399</TD>
+<TD HEIGHT=22 BGCOLOR="#6633CC">6633CC</TD></TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#6600CC">6600CC</TD>
+<TD HEIGHT=22 BGCOLOR="#9966FF">9966FF</TD>
+<TD HEIGHT=22 BGCOLOR="#330066"><FONT COLOR="#FFFFFF">330066</FONT></TD>
+<TD HEIGHT=22 BGCOLOR="#6600FF">6600FF</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#6633FF">6633FF</TD>
+<TD HEIGHT=22 BGCOLOR="#CCCCFF">CCCCFF</TD>
+<TD HEIGHT=22 BGCOLOR="#9999FF">9999FF</TD>
+<TD HEIGHT=22 BGCOLOR="#9999CC">9999CC</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#6666CC">6666CC</TD>
+<TD HEIGHT=22 BGCOLOR="#6666FF">6666FF</TD>
+<TD HEIGHT=22 BGCOLOR="#666699">666699</TD>
+<TD HEIGHT=22 BGCOLOR="#333366">333366</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#333399">333399</TD>
+<TD HEIGHT=22 BGCOLOR="#330099">330099</TD>
+<TD HEIGHT=22 BGCOLOR="#3300CC">3300CC</TD>
+<TD HEIGHT=22 BGCOLOR="#3300FF">3300FF</TD></TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#3333FF">3333FF</TD>
+<TD HEIGHT=22 BGCOLOR="#3333CC">3333CC</TD>
+<TD HEIGHT=22 BGCOLOR="#0066FF">0066FF</TD>
+<TD HEIGHT=22 BGCOLOR="#0033FF">0033FF</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#3366FF">3366FF</TD>
+<TD HEIGHT=22 BGCOLOR="#3366CC">3366CC</TD>
+<TD HEIGHT=22 BGCOLOR="#000066"><FONT COLOR="#FFFFFF">000066</FONT></TD>
+<TD HEIGHT=22 BGCOLOR="#000033"><FONT COLOR="#FFFFFF">000033</FONT></TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#0000FF">0000FF</TD>
+<TD HEIGHT=22 BGCOLOR="#000099">000099</TD>
+<TD HEIGHT=22 BGCOLOR="#0033CC">0033CC</TD>
+<TD HEIGHT=22 BGCOLOR="#0000CC">0000CC</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#336699">336699</TD>
+<TD HEIGHT=22 BGCOLOR="#0066CC">0066CC</TD>
+<TD HEIGHT=22 BGCOLOR="#99CCFF">99CCFF</TD>
+<TD HEIGHT=22 BGCOLOR="#6699FF">6699FF</TD></TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#003366"><FONT COLOR="#FFFFFF">003366</FONT></TD>
+<TD HEIGHT=22 BGCOLOR="#6699CC">6699CC</TD>
+<TD HEIGHT=22 BGCOLOR="#006699">006699</TD>
+<TD HEIGHT=22 BGCOLOR="#3399CC">3399CC</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#0099CC">0099CC</TD>
+<TD HEIGHT=22 BGCOLOR="#66CCFF">66CCFF</TD>
+<TD HEIGHT=22 BGCOLOR="#3399FF">3399FF</TD>
+<TD HEIGHT=22 BGCOLOR="#003399">003399</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#0099FF">0099FF</TD>
+<TD HEIGHT=22 BGCOLOR="#33CCFF">33CCFF</TD>
+<TD HEIGHT=22 BGCOLOR="#00CCFF">00CCFF</TD>
+<TD HEIGHT=22 BGCOLOR="#99FFFF">99FFFF</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#66FFFF">66FFFF</TD>
+<TD HEIGHT=22 BGCOLOR="#33FFFF">33FFFF</TD>
+<TD HEIGHT=22 BGCOLOR="#00FFFF">00FFFF</TD>
+<TD HEIGHT=22 BGCOLOR="#00CCCC">00CCCC</TD></TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#009999">009999</TD>
+<TD HEIGHT=22 BGCOLOR="#669999">669999</TD>
+<TD HEIGHT=22 BGCOLOR="#99CCCC">99CCCC</TD>
+<TD HEIGHT=22 BGCOLOR="#CCFFFF">CCFFFF</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#33CCCC">33CCCC</TD>
+<TD HEIGHT=22 BGCOLOR="#66CCCC">66CCCC</TD>
+<TD HEIGHT=22 BGCOLOR="#339999">339999</TD>
+<TD HEIGHT=22 BGCOLOR="#336666">336666</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#006666">006666</TD>
+<TD HEIGHT=22 BGCOLOR="#003333"><FONT COLOR="#FFFFFF">003333</FONT></TD>
+<TD HEIGHT=22 BGCOLOR="#00FFCC">00FFCC</TD>
+<TD HEIGHT=22 BGCOLOR="#33FFCC">33FFCC</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#33CC99">33CC99</TD>
+<TD HEIGHT=22 BGCOLOR="#00CC99">00CC99</TD>
+<TD HEIGHT=22 BGCOLOR="#66FFCC">66FFCC</TD>
+<TD HEIGHT=22 BGCOLOR="#99FFCC">99FFCC</TD></TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#00FF99">00FF99</TD>
+<TD HEIGHT=22 BGCOLOR="#339966">339966</TD>
+<TD HEIGHT=22 BGCOLOR="#006633">006633</TD>
+<TD HEIGHT=22 BGCOLOR="#336633">336633</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#669966">669966</TD>
+<TD HEIGHT=22 BGCOLOR="#66CC66">66CC66</TD>
+<TD HEIGHT=22 BGCOLOR="#99FF99">99FF99</TD>
+<TD HEIGHT=22 BGCOLOR="#66FF66">66FF66</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#339933">339933</TD>
+<TD HEIGHT=22 BGCOLOR="#99CC99">99CC99</TD>
+<TD HEIGHT=22 BGCOLOR="#66FF99">66FF99</TD>
+<TD HEIGHT=22 BGCOLOR="#33FF99">33FF99</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#33CC66">33CC66</TD>
+<TD HEIGHT=22 BGCOLOR="#00CC66">00CC66</TD>
+<TD HEIGHT=22 BGCOLOR="#66CC99">66CC99</TD>
+<TD HEIGHT=22 BGCOLOR="#009966">009966</TD></TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#009933">009933</TD>
+<TD HEIGHT=22 BGCOLOR="#33FF66">33FF66</TD>
+<TD HEIGHT=22 BGCOLOR="#00FF66">00FF66</TD>
+<TD HEIGHT=22 BGCOLOR="#CCFFCC">CCFFCC</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#CCFF99">CCFF99</TD>
+<TD HEIGHT=22 BGCOLOR="#99FF66">99FF66</TD>
+<TD HEIGHT=22 BGCOLOR="#99FF33">99FF33</TD>
+<TD HEIGHT=22 BGCOLOR="#00FF33">00FF33</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#33FF33">33FF33</TD>
+<TD HEIGHT=22 BGCOLOR="#00CC33">00CC33</TD>
+<TD HEIGHT=22 BGCOLOR="#33CC33">33CC33</TD>
+<TD HEIGHT=22 BGCOLOR="#66FF33">66FF33</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#00FF00">00FF00</TD>
+<TD HEIGHT=22 BGCOLOR="#66CC33">66CC33</TD>
+<TD HEIGHT=22 BGCOLOR="#006600"><FONT COLOR="#FFFFFF">006600</FONT></TD>
+<TD HEIGHT=22 BGCOLOR="#003300"><FONT COLOR="#FFFFFF">003300</FONT></TD></TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#009900">009900</TD>
+<TD HEIGHT=22 BGCOLOR="#33FF00">33FF00</TD>
+<TD HEIGHT=22 BGCOLOR="#66FF00">66FF00</TD>
+<TD HEIGHT=22 BGCOLOR="#99FF00">99FF00</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#66CC00">66CC00</TD>
+<TD HEIGHT=22 BGCOLOR="#00CC00">00CC00</TD>
+<TD HEIGHT=22 BGCOLOR="#33CC00">33CC00</TD>
+<TD HEIGHT=22 BGCOLOR="#339900">339900</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#99CC66">99CC66</TD>
+<TD HEIGHT=22 BGCOLOR="#669933">669933</TD>
+<TD HEIGHT=22 BGCOLOR="#99CC33">99CC33</TD>
+<TD HEIGHT=22 BGCOLOR="#336600">336600</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#669900">669900</TD>
+<TD HEIGHT=22 BGCOLOR="#99CC00">99CC00</TD>
+<TD HEIGHT=22 BGCOLOR="#CCFF66">CCFF66</TD>
+<TD HEIGHT=22 BGCOLOR="#CCFF33">CCFF33</TD></TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#CCFF00">CCFF00</TD>
+<TD HEIGHT=22 BGCOLOR="#999900">999900</TD>
+<TD HEIGHT=22 BGCOLOR="#CCCC00">CCCC00</TD>
+<TD HEIGHT=22 BGCOLOR="#CCCC33">CCCC33</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#333300">333300</TD>
+<TD HEIGHT=22 BGCOLOR="#666600">666600</TD>
+<TD HEIGHT=22 BGCOLOR="#999933">999933</TD>
+<TD HEIGHT=22 BGCOLOR="#CCCC66">CCCC66</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#666633">666633</TD>
+<TD HEIGHT=22 BGCOLOR="#999966">999966</TD>
+<TD HEIGHT=22 BGCOLOR="#CCCC99">CCCC99</TD>
+<TD HEIGHT=22 BGCOLOR="#FFFFCC">FFFFCC</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#FFFF99">FFFF99</TD>
+<TD HEIGHT=22 BGCOLOR="#FFFF66">FFFF66</TD>
+<TD HEIGHT=22 BGCOLOR="#FFFF33">FFFF33</TD>
+<TD HEIGHT=22 BGCOLOR="#FFFF00">FFFF00</TD></TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#FFCC00">FFCC00</TD>
+<TD HEIGHT=22 BGCOLOR="#FFCC66">FFCC66</TD>
+<TD HEIGHT=22 BGCOLOR="#FFCC33">FFCC33</TD>
+<TD HEIGHT=22 BGCOLOR="#CC9933">CC9933</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#996600">996600</TD>
+<TD HEIGHT=22 BGCOLOR="#CC9900">CC9900</TD>
+<TD HEIGHT=22 BGCOLOR="#FF9900">FF9900</TD>
+<TD HEIGHT=22 BGCOLOR="#CC6600">CC6600</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#993300">993300</TD>
+<TD HEIGHT=22 BGCOLOR="#CC6633">CC6633</TD>
+<TD HEIGHT=22 BGCOLOR="#663300">663300</TD>
+<TD HEIGHT=22 BGCOLOR="#FF9966">FF9966</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#FF6633">FF6633</TD>
+<TD HEIGHT=22 BGCOLOR="#FF9933">FF9933</TD>
+<TD HEIGHT=22 BGCOLOR="#FF6600">FF6600</TD>
+<TD HEIGHT=22 BGCOLOR="#CC3300">CC3300</TD></TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#996633">996633</TD>
+<TD HEIGHT=22 BGCOLOR="#330000"><FONT COLOR="#FFFFFF">330000</FONT></TD>
+<TD HEIGHT=22 BGCOLOR="#663333">663333</TD>
+<TD HEIGHT=22 BGCOLOR="#996666">996666</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#CC9999">CC9999</TD>
+<TD HEIGHT=22 BGCOLOR="#993333">993333</TD>
+<TD HEIGHT=22 BGCOLOR="#CC6666">CC6666</TD>
+<TD HEIGHT=22 BGCOLOR="#FFCCCC">FFCCCC</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#FF3333">FF3333</TD>
+<TD HEIGHT=22 BGCOLOR="#CC3333">CC3333</TD>
+<TD HEIGHT=22 BGCOLOR="#FF6666">FF6666</TD>
+<TD HEIGHT=22 BGCOLOR="#660000"><FONT COLOR="#FFFFFF">660000</FONT></TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#990000">990000</TD>
+<TD HEIGHT=22 BGCOLOR="#CC0000">CC0000</TD>
+<TD HEIGHT=22 BGCOLOR="#FF0000">FF0000</TD>
+<TD HEIGHT=22 BGCOLOR="#FF3300">FF3300</TD></TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#CC9966">CC9966</TD>
+<TD HEIGHT=22 BGCOLOR="#FFCC99">FFCC99</TD>
+<TD HEIGHT=22 BGCOLOR="#FFFFFF">FFFFFF</TD>
+<TD HEIGHT=22 BGCOLOR="#CCCCCC">CCCCCC</TD>
+</TR>
+<TR>
+<TD HEIGHT=22 BGCOLOR="#999999">999999</TD>
+<TD HEIGHT=22 BGCOLOR="#666666">666666</TD>
+<TD HEIGHT=22 BGCOLOR="#333333"><FONT COLOR="#FFFFFF">333333</FONT></TD>
+<TD HEIGHT=22 BGCOLOR="#000000"><FONT COLOR="#FFFFFF">000000</FONT></TD>
+
+</TR></TABLE>
+
+  </center><p align="right">
+        <font face="Arial" size="1" color="lightgrey">
+        &copy; 2001, Lin Zhou. All rights reserved. </font>
+ </td>
+</tr>
+</table>
+
+</center>
+
+
+</body>
+</html>

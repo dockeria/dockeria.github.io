@@ -1,0 +1,123 @@
+<html>
+<head><title>Fashion Covers</title>
+<base href="http://cover.bizland.com/pages">
+
+<script type="text/javascript">
+
+  var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+  var ie4up = (document.all) ? 1 : 0;
+
+ function GoView() {
+  if (ns4up) window.location.href='#View'
+  //  else window.location.href='#main'
+ }
+  var g_fPlayMode = 0;
+  var g_iimg = 0;
+  var g_imax = 0;
+  var g_ImageTable = new Array();
+  var g_dwTimeOutSec=2
+
+  for (idx=101; idx <= 580; idx++) {
+   g_ImageTable[g_imax++] = new Array ("../covers/COVE"+idx+".JPG","");
+  }
+
+ function ChangeImage(fFwd) {
+  if (fFwd) { if (++g_iimg==g_imax) g_iimg=0; }
+  else { if (g_iimg==0) g_iimg=g_imax; g_iimg--; }
+  Update();
+ }
+
+ function Update() {
+  document.all._Ath_Slide.src = g_ImageTable[g_iimg][0];
+ }
+ function Play() {
+  g_fPlayMode = !g_fPlayMode;
+  if (g_fPlayMode) { btnPrev.disabled = btnNext.disabled = true; Next(); }
+  else { btnPrev.disabled = btnNext.disabled = false; }
+ }
+ function OnImgLoad() { if (g_fPlayMode) window.setTimeout("Tick()", g_dwTimeOutSec*1000); }
+ function Tick() { if (g_fPlayMode) Next(); }
+ function Prev() { ChangeImage(false); }
+ function Next() { ChangeImage(true); }
+ function main() { Update(); }
+
+ window.onload=Play
+
+</script>
+
+</head>
+
+<body bgcolor=#006666 text=#CCCCCC link=#CC9999 vlink=#CCFF99 alink=#FF0000 scroll="yes" onload="GoView()">
+
+<script type="text/javascript">
+</script>
+
+<font face="Arial" color=#CCCCCC size=2><center>
+
+<a name="main">
+
+<table width=100% height=100% border=0 cellpadding=0 cellspacing=0>
+ <tr><td height=1280 align="center" valign="top">
+
+ <input type="button" name="btnPrev" value="&lt;&lt; Previous"
+  onclick="Prev();window.location.href='#main'"
+  OnMouseOver="window.status='Go Previous';return true"
+  OnMouseOut="window.status='';return true">
+ <input type="button" name="btnPlay" value="Turn Over | Stop"
+  onclick="Play();window.location.href='#main'"
+  OnMouseOver="window.status='Turn Over or Stop Browsing the Pictures';return true"
+  OnMouseOut="window.status='';return true">
+ <input type="button" name="btnView" value="Picture List"
+  onClick="window.location.href='#View'"
+  OnMouseOver="window.status='View Page List';return true"
+  OnMouseOut="window.status='';return true">
+ <input type="button" name="btnNext" value="Next &gt;&gt;"
+  onclick="Next();window.location.href='#main'"
+  OnMouseOver="window.status='Go Next';return true"
+  OnMouseOut="window.status='';return true">
+
+ <br><br>
+
+ <img name="_Ath_Slide" onload="OnImgLoad()" width=640><br>
+
+ <script type="text/javascript" event="onload" for="window">
+  main();
+ </script>
+
+ </td></tr>
+</table>
+
+<a name="View"><center><img src="../media/line_rgb.gif"><font color=#FF8888 size=4><br>
+Fashion Covers Collection
+</font><br><img src="../media/line_rgb.gif"><br><br>
+
+<table width=600 height=100% border=0 cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=600 height=80% align="center" valign="top">
+  <font color=#555555 face="Arial" size=2>
+
+   <script>
+  for (idx=101; idx <= 580; idx++) {
+   document.write("<img src=\"../media/bullet_red.gif\" border=0>&#160;<a href=\"../covers/COVE"+idx+".JPG\">Cover "+idx+"</a>\n");
+  }
+
+   </script>
+
+  <br>
+
+  </td>
+ </tr>
+ <tr>
+  <td width=100% height=20% align="center" valign="middle"><br>
+   <FORM><br>
+    <INPUT TYPE="button" VALUE="Back" onClick="history.go(-2)">
+   </FORM>
+  </td>
+ </tr>
+</table>
+
+</center>
+
+</font>
+</body>
+</html>

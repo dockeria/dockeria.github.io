@@ -1,0 +1,136 @@
+<html>
+<head><title>Text Dissolving</title>
+
+<style type="text/css">		<!-- Dissovling Text Effect	-->
+
+.textstyle	{
+	position:absolute;
+	left:0px;
+    width:400px;
+    font-family:Arial;
+    font-size:20pt;
+    font-weight:bold;
+    text-align:center;
+	color:FFFFFF;
+    filter:glow(color=red,strength=2);
+}
+
+.coverstyle	{
+	position:absolute;
+	left:0px;
+}
+</style>
+
+<script LANGUAGE="JavaScript1.2">	// Dissolving text effect - By Peter Gehrig (http://www.24fun.ch/)
+
+ var message = new Array()
+ message[0]="Welcome to Dynamic Drive"
+ message[1]="The #1 DHTML site on the net"
+ message[2]="Here you\'ll find free DHTML scripts and components"
+ message[3]="All of which utilize the latest in DHTML\/ JavaScript technology"
+ message[4]="Enjoy your stay here"
+ message[5]="And have a wonderful Christmas Holiday!"
+
+ var i_message=0
+
+ // The trick of this script is a simple gif-image
+ // consisting of two colors: black and white dots.
+ // The black dots are transparent.
+ // By wipeing this gif-image back and forth over the
+ // textmessages you get an attractive dissolving effect.
+ // This image is called slidefader.gif.
+
+ // Configure the left and top margin of the text (pixels).
+ var covertop=20
+ var coverleft=150
+
+ // Configure the size of the wipeing gif-image. 
+ // If you change the size you should create a new image too.
+ // The coverheight also represents the height of the textzone.
+ var coverwidth=1200
+ var coverheight=96
+
+ var texttop=covertop
+ var textleft=coverleft
+
+ //configure width of text effect
+ //be sure to change the corresponding width attribute above in the <style> tag to match
+ var textwidth=400
+ var textheight=coverheight
+
+ var cliptop=0
+ var clipright=textwidth
+ var clipbottom=coverheight
+ var clipleft=0
+
+ var clippoints
+
+ // Configure the speeds of the wipeing effect
+ var step=40
+ var pause=50
+
+ var timer
+
+ function init() {
+    if (document.all) {
+	    document.all.text.style.posTop=texttop
+        document.all.text.style.posLeft=textleft
+        document.all.cover.style.posTop=covertop
+        document.all.cover.style.posLeft=coverleft
+        clipleft=0
+        fadeout()
+    }
+ }
+
+ function fadeout() {
+    if (document.all.cover.style.posLeft >=(-coverwidth+textwidth+coverleft+step)) {   
+        clipleft+=step
+        clipright=clipleft+textwidth
+        clippoints="rect("+cliptop+" "+clipright+" "+clipbottom+" "+clipleft+")"
+		document.all.cover.style.clip=clippoints
+        document.all.cover.style.posLeft-=step
+        timer= setTimeout("fadeout()",pause)
+    }
+    else {
+        clearTimeout(timer)
+        i_message++
+        if (i_message>=message.length) {i_message=0}
+        text.innerHTML=message[i_message]   
+        fadein()
+ 
+    }
+ }
+
+ function fadein() {
+    if (document.all.cover.style.posLeft <=coverleft) {   
+        clipleft-=step
+        clipright=clipleft+textwidth
+        clippoints="rect("+cliptop+" "+clipright+" "+clipbottom+" "+clipleft+")"
+		document.all.cover.style.clip=clippoints
+        document.all.cover.style.posLeft+=step
+        timer= setTimeout("fadein()",pause)
+    }
+    else {
+        clearTimeout(timer)
+        init()
+    }
+ }
+
+</script>
+
+</head>
+
+<body background="" style="width:100%;overflow-x:hidden;overflow-y:scroll" onLoad="if(document.all&&window.print)init()">
+
+<center>
+
+<script language="JavaScript1.2">
+ if (document.all&&window.print) {
+  document.write('<DIV ID="text" class="textstyle">'+message[0]+'</div>')
+  document.write('<DIV ID="cover" class="coverstyle"><img src="textfader.gif"></DIV>')
+ }
+</script>
+
+</center>
+</body>
+</html>

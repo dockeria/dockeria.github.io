@@ -1,0 +1,373 @@
+<html>
+<head><title>Holidays</title>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Personal Homepage, including topics of Pictures (Palace, Qingdao-Dalian, Hainan, Tailand, the States, Wedding, Studio, etc.), Favorites (Music, surfing internet, Cookbook, Fashion, Movies, Entertainment, Seasons and Holidays), Family and Friends (my family, our couples, friends and another me), Books (internet digest, jokes, fictions, scenes, lyrics, forums, talktime), Poems, Resume and Links."> 
+<META NAME="keywords" CONTENT="Grace, Zhou, Lin, Zhoulin, Pictures, Favorites, Family, Friends, Books, Poems, Resume, Links, Wedding, Studio, Beijing, Qingdao, Dalian, Hainan, United States, Scenes, Music, internet digest, jokes, lyrics, DHTML, JavaScript, jpg, gif, music, holiday, ">
+
+<style type="text/css">
+.textanimlink,a {
+ text-decoration : none;
+ }
+ P.main {font-family : Arial;
+   font-size : 15pt;
+   font-weight : bold;
+  }
+</style>
+
+<Script Language="Javascript">  // Text Animation
+
+ bname=navigator.appName;
+ bversion=parseInt(navigator.appVersion)
+ if ((bname=="Netscape" && bversion>=4) || (bname=="Microsoft Internet Explorer" && bversion>=4))
+  window.onload=start
+ else
+  stop();
+ window.onunload=stop
+ if (bname=="Netscape") {
+  brows=true
+  dt=2
+ }
+ else {
+  brows=false
+  dt=20
+ }
+ var z=0;
+ var msg=0;
+ var rgb=0;
+ var link=false;
+ var status=true;
+ var updwn=false;
+ var message= new Array();
+ var value=0;
+ var h=window.innerHeight;
+ var w=window.innerWidth;
+ var timer1;
+ var timer2;
+ var timer3;
+ var convert = new Array()
+ var hexbase= new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F");
+
+ // Put here your own messages. Add as many as you wan't (Do not edit anything else in the Script except the lines below)
+
+ var bgcolor="#FFFFFF"; //Color of background
+ var color="#00FF8D";  //Color of the Letters
+
+ message[0]="Happy Chinese New Year"
+ message[1]="Febrary 5, 2000"
+ message[2]="New Year's Eve on Friday"
+ message[3]="family reunited to have the dinner of eve, ... "
+ message[4]="refresh the house, and refresh the clothes, ... "
+ message[5]="enjoy the rice dumpling ... "
+ message[6]="at the 15th night of the 1st lunar month, ..."
+ message[7]="This is the Dragon Year of 2000"
+ message[8]="Gung Hay Fat Choy!"
+
+ // Put here your own messages. Add as many as you wan't (Do not edit anything else in the Script except the lines above)
+
+ for (x=0; x<16; x++) {
+  for (y=0; y<16; y++) {
+   convert[value]= hexbase[x] + hexbase[y];
+   value++;
+  }
+ }
+
+ redx=color.substring(1,3);
+ greenx=color.substring(3,5);
+ bluex=color.substring(5,7);
+ hred=eval(parseInt(redx,16));
+ hgreen=eval(parseInt(greenx,16));
+ hblue=eval(parseInt(bluex,16));
+ eredx=bgcolor.substring(1,3);
+ egreenx=bgcolor.substring(3,5);
+ ebluex=bgcolor.substring(5,7);
+ ered=eval(parseInt(eredx,16));
+ egreen=eval(parseInt(egreenx,16));
+ eblue=eval(parseInt(ebluex,16));
+ red=ered;
+ green=egreen;
+ blue=eblue;
+
+ function start() {
+  if ((bname=="Netscape" && bversion>=4) || (bname=="Microsoft Internet Explorer" && bversion>=4)) {
+   link=false;
+   updwn=true;
+   if (brows)
+    res=document.layers['textanim'].top
+   else {
+    textanim.style.width=document.body.offsetWidth-20;
+    textanim.innerHTML='<Pre><P Class="main" Align="Center">'+message[msg]+'</P></Pre>'
+    res=textanim.style.top
+    for (x=0; x<document.all.length; x++)
+     if(document.all[x].id=="textanimlink")
+      link=true;
+   }
+   up()
+  }
+ }
+
+ function stop() {
+  clearTimeout(timer1);
+  clearTimeout(timer2);
+  clearTimeout(timer3);
+ }
+
+ function resz() {
+  h=window.innerHeight;
+  w=window.innerWidth;
+  if (updwn)
+   timer1=setTimeout('up()',1000)
+  else
+   timer2=setTimeout('down()',1000)
+ }
+
+ function breakf() {
+  if (status) {
+   clearTimeout(timer1);
+   clearTimeout(timer2);
+   status=false
+   return;
+  }
+  else {
+   status=true;
+   if (updwn)
+    timer1=setTimeout('up()',dt)
+   else
+    timer2=setTimeout('down()',dt)
+  }
+ }
+
+ function up() {
+  if (red<hred) {
+   if ((red+7)<hred) red+=7;
+   else red=hred
+   redx = convert[red]
+  }
+  else {
+   if ((red-7)>hred) red-=7;
+   else red=hred
+   redx = convert[red]
+  }
+
+  if (green<hgreen) {
+   if ((green+7)<hgreen) green+=7;
+   else green=hgreen
+   greenx = convert[green]
+  }
+  else {
+   if ((green-7)>hgreen) green-=7;
+   else green=hgreen
+   greenx = convert[green]
+  }
+
+  if (blue<hblue) {
+   if ((blue+7)<hblue) blue+=7;
+   else blue=hblue
+   bluex = convert[blue]
+  }
+  else {
+   if ((blue-7)>hblue) blue-=7;
+   else blue=hblue
+   bluex = convert[blue]
+  }
+
+  rgb = "#"+redx+greenx+bluex;
+  if (brows) {
+   document.layers['textanim'].document.linkColor=rgb;
+   document.layers['textanim'].document.vlinkColor=rgb;
+   if (window.innerHeight!=h || window.innerWidth!=w) {
+    clearTimeout(timer1);
+    resz()
+    return;
+   }
+   else {
+    document.layers['textanim'].document.write('<Pre><P Class="main" Align="Center"><font color="'+rgb+'">'+message[msg]+'</font></P></Pre>')
+    document.layers['textanim'].document.close();
+   }
+  }
+  else {
+   textanim.style.color=rgb;
+   if(link) textanimlink.style.color=rgb;
+  }
+  if (z<38) {
+   if (brows) document.layers['textanim'].top--
+   else textanim.style.posTop--
+   z++
+   timer1=setTimeout('up()',dt)
+  }
+  else {
+   updwn=false;
+   down()
+  }
+ }
+
+ function down() {
+  if (red<ered) {
+   if ((red+7)<ered) red+=7;
+   else red=ered
+   redx = convert[red]
+  }
+  else {
+   if ((red-7)>ered) red-=7;
+   else red=ered
+   redx = convert[red]
+  }
+
+  if (green<egreen) {
+   if ((green+7)<egreen) green+=7;
+   else green=egreen
+   greenx = convert[green]
+  }
+  else {
+   if ((green-7)>egreen) green-=7;
+   else green=egreen
+   greenx = convert[green]
+  }
+
+  if (blue<eblue) {
+   if ((blue+7)<eblue) blue+=7;
+   else blue=eblue
+   bluex = convert[blue]
+  }
+  else {
+   if ((blue-7)>eblue) blue-=7;
+   else blue=eblue
+   bluex = convert[blue]
+  }
+
+  rgb = "#"+redx+greenx+bluex;
+  if (brows) {
+   document.layers['textanim'].document.linkColor=rgb;
+   document.layers['textanim'].document.vlinkColor=rgb;
+   if (window.innerHeight!=h || window.innerWidth!=w) {
+    clearTimeout(timer2);
+    resz()
+    return;
+   }
+   else {
+    document.layers['textanim'].document.write('<Pre><P Class="main" Align="Center"><font color="'+rgb+'">'+message[msg]+'</font></P></Pre>')
+    document.layers['textanim'].document.close();
+   }
+  }
+  else {
+   textanim.style.color=rgb;
+   if(link) textanimlink.style.color=rgb;
+  }
+
+  if (z<76) {
+   if (brows) document.layers['textanim'].top--
+   else textanim.style.posTop--
+   z++
+   timer2=setTimeout('down()',dt)
+  }
+  else {
+   if (brows) {
+    document.layers['textanim'].document.write('')
+    document.layers['textanim'].document.close();
+   }
+  else
+   textanim.innerHTML='';
+
+  window.clearInterval(timer2);
+  if(msg<message.length-1) {
+   msg++;
+   z=0;
+   if (brows) document.layers['textanim'].top=res;
+   else textanim.style.top=res;
+   timer3=setTimeout('start()',100);
+  }
+  else {
+   msg=0;
+   z=0;
+   if (brows) document.layers['textanim'].top=res;
+   else textanim.style.top=res;
+   timer3=setTimeout('start()',2000);
+  }
+ }
+}
+
+</script>
+
+<script>
+ function textStatus() {
+  window.status="For your information, click on the picture to return back page";
+  return true;
+ }
+</script>
+
+</head>
+
+<body background="../media/bgswirl.gif">
+
+<center>
+<a name=newyear><br>
+<img src='../media/newyear.jpg' onClick='history.go(-1)' onMouseOver='textStatus()'><br>
+Chinese New Year, the Great Holiday of Worldwide Chinese People<br>
+<table width=720><tr><td align="center">
+<img src='../media/newyear1.jpg' onClick='history.go(-1)' height=200>
+<img src='../media/newyear3.jpg' onClick='history.go(-1)' height=200>
+<img src='../media/newyear2.jpg' onClick='history.go(-1)' height=200>
+</td></tr></table>
+<img src="../media/snowflakes.gif"><br>
+
+<DIV id='textanim' style='position: absolute; left: 0; top: 260' onclick='breakf()'></DIV><Layer name="textanim" left=0 top=440></Layer>
+
+<center>
+<a name=yearname><br>
+<img src='../media/zodiac.gif' onClick='history.go(-1)'><br>
+Names of Chinese Years, Months, and Hours in A Circle of Twelve. Click on <a href='http://members.aol.com/johnsonlau/notes.htm'><font face='Arial'><b>link site</b></font></a> to learn more...<br>
+<img src="../media/snowflakes.gif"><br>
+
+<a name=valentine><br>
+<img src='../media/valentine.jpg' onClick='history.go(-1)'><br>
+Exchange Gifts, Enjoy in Love - Valentine&#39;s Day, Febrary 14<br>
+<img src="../media/snowflakes.gif"><br>
+
+<a name=easter><br>
+<img src='../media/eggs.gif' onClick='history.go(-1)'><br>
+A time to welcome back the Tulips, the Crocuses and the Daffodils. 
+It&#39;s time for Christians to celebrate the rebirth of Christ. 
+And a time of new suits, new dresses and patent leather shoes...<br>
+<img src="../media/snowflakes.gif"><br>
+
+<a name=midautumn><br>
+<img src='../media/moonboat.jpg' onClick='history.go(-1)'><br>
+Missing your family, missing your homeland, and missing your homestyle mooncakes<br>
+<img src="../media/snowflakes.gif"><br>
+<img src='../media/mooncake.gif' onClick='history.go(-1)'><br>
+Chinese Mid-Autumn (Jong-Chiu) Holiday, the 15th day of the 8th lunar month in Chinese Calendar<br><br>
+<img src="../media/snowflakes.gif"><br>
+
+<a name=halloween><br>
+<img src='../media/halloween.gif' onClick='history.go(-1)'>
+<br>
+<img src='../media/pumpkin.gif' align="middle" onClick='history.go(-1)'>
+<img src='../media/ghost.gif' align="middle" onClick='history.go(-1)'><br>
+<img src="../media/snowflakes.gif"><br>
+
+<a name=thanksgiving><br>
+<img src='../media/bbqturkey.gif' onClick='history.go(-1)'><br>
+Thanksgiving of Turkey&#39;s Day (Celebrated the last Thursday of November)<br><br>
+<img src="../media/snowflakes.gif"><br>
+
+<a name=xmas>
+<table width=1220><tr><td align="center">
+<img src='../media/xmaslights.gif'><img src='../media/xmaslights.gif'><br>
+<img src='../media/xmas001.gif' height=320 onClick='history.go(-1)'>
+<img src='../media/xmas002.gif' height=320 onClick='history.go(-1)'>
+<img src='../media/xmas003.gif' height=320 onClick='history.go(-1)'>
+<img src='../media/xmas004.gif' height=320 onClick='history.go(-1)'><br>
+<img src='../media/xmasline.gif'><img src='../media/xmasline.gif'>
+</td></tr></table>
+<img src='../media/xmas.gif' align="middle" onClick='history.go(-1)'><br>
+<img src='../media/xmastree.gif' height=100 align="middle">
+Santa Claus hurries on the way to Christmas Day, December 25
+<img src='../media/xmastree.gif' height=100 align="middle">
+<br>
+<table width=820><tr><td align="center">
+<img src='../media/snowman.gif'><img src="../media/snowflake.gif"><img src='../media/snowman.gif'>
+</td></tr></table>
+
+</center>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<HTML>
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="description" CONTENT="Grace Homepage">
+<META NAME="keywords" CONTENT="pictures, favorites, family, friends, books, poems, resume, links">
+
+
+<TITLE>The Friends - Family & Friends</TITLE></HEAD>
+
+<BODY BGCOLOR=#191970 SCROLL="yes" onLoad="if(brOK) setHandlers()" onUnload="if(brOK) {if(tid) clearTimeout(tid);}">
+<BGSOUND SRC="../midi/petergun.mid" LOOP=-1>
+
+<script type="text/javascript">  //Text Link/Image Map Tooltip 
+
+ if (!document.layers&&!document.all) event="test"
+
+ function showtip(current,e,text) {
+  if (document.all) {
+   thetitle=text.split('<br>')
+   if (thetitle.length>1) {
+    thetitles=''
+    for (i=0;i<thetitle.length;i++) thetitles+=thetitle[i]
+    current.title=thetitles
+   }
+   else {
+    current.title=text
+   }
+  }
+  else if (document.layers) {
+   document.tooltip.document.write('<layer bgColor="white" style="border:1px solid black;font-size:12px;">'+text+'</layer>')
+   document.tooltip.document.close()
+   document.tooltip.left= e.PageX + 5
+   document.tooltip.top= e.PageY - 10
+   document.tooltip.visibility="show"
+  }
+ }
+
+ function hidetip() {
+  if (document.layers) document.tooltip.visibility="hidden"
+ }
+</script>
+<div id="tooltip" style="position:absolute;visibility:hidden"></div>
+
+
+
+<script type="text/javascript">  //Moving Eyes
+
+ var brOK=false;
+ var mie=false;
+ var ex=0;
+ var ey=0;
+ var ae;
+ var le;
+ var re;
+ var x0;
+ var y0;
+ var tid;
+ var realx;
+ var realy;
+ var loaded=false;
+
+ if(parseInt(navigator.appVersion.charAt(0))>=4) {brOK=true;}
+ if(navigator.appName.indexOf("Microsoft")!=-1) {mie=true; }
+
+ function myhandler(e) {
+  ex=e.pageX; 
+  ey=e.pageY;
+  moveeye()
+  return routeEvent(e);
+ }
+
+ function moveeye() {
+  dy=ey-y0-20;
+  dx1=ex-x0-20;
+  dx2=ex-x0-60;
+
+  r=Math.sqrt(dx1*dx1+dy*dy);
+  if(r<20) r=20
+  dx1=dx1*10/r+x0+10;
+  dy1=dy*10/r+y0+10;
+
+  r=Math.sqrt(dx2*dx2+dy*dy);
+  if(r<20) r=20
+  dx2=dx2*10/r+x0+50;
+
+  ae.left=x0;  
+  ae.top=y0;  
+  le.left=dx1;  
+  le.top=dy1;  
+  re.left=dx2;  
+  re.top=dy1;  
+ }
+
+ function setHandlers() {
+  if(!mie) { y0=document.eyeballs.top;
+             x0=document.eyeballs.left;
+             ae=document.eyeballs;
+             le=document.lefteye;   
+             re=document.righteye;   
+             window.captureEvents(Event.MOUSEMOVE);
+             window.onMouseMove=myhandler;
+           }
+  else     { y0=document.all.eyeballs.style.pixelTop;
+             x0=document.all.eyeballs.style.pixelLeft;
+             ae=document.all.eyeballs.style;
+             le=document.all.lefteye.style;
+             re=document.all.righteye.style;
+            }
+  realx=x0+0.1;
+  realy=y0+0.1;
+ 
+  moveall();
+  loaded=true;
+ }
+
+ function moveall() {
+  rx=realx+34
+  ry=realy+36;
+  rx+=(ex-rx)*0.1;
+  ry+=(ey-ry)*0.1;
+  realx=rx-40;
+  realy=ry-40;
+  x0=Math.round(realx);
+  y0=Math.round(realy);
+  moveeye();
+  tid=setTimeout('moveall()',100);
+ }
+
+ function placeeyes(x,y) {
+  if(brOK) {
+   ex=x+40;
+   ey=y+40;
+   s ='<DIV ID="dummy"    STYLE="position:absolute; top:'+y+'; left:'+x+'; width:10; height:10;">&#160;</DIV>';
+   s+='<DIV ID="eyeballs" STYLE="position:absolute; top:'+y+'; left:'+x+'; width:80; height:40;"  ><IMG SRC="../media/eyeballs.gif" border=0></DIV>';
+   s+='<DIV ID="lefteye"  STYLE="position:absolute; top:'+(y+10)+'; left:'+(x+10)+'; width:20; height:20;" ><IMG SRC="../media/eye.gif" border=0></DIV>';
+   s+='<DIV ID="righteye" STYLE="position:absolute; top:'+(y+10)+'; left:'+(x+50)+'; width:20; height:20;" ><IMG SRC="../media/eye.gif" border=0></DIV>';
+   document.writeln(s);
+  }
+ }
+</script>
+<script FOR=document Event="onmousemove()">
+ if((mie==true)&&(brOK)&&loaded) {
+  ex=document.body.scrollLeft+event.x;
+  ey=document.body.scrollTop+event.y;
+  moveeye();
+ }
+</script>
+<script>
+ if (document.all||document.layers)
+  placeeyes(100,100);
+</script>
+
+
+<FONT FACE="Times New Roman, Arial Narrow, Arial" SIZE=3>
+
+<center>
+
+<table border=0 width=100% height=90% cellpadding=0 cellspacing=0>
+ <tr>
+  <td align="center" valign="top">
+   <a name="friends">
+    <FONT COLOR=#8F8F8F FACE="Times New Roman" SIZE=2 STYLE="font-size:10pt">
+    <a href="../pages/Family.htm">Back</a> | 
+    <a href="../pages/myfamily.htm">My Family</a> | 
+    <a href="../pages/couples.htm">As A Couple</a> | The Friends |
+    <a href="../pages/another.htm">Another Me</a></FONT><p>
+   <table border=0 cellpadding=0 cellspacing=0 cols=1>
+    <tr>
+     <td width=600 align="center" valign="top">
+      <img src="../images/friend123a.jpg" border=0 usemap="#friend123" height=132>
+      <img src="../images/friend126a.jpg" border=0 usemap="#friend126" height=132>
+      <img src="../images/friend107a.jpg" border=0 usemap="#friend107" height=132>
+      <img src="../images/friend109a.jpg" border=0 usemap="#friend109" height=132>
+      <img src="../images/friend112a.jpg" border=0 usemap="#friend112" height=132>
+      <img src="../images/friend120a.jpg" border=0 usemap="#friend120" height=132><br>
+      <img src="../images/friend125a.jpg" border=0 usemap="#friend125" height=90>
+      <img src="../images/friend106a.jpg" border=0 usemap="#friend106" height=90>
+      <img src="../images/friend108a.jpg" border=0 usemap="#friend108" height=90>
+      <img src="../images/friend114a.jpg" border=0 usemap="#friend114" height=90><br>
+      <img src="../images/friend103a.jpg" border=0 usemap="#friend103" height=90>
+      <img src="../images/friend104a.jpg" border=0 usemap="#friend104" height=90>
+      <img src="../images/friend105a.jpg" border=0 usemap="#friend105" height=90><br>
+      <img src="../images/friend001a.jpg" border=0 usemap="#friend001" height=90>
+      <img src="../images/frAnjinga.jpg" border=0 usemap="#frAnjing" height=90>
+      <img src="../images/friend003a.jpg" border=0 usemap="#friend003" height=90>
+      <img src="../images/friend009a.jpg" border=0 usemap="#friend009" height=90><br>
+     </td>
+    </tr>
+   </table>
+   <font face="Arial" size=2 color=#48d1cc STYLE="font-size:10pt">
+   Hi, Friends: Please <a href="mailto:grace_zhou@hotmail.com" 
+  onMouseover="showtip(this,event,'Click to send me your pictures')" 
+  onMouseout="hidetip()"><img src="../media/submit.gif" align="middle" border=0"></a>
+  your pictures to furnish this page.
+  </td>
+ </tr>
+ <tr><td height=10% align="center" valign="bottom"><br>
+    <FONT COLOR=#8F8F8F FACE="Times New Roman" SIZE=2 STYLE="font-size:10pt"><p>
+    <a href="../index.html">Back Home</a> | 
+    <a href="../pages/Pictures.htm">Pictures</a> |
+    <a href="../pages/Favorites.htm">Favorites</a> | Family & Friends | 
+    <a href="../pages/Books.htm">Books</a>|
+    <a href="../pages/Poems.htm">Poems</a> |
+    <a href="../pages/Resume.htm">Resume</a> |
+    <a href="../pages/Links.htm">Links</a> <br><br></FONT>
+    </td></tr>
+ </tr>
+</table>
+
+<MAP NAME="frAnjing">
+<AREA SHAPE="RECT" COORDS="0,0,65,90" HREF="../images/frAnjinga.jpg" ALT="Cool Peaceful Anjing">
+</MAP>
+<MAP NAME="friend001">
+<AREA SHAPE="RECT" COORDS="0,0,98,90" HREF="../images/friend001a.jpg" ALT="Spring, we were outing!">
+</MAP>
+<MAP NAME="friend003">
+<AREA SHAPE="RECT" COORDS="0,0,126,90" HREF="../images/friend003a.jpg" ALT="Friend, colleague, supervisor">
+</MAP>
+<MAP NAME="friend009">
+<AREA SHAPE="RECT" COORDS="0,0,175,90" HREF="../images/friend009a.jpg" ALT="Dawncom Beijing Group">
+</MAP>
+<MAP NAME="friend103">
+<AREA SHAPE="RECT" COORDS="0,0,120,90" HREF="../images/friend103a.jpg" ALT="Xiao-yuan & Johny">
+</MAP>
+<MAP NAME="friend104">
+<AREA SHAPE="RECT" COORDS="0,0,132,90" HREF="../images/friend104a.jpg" ALT="Neighborhood Boy">
+</MAP>
+<MAP NAME="friend105">
+<AREA SHAPE="RECT" COORDS="0,0,132,90" HREF="../images/friend105a.jpg" ALT="The Group to Mt. Rainier">
+</MAP>
+<MAP NAME="friend106">
+<AREA SHAPE="RECT" COORDS="0,0,136,90" HREF="../images/friend106a.jpg" ALT="Picnic Group in Randy's House">
+</MAP>
+<MAP NAME="friend108">
+<AREA SHAPE="RECT" COORDS="0,0,132,90" HREF="../images/friend108a.jpg" ALT="King and Queens">
+</MAP>
+<MAP NAME="friend114">
+<AREA SHAPE="RECT" COORDS="0,0,132,90" HREF="../images/friend114a.jpg" ALT="Jenny and Me">
+</MAP>
+<MAP NAME="friend107">
+<AREA SHAPE="RECT" COORDS="0,0,90,132" HREF="../images/friend107a.jpg" ALT="Swinging">
+</MAP>
+<MAP NAME="friend109">
+<AREA SHAPE="RECT" COORDS="0,0,90,132" HREF="../images/friend109a.jpg" ALT="Jason and Me">
+</MAP>
+<MAP NAME="friend112">
+<AREA SHAPE="RECT" COORDS="0,0,90,132" HREF="../images/friend112a.jpg" ALT="Water Fight">
+</MAP>
+<MAP NAME="friend120">
+<AREA SHAPE="RECT" COORDS="0,0,90,132" HREF="../images/friend120a.jpg" ALT="Jenny & Me, Mt. Rainier">
+</MAP>
+<MAP NAME="friend123">
+<AREA SHAPE="RECT" COORDS="0,0,90,132" HREF="../images/friend123a.jpg" ALT="With Alice and Bob, The Most Beautiful Chritmas Tree">
+</MAP>
+<MAP NAME="friend125">
+<AREA SHAPE="RECT" COORDS="0,0,135,90" HREF="../images/friend125a.jpg" ALT="Happy Millennium! (New Year's Eve)">
+</MAP>
+<MAP NAME="friend126">
+<AREA SHAPE="RECT" COORDS="0,0,90,132" HREF="../images/friend126a.jpg" ALT="Jani and Me">
+</MAP>
+
+</center>
+
+</BODY> 
+</HTML>

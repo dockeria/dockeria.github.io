@@ -1,0 +1,299 @@
+<html>
+<head><title>Ching Ming Poems</title>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="subject" CONTENT="Ching Ming Poems">
+<META NAME="description" CONTENT="A Poetry Anthology to Commemorate Premier Zhou and Tian An Men Event in Ching Ming of 1976, Beijing, China">
+<META NAME="keywords" CONTENT="poems, Zhou EnLai, Ching Ming, Tian An Men Square, DHTML, JavaScript, jpg, gif">
+
+<script type="text/javascript">
+
+ var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+ var ie4up = (document.all) ? 1 : 0;
+
+ function GoView() {
+  if (ns4up) window.location.href='#View'
+//  else window.location.href='#main'
+ }
+
+ var g_fPlayMode = 0;
+ var g_iimg = 0;
+ var g_imax = 0;
+ var g_ImageTable = new Array();
+ var g_dwTimeOutSec=2
+
+ g_ImageTable[g_imax++] = new Array ("../poems/qp001t.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002a.gif","");
+ g_ImageTable[g_imax++] = new Array ("../poems/qp002b.gif","");
+
+ function ChangeImage(fFwd) {
+  if (fFwd) { if (++g_iimg==g_imax) g_iimg=0; }
+  else { if (g_iimg==0) g_iimg=g_imax; g_iimg--; }
+  Update();
+ }
+
+ function Update() {
+  document.all._Ath_Slide.src = g_ImageTable[g_iimg][0];
+//  document.all._Ath_FileName.innerHTML = g_ImageTable[g_iimg][1];
+//  document.all._Ath_Img_X.innerHTML = g_iimg + 1;
+//  document.all._Ath_Img_N.innerHTML = g_imax;
+ }
+ function Play() {
+  g_fPlayMode = !g_fPlayMode;
+  if (g_fPlayMode) { btnPrev.disabled = btnNext.disabled = true; Next(); }
+  else { btnPrev.disabled = btnNext.disabled = false; }
+ }
+ function OnImgLoad() { if (g_fPlayMode) window.setTimeout("Tick()", g_dwTimeOutSec*1000); }
+ function Tick() { if (g_fPlayMode) Next(); }
+ function Prev() { ChangeImage(false); }
+ function Next() { ChangeImage(true); }
+ function main() { Update(); }
+
+ window.onload=Play
+
+</script>
+
+</head>
+
+<body bgcolor=#000000 text=#CCCCCC link=#CC9999 vlink=#CD853F alink=#FF0000 scroll="yes" onLoad="GoView()">
+
+
+<font face="Arial" color=#CCCCCC size=2>
+
+<a name="main"><center>
+
+<table height=100% border=0 cellpadding=0 cellspacing=0>
+ <tr><td height=10240 align="center" valign="top">
+
+ <input type="button" name="btnNext" value="Next Page &lt;&lt;" onclick="Next();">
+ <input type="button" name="btnPlay" value="Turn Over" onclick="Play();"
+  OnMouseOver="window.status='Turn Over the Book';return true"
+  OnMouseOut="window.status='';return true">
+ <input type="button" name="btnView" value="Pagelist"
+  onClick="window.location.href='#View'"
+  OnMouseOver="window.status='View Page List';return true"
+  OnMouseOut="window.status='';return true">
+ <input type="button" name="btnPrev" value="&gt;&gt; Back Page" onclick="Prev();">
+ <br><br>
+
+ <img name="_Ath_Slide" onload="OnImgLoad()"><br>
+
+ <script type="text/javascript" event="onload" for="window">
+  main();
+ </script>
+
+ </td></tr>
+</table>
+
+<a name="View">
+<table height=100% border=0 cellpadding=0 cellspacing=0>
+ <tr>
+  <td height=90% align="center" valign="top"><font face="Arial" size=2>
+   <img src="../media/section.gif"><br><br>
+<a href="../poems/qp001t.gif">The Cover</a> &#160; Catalog
+   <a href="../poems/qp002a.gif">Page 01</a> &#160;
+   <a href="../poems/qp002b.gif">02</a> &#160;
+   <a href="../poems/qp002a.gif">03</a> &#160;
+   <a href="../poems/qp002b.gif">04</a> &#160; <p> Chapter 1 -
+   <a href="../poems/qp002a.gif">Page 05</a> &#160;
+   <a href="../poems/qp002b.gif">06</a> &#160;
+   <a href="../poems/qp002a.gif">07</a> &#160;
+   <a href="../poems/qp002b.gif">08</a> &#160;
+   <a href="../poems/qp002a.gif">09</a> &#160;
+   <a href="../poems/qp002b.gif">10</a> &#160;
+   <a href="../poems/qp002a.gif">11</a> &#160;
+   <a href="../poems/qp002b.gif">12</a> &#160;
+   <a href="../poems/qp002a.gif">13</a> &#160;
+   <a href="../poems/qp002b.gif">14</a> &#160;
+   <a href="../poems/qp002a.gif">15</a> &#160;
+   <a href="../poems/qp002b.gif">16</a> &#160; <p> Chapter 2 -
+   <a href="../poems/qp002a.gif">Page 17</a> &#160;
+   <a href="../poems/qp002b.gif">18</a> &#160;
+   <a href="../poems/qp002a.gif">19</a> &#160;
+   <a href="../poems/qp002b.gif">20</a> &#160;
+   <a href="../poems/qp002a.gif">21</a> &#160;
+   <a href="../poems/qp002b.gif">22</a> &#160;
+   <a href="../poems/qp002a.gif">23</a> &#160;
+   <a href="../poems/qp002b.gif">24</a> &#160; <p> Chapter 3 -
+   <a href="../poems/qp002a.gif">Page 25</a> &#160;
+   <a href="../poems/qp002b.gif">26</a> &#160;
+   <a href="../poems/qp002a.gif">27</a> &#160;
+   <a href="../poems/qp002b.gif">28</a> &#160;
+   <a href="../poems/qp002a.gif">29</a> &#160;
+   <a href="../poems/qp002b.gif">30</a> &#160;
+   <a href="../poems/qp002a.gif">31</a> &#160;
+   <a href="../poems/qp002b.gif">32</a> &#160;
+   <a href="../poems/qp002a.gif">33</a> &#160;
+   <a href="../poems/qp002b.gif">34</a> &#160; <p> Chapter 4 -
+   <a href="../poems/qp002a.gif">Page 35</a> &#160;
+   <a href="../poems/qp002b.gif">36</a> &#160;
+   <a href="../poems/qp002a.gif">37</a> &#160;
+   <a href="../poems/qp002b.gif">38</a> &#160;
+   <a href="../poems/qp002a.gif">39</a> &#160;
+   <a href="../poems/qp002b.gif">40</a> &#160;
+   <a href="../poems/qp002a.gif">41</a> &#160;
+   <a href="../poems/qp002b.gif">42</a> &#160; <p> Chapter 5 -
+   <a href="../poems/qp002a.gif">Page 43</a> &#160;
+   <a href="../poems/qp002b.gif">44</a> &#160;
+   <a href="../poems/qp002a.gif">45</a> &#160;
+   <a href="../poems/qp002b.gif">46</a> &#160;
+   <a href="../poems/qp002a.gif">47</a> &#160;
+   <a href="../poems/qp002b.gif">48</a> &#160;
+   <a href="../poems/qp002a.gif">49</a> &#160;
+   <a href="../poems/qp002b.gif">50</a> &#160;
+   <a href="../poems/qp002a.gif">51</a> &#160;
+   <a href="../poems/qp002b.gif">52</a> &#160;
+   <a href="../poems/qp002a.gif">53</a> &#160;
+   <a href="../poems/qp002b.gif">54</a> &#160;
+   <a href="../poems/qp002a.gif">55</a> &#160;
+   <a href="../poems/qp002b.gif">56</a> &#160;
+   <a href="../poems/qp002a.gif">57</a> &#160;
+   <a href="../poems/qp002b.gif">58</a> &#160;
+   <a href="../poems/qp002a.gif">59</a> &#160;
+   <a href="../poems/qp002b.gif">60</a> &#160; <p> Chapter 6 -
+   <a href="../poems/qp002a.gif">Page 61</a> &#160;
+   <a href="../poems/qp002b.gif">62</a> &#160;
+   <a href="../poems/qp002a.gif">63</a> &#160;
+   <a href="../poems/qp002b.gif">64</a> &#160;
+   <a href="../poems/qp002a.gif">65</a> &#160;
+   <a href="../poems/qp002b.gif">66</a> &#160;
+   <a href="../poems/qp002a.gif">67</a> &#160;
+   <a href="../poems/qp002b.gif">68</a> &#160; <p> Chapter 7 -
+   <a href="../poems/qp002a.gif">Page 69</a> &#160;
+   <a href="../poems/qp002b.gif">70</a> &#160;
+   <a href="../poems/qp002a.gif">71</a> &#160;
+   <a href="../poems/qp002b.gif">72</a> &#160;
+   <a href="../poems/qp002a.gif">73</a> &#160;
+   <a href="../poems/qp002b.gif">74</a> &#160;
+   <a href="../poems/qp002a.gif">75</a> &#160;
+   <a href="../poems/qp002b.gif">76</a> &#160; <p> Chapter 8 -
+   <a href="../poems/qp002a.gif">Page 77</a> &#160;
+   <a href="../poems/qp002b.gif">78</a> &#160;
+   <a href="../poems/qp002a.gif">79</a> &#160;
+   <a href="../poems/qp002b.gif">80</a> &#160;
+   <a href="../poems/qp002a.gif">81</a> &#160;
+   <a href="../poems/qp002b.gif">82</a> &#160;
+   <a href="../poems/qp002a.gif">83</a> &#160;
+   <a href="../poems/qp002b.gif">84</a> &#160;
+   <a href="../poems/qp002a.gif">85</a> &#160;
+   <a href="../poems/qp002b.gif">86</a> &#160;
+   <a href="../poems/qp002a.gif">87</a> &#160;
+   <a href="../poems/qp002b.gif">88</a> &#160;
+   <a href="../poems/qp002a.gif">89</a> &#160;
+   <a href="../poems/qp002b.gif">90</a> &#160; <p>
+
+   <br><br><img src="../media/section.gif"><br><br>
+
+   Back | Home |
+   <a href="../pages/verse.htm">Boathill</a> |
+   Ching-Ming Anthology |
+   <a href="../pages/honglou.htm">Dream of Red Mansions</a> |
+   Tang |
+   Song |
+   Links
+
+   <br><br><br>
+
+  </td>
+ </tr>
+ <tr>
+  <td height=10% align="center">
+   <FORM>
+    <INPUT TYPE="button" VALUE="Back" onClick="history.go(-2)">
+   </FORM>
+  </td>
+ </tr>
+</table>
+
+</center>
+
+</body>
+</html>

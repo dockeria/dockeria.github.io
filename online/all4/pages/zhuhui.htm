@@ -1,0 +1,174 @@
+<html>
+<head><title>Childhood Zhuhui</title>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="subject" CONTENT="Childhood Zhuhui">
+<META NAME="description" CONTENT="7 Pictures of Childhood Zhuhui">
+<META NAME="keywords" CONTENT="Zhu Hui, pictures, childhood, javascript, dhtml, html, jpg">
+
+<script type="text/javascript">
+
+ var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+ var ie4up = (document.all) ? 1 : 0;
+
+ function GoView() {
+  if (ns4up) window.location.href='#View'
+ }
+
+
+ var g_fPlayMode = 0;
+ var g_iimg = 0;
+ var g_imax = 0;
+ var g_ImageTable = new Array();
+ var g_dwTimeOutSec=2
+
+ g_ImageTable[g_imax++] = new Array ("../family/zhuhui1a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuhui2a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuhui3a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuhui4a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuhui5a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuhui6a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../family/zhuhui7a.jpg","");
+ g_ImageTable[g_imax++] = new Array ("../family/jzcn006a.jpg","");
+
+ function ChangeImage(fFwd) {
+  if (fFwd) { if (++g_iimg==g_imax) g_iimg=0; }
+  else { if (g_iimg==0) g_iimg=g_imax; g_iimg--; }
+  Update();
+ }
+
+ function Update() {
+  document.all._pic_Slide.src = g_ImageTable[g_iimg][0];
+//  document.all._pic_FileName.innerHTML = g_ImageTable[g_iimg][1];
+//  document.all._pic_Img_X.innerHTML = g_iimg + 1;
+//  document.all._pic_Img_N.innerHTML = g_imax;
+ }
+ function Play() {
+  g_fPlayMode = !g_fPlayMode;
+  if (g_fPlayMode) { btnPrev.disabled = btnNext.disabled = btnView.disabled = true; Next(); }
+  else { btnPrev.disabled = btnNext.disabled = btnView.disabled = false; }
+ }
+ function OnImgLoad() { if (g_fPlayMode) window.setTimeout("Tick()", g_dwTimeOutSec*1000); }
+ function Tick() { if (g_fPlayMode) Next(); }
+ function Prev() { ChangeImage(false); }
+ function Next() { ChangeImage(true); }
+ function main() { Update(); }
+
+ window.onload=Play
+
+</script>
+
+</head>
+
+<body bgcolor=#000000 text=#DCDCDC link=#A0CE00 vlink=#B8860B alink=#6495ED scroll="yes" onLoad="GoView()">
+
+
+<font face="Arial" color=#CCCCCC size=2>
+
+<a name="main"><center>
+
+ <input type="button" name="btnPrev" value="&lt;&lt; Back Page" onclick="Prev();">
+ <input type="button" name="btnPlay" value="Turn Over | Stop" onclick="Play()"
+  OnMouseOver="window.status='Turn Over the Album';return true"
+  OnMouseOut="window.status='';return true">
+ <input type="button" name="btnView" value="Thumbnail"
+  onclick="window.location.href='#View'"
+  OnMouseOver="window.status='View Thumbnail';return true"
+  OnMouseOut="window.status='';return true">
+ <input type="button" name="btnNext" value="Next Page &gt;&gt;" onclick="Next();">
+ <br><br>
+
+<script type="text/javascript" event="onload" for="window">
+ main();
+</script>
+
+<img name="_pic_Slide" onload="OnImgLoad()"><br><br>
+
+Back |
+<a href="../index.html">Home</a> |
+Photo Album |
+<a href="../../Angelfire/pages/Books.htm">Books</a> |
+Music |
+<a href="../../Boathill/index.html">Poems</a> |
+<a href="../pages/Resume.htm">Resume</a> |
+Links
+
+<br>
+
+<table height=100% border=0 cellpadding=0 cellspacing=0>
+ <tr><td height=10240 align="center" valign="top">
+
+</td></tr></table>
+
+<br>
+
+<a name="View">
+<table width=100% height=100% border=0 cellpadding=0 cellspacing=0>
+ <tr>
+  <td height=60% align="center" valign="top"><font size=1>
+   <img src="../media/section.gif"><br><br>
+   <img src="../family/zhuhui1a.jpg" border=0 usemap="#zhuhui1" width=100 height=100>
+   <img src="../family/zhuhui2a.jpg" border=0 usemap="#zhuhui2" width=100 height=100>
+   <img src="../family/zhuhui3a.jpg" border=0 usemap="#zhuhui3" width=100 height=100>
+   <img src="../family/zhuhui4a.jpg" border=0 usemap="#zhuhui4" width=100 height=100><br>
+   <img src="../family/zhuhui5a.jpg" border=0 usemap="#zhuhui5" width=100 height=100>
+   <img src="../family/zhuhui6a.jpg" border=0 usemap="#zhuhui6" width=100 height=100>
+   <img src="../family/zhuhui7a.jpg" border=0 usemap="#zhuhui7" width=100 height=100>
+   <img src="../family/jzcn006a.jpg" border=0 usemap="#jzcn006" width=100 height=100>
+   <p><img src="../media/section.gif"><br><br>
+  </td>
+ </tr>
+
+ <tr><td height=20% align="center"><font face="Arial" size=2>
+   <br><br><br>
+
+<a href=#main>Main</a> |
+<a href="../index.html">Home</a> |
+Photo Album |
+<a href="../../Angelfire/pages/Books.htm">Books</a> |
+Music |
+<a href="../../Boathill/index.html">Poems</a> |
+<a href="../pages/Resume.htm">Resume</a> |
+Links
+
+   <br><br><br></font>
+ </td></tr>
+
+ <tr>
+  <td height=10% align="center">
+   <FORM>
+    <INPUT TYPE="button" VALUE="Back" onClick="history.go(-2)">
+   </FORM>
+  </td>
+ </tr>
+</table>
+
+</center>
+
+<MAP NAME="zhuhui1">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuhui1a.jpg" ALT="I Am The Traffic Cop">
+</MAP>
+<MAP NAME="zhuhui2">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuhui2a.jpg" ALT="I Got A Pebble">
+</MAP>
+<MAP NAME="zhuhui3">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuhui3a.jpg" ALT="Look">
+</MAP>
+<MAP NAME="zhuhui4">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuhui4a.jpg" ALT="Tian An Men Square">
+</MAP>
+<MAP NAME="zhuhui5">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuhui5a.jpg" ALT="Generation under the red flag">
+</MAP>
+<MAP NAME="zhuhui6">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuhui6a.jpg" ALT="My Forum">
+</MAP>
+<MAP NAME="zhuhui7">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/zhuhui7a.jpg" ALT="Little Landlord">
+</MAP>
+<MAP NAME="jzcn006">
+<AREA SHAPE="RECT" COORDS="0,0,100,100" HREF="../family/jzcn006a.jpg" ALT="Sister and Me">
+</MAP>
+
+</body>
+</html>

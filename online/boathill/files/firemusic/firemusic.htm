@@ -1,0 +1,473 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Page-Enter" CONTENT="RevealTrans(Duration=3,Transition=12)">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>FireMusic Desktop � 2001, Jason Zhu</TITLE>
+
+<style type="text/css">
+ a:link    {color: #0000ff;} 
+ a:active  {color: #8A2BE2;} 
+ a:visited {color: #800080;}
+ a:hover   {color: #00BFFF; font-style: italic;}
+ li { list-style: circle outside; }
+ p {
+  width: 100%;
+  padding: 0 0 0 0;
+  display: block;   /* block; inline; list-item; none; */
+  align: center;
+  float: right;
+ }
+
+ body {
+  color: #0F0F0F;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+
+  border-width: 0 0 0 0;
+  border-style: ridge;
+  border-color: lightgreen hotpink yellow skyblue;
+
+  background: #000080 url('') repeat-y fixed right;
+/****** use above CSS settings instead
+  background-color: #000080;
+  background-image: url(''); 
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: repeat-y;
+*/
+  font: bold 12pt/12pt Arial;
+  letter-sapcing: normal;
+  line-height: 12pt;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  text-indent: 24pt;
+  tab-interval: 36pt;
+  vertical-align: baseline;
+  word-spacing: normal;
+ }
+
+ input { font: bold 8pt/9pt Arial, Hevetica, "Times New Roman"; }
+
+ td { margin: 0 0 0 0; padding: 0 0 0 0; }
+ td.popup {
+  padding: 10 10 10 10;
+  background-color: yellowgreen;
+  font: normal 10pt/12pt Tahoma, "Times New Roman";
+  text-indent: 0pt;
+  color: purple;
+ }
+
+.btfilter { filter: blendTrans(Duration=3.0); display:inline; visibility:visible; }
+.rdfilter { filter: revealTrans(Duration=2.0, Transition=12); visibility:visible; }
+.refilter { filter: revealTrans(Duration=1.0, Transition=23); visibility:visible; }
+
+#id_music { }
+
+#id_image { cursor: wait; }
+
+#id_text  { cursor: text; }
+
+#id_splash {
+  position: relative; font: normal 32/36pt; cursor: hand;
+ }
+#id_popup {
+  position: absolute; top: 100; left: 100; width: 160pt;
+  z-index: 100; visibility: hidden;
+ }
+
+ font {
+  font: normal small-caps bold 24pt/32pt Arial, Helvetica;
+/****** use above CSS settings instead
+  font-family: Arial, Helvetica;
+  font-style: normal;
+  font-variant: normal;  // normal; small-caps;
+  font-weight: 900 !important; // bold; 100; ... 900;
+  line-height: 32pt;
+  font-size: 24pt;
+*/
+ }
+.text1 {color:aqua;     font-family: "Book Antiqua","Comic Sans MS";}
+.text2 {color:gold;     font-family: "Century Gothic","Courier New";}
+.text3 {color:hotpink;  font-family: "Impact";}
+.text4 {color:lavender; font-family: "Lucida Handwriting","Lucida Sans Unicode";}
+.text5 {color:green;    font-family: "Matisse ITC";}
+.text6 {color:salmon;   font-family: "Monotype Corsiva","Microsoft Sans Serif";}
+.text7 {color:skyblue;  font-family: "Symbol";}
+.text8 {color:violet;   font-family: "Tempus Sans ITC",Tahoma;}
+.text9 {color:wheat;    font-family: "Westminster",Verdana;}
+
+</style>
+
+<script language="JavaScript">
+<!--
+ if (top.location != self.location) {
+  top.location = self.location 
+ }
+
+/***********************************************************
+ sensing browser versions - not applied for Windows/IE
+ ***********************************************************/
+ var isNew = 0, isIE4 = 0, isNS4 = 0, isDHTML = 0;
+ var version = parseInt(navigator.appVersion);
+ var browser = navigator.appName + version;
+
+ if (version>=5) isNew = 1;
+ else if (browser == "Netscape4") isNS4=1;
+ else if (browser == "Microsoft Internet Explorer4") isIE4=1;
+
+ if (isNew || isIE4 || isNS4) {
+  var domdoc   = (isNS4)?'document':'document.all';
+  var domstyle = (isNS4)?'':'.style';
+  isDHTML  = 1;
+ }
+
+ var max = 0;
+ var music = new Array();
+
+ music[max++] = new Array("./asdeer.mid",-6);
+ music[max++] = new Array("./axelstheme.mid",2);
+ music[max++] = new Array("./exodus.mid",2);
+ music[max++] = new Array("./feather.mid",-4);
+ music[max++] = new Array("./frozen.mid",-2);
+ music[max++] = new Array("./godfather.mid",2);
+ music[max++] = new Array("./honglou.mid",2);
+ music[max++] = new Array("./picket.mid",2);
+ music[max++] = new Array("./rainman.mid",1);
+ music[max++] = new Array("./rayoflight.mid",2);
+ music[max++] = new Array("./riverkwai.mid",-2);
+ music[max++] = new Array("./starwars.mid",4);
+ music[max++] = new Array("./superman.mid",4);
+ music[max++] = new Array("./thepiano.mid",1);
+ music[max++] = new Array("./xfilestheme.mid",-2);
+ music[max++] = new Array("./youhappy.mid",1);
+/***********************************************************
+ Modify or Add your favorite music files here
+ Gave higher volume ratio if the original louder (default=0)
+ ***********************************************************/
+
+ var snd_click = "./click.wav";
+
+ var bgImage = "./bgfire.gif";
+
+ var msgs = ""  // messages to be displayed
+
+/***********************************************************
+ Customize the center message and popup text below:
+ ***********************************************************/
+ var tagTable = '<TABLE WIDTH=100% HEIGHT=100%><TR>'
+ var openingPop = '<TD CLASS="popup" WIDTH=100% align="LEFT" Valign="MIDDLE">'
+ var msgPop = '"Nee~Hao", in Chinese, means "Hello", "How are you?". This is the most popular greeting. '
+ var endTable = '</TD></TR></TABLE>'
+ var snd_speak = "./neehao.wav";
+ var speaktimeout = 10;
+
+ var openingTxt = '<TD WIDTH=100% align="CENTER" Valign="MIDDLE">'
+ var msgText = "Hi, Nee~Hao!"
+
+/***********************************************************
+ Customize the marquee demo text below:
+ ***********************************************************/
+ var tagMarquee = '<MARQUEE BEHAVIOR=scroll SCROLLDELAY=100 HSPACE=0 LOOP=INFINITE>'
+ var msgMarquee = "Hi, how are you doing today?"
+ var endMarquee = '</MARQUEE>'
+
+ var msgmaxWidth = 300;
+ var msgmaxHeight = 60;
+ var taskbarHeight = 30;
+ var maxfonts = 9;
+ var maxcolors = 0xffffff;
+ var offrgb = 0x808080;
+ var intervals = 500;    // delay in milliseconds
+ var musictimeout = 300;  // music play time in intervals
+ var musicfadeout = 20;
+ var musicoff = 0;
+ var musicvolume = -1000;  // current music volume;
+ var maxvolume = 0, minvolume = -10000;
+ var defvolume = -1000;
+ var offvolume = 100;
+ var i = 0, j = 1, k = musictimeout;
+ var ratio = 4;
+-->
+</script>
+
+<script language="VBScript">
+<!--
+ Sub demo_filter(objImage)
+  objImage.style.visibility="hidden"
+  call objImage.filters.item(0).Apply()
+  objImage.style.visibility=""
+  call objImage.filters.item(0).Play()
+ End Sub
+-->
+</script>
+
+</HEAD>
+
+<BODY ID="id_body" SCROLL="no" onClick="javascript:history.go(-1)">
+<BGSOUND ID="id_music" SRC="thepiano.mid" VOLUME=-1000 LOOP=1>
+<BGSOUND ID="id_sound" SRC="" VOLUME=0 LOOP=1>
+<BGSOUND ID="id_speak" SRC="" VOLUME=0 LOOP=1>
+
+<span style="position:absolute;width:100%;height:100%;top:0;left:0;align:right;z-index:-1;">
+ <TABLE WIDTH=100% HEIGHT=98% border=0>
+  <TR><TD WIDTH=90% HEIGHT=100% align="RIGHT" Valign="TOP"></TD>
+   <TD WIDTH=10% align="RIGHT" Valign="TOP">
+    <IMG id="id_image" SRC="bgfire.gif"
+         onLoad="this.className='btfilter';"
+   onMouseOver="this.className='rdfilter';demo_filter(this)"
+   onMouseOut="this.className='btfilter';demo_filter(this)"
+   WIDTH=80% HEIGHT=92% BORDER=0>
+   </TD>
+  </TR>
+ </TABLE>
+</span>
+
+<TABLE HEIGHT=20% WIDTH=75% BORDER="0">
+ <TR><TD align="RIGHT" Valign="MIDDLE">
+   <IMG SRC="star_purple.gif" BORDER=0>
+  </TD>
+ </TR>
+</TABLE>
+
+<TABLE HEIGHT=60% BORDER="0">
+ <TR><TD align="CENTER" Valign="MIDDLE">
+   <P id="id_splash"
+      onMouseOver="demo_popup()"
+      onMouseOut="this.className='refilter';demo_filter(this);">
+   <IMG SRC="star_flash.gif" BORDER=0>
+   </P>
+  </TD>
+ </TR>
+</TABLE>
+
+<TABLE HEIGHT=20% WIDTH=100% BORDER="0">
+ <TR>
+  <TD align="RIGHT" Valign="BOTTOM">
+   <IMG SRC="star_white.gif" BORDER=0>
+   <INPUT ID="id_voldown" TYPE="BUTTON" VALUE=" - " onClick="musicvoldown()"><INPUT
+    ID="id_toggle" TYPE="BUTTON" VALUE="Music On" onClick="musictoggle()"><INPUT
+    ID="id_volup" TYPE="BUTTON" VALUE=" + " onClick="musicvolup()">
+  </TD>
+ </TR>
+</TABLE>
+
+<div id="id_popup" style="position:absolute;"></div>
+<div id="id_text" style="position:absolute;z-index:-2;"></div>
+
+<script language="JavaScript">  // Dynamic Win98 Wallpaper
+<!--
+ var defWidth = 800, defHeight = 600;
+ var bodyWidth = document.body.clientWidth;
+ var bodyHeight = document.body.clientHeight;
+ var bodyLeft = document.body.scrollLeft;
+ var bodyTop = document.body.scrollTop;
+ var scrlWidth = document.body.scrollWidth;
+ var scrlHeight = document.body.scrollHeight;
+
+ if (bodyWidth==0) bodyWidth = screen.width;
+ if (bodyHeight==0) bodyHeight = screen.height;
+
+/*************************************************
+ function demo_text()
+ */
+ function demo_text() {
+  if (j>maxfonts) {
+   i = 0; j = 1;
+  }
+  else i++;
+
+  if (i==(j*ratio)) {
+   if (dg_ie) {  // changing the greeting style
+    dg_ie.style.visibility = "hidden";
+    msgs = '<FONT CLASS="text'+j+'">'+msgText+'</FONT>';
+    dg_ie.innerHTML= msgs;
+//    dg_ie.style.left = bodyLeft+(bodyWidth-dg_ie.clientWidth)/2;
+//    dg_ie.style.top = bodyTop+(bodyHeight-dg_ie.clientHeight)/2;
+    dg_ie.style.visibility = "visible";
+   }
+   j++; 
+   if (dm_ie) {  // randomly hide the right-top image
+    if (j==(Math.round(Math.random()*maxfonts))) {
+     dm_ie.className = "btfilter";
+     dm_ie.filters.blendTrans.Play();
+    }
+    else {
+     dm_ie.style.visibility = "visible";
+    }
+   }
+  }
+
+  if (dt_ie) {  // randomly change the text color
+   dt_color = Math.round(Math.random()*(maxcolors-offrgb)) + offrgb;
+   dt_ie.style.color = dt_color;
+  }
+
+  if (document.all.id_music) {
+   if (k<musictimeout) { // playing music fadeout before the timeout
+    if (k>(musictimeout-musicfadeout)) {
+     musicvolume = document.all.id_music.volume;
+     document.all.id_music.volume = musicvolume-(musicvolume-minvolume)/(Math.pow(2,(musictimeout-k)));
+    }
+    k++;
+   }
+   else {    // randomly change the music
+    k = Math.round(Math.random()*(max-1));
+    document.all.id_music.src = music[k][0];
+    musicvolume = defvolume-(offvolume*music[k][1]);
+    if (musicvolume>maxvolume) musicvolume = maxvolume;
+    if (musicvolume<minvolume) musicvolume = minvolume;
+    if (musicoff==0) document.all.id_music.volume = musicvolume;
+   }
+  }
+  setTimeout("demo_text()", intervals);
+ }
+
+/*************************************************
+ function demo_splash()
+ */
+ function demo_splash() {
+  if (document.all) {
+   if (document.all.id_splash)
+    dg_ie = document.all.id_splash;
+   if (document.all.id_image)
+    dm_ie = document.all.id_image;
+   if (document.all.id_text) {
+    dt_ie = document.all.id_text;
+    dt_ie.innerHTML = tagMarquee+msgMarquee+endMarquee;
+    dt_ie.style.left = bodyLeft;
+    dt_ie.style.top = bodyHeight-dt_ie.offsetHeight-taskbarHeight;
+   }
+   demo_text();
+  }
+ }
+
+/*************************************************
+ function musicvoldown(offvol)
+ function musictoggle(offvol)
+ function musicvolup(offvol)
+ */
+ function musicvoldown(offvol) {
+  if (document.all.id_music && document.all.id_voldown) {
+   document.all.id_voldown.blur();
+   if (musicoff==0 && defvolume>minvolume) {
+    if (offvol>=minvolume && offvol<=maxvolume) 
+     defvolume = offvol;
+    else {
+     offvol = offvolume*(Math.pow(100,(musicvolume-1)/minvolume));
+     defvolume = musicvolume - offvol;
+     if (defvolume<minvolume) defvolume=minvolume;
+     offvol = 1;
+    }
+    musicvolume = document.all.id_music.volume;
+    if (musicvolume>defvolume) musicvolume=defvolume;
+    document.all.id_music.volume = musicvolume;
+   }
+  }
+ }
+
+ function musictoggle() {
+  if (document.all.id_music && document.all.id_toggle) {
+   document.all.id_toggle.blur();
+   if (musicoff==0) {
+    document.all.id_music.volume = minvolume;
+    document.all.id_toggle.value = "Music Off";
+    musicoff = 1;
+   }
+   else {
+    document.all.id_music.volume = defvolume;
+    document.all.id_toggle.value = "Music On";
+    musicoff = 0;
+   }
+   document.all.id_sound.src = snd_click;
+  }
+ }
+
+ function musicvolup(offvol) {
+  if (document.all.id_music && document.all.id_volup) {
+   document.all.id_volup.blur();
+   if (musicoff==0 && defvolume<maxvolume) {
+    if (offvol>=minvolume && offvol<=maxvolume)
+     defvolume = offvol;
+    else {
+     offvol = offvolume*(Math.pow(80,(musicvolume-1)/minvolume));
+     defvolume = musicvolume + offvol;
+     if (defvolume>maxvolume) defvolume = maxvolume;
+    }
+    musicvolume = document.all.id_music.volume;
+    if (musicvolume<defvolume) musicvolume = defvolume;
+    document.all.id_music.volume = musicvolume;
+   }
+  }
+ }
+
+/*************************************************
+ function delay(timeIntervals)
+ */
+ function delay(timeIntervals) { // delay intervals in milliseconds
+  var timeNow, timeThen=new Date().getTime();
+  timeNow = timeThen;
+  while((timeNow-timeThen)<timeIntervals)
+  {
+   timeNow = new Date().getTime();
+  }
+ }
+
+/*************************************************
+ function demo_popup(timer)
+ */
+ function demo_popup(timer) {
+  var timer;
+  if (document.all.id_popup) {
+   dp_ie = document.all.id_popup;
+   if (timer==0) 
+    dp_ie.style.visibility = "hidden";
+   else {
+    dp_ie.innerHTML = tagTable+openingPop+msgPop+endTable;
+    if (bodyWidth>dp_ie.clientWidth)
+     dp_ie.style.left = (event.clientX<(bodyWidth-dp_ie.clientWidth))?event.clientX:(bodyWidth-dp_ie.clientWidth);
+    else
+     dp_ie.style.left = event.clientX;
+    dp_ie.style.top = event.clientY;
+    dp_ie.style.visibility = "visible";
+    /*
+     * fade out the background music (optional feature)
+     */
+    if (musicoff==0) {
+//   musictoggle();
+//   setTimeout("musictoggle()",speaktimeout*intervals);
+     k = musictimeout-musicfadeout;
+     document.all.id_music.volume = minvolume;
+     document.all.id_music.src = "";
+     k = musictimeout-speaktimeout;
+    }
+    /*
+     * comment the above coding without silent background music.
+     */
+    setTimeout("demo_popup(0)",10000);
+    document.all.id_speak.src = snd_speak;
+   }
+  }
+ }
+
+ window.onload = demo_splash;
+-->
+</script>
+
+<noscript>
+ <PRE>
+ This page running JavaScript & VBScript for CSS/CSS-P DHTML
+ Save it with the background image and your favorite music files
+ in "%windir%\Web\Wallpaper" - Windows 98 or 2000 above required
+ Also work bundled with the following files:
+ "./neehao.wav"   - greeting message file;
+ "./bgfile.gif"   - background image file, if bgImage defined;
+ "./starflash.gif"  - background star files;
+ "./starpurple.gif"
+ "./starwhite.gif"
+ </PRE>
+</noscript>
+
+
+</BODY>
+</HTML>

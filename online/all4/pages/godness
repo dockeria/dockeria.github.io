@@ -1,0 +1,24 @@
+<HTML>
+<HEAD><title>Godness</title></head>
+
+<body bgcolor=#000000 leftmargin=0 topmargin=0 onBlur="self.close()">
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width=100% height=100% align=center valign=middle>
+
+ <tr><td align=center valign=middle><table cellpadding=0 cellspacing=0 border=0><tr>
+  <td align=left valign=middle width=200>
+   <img src="../pics/goddess02.jpg" width=200 border=0><br>
+   <img src="../pics/goddess05.jpg" width=200 border=0><br>
+  </td>
+  <td align=left valign=middle>
+   <img src="../pics/goddess01.jpg" height=320 border=0><img src="../pics/goddess03.jpg" height=320 border=0><br>
+   <img src="../pics/goddess04.jpg" height=254 border=0>
+  </td>
+ </tr>
+ </td></tr></table>
+</table>
+
+</center>
+</body>
+</html>
